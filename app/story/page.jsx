@@ -4,7 +4,7 @@ import { luckiest_guy } from "../fonts";
 
 const StoryPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-[#d2def4]">
+    <div className="flex flex-col justify-center items-center bg-[#d2def4] min-h-screen">
       <div className="flex flex-col w-full container gap-6 my-20">
         <h2
           className={cn(
