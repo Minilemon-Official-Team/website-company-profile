@@ -16,6 +16,11 @@ module.exports = {
       boxShadow: {
         blue: "0 25px 50px -12px rgba(0, 0, 255, 0.25)",
       },
+      dropShadow: {
+        titlePurple: ["0 6px 0 rgba(114,4,165,0.8)", "-2px 0 0.3px rgba(114,4,165,0.8)", "2px 0 0.3px rgba(114,4,165,0.8)"],
+        titleBlack: ["0 6px 0 rgba(49, 49, 49,0.8)", "-2px 0 0.3px rgba(49, 49, 49,0.8)", "2px 0 0.3px rgba(49, 49, 49,0.8)"],
+        titleRed: ["0 6px 0 rgba(144, 27, 1,0.8)", "-2px 0 0.3px rgba(144, 27, 1,0.8)", "2px 0 0.3px rgba(144, 27, 1,0.8)"],
+      },
     },
   },
   plugins: [],
