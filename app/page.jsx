@@ -3,11 +3,9 @@ import Image from "next/image";
 import { luckiest_guy } from "./fonts";
 import { Button } from "../components/ui/button";
 import Minggus from "../public/Minggus.png";
-import Wave from "../public/wave.svg";
-import Wave1 from "../public/wave-1.svg";
-import { Assets } from "../components/ui/assets";
 import Contact from "../components/contact";
 import { Placeholder } from "placeholder";
+import DividerBlue from "../components/ui/divider-blue";
 
 export default function Home() {
   return (
@@ -33,12 +31,10 @@ export default function Home() {
         </div>
       </div>
 
+      <DividerBlue className="bg-[#391b51]" />
+
       {/* Story */}
       <div className="bg-[#D3DEF4] w-full relative">
-        {/* //TODOS: On mobile device not show wave  */}
-        <Assets.WaveMd className="absolute hidden md:block xl:hidden -top-24 w-full -z-0" />
-        <Assets.WaveLg className="absolute hidden lg:block -top-32 w-full -z-0" />
-        <Assets.WaveSm className="absolute block -top-24 md:hidden w-full -z-0" />
         <div className="my-20 container flex lg:flex-row flex-col gap-20 px-10 md:px-0 z-10">
           <div className="flex flex-col gap-y-12 basis-1/2 z-10">
             <h2
@@ -59,8 +55,8 @@ export default function Home() {
             </p>
             <Button.Secondary className="uppercase w-fit font-bold shadow-md">See More</Button.Secondary>
           </div>
-          <div className="flex flex-col basis-1/2"> 
-          <h2
+          <div className="flex flex-col basis-1/2">
+            <h2
               className={cn(
                 luckiest_guy.className,
                 "text-5xl text-center bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-transparent items-center",
