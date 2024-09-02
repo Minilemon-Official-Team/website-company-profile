@@ -5,9 +5,9 @@ import Memey from "../public/Memey.png";
 import Ucup from "../public/Ucup.png";
 import Minggus from "../public/Minggus.png";
 import Amink from "../public/Amink.png";
-import Bibie from "../public/Bibie.png";
+import Bibie from "../public/Bibi.png";
 import Tigor from "../public/Tigor.png";
-import Rudi from "../public/Robot RU-D1.png";
+import Rudi from "../public/Robot-Bibie.png";
 
 export const charactersData = [
   {

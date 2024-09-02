@@ -153,6 +153,62 @@ const CompanyPage = () => {
           </div>
         </div>
       </div>
+          {/* Special Partner */}
+      <div className="bg-[#fbe5db] py-20">
+         <div className="container">
+          <h2
+            className={cn(
+            luckiest_guy.className,
+            "text-center text-5xl md:text-6xl lg:text-7xl bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-transparent items-center text-wrap mb-10"
+             )}
+           >
+              Special Partner
+          </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+               <p className="mt-4 font-semibold">Anis Ilahi Wahdati</p>
+               <p className="text-sm text-[#555]">BUSINESS DEVELOPMENT</p>
+            </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+               <p className="mt-4 font-semibold">Biwarca Sakti Pracihara</p>
+               <p className="text-sm text-[#555]">CREATIVE PROGRAM ANALYST</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+               <p className="mt-4 font-semibold">Elly Halsamer</p>
+               <p className="text-sm text-[#555]">BRAND COMMUNICATION</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+               <p className="mt-4 font-semibold">Francisca Diwati</p>
+               <p className="text-sm text-[#555]">PUBLIC RELATION</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+             <p className="mt-4 font-semibold">Andi Hardjani</p>
+             <p className="text-sm text-[#555]">HEAD OF VISUAL DEVELOPMENT</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+             <p className="mt-4 font-semibold">Arif Rachman Hakim</p>
+             <p className="text-sm text-[#555]">HEAD OF ANIMATION</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+             <p className="mt-4 font-semibold">Muhammad Ghaza</p>
+             <p className="text-sm text-[#555]">GAME DEVELOPMENT</p>
+           </div>
+           <div className="text-center">
+             <div className="bg-[#f9d8c3] h-[280px] w-[200px] mx-auto"></div>
+             <p className="mt-4 font-semibold">Fahmi</p>
+             <p className="text-sm text-[#555]">IT DEVELOPMENT</p>
+           </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };
