@@ -8,7 +8,7 @@
   }
 
   .title {
-    @apply text-7xl bg-gradient-to-b from-[#fdfd10] from-20% via-[#ffa136] via-55% to-[#f9751d] to-80% bg-clip-text text-transparent items-center z-10;
+    @apply md:text-6xl xl:text-7xl bg-gradient-to-b from-[#fdfd10] from-20% via-[#ffa136] via-55% to-[#f9751d] to-80% bg-clip-text text-transparent items-center z-10;
   }
 }
 

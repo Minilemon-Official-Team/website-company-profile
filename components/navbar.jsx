@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <div className="md:flex justify-center items-center w-full top-0 stripe-bg hidden sticky z-50">
       <div className={cn("")}>
-        <ul className="flex flex-row gap-x-3 lg:gap-x-4 items-center font-semibold my-4">
+        <ul className="flex flex-row gap-x-3 lg:gap-x-6 items-center font-semibold my-4">
           <li
             className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/about" ? "text-[#ffd201]" : "")}
             onClick={() => router.push("/about")}>
