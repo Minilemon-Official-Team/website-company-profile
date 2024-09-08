@@ -70,7 +70,7 @@ const StoryPage = () => {
       <div
         className="relative w-full justify-center overflow-hidden"
         style={{
-          width: "1920px",
+          width: "100%",
           height: "385px",
         }}>
         <Image
