@@ -17,11 +17,7 @@ const NavigationMobile = () => {
       href: "/",
     },
     {
-      name: "About Us",
-      href: "/about",
-    },
-    {
-      name: "The Story of",
+      name: "The Story of Us",
       href: "/story",
     },
     {
