@@ -14,11 +14,29 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      <input type="text" placeholder="Name" className="bg-transparent border border-white/70 rounded-md p-2 text-[#d2def4]" />
-      <input type="email" placeholder="Email" className="bg-transparent border border-white/70 rounded-md  text-[#d2def4] p-2" />
-      <input type="text" placeholder="Subject" className="bg-transparent border border-white/70 rounded-md  text-[#d2def4] p-2" />
-      <input type="text" placeholder="Message" className="bg-transparent border border-white/70 rounded-md  text-[#d2def4] p-2 pb-24" />
-      <Button.Primary className="uppercase w-fit font-bold shadow-md mt-6 scale-125">Submit</Button.Primary>
+      <input
+        type="text"
+        placeholder="Name"
+        className="rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        className="rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+      />
+      <input
+        type="text"
+        placeholder="Subject"
+        className="rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+      />
+      <input
+        type="text"
+        placeholder="Message"
+        className="rounded-md border border-white/70 bg-transparent p-2 pb-24 text-[#d2def4]"
+      />
+      <Button.Primary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
+        Submit
+      </Button.Primary>
     </div>
   );
 };

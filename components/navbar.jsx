@@ -18,12 +18,12 @@ const Navbar = () => {
   const navItems = [
     {
       name: "About Us",
-      icon: <GiDoorway className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <GiDoorway className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/about",
     },
     {
       name: "The Story of",
-      icon: <FaBookOpen className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <FaBookOpen className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/story",
     },
     {
@@ -33,22 +33,22 @@ const Navbar = () => {
     },
     {
       name: "Characters",
-      icon: <FaLemon className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <FaLemon className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/characters",
     },
     {
       name: "Our Product",
-      icon: <BsBox className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <BsBox className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/product",
     },
     {
       name: "Company",
-      icon: <FaFlag className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <FaFlag className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/company",
     },
     {
       name: "Contact Us",
-      icon: <BsCursorFill className="h-6 w-6 mr-1 md:hidden lg:block" />,
+      icon: <BsCursorFill className="mr-1 h-6 w-6 md:hidden lg:block" />,
       link: "/contact",
     },
   ];
@@ -60,28 +60,43 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <div className="md:flex justify-center items-center w-full top-0 stripe-bg hidden sticky z-50">
+    <div className="stripe-bg sticky top-0 z-50 hidden w-full items-center justify-center md:flex">
       <div className={cn("")}>
-        <ul className="flex flex-row gap-x-3 lg:gap-x-6 items-center font-semibold my-4">
+        <ul className="my-4 flex flex-row items-center gap-x-3 font-semibold lg:gap-x-6">
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/about" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/about")}>
-            <GiDoorway className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/about" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/about")}
+          >
+            <GiDoorway className="mr-1 h-6 w-6 md:hidden lg:block" />
             About Us
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/story" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/story")}>
-            <FaBookOpen className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/story" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/story")}
+          >
+            <FaBookOpen className="mr-1 h-6 w-6 md:hidden lg:block" />
             The Story of
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/characters" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/characters")}>
-            <FaLemon className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/characters" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/characters")}
+          >
+            <FaLemon className="mr-1 h-6 w-6 md:hidden lg:block" />
             Characters
           </li>
-          <li className="relative h-12 w-32 lg:h-14 lg:w-44 px-4 cursor-pointer" onClick={() => router.push("/")}>
+          <li
+            className="relative h-12 w-32 cursor-pointer px-4 lg:h-14 lg:w-44"
+            onClick={() => router.push("/")}
+          >
             <Image
               src={LogoBrand}
               className=""
@@ -93,21 +108,33 @@ const Navbar = () => {
             />
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/product" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/product")}>
-            <BsBox className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/product" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/product")}
+          >
+            <BsBox className="mr-1 h-6 w-6 md:hidden lg:block" />
             Our Product
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/company" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/company")}>
-            <FaFlag className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/company" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/company")}
+          >
+            <FaFlag className="mr-1 h-6 w-6 md:hidden lg:block" />
             Company
           </li>
           <li
-            className={cn("flex flex-row items-center cursor-pointer hover:text-[#ffe15a]", pathname === "/contact" ? "text-[#ffd201]" : "")}
-            onClick={() => router.push("/contact")}>
-            <BsCursorFill className="h-6 w-6 mr-1 md:hidden lg:block" />
+            className={cn(
+              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
+              pathname === "/contact" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/contact")}
+          >
+            <BsCursorFill className="mr-1 h-6 w-6 md:hidden lg:block" />
             Contact Us
           </li>
         </ul>

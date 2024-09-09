@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import { poppins } from "./fonts";
 import { cn } from "../lib/utils";
 import NavigationMobile from "../components/navigation-mobile";
+import { PageIndicator } from "@/components/page-indicator";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <NavigationMobile />
+        <PageIndicator />
         <Footer />
       </body>
     </html>
