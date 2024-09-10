@@ -221,17 +221,43 @@ export default function Home() {
           >
             O<span className="text-6xl">ur product</span>
           </h2>
-          <div className="flex flex-row gap-4">
-            <div className="hidden md:flex">
-              <Placeholder height={420} width={300} color="#333" />
-            </div>
-            <div className="flex">
-              <Placeholder height={420} width={300} color="#333" />
-            </div>
-            <div className="hidden md:flex">
-              <Placeholder height={420} width={300} color="#333" />
-            </div>
-          </div>
+          <Splide
+            options={{
+              type: 'loop',
+              interval: 2000,
+              pauseOnHover: false,
+              perPage: 3, 
+              gap: '1rem',
+              drag: 'free',
+              focus: 'center',
+              breakpoints: {
+                768: {
+                  perPage: 1,
+                },
+              },
+              AutoScroll: {
+                pauseOnHover: false,
+                speed: 2
+              },
+            }}
+            extensions={{AutoScroll}}
+          >
+            <SplideSlide>
+              <Placeholder height={420} width={300} color="#111" background="#d1fae5" />
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder background="#a7f3d0" height={420} width={300} color="#222" />
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder height={420} background="#6ee7b7" width={300} color="#333" />
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder height={420} width={300} color="#444" background="#34d399" />
+            </SplideSlide>
+            <SplideSlide>
+              <Placeholder height={420} background="#10b981" width={300} color="#333" />
+            </SplideSlide>
+          </Splide>
           <Button.Secondary className="uppercase w-fit font-bold shadow-md self-center scale-125 mt-2">See More</Button.Secondary>
         </div>
       </div>
