@@ -64,7 +64,7 @@ const NavigationMobile = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-5 z-50 flex items-center justify-center px-4 py-2 md:hidden">
+    <div className="fixed inset-x-0 bottom-5 z-50 flex items-center justify-center px-4 py-2 lg:hidden">
       <div className="flex w-fit flex-row items-center justify-center gap-x-2 rounded-full bg-white px-4">
         <HiChevronDoubleLeft
           className={cn(

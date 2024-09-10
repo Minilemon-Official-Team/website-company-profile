@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <DividerBlack
         className={cn(
-          pathname === "/" ? "bg-[#1b1b1b]" : "",
+          pathname === "/" ? "bg-[#f4d8d4] lg:bg-[#1b1b1b]" : "",
           pathname === "/about" ? "bg-[#f4d8d4]" : "",
           pathname === "/story" ? "bg-[#78602f]" : "",
           pathname === "/characters" ? "bg-[#eaf9e8]" : "",

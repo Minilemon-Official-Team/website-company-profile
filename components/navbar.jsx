@@ -60,7 +60,7 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <div className="stripe-bg sticky top-0 z-50 hidden w-full items-center justify-center md:flex">
+    <div className="stripe-bg sticky top-0 z-50 hidden w-full items-center justify-center lg:flex">
       <div className={cn("")}>
         <ul className="my-4 flex flex-row items-center gap-x-3 font-semibold lg:gap-x-6">
           <li
