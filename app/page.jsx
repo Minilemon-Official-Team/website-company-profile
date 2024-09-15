@@ -1,17 +1,18 @@
 "use client";
 
-import { cn } from "../lib/utils";
 import Image from "next/image";
-import { luckiest_guy } from "./fonts";
-import { Button } from "../components/ui/button";
-import Contact from "../components/contact";
 import { Placeholder } from "placeholder";
-import DividerBlue from "../components/ui/divider-blue";
-import Minggus from "../public/Minggus.png";
+
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+
+import { cn } from "../lib/utils";
+import { Button } from "../components/ui/button";
+import Contact from "../components/contact";
+import DividerBlue from "../components/ui/divider-blue";
+import Minggus from "../public/Minggus.png";
 import MinilemonTitle from "@/public/title-picture/minilemon-1.png";
 import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";
@@ -21,7 +22,6 @@ import StoryTitle from "@/public/title-picture/story-2.png";
 import CharacterTitle from "@/public/title-picture/characters-1.png";
 import OurProductTitle from "@/public/title-picture/our-product-1.png";
 import CompanyTitle from "@/public/title-picture/company-1.png";
-import ContactUsTitle from "@/public/title-picture/contact-us-1.png";
 
 export default function Home() {
   return (
@@ -299,15 +299,7 @@ export default function Home() {
       {/* Contact Us */}
       <div className="hidden w-full flex-row bg-[#1b1b1b] lg:flex">
         <div className="container my-20 flex flex-col gap-12 px-10 md:px-0 lg:flex-row">
-          <div className="flex basis-1/2 flex-col items-center justify-center gap-6">
-            <div>
-              <Image src={ContactUsTitle} alt="Contact Us" />
-            </div>
-            <p className="text-2xl text-[#d2def4]">How can we help you?</p>
-          </div>
-          <div className="flex basis-1/2 flex-col">
-            <Contact />
-          </div>
+          <Contact />
         </div>
       </div>
     </div>

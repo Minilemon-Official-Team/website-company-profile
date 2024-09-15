@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 const Primary = ({ className, children }) => (
   <button
     className={cn(
-      "ring-offset-background focus-visible:ring-ring text-primary-foreground hover:bg-primary/90 relative inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#FF7D10] px-4 py-2 text-sm font-medium text-[#d0dff4] drop-shadow-[-1px_2px_0px_rgba(232,105,14,1)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "ring-offset-background focus-visible:ring-ring text-primary-foreground hover:bg-primary/90 relative ml-2 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#FF7D10] px-4 py-2 text-sm font-medium text-[#d0dff4] drop-shadow-[-1px_2px_0px_rgba(232,105,14,1)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
       className,
     )}
   >
