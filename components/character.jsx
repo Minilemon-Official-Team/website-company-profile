@@ -22,7 +22,7 @@ const Character = ({
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    amount: 1,
+    amount: 0.8,
   });
 
   return (

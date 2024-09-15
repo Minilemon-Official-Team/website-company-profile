@@ -18,6 +18,7 @@ const CharactersPage = () => {
     autoplay: true,
     pauseOnHover: false,
     resetProgress: false,
+    interval: 12000,
   };
 
   return (
@@ -35,6 +36,10 @@ const CharactersPage = () => {
               <Character {...data} />
             </SplideSlide>
           ))}
+
+          <div className="splide__progress">
+            <div className="splide__progress__bar" />
+          </div>
         </Splide>
       </div>
     </>

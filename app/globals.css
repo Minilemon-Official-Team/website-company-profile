@@ -24,4 +24,9 @@
     #131313
   );
   background-size: 10px 10px;
+
+  .splide__progress_bar {
+    height: 4px;
+    background: #ccc;
+  }
 }
