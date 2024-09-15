@@ -17,6 +17,7 @@ const Character = ({
   logic,
   creative,
   luck,
+  className,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -29,7 +30,7 @@ const Character = ({
       key={id}
       ref={ref}
       className={cn(
-        "flex flex-col items-center justify-center",
+        "flex h-screen flex-col items-center justify-center lg:h-full",
         id === 1 ? "bg-[#FBEFEF]" : "",
         id === 2 ? "bg-[#FAF3E1]" : "",
         id === 3 ? "bg-[#E5FAE1]" : "",
@@ -40,25 +41,23 @@ const Character = ({
         id === 8 ? "bg-[#EBF9E8]" : "",
         id === 9 ? "bg-[#FBEFEF]" : "",
         id === 10 ? "bg-[#EAF9E8]" : "",
+        className,
       )}
     >
       <div className="container px-8 md:px-0">
-        <div
-          className={cn(
-            "flex max-w-6xl flex-col justify-center gap-6 py-8 md:flex-row",
-          )}
-        >
+        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-8 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
-              id % 2 === 0 ? "md:order-2" : "md:order-1",
-              "flex basis-4/12 flex-row items-center justify-center",
+              id % 2 === 0 ? "lg:order-2" : "lg:order-1",
+              "flex basis-4/12 flex-row items-center justify-center gap-4",
             )}
           >
-            <div className="order-2 flex basis-1/2 flex-col gap-6 lg:basis-0">
-              <div className="flex lg:hidden">
+            {/* Mobile Design */}
+            <div className="order-2 flex basis-1/2 flex-col gap-6 lg:hidden lg:basis-0">
+              <div className="flex">
                 <Image src={namePicture} alt={fullName} />
               </div>
-              <div className="flex flex-col gap-4 lg:hidden">
+              <div className="flex flex-col gap-4">
                 <Slider value={isInView ? strong : 0}>Strong</Slider>
                 <Slider value={isInView ? creative : 0}>Creative</Slider>
                 <Slider value={isInView ? logic : 0}>Logic</Slider>
@@ -81,11 +80,16 @@ const Character = ({
             className={cn(
               "flex basis-8/12 flex-col tracking-wide",
               id % 2 === 0
-                ? "md:order-1 md:text-right"
-                : "md:order-2 md:text-left",
+                ? "lg:order-1 lg:text-right"
+                : "lg:order-2 lg:text-left",
             )}
           >
-            <div className="hidden lg:flex">
+            <div
+              className={cn(
+                id % 2 === 0 ? "justify-end" : "justify-start",
+                "hidden lg:flex",
+              )}
+            >
               <Image src={namePicture} alt={fullName} />
             </div>
             <p className="leading-loose tracking-widest">{description}</p>
@@ -95,11 +99,11 @@ const Character = ({
                 id % 2 === 0 ? "justify-end" : "justify-start",
               )}
             >
-              <div className="flex flex-row items-center justify-between gap-x-10 md:gap-x-24">
+              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
                 <Slider value={isInView ? strong : 0}>Strong</Slider>
                 <Slider value={isInView ? creative : 0}>Creative</Slider>
               </div>
-              <div className="flex flex-row items-center justify-between gap-x-10 md:gap-x-24">
+              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
                 <Slider value={isInView ? logic : 0}>Logic</Slider>
                 <Slider value={isInView ? luck : 0}>Luck</Slider>
               </div>

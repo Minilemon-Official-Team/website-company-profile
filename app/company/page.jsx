@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "../../lib/utils";
 import { luckiest_guy } from "../fonts";
 import { Placeholder } from "placeholder";
+import Image from "next/image";
 import { specialPartners } from "../../data/specialPartners";
 
 const CompanyPage = () => {
@@ -215,7 +216,7 @@ const CompanyPage = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {specialPartners.map((partner, index) => (
               <div key={index} className="text-center">
-                <img
+                <Image
                   src={partner.image}
                   alt={partner.name}
                   className="mx-auto"
