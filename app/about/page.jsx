@@ -1,6 +1,12 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 import { luckiest_guy } from "../fonts";
+import IdeaTitle from "@/public/title-picture/idea-1.png";
+import MessageTitle from "@/public/title-picture/message-1.png";
+import TreatmentTitle from "@/public/title-picture/treatment-1.png";
+import ConceptTitle from "@/public/title-picture/concept-1.png";
+import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
+import Image from "next/image";
 
 const AboutPage = () => {
   return (
@@ -8,15 +14,9 @@ const AboutPage = () => {
       {/* Idea */}
       <div className="bg-[#d3def4] py-20">
         <div className="container flex flex-col justify-center gap-y-8 p-6">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-              "drop-shadow-[0px_4px_2px_rgba(102,1,139,1)]",
-            )}
-          >
-            Idea
-          </h2>
+          <div>
+            <Image src={IdeaTitle} alt="Idea" />
+          </div>
           <div className="flex flex-col gap-y-6 leading-loose tracking-widest">
             <p>
               Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
@@ -42,15 +42,9 @@ const AboutPage = () => {
       {/* Message */}
       <div className="bg-[#d3eff3] py-20">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-              "drop-shadow-[0px_4px_2px_rgba(13,58,116,1)]",
-            )}
-          >
-            Message
-          </h2>
+          <div className="flex justify-end">
+            <Image src={MessageTitle} alt="Message" />
+          </div>
           <div className="flex flex-col gap-y-6 leading-loose tracking-widest">
             <p>
               minimnya hiburan yang mengedepankan kualitas dan edukasi kepada
@@ -65,15 +59,9 @@ const AboutPage = () => {
       {/* Treatment */}
       <div className="bg-[#d3f4df] py-20">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-center">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-              "drop-shadow-[0px_4px_2px_rgba(8,70,106,1)]",
-            )}
-          >
-            Treatment
-          </h2>
+          <div className="flex justify-center">
+            <Image src={TreatmentTitle} alt="Treatment" />
+          </div>
           <p className="flex flex-col gap-y-6 leading-loose tracking-widest">
             Sadar akan persoalan-persoalan besar dan mendasar, PT Minilemon
             Nusantara berinisitatif membuat produk-produk anak yang berupa
@@ -85,15 +73,9 @@ const AboutPage = () => {
       {/* Concept */}
       <div className="bg-[#f0f4d3] py-20">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-start">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-              "drop-shadow-[0px_4px_2px_rgba(111,58,26,1)]",
-            )}
-          >
-            Concept
-          </h2>
+          <div>
+            <Image src={ConceptTitle} alt="Concept" />
+          </div>
           <p className="flex flex-col gap-y-6 leading-loose tracking-widest">
             Minilemon adalah kisah 6 sahabat sepermainan yang berasal dari suku
             berbeda-beda yaitu Jawa, Sunda, Papua, Tionghoa, Batak dan Bali.
@@ -107,15 +89,9 @@ const AboutPage = () => {
       {/* Psychographic */}
       <div className="bg-[#f4d8d4] py-20">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
-          <h2
-            className={cn(
-              luckiest_guy.className,
-              "items-center text-wrap bg-gradient-to-b from-[#fdfe28] from-10% via-[#ffa136] via-40% to-[#f66708] to-80% bg-clip-text text-5xl text-transparent md:text-6xl lg:text-7xl",
-              "drop-shadow-[0px_4px_2px_rgba(129,40,86,1)]",
-            )}
-          >
-            Psychographic
-          </h2>
+          <div className="flex justify-end">
+            <Image src={PsychographicTitle} alt="Psychographic" />
+          </div>
           <p className="flex flex-col gap-y-6 leading-loose tracking-wider">
             Membangun pola pikir positif di dalam pertumbuhan anak yang suka
             bermain, imajinatif, hidup dalam dunia angan-anagan, tidak suka
