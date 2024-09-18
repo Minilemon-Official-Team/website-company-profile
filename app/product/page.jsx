@@ -15,55 +15,62 @@ import MinilemonLiveParentingTitle1 from "@/public/title-picture/minilemon-live-
 import MinilemonLiveParentingTitle2 from "@/public/title-picture/minilemon-live-parenting-2.png";
 import MinilemonPanggungBonekaTitle1 from "@/public/title-picture/panggung-boneka-minilemon-1.png";
 import MinilemonPanggungBonekaTitle2 from "@/public/title-picture/panggung-boneka-minilemon-2.png";
+import ProductTitle from "@/public/title-picture/our-product-1.png";
 
 const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Product 1 */}
-      <div className="flex flex-row bg-[#1b1b1b] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
-            <Placeholder
-              height="550"
-              width="350"
-              background="#333"
-              color="#fff"
-            />
-          </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#c0cbdf]">
-            <div className="hidden flex-col lg:flex">
-              <Image
-                src={PetualanganSiMinilemonTitle1}
-                alt="Petualangan Si Minilemon"
-              />
-              <Image
-                src={PetualanganSiMinilemonTitle2}
-                alt="Petualangan Si Minilemon"
+      <div className="bg-[#1b1b1b] py-12">
+        <div className="mb-8 flex w-full justify-center lg:hidden">
+          <Image src={ProductTitle} alt="Our Product" />
+        </div>
+        <div className="flex flex-row">
+          <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
+            <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+              <Placeholder
+                height="550"
+                width="350"
+                background="#333"
+                color="#fff"
               />
             </div>
-            <p>
-              Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar yang
-              tanpa sengaja memicu kejar-kerjaran menegangkan dengan sekelompok
-              angsa marah. Dalam kekacauan itu, Ucup terpisah dan menghilang
-              setelah menemukan mesin portal misterius diruang rahasia Kak
-              Bibie.
-            </p>
-            <p className="">
-              Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan siap
-              bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman Tigor.{" "}
-              <Link
-                className="inline-flex items-center text-blue-500 hover:underline"
-                href="/story"
-              >
-                Read More <span className="text-xs">❯</span>
+            <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#c0cbdf]">
+              <div className="hidden flex-col lg:flex">
+                <Image
+                  src={PetualanganSiMinilemonTitle1}
+                  alt="Petualangan Si Minilemon"
+                />
+                <Image
+                  src={PetualanganSiMinilemonTitle2}
+                  alt="Petualangan Si Minilemon"
+                />
+              </div>
+              <p>
+                Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar
+                yang tanpa sengaja memicu kejar-kerjaran menegangkan dengan
+                sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
+                menghilang setelah menemukan mesin portal misterius diruang
+                rahasia Kak Bibie.
+              </p>
+              <p className="">
+                Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan siap
+                bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
+                Tigor.{" "}
+                <Link
+                  className="inline-flex items-center text-blue-500 hover:underline"
+                  href="/story"
+                >
+                  Read More <span className="text-xs">❯</span>
+                </Link>
+              </p>
+              <Link href={"#"} className="flex flex-row items-center gap-x-4">
+                <span className="rounded-full bg-black p-1 shadow-lg">
+                  <FaYoutube className="" />
+                </span>
+                Trailer
               </Link>
-            </p>
-            <Link href={"#"} className="flex flex-row items-center gap-x-4">
-              <span className="rounded-full bg-black p-1 shadow-lg">
-                <FaYoutube className="" />
-              </span>
-              Trailer
-            </Link>
+            </div>
           </div>
         </div>
       </div>
