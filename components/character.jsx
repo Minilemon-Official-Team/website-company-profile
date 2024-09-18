@@ -44,7 +44,7 @@ const Character = ({
         className,
       )}
     >
-      <div className="container px-8 md:px-0">
+      <div className="container overflow-auto px-8 md:px-0">
         <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-8 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
