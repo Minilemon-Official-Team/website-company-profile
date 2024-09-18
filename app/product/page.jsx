@@ -21,7 +21,7 @@ const ProductPage = () => {
     <div className="flex flex-col">
       {/* Product 1 */}
       <div className="flex flex-row bg-[#1b1b1b] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 md:flex-row">
+        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
             <Placeholder
               height="550"
@@ -31,7 +31,7 @@ const ProductPage = () => {
             />
           </div>
           <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#c0cbdf]">
-            <div className="hidden flex-col">
+            <div className="hidden flex-col lg:flex">
               <Image
                 src={PetualanganSiMinilemonTitle1}
                 alt="Petualangan Si Minilemon"
@@ -70,7 +70,7 @@ const ProductPage = () => {
 
       {/* Product 2 */}
       <div className="flex flex-row bg-[#d2e1f4] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 md:flex-row">
+        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
             <Placeholder
               width="350"
@@ -117,7 +117,7 @@ const ProductPage = () => {
 
       {/* Product 3 */}
       <div className="flex flex-row bg-[#d2f4d3] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 md:flex-row">
+        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
             <Placeholder
               width="350"
@@ -158,7 +158,7 @@ const ProductPage = () => {
 
       {/* Product 4 */}
       <div className="flex flex-row bg-[#f4d3e8] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 md:flex-row">
+        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
             <Placeholder
               width="350"
@@ -207,7 +207,7 @@ const ProductPage = () => {
 
       {/* Produk 5 */}
       <div className="flex flex-row bg-[#f4efd2] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 md:flex-row">
+        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
             <Placeholder
               width="350"
