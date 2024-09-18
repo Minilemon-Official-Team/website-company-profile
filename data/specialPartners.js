@@ -1,3 +1,4 @@
+// Input photo cards
 export const specialPartners = [
   {
     name: "Anis Ilahi Wahdati",
