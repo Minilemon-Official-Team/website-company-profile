@@ -33,7 +33,7 @@ const Contact = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
   });
 
@@ -43,19 +43,29 @@ const Contact = () => {
 
   if (!mounted) return null;
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: z.infer<typeof schema>) => {
     setIsSubmitting(true);
     try {
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+      const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID!;
+
+      if (!serviceId || !templateId || !userId) {
+        toast.error("Email service configuration is missing");
+        setIsSubmitting(false);
+        return;
+      }
+
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: data.name,
           from_email: data.email,
           subject: data.subject,
           message: data.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+        userId,
       );
       toast.success("Message sent successfully");
       reset();

@@ -15,44 +15,6 @@ const Navbar = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const navItems = [
-    {
-      name: "About Us",
-      icon: <GiDoorway className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/about",
-    },
-    {
-      name: "The Story of",
-      icon: <FaBookOpen className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/story",
-    },
-    {
-      name: "Home",
-      image: LogoBrand,
-      link: "/",
-    },
-    {
-      name: "Characters",
-      icon: <FaLemon className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/characters",
-    },
-    {
-      name: "Our Product",
-      icon: <BsBox className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/product",
-    },
-    {
-      name: "Company",
-      icon: <FaFlag className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/company",
-    },
-    {
-      name: "Contact Us",
-      icon: <BsCursorFill className="mr-1 h-6 w-6 md:hidden lg:block" />,
-      link: "/contact",
-    },
-  ];
-
   React.useEffect(() => {
     setMounted(true);
   }, []);
@@ -98,6 +60,7 @@ const Navbar = () => {
             onClick={() => router.push("/")}
           >
             <Image
+              alt="logo"
               src={LogoBrand}
               className=""
               fill

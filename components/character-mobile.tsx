@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import { cn } from "../lib/utils";
 import Image from "next/image";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -9,18 +8,20 @@ import { charactersData } from "@/data/characters";
 import { useInView } from "framer-motion";
 import Slider from "./ui/slider";
 
-const Character = ({
-  id,
-  namePicture,
-  fullName,
-  description,
-  image,
-  strong,
-  logic,
-  creative,
-  luck,
-  className,
-}) => {
+interface CharacterProps {
+  id: number;
+  namePicture: string;
+  fullName: string;
+  description: string;
+  image: string;
+  strong: number;
+  logic: number;
+  creative: number;
+  luck: number;
+  className?: string;
+}
+
+const Character = ({ strong, logic, creative, luck }: CharacterProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,

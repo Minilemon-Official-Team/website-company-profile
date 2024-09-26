@@ -19,8 +19,21 @@ import TitleTigor from "@/public/title-picture/tigor-title.png";
 import TitleTogar from "@/public/title-picture/togar-title.png";
 import TitleUcup from "@/public/title-picture/ucup-title.png";
 import TitleWayan from "@/public/title-picture/wayan-title.png";
+import { StaticImageData } from "next/image";
 
-export const charactersData = [
+interface CharacterData {
+  id: number;
+  namePicture: StaticImageData;
+  fullName: string;
+  description: string;
+  image: StaticImageData;
+  strong: number;
+  logic: number;
+  creative: number;
+  luck: number;
+}
+
+export const charactersData: CharacterData[] = [
   {
     id: 1,
     namePicture: TitleTogar,

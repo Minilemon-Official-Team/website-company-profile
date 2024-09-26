@@ -1,6 +1,4 @@
 import React from "react";
-import { cn } from "../../lib/utils";
-import { luckiest_guy } from "../fonts";
 import { Placeholder } from "placeholder";
 import Image from "next/image";
 import { specialPartners } from "../../data/specialPartners";
@@ -59,7 +57,7 @@ const CompanyPage = () => {
             Nusantara mengambil tanggung jawab untuk berkontribusi memberikan
             edukasi dan harapan untuk kemajuan bangsa.
             <br />
-            Dengan menciptakan "Good character" PT Minilemon Nusantara
+            Dengan menciptakan &quot;Good character&quot; PT Minilemon Nusantara
             diharapkan dapat berperan kreatif untuk mempersiapkan generasi muda
             dan anak-anak Indonesia yang tangguh, cinta tanah air, dengan
             membawa nilai - nilai kebaikan dan budaya yang merupakan warisan
@@ -115,10 +113,10 @@ const CompanyPage = () => {
                 Karakter animasi minilemon diharapkan menjadi figur baik dan
                 menjadi teladan terutama untuk anak-anak Indonesia, sehingga
                 buah lemon yang dikenal banyak manfaatnya, sangat cocok
-                dipadukan dengan topeng, untuk menjadi "THE GOOD CHARACTER"
-                dengan "WAJAH INDOENSIA". Dengan idenya yang brilian, "BAPAK
-                MINILEMON" merupakan julukan yang pantas dilekatkan dengan Reno
-                Halsamer.
+                dipadukan dengan topeng, untuk menjadi &quot;THE GOOD
+                CHARACTER&quot; dengan &quot;WAJAH INDOENSIA&quot;. Dengan
+                idenya yang brilian, &quot;BAPAK MINILEMON&quot; merupakan
+                julukan yang pantas dilekatkan dengan Reno Halsamer.
               </p>
             </div>
           </div>
@@ -159,8 +157,8 @@ const CompanyPage = () => {
                 teknologi, membuat Heriyadi Natawijaya banyak menciptakan
                 gagasan dan putusan yang berpihak kepada estetika dan budaya
                 kerja yang tech savvy, menyenangkan, transparan dan terukur.
-                dengan pemikiran dan Kepiawayannya "Paman Minilemon" adalah
-                julukan yang cocok untuk Heriyadi Natawijaya.
+                dengan pemikiran dan Kepiawayannya &quot;Paman Minilemon&quot;
+                adalah julukan yang cocok untuk Heriyadi Natawijaya.
               </p>
             </div>
           </div>

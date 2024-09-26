@@ -1,5 +1,10 @@
-// Input photo cards
-export const specialPartners = [
+interface SpecialPartner {
+  name: string;
+  role: string;
+  image: string;
+}
+
+export const specialPartners: SpecialPartner[] = [
   {
     name: "Anis Ilahi Wahdati",
     role: "BUSINESS DEVELOPMENT",
