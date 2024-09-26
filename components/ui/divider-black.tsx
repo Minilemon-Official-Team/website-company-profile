@@ -3,7 +3,7 @@
 import { cn } from "../../lib/utils";
 import React, { useEffect, useState } from "react";
 
-export default function DividerBlack({ className }) {
+export default function DividerBlack({ className }: { className?: string }) {
   const [windowWidth, setWindowWidth] = useState(1280);
 
   useEffect(() => {

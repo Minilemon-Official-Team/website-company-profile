@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { cn } from "../../lib/utils";
 import { Assets } from "./assets";
 
-const Slider = ({ children, value }) => {
+interface SliderProps {
+  children: React.ReactNode;
+  value: number;
+}
+
+const Slider = ({ children, value }: SliderProps) => {
   return (
     <div className="flex basis-1/2 flex-col">
       <p className={cn("pl-4 text-start font-semibold uppercase italic")}>

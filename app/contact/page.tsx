@@ -2,11 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaInstagram, FaYoutube, FaTiktok, FaLemon } from "react-icons/fa6";
+import { FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa6";
 
-import { cn } from "../../lib/utils";
-import { luckiest_guy } from "../fonts";
-import { Button } from "../../components/ui/button";
 import Contact from "@/components/contact";
 import OfficialTitle from "@/public/title-picture/official-1.png";
 import Image from "next/image";

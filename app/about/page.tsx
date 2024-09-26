@@ -1,6 +1,4 @@
 import React from "react";
-import { cn } from "../../lib/utils";
-import { luckiest_guy } from "../fonts";
 import IdeaTitle from "@/public/title-picture/idea-1.png";
 import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";

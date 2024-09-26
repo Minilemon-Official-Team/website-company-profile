@@ -1,11 +1,23 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 import { cn } from "../lib/utils";
-import { luckiest_guy } from "../app/fonts";
 import Slider from "./ui/slider";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { useInView } from "framer-motion";
+
+interface CharacterProps {
+  id: number;
+  namePicture: StaticImageData;
+  fullName: string;
+  description: string;
+  image: StaticImageData;
+  strong: number;
+  logic: number;
+  creative: number;
+  luck: number;
+  className?: string;
+}
 
 const Character = ({
   id,
@@ -18,7 +30,7 @@ const Character = ({
   creative,
   luck,
   className,
-}) => {
+}: CharacterProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,

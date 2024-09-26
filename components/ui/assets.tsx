@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
 
-const IconSlider = ({ className }) => (
+const IconSlider = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 64 64"
     fill="none"

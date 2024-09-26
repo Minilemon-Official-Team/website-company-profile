@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import { cn } from "../../lib/utils";
-import { luckiest_guy } from "../fonts";
 import { Placeholder } from "placeholder";
-import { FaChevronRight, FaYoutube } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
 import PetualanganSiMinilemonTitle1 from "@/public/title-picture/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title-picture/petualangan-si-minilemon-2.png";
@@ -100,11 +98,12 @@ const ProductPage = () => {
             <p>
               Dengan menyadari betapa pentingnya meenjaga dan melestarikan alam,
               Minilemon yang di pimpin Kak Biebie, memulai petualangan mereka
-              dalam serial animasi "Minilemon Save The Earth". Di sini, mereka
-              tidak hanya belajar lebih dalam tentang ekosistem yang rumit,
-              keanekaragaman hayati yang menakjubkan, pentingnya konservasi
-              alam, tetapi mereka juga belajar menanamkan nilai-nilai positif
-              dan tanggung jawab terhadap alam dari setiap langkah mereka.{" "}
+              dalam serial animasi &quot;Minilemon Save The Earth&quot;. Di
+              sini, mereka tidak hanya belajar lebih dalam tentang ekosistem
+              yang rumit, keanekaragaman hayati yang menakjubkan, pentingnya
+              konservasi alam, tetapi mereka juga belajar menanamkan nilai-nilai
+              positif dan tanggung jawab terhadap alam dari setiap langkah
+              mereka.{" "}
               <Link
                 className="inline-flex items-center font-bold text-blue-500 hover:underline"
                 href="/story"
@@ -191,10 +190,10 @@ const ProductPage = () => {
               peran aktif orang tua dalam membimbing anak-anak mereka.
             </p>
             <p>
-              "Sahabat Minilemon Parenting" adalah program yang dirancang khusus
-              untuk membantu para bunda dengan memberikan tips dan saran praktis
-              yang dapat langsung diterapkan di rumah. Sehingga orang tua dapat
-              ikut berperan mendidik anak-anak mereka.{" "}
+              &quot;Sahabat Minilemon Parenting&quot; adalah program yang
+              dirancang khusus untuk membantu para bunda dengan memberikan tips
+              dan saran praktis yang dapat langsung diterapkan di rumah.
+              Sehingga orang tua dapat ikut berperan mendidik anak-anak mereka.{" "}
               <Link
                 className="inline-flex items-center font-bold text-blue-500 hover:underline"
                 href="/story"
@@ -235,15 +234,16 @@ const ProductPage = () => {
               />
             </div>
             <p>
-              "Panggung Boneka Minilemon" adlaah program pertunjukan boneka yang
-              menghadirkan kisah-kisah lucu dan seru dari keseharian Minilemon.
+              &quot;Panggung Boneka Minilemon&quot; adlaah program pertunjukan
+              boneka yang menghadirkan kisah-kisah lucu dan seru dari keseharian
+              Minilemon.
             </p>
             <p>
-              Selain mengundang tawa dan penuh kejutan, certa "Panggung Boneka
-              Minilemon" selalu disertai dengan pesan-pesan moral yang positif.
-              Melalui karakter Minilemon, anak-anak diajak untuk bermain dan
-              belajar tentang nilai-nilai persahabatan, gotong royong,
-              kejujuran, dan tanggung jawab.{" "}
+              Selain mengundang tawa dan penuh kejutan, certa &quot;Panggung
+              Boneka Minilemon&quot; selalu disertai dengan pesan-pesan moral
+              yang positif. Melalui karakter Minilemon, anak-anak diajak untuk
+              bermain dan belajar tentang nilai-nilai persahabatan, gotong
+              royong, kejujuran, dan tanggung jawab.{" "}
               <Link
                 className="inline-flex items-center font-bold text-blue-500 hover:underline"
                 href="/story"

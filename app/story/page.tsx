@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, stagger } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Cave from "@/public/cave.png";
 import StoryTitle from "@/public/title-picture/story-1.png";
@@ -83,9 +83,9 @@ const StoryPage = () => {
                 <motion.p variants={paragraphVariants}>
                   Suatu malam, dalam perjalanannya melewati hutan yang lebat,
                   Pangeran Djoyo tersesat dan ia mendengar sayup-sayup suara
-                  yang memanggil namanya, "Djoyo... Djoyo... Djoyo..." karena
-                  penasaran, Pangeran Djoyo mengikutinya hingga tiba di depan
-                  sebuah gua.
+                  yang memanggil namanya, &quot;Djoyo... Djoyo... Djoyo...&quot;
+                  karena penasaran, Pangeran Djoyo mengikutinya hingga tiba di
+                  depan sebuah gua.
                 </motion.p>
                 <motion.p variants={paragraphVariants}>
                   Hujan mulai turun, lalu Djoyo memutuskan untuk berteduh di
