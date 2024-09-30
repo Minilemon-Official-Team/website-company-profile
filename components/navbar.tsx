@@ -1,14 +1,19 @@
 "use client";
 
-import { cn } from "../lib/utils";
 import React from "react";
-import LogoBrand from "../public/logo.png";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import { GiDoorway } from "react-icons/gi";
-import { FaBookOpen, FaFlag } from "react-icons/fa";
-import { FaLemon } from "react-icons/fa6";
-import { BsBox, BsCursorFill } from "react-icons/bs";
+
+import { cn } from "../lib/utils";
+import LogoBrand from "../public/logo.png";
+import {
+  ArrowIcon,
+  BookIcon,
+  CubeIcon,
+  FlagIcon,
+  GateIcon,
+  LemonIcon,
+} from "./icons";
 
 const Navbar = () => {
   const [mounted, setMounted] = React.useState(false);
@@ -22,9 +27,85 @@ const Navbar = () => {
   if (!mounted) return null;
 
   return (
-    <div className="stripe-bg sticky top-0 z-50 hidden w-full items-center justify-center lg:flex">
-      <div className={cn("")}>
-        <ul className="my-4 flex flex-row items-center gap-x-3 font-semibold lg:gap-x-6">
+    <div className="sticky top-0 z-50 hidden w-full items-center justify-center bg-gradient-to-b from-[#303030] to-[#252525] lg:flex">
+      <div className="flex max-w-screen-lg flex-row items-center py-5 font-semibold">
+        <ul className="flex flex-row gap-6">
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/about" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/about")}
+          >
+            <GateIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">About Us</span>
+          </li>
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/story" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/story")}
+          >
+            <BookIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">The Story of</span>
+          </li>
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/characters" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/characters")}
+          >
+            <LemonIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">Characters</span>
+          </li>
+        </ul>
+        <div className="relative flex h-14 w-44 cursor-pointer flex-row">
+          <Image
+            alt="logo"
+            src={LogoBrand}
+            className=""
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </div>
+        <ul className="flex flex-row gap-6">
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/product" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/product")}
+          >
+            <CubeIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">Our Product</span>
+          </li>
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/company" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/company")}
+          >
+            <FlagIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">Company</span>
+          </li>
+          <li
+            className={cn(
+              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              pathname === "/contact" ? "text-[#ffd201]" : "",
+            )}
+            onClick={() => router.push("/contact")}
+          >
+            <ArrowIcon className="h-5 w-5" fill="#868686" />
+            <span className="mt-1">Contact Us</span>
+          </li>
+        </ul>
+        {/* <ul className="my-4 flex flex-row items-center gap-6 pt-2 text-[16px] font-semibold tracking-tighter">
           <li
             className={cn(
               "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
@@ -32,7 +113,7 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/about")}
           >
-            <GiDoorway className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <GiDoorway className="mr-1 h-5 w-5 md:hidden lg:block" />
             About Us
           </li>
           <li
@@ -42,7 +123,7 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/story")}
           >
-            <FaBookOpen className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <FaBookOpen className="mr-1 h-5 w-5 md:hidden lg:block" />
             The Story of
           </li>
           <li
@@ -52,7 +133,11 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/characters")}
           >
-            <FaLemon className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <Image
+              src={LemonIcon}
+              alt="lemon-icon"
+              className="mr-1 h-6 w-6 md:hidden lg:block"
+            />
             Characters
           </li>
           <li
@@ -77,7 +162,7 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/product")}
           >
-            <BsBox className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <BsBox className="mr-1 h-5 w-5 md:hidden lg:block" />
             Our Product
           </li>
           <li
@@ -87,7 +172,7 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/company")}
           >
-            <FaFlag className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <FaFlag className="mr-1 h-5 w-5 md:hidden lg:block" />
             Company
           </li>
           <li
@@ -97,10 +182,10 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/contact")}
           >
-            <BsCursorFill className="mr-1 h-6 w-6 md:hidden lg:block" />
+            <BsCursorFill className="mr-1 h-5 w-5 md:hidden lg:block" />
             Contact Us
           </li>
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
