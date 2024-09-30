@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 
-import { Button } from "./ui/button";
+import { Button } from "./ui/button-sec";
 import ContactUsTitle from "@/public/title-picture/contact-us-1.png";
 
 const schema = z.object({

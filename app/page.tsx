@@ -9,7 +9,7 @@ import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 import { cn } from "../lib/utils";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button-sec";
 import Contact from "../components/contact";
 import DividerBlue from "../components/ui/divider-blue";
 import Minggus from "../public/Minggus.png";
@@ -29,17 +29,19 @@ export default function Home() {
       {/* Section 1 */}
       <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
         <div className="container my-12 flex flex-col gap-4 px-10 lg:px-0">
-          <p className="my-2 text-xl font-bold uppercase tracking-wide">
+          <p className="mt-10 text-xl font-bold uppercase tracking-wide text-[#d5ddf4]">
             welcome to
           </p>
-          <Image src={MinilemonTitle} alt="Minilemon" className="my-4" />
-          <div className="hidden flex-col lg:flex">
-            <p className="leading-8 tracking-wide">
+          <Image src={MinilemonTitle} alt="Minilemon" className="mb-1" />
+
+          {/* Desktop View */}
+          <div className="hidden flex-col font-semibold leading-8 tracking-wide text-[#d5ddf4]/80 lg:flex">
+            <p className="">
               Berawal dari cinta dan bangga akan budaya topeng yang merupakan
               wajah suku bangsa Indonesia,
             </p>
             <p>
-              <span className="text-[#ffe200]">
+              <span className="text-[#ffe200]/80">
                 Reno Halsamer Founder (dTopeng Kingdom Foundation)
               </span>{" "}
               menciptakan tokoh animasi fiksi
@@ -49,6 +51,8 @@ export default function Home() {
               kesehatan.
             </p>
           </div>
+
+          {/* Mobile View */}
           <div className="flex flex-col gap-y-4 self-center leading-loose tracking-widest lg:hidden">
             <p>
               Berawal dari cinta dan bangga akan warisan budaya khususnya
