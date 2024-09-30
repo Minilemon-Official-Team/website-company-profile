@@ -8,6 +8,7 @@ import { poppins } from "./fonts";
 import { cn } from "../lib/utils";
 import NavigationMobile from "../components/navigation-mobile";
 import { PageIndicator } from "@/components/page-indicator";
+import Dimension from "@/components/dimension";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className={cn(poppins.className)}>
         <Navbar />
         {children}
+        <Dimension />
         <NavigationMobile />
         <PageIndicator />
         <Footer />
