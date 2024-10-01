@@ -8,11 +8,11 @@ import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
-import { cn } from "../lib/utils";
-import { Button } from "../components/ui/button-sec";
-import Contact from "../components/contact";
-import DividerBlue from "../components/ui/divider-blue";
-import Minggus from "../public/Minggus.png";
+import { cn } from "@/lib/utils";
+import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import Contact from "@/components/contact";
+import DividerBlue from "@/components/ui/divider-blue";
+import Minggus from "@/public/Minggus.png";
 import MinilemonTitle from "@/public/title-picture/minilemon-1.png";
 import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";
@@ -28,14 +28,14 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center">
       {/* Section 1 */}
       <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
-        <div className="container my-12 flex flex-col gap-4 px-10 lg:px-0">
+        <div className="container mb-20 mt-12 flex flex-col gap-4 px-10 lg:px-0">
           <p className="mt-10 text-xl font-bold uppercase tracking-wide text-[#d5ddf4]">
             welcome to
           </p>
           <Image src={MinilemonTitle} alt="Minilemon" className="mb-1" />
 
           {/* Desktop View */}
-          <div className="hidden flex-col font-semibold leading-8 tracking-wide text-[#d5ddf4]/80 lg:flex">
+          <div className="hidden flex-col font-semibold leading-7 tracking-wide text-[#d5ddf4]/80 lg:flex">
             <p className="">
               Berawal dari cinta dan bangga akan budaya topeng yang merupakan
               wajah suku bangsa Indonesia,
@@ -76,9 +76,9 @@ export default function Home() {
             </p>
           </div>
           <div className="flex w-full items-center justify-center lg:items-start lg:justify-start">
-            <Button.Primary className="mb-24 mt-8 w-fit scale-125 font-bold uppercase shadow-md">
+            <ButtonLegacy.Primary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
               See More
-            </Button.Primary>
+            </ButtonLegacy.Primary>
           </div>
         </div>
       </div>
@@ -195,14 +195,14 @@ export default function Home() {
           </div>
           <div className="mb-2 mt-6 flex flex-row">
             <div className="flex basis-1/2">
-              <Button.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
+              <ButtonLegacy.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
                 See More
-              </Button.Secondary>
+              </ButtonLegacy.Secondary>
             </div>
             <div className="flex basis-1/2 justify-center">
-              <Button.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
+              <ButtonLegacy.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
                 See More
-              </Button.Secondary>
+              </ButtonLegacy.Secondary>
             </div>
           </div>
         </div>
@@ -276,9 +276,9 @@ export default function Home() {
               />
             </SplideSlide>
           </Splide>
-          <Button.Secondary className="mt-2 w-fit scale-125 self-center font-bold uppercase shadow-md">
+          <ButtonLegacy.Secondary className="mt-2 w-fit scale-125 self-center font-bold uppercase shadow-md">
             See More
-          </Button.Secondary>
+          </ButtonLegacy.Secondary>
         </div>
       </div>
 
@@ -294,9 +294,9 @@ export default function Home() {
             Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
             Pendidikan berbasis seni, hiburan dan teknologi.
           </p>
-          <Button.Secondary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
+          <ButtonLegacy.Secondary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
             See More
-          </Button.Secondary>
+          </ButtonLegacy.Secondary>
         </div>
       </div>
 
