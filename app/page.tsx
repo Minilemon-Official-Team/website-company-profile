@@ -22,6 +22,7 @@ import StoryTitle from "@/public/title-picture/story-2.png";
 import CharacterTitle from "@/public/title-picture/characters-1.png";
 import OurProductTitle from "@/public/title-picture/our-product-1.png";
 import CompanyTitle from "@/public/title-picture/company-1.png";
+import { charactersData } from "@/data/characters";
 
 export default function Home() {
   return (
@@ -85,7 +86,7 @@ export default function Home() {
 
       <DividerBlue className="bg-[#391b51]" />
 
-      {/* Message */}
+      {/* Message Mobile View */}
       <div className="w-full bg-[#d3def4] py-20 lg:hidden">
         <div className="container flex max-w-xl flex-col justify-center gap-y-6 px-8 text-end sm:px-0">
           <div className="flex w-full justify-end">
@@ -102,7 +103,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Treatment */}
+      {/* Treatment Mobile View */}
       <div className="w-full bg-[#d3eff3] py-20 lg:hidden">
         <div className="container flex max-w-xl flex-col justify-center gap-y-6 px-8 text-center sm:px-0">
           <div className="flex w-full justify-center">
@@ -116,7 +117,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Concept */}
+      {/* Concept Mobile View */}
       <div className="w-full bg-[#f0f4d3] py-20 lg:hidden">
         <div className="container flex max-w-xl flex-col justify-center gap-y-6 px-8 text-start sm:px-0">
           <div className="">
@@ -132,7 +133,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Psychographic */}
+      {/* Psychographic Mobile View */}
       <div className="w-full bg-[#f4d8d4] py-20 lg:hidden">
         <div className="container flex max-w-xl flex-col justify-center gap-y-6 px-8 text-end sm:px-0">
           <div className="">
@@ -147,11 +148,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Story Large Screen */}
+      {/* Story Desktop View */}
       <div className="hidden w-full bg-[#D3DEF4] lg:flex">
-        {/* <Story /> */}
-        <div className="container my-10 flex flex-col gap-y-2">
-          <div className="flex flex-row gap-12">
+        <div className="container mt-10 flex flex-col gap-y-3">
+          <div className="mt-2 flex flex-row gap-12">
             <div className="basis-1/2">
               <Image src={StoryTitle} alt="Story" />
             </div>
@@ -159,41 +159,57 @@ export default function Home() {
               <Image src={CharacterTitle} alt="Character Minggus" />
             </div>
           </div>
-          <div className="flex flex-row gap-12">
-            <div
-              className={cn("flex basis-1/2 flex-col justify-between gap-y-12")}
-            >
-              <div className="flex h-full flex-col justify-between gap-y-12 font-medium leading-relaxed tracking-wider">
-                <p className="z-10 mt-4">
-                  Di dalam gua ditengah kebun lemon yang indah, hidup seorang
-                  kakek (Djoyo) yang setiap hari membuat topeng berbentuk wajah
-                  manusia. Kecintaannya dengan Nusantara membuat gua yang ia
-                  tinggali dihiasi ribuan topeng wajah dari kesukuan yang
-                  berbeda-beda di Nusantara.
-                </p>
-                <p className="z-10">
-                  Suatu malam, Kakek yang baik hati ini bermimpi. di dalam
-                  mimpinya ia melihat 6 topengnya hidup dan menjelma menjadi
-                  karakter anak-anak dengan tubuh buah lemon yang ia sebut
-                  MINILEMON.
-                </p>
-              </div>
+          <div className="flex flex-row gap-4">
+            <div className="flex basis-1/2 flex-col gap-y-6 font-semibold leading-loose tracking-wider text-black/60">
+              <p className="">
+                Di dalam gua ditengah kebun lemon yang indah, hidup seorang
+                kakek (Djoyo) yang setiap hari membuat topeng berbentuk wajah
+                manusia. Kecintaannya dengan Nusantara membuat gua yang ia
+                tinggali dihiasi ribuan topeng wajah dari kesukuan yang
+                berbeda-beda di Nusantara.
+              </p>
+              <p>
+                Suatu malam, Kakek yang baik hati ini bermimpi. di dalam
+                mimpinya ia melihat 6 topengnya hidup dan menjelma menjadi
+                karakter anak-anak dengan tubuh buah lemon yang ia sebut
+                MINILEMON.
+              </p>
             </div>
             <div className={cn("flex basis-1/2 items-center justify-center")}>
-              <div className="relative h-[285px] w-[228px]">
-                <Image
-                  src={Minggus}
-                  alt="Minggus"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: "contain",
+              <div className="h-full w-full">
+                <Splide
+                  options={{
+                    type: "loop",
+                    interval: 2000,
+                    perPage: 1,
+                    perMove: 1,
+                    gap: "0.5rem",
+                    drag: "free",
+                    focus: "center",
+                    pagination: false,
                   }}
-                />
+                >
+                  {charactersData.map((character) => (
+                    <SplideSlide
+                      key={character.id}
+                      className="relative h-[350px] w-[300px]"
+                    >
+                      <Image
+                        src={character.image}
+                        alt={character.fullName}
+                        fill
+                        sizes="100vw"
+                        style={{
+                          objectFit: "contain",
+                        }}
+                      />
+                    </SplideSlide>
+                  ))}
+                </Splide>
               </div>
             </div>
           </div>
-          <div className="mb-2 mt-6 flex flex-row">
+          <div className="mb-12 mt-4 flex flex-row">
             <div className="flex basis-1/2">
               <ButtonLegacy.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
                 See More
