@@ -300,7 +300,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Contact Us */}
+      {/* Contact Us Desktop View */}
       <div className="hidden w-full flex-row bg-[#1b1b1b] lg:flex">
         <div className="container my-20 flex flex-col gap-12 px-10 md:px-0 lg:flex-row">
           <Contact />

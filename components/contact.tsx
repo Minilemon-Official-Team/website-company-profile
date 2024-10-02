@@ -83,7 +83,7 @@ const Contact = () => {
         <div className="">
           <Image src={ContactUsTitle} alt="Contact Us" />
         </div>
-        <p className="text-2xl text-[#d2def4]">How can we help you?</p>
+        <p className="text-3xl text-[#d2def4]">How can we help you?</p>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -98,7 +98,7 @@ const Contact = () => {
               {...register("name")}
               id="name"
               placeholder="Name"
-              className="w-full rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
             />
             {errors.name && (
               <p className="text-xs text-red-500">{errors.name.message}</p>
@@ -113,7 +113,7 @@ const Contact = () => {
               id="email"
               type="email"
               placeholder="Email"
-              className="w-full rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
             />
             {errors.email && (
               <p className="text-xs text-red-500">{errors.email.message}</p>
@@ -128,7 +128,7 @@ const Contact = () => {
               id="subject"
               type="text"
               placeholder="Subject"
-              className="w-full rounded-md border border-white/70 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
             />
             {errors.subject && (
               <p className="text-xs text-red-500">{errors.subject.message}</p>
@@ -143,7 +143,7 @@ const Contact = () => {
               id="message"
               rows={4}
               placeholder="Message"
-              className="w-full rounded-md border border-white/70 bg-transparent p-2 pb-24 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent p-2 pb-16 text-[#d2def4]"
             />
             {errors.message && (
               <p className="text-xs text-red-500">{errors.message.message}</p>
@@ -153,7 +153,7 @@ const Contact = () => {
           <Button.Primary
             type="submit"
             disabled={isSubmitting}
-            className="mt-6 w-fit scale-125 font-bold uppercase shadow-md"
+            className="mt-4 w-fit scale-125 font-bold uppercase shadow-md"
           >
             {isSubmitting ? "Sending..." : "Submit"}
           </Button.Primary>

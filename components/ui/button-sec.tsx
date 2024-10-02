@@ -1,18 +1,17 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 
-const Primary = ({
-  className,
-  children,
-  ...props
-}: {
+interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   className?: string;
   children: React.ReactNode;
-  props?: React.HTMLProps<HTMLButtonElement>;
-}) => (
+  type?: "button" | "submit" | "reset";
+}
+
+const Primary = ({ className, children, ...props }: ButtonProps) => (
   <button
+    type="button"
     className={cn(
-      "ring-offset-background focus-visible:ring-ring text-primary-foreground hover:bg-primary/90 relative ml-2 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#FF7D10] px-4 py-2 text-sm font-medium text-white drop-shadow-[-1px_2px_0px_rgba(232,105,14,1)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "relative ml-2 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#FF7D10] px-4 py-2 text-sm font-medium text-primary-foreground text-white ring-offset-background drop-shadow-[-1px_2px_0px_rgba(232,105,14,1)] transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
       className,
     )}
     {...props}
@@ -23,18 +22,13 @@ const Primary = ({
   </button>
 );
 
-const Secondary = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => (
+const Secondary = ({ className, children, ...props }: ButtonProps) => (
   <button
     className={cn(
-      "ring-offset-background focus-visible:ring-ring text-primary-foreground hover:bg-primary/90 relative ml-2 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#606060] px-4 py-2 text-sm font-medium text-[#ffffff] drop-shadow-[-1px_2px_0px_rgba(83,83,83,1)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "relative ml-2 inline-flex h-8 items-center justify-center whitespace-nowrap rounded-full bg-[#606060] px-4 py-2 text-sm font-medium text-[#ffffff] text-primary-foreground ring-offset-background drop-shadow-[-1px_2px_0px_rgba(83,83,83,1)] transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
       className,
     )}
+    {...props}
   >
     <div className="absolute left-3 top-0 h-2 w-10 rounded-full bg-[#707070]" />
     {children}
