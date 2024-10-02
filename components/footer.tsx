@@ -25,9 +25,9 @@ const Footer = () => {
           pathname === "/contact" ? "bg-[#d2d5f4]" : "",
         )}
       />
-      <div className="flex flex-col items-center justify-center bg-[#272727] py-4">
-        <Image src={LogoBrand} alt="logo" width={100} height={100} />
-        <p className="text-xs text-[#868686]">
+      <div className="flex flex-col items-center justify-center gap-3 bg-[#272727] py-3">
+        <Image src={LogoBrand} alt="logo" width={80} height={80} />
+        <p className="text-xs font-semibold tracking-wider text-[#868686]">
           Copyright 2020 - {currrentYear} | Minilemon | All Rights Reserved
         </p>
       </div>
