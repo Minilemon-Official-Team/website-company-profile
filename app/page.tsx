@@ -224,7 +224,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Product */}
+      {/* Product Desktop View */}
       <div className="hidden w-full flex-col bg-[#1b1b1b] lg:flex">
         <div className="container my-12 flex flex-col items-center justify-center gap-8 px-10 pt-6 md:px-0">
           <div>
@@ -253,42 +253,42 @@ export default function Home() {
           >
             <SplideSlide>
               <Placeholder
-                height={420}
-                width={300}
+                height={445.2}
+                width={315}
                 color="#111"
                 background="#d1fae5"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                background="#a7f3d0"
-                height={420}
-                width={300}
+                height={445.2}
+                width={315}
                 color="#222"
+                background="#a7f3d0"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={420}
-                background="#6ee7b7"
-                width={300}
+                height={445.2}
+                width={315}
                 color="#333"
+                background="#6ee7b7"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={420}
-                width={300}
+                height={445.2}
+                width={315}
                 color="#444"
                 background="#34d399"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={420}
-                background="#10b981"
-                width={300}
+                height={445.2}
+                width={315}
                 color="#333"
+                background="#10b981"
               />
             </SplideSlide>
           </Splide>
