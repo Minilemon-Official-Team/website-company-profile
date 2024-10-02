@@ -282,13 +282,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Company */}
+      {/* Company Desktop View */}
       <div className="hidden w-full flex-col bg-[#f4e4d4] lg:flex">
-        <div className="container my-12 flex flex-col gap-4 px-10 md:px-0">
+        <div className="container my-14 flex flex-col gap-4 px-10 md:px-0">
           <div>
             <Image src={CompanyTitle} alt="Company" />
           </div>
-          <p className="leading-relaxed tracking-widest">
+          <p className="font-semibold leading-loose tracking-widest text-[#2c2a2a]/70">
             PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
             Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
             Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
