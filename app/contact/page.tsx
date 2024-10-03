@@ -8,7 +8,7 @@ import Contact from "@/components/contact";
 import OfficialTitle from "@/public/title-picture/official-1.png";
 import Image from "next/image";
 import FollowTitle from "@/public/title-picture/follow-1.png";
-import LemonIcon from "@/public/icon/lemon-icon.png";
+import LemonIcon from "@/public/icon/lemon-grey.png";
 
 const ContactPage = () => {
   const [mounted, setMounted] = useState(false);
