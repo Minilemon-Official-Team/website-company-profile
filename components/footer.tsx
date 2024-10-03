@@ -19,7 +19,7 @@ const Footer = () => {
           "absolute top-0",
           pathname === "/" ? "bg-[#f4d8d4] lg:bg-[#1b1b1b]" : "",
           pathname === "/about" ? "bg-[#f4d8d4]" : "",
-          pathname === "/story" ? "bg-[#78602f]" : "",
+          pathname === "/story" ? "bg-[#d4def4]" : "",
           pathname === "/characters" ? "bg-[#eaf9e8]" : "",
           pathname === "/product" ? "bg-[#f4efd2]" : "",
           pathname === "/company" ? "bg-[#fbe5db]" : "",
