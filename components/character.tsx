@@ -43,16 +43,16 @@ const Character = ({
       ref={ref}
       className={cn(
         "flex h-screen flex-col items-center justify-center lg:h-full",
-        id === 1 ? "bg-[#FBEFEF]" : "",
-        id === 2 ? "bg-[#FAF3E1]" : "",
-        id === 3 ? "bg-[#E5FAE1]" : "",
-        id === 4 ? "bg-[#FAF0FB]" : "",
-        id === 5 ? "bg-[#E4FAF8]" : "",
-        id === 6 ? "bg-[#F0F4FF]" : "",
-        id === 7 ? "bg-[#FEF4EB]" : "",
-        id === 8 ? "bg-[#EBF9E8]" : "",
-        id === 9 ? "bg-[#FBEFEF]" : "",
-        id === 10 ? "bg-[#EAF9E8]" : "",
+        id === 1 ? "bg-[#dedede]" : "",
+        id === 2 ? "bg-[#2e2e2e]" : "",
+        id === 3 ? "bg-[#dedede]" : "",
+        id === 4 ? "bg-[#2e2e2e]" : "",
+        id === 5 ? "bg-[#dedede]" : "",
+        id === 6 ? "bg-[#2e2e2e]" : "",
+        id === 7 ? "bg-[#dedede]" : "",
+        id === 8 ? "bg-[#2e2e2e]" : "",
+        id === 9 ? "bg-[#dedede]" : "",
+        id === 10 ? "bg-[#2e2e2e]" : "",
         className,
       )}
     >
@@ -76,6 +76,7 @@ const Character = ({
                 <Slider value={isInView ? luck : 0}>Luck</Slider>
               </div>
             </div>
+
             <div className="relative h-[350px] w-[300px] basis-1/2 lg:basis-full">
               <Image
                 src={image}
@@ -99,12 +100,20 @@ const Character = ({
             <div
               className={cn(
                 id % 2 === 0 ? "justify-end" : "justify-start",
-                "hidden lg:flex",
+                "mb-4 mt-10 hidden lg:flex",
               )}
             >
               <Image src={namePicture} alt={fullName} />
             </div>
-            <p className="leading-loose tracking-widest">{description}</p>
+            <p
+              className={cn(
+                "mb-6 font-semibold leading-relaxed tracking-wide",
+                id % 2 === 0 ? "text-[#cdcdcd]/80" : "text-[#2d2d2d]/70",
+                id % 2 === 0 ? "text-right" : "text-left",
+              )}
+            >
+              {description}
+            </p>
             <div
               className={cn(
                 "hidden flex-col gap-6 lg:flex",
@@ -112,12 +121,44 @@ const Character = ({
               )}
             >
               <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
-                <Slider value={isInView ? strong : 0}>Strong</Slider>
-                <Slider value={isInView ? creative : 0}>Creative</Slider>
+                <Slider
+                  value={isInView ? strong : 0}
+                  className={cn(
+                    id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                  )}
+                  slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
+                >
+                  Strong
+                </Slider>
+                <Slider
+                  value={isInView ? creative : 0}
+                  className={cn(
+                    id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                  )}
+                  slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
+                >
+                  Creative
+                </Slider>
               </div>
               <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
-                <Slider value={isInView ? logic : 0}>Logic</Slider>
-                <Slider value={isInView ? luck : 0}>Luck</Slider>
+                <Slider
+                  value={isInView ? logic : 0}
+                  className={cn(
+                    id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                  )}
+                  slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
+                >
+                  Logic
+                </Slider>
+                <Slider
+                  value={isInView ? luck : 0}
+                  className={cn(
+                    id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                  )}
+                  slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
+                >
+                  Luck
+                </Slider>
               </div>
             </div>
           </div>

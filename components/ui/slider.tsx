@@ -6,16 +6,28 @@ import { Assets } from "./assets";
 interface SliderProps {
   children: React.ReactNode;
   value: number;
+  className?: string;
+  slider?: string;
 }
 
-const Slider = ({ children, value }: SliderProps) => {
+const Slider = ({ children, value, className, slider }: SliderProps) => {
   return (
     <div className="flex basis-1/2 flex-col">
-      <p className={cn("pl-4 text-start font-semibold uppercase italic")}>
+      <p
+        className={cn(
+          "pl-4 text-start font-semibold uppercase italic",
+          className,
+        )}
+      >
         {children}
       </p>
-      <div className="relative max-w-full rounded-full bg-[#ededed] p-1 lg:p-2">
-        <div className="bg-muted relative w-full max-w-full overflow-hidden rounded-full p-1 lg:p-2">
+      <div className={cn(slider, "relative max-w-full rounded-full p-[6px]")}>
+        <div
+          className={cn(
+            slider,
+            "relative w-full max-w-full overflow-hidden rounded-full p-[6px]",
+          )}
+        >
           <motion.div
             className="absolute inset-y-0 left-0 h-full bg-gradient-to-b from-[#fef085] to-[#ffa914]"
             initial={{ width: "0%" }}
@@ -29,7 +41,7 @@ const Slider = ({ children, value }: SliderProps) => {
           animate={{ left: `${value}%` }}
           transition={{ duration: 5, ease: "easeOut" }}
         >
-          <Assets.IconSlider className="absolute -left-4 h-4 w-6 lg:h-8 lg:w-8" />
+          <Assets.IconSlider className="absolute -left-4 h-4 w-6 lg:h-6 lg:w-6" />
         </motion.div>
       </div>
     </div>
