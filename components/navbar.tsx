@@ -39,7 +39,7 @@ const Navbar = () => {
           >
             <GateIcon
               className="h-5 w-5"
-              fill={pathname === "/about" ? "#ffd201" : ""}
+              fill={pathname === "/about" ? "#ffd201" : "#868686"}
             />
             <span className="mt-1">About Us</span>
           </li>
@@ -50,7 +50,10 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/story")}
           >
-            <BookIcon className="h-5 w-5" fill="#868686" />
+            <BookIcon
+              className="h-5 w-5"
+              fill={pathname === "/story" ? "#ffd201" : "#868686"}
+            />
             <span className="mt-1">The Story of</span>
           </li>
           <li
