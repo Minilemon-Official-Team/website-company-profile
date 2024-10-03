@@ -37,7 +37,10 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/about")}
           >
-            <GateIcon className="h-5 w-5" fill="#868686" />
+            <GateIcon
+              className="h-5 w-5"
+              fill={pathname === "/about" ? "#ffd201" : ""}
+            />
             <span className="mt-1">About Us</span>
           </li>
           <li
@@ -71,6 +74,7 @@ const Navbar = () => {
             style={{
               objectFit: "contain",
             }}
+            onClick={() => router.push("/")}
           />
         </div>
         <ul className="flex flex-row gap-6">
