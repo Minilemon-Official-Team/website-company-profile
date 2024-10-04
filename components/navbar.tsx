@@ -63,7 +63,10 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/characters")}
           >
-            <LemonIcon className="h-5 w-5" fill="#868686" />
+            <LemonIcon
+              className="h-5 w-5"
+              fill={pathname === "/characters" ? "#ffd201" : "#868686"}
+            />
             <span className="mt-1">Characters</span>
           </li>
         </ul>

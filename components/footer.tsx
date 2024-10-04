@@ -20,7 +20,7 @@ const Footer = () => {
           pathname === "/" ? "bg-[#f4d8d4] lg:bg-[#1b1b1b]" : "",
           pathname === "/about" ? "bg-[#f4d8d4]" : "",
           pathname === "/story" ? "bg-[#d4def4]" : "",
-          pathname === "/characters" ? "bg-[#eaf9e8]" : "",
+          pathname === "/characters" ? "bg-[#2e2e2e]" : "",
           pathname === "/product" ? "bg-[#f4efd2]" : "",
           pathname === "/company" ? "bg-[#fbe5db]" : "",
           pathname === "/contact" ? "bg-[#d2d5f4]" : "",
