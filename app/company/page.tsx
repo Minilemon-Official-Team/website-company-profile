@@ -1,27 +1,38 @@
 import React from "react";
 import { Placeholder } from "placeholder";
 import Image from "next/image";
-import { specialPartners } from "../../data/specialPartners";
 import VisiTitle from "@/public/title-picture/visi-1.png";
 import MisiTitle from "@/public/title-picture/misi-1.png";
 import FounderTitle from "@/public/title-picture/the-founder-1.png";
 import CoFounderTitle from "@/public/title-picture/co-founder-1.png";
-import SpecialPartnerTitle from "@/public/title-picture/special-partner-1.png";
-import PTMinilemonNusantaraTitle from "@/public/title-picture/pt-minilemon-nusantara.png";
+import PTMinilemonNusantaraTitle from "@/public/title-picture/pt.minilemon-nusantara-title.png";
+import BackgroundImage from "@/public/background/company.png";
+import HeroTitle from "@/public/title-picture/our-hero-title.png";
+import FamilyTitle from "@/public/title-picture/our-family-title.png";
+import { Family, Hero } from "@/data/contribution";
 
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="bg-[#d3def4] py-20">
-        <div className="container flex flex-col gap-y-6 p-6">
-          <div className="flex w-full justify-center">
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+        <Image
+          src={BackgroundImage}
+          alt="Background"
+          quality={100}
+          fill
+          sizes="100vw"
+          objectFit="cover"
+          className="absolute inset-0 z-10"
+        />
+        <div className="container z-20 flex flex-col gap-6">
+          <div className="z-20">
             <Image
               src={PTMinilemonNusantaraTitle}
               alt="PT Minilemon Nusantara"
             />
           </div>
-          <div className="flex flex-col gap-y-6 leading-loose tracking-widest">
+          <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-[0.07em] text-[#c5cce0]">
             <p>
               PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
               Surabaya dan Jakarta, Indoensia. Yang berorientasi pada Pendidikan
@@ -47,12 +58,12 @@ const CompanyPage = () => {
       </div>
 
       {/* Visi dan Misi */}
-      <div className="bg-[#2f2f2f] py-20">
-        <div className="container flex flex-col gap-y-6 p-6">
+      <div className="bg-[#1b1b1b] py-12">
+        <div className="container flex flex-col gap-y-8 p-6">
           <div className="flex w-full justify-center">
             <Image src={VisiTitle} alt="Visi dan Misi" />
           </div>
-          <p className="leading-loose tracking-widest text-[#d1d9e6]">
+          <p className="leading-[1.8] tracking-[0.04em] text-[#d1d9e6]">
             Sebagai anak bangsa yang baik dan cinta tanah air, PT Minilemon
             Nusantara mengambil tanggung jawab untuk berkontribusi memberikan
             edukasi dan harapan untuk kemajuan bangsa.
@@ -66,15 +77,15 @@ const CompanyPage = () => {
           <div className="flex w-full justify-center">
             <Image src={MisiTitle} alt="Misi" />
           </div>
-          <ol className="ml-4 list-decimal leading-loose tracking-widest text-[#aab3c3]">
-            <li className="text-[#d1d9e6]">
+          <ol className="ml-6 list-decimal font-semibold leading-[1.8] tracking-[0.02em] text-[#c5cce0]/90">
+            <li className="text-[#c5cce0]/90">
               Menciptakan produk kreatif dan eduktif yang bekelanjutan
             </li>
-            <li className="text-[#d1d9e6]">
+            <li className="text-[#c5cce0]/90">
               Membangung ekosistem yang mandiri, kreatif dan punya daya saing
               kuat di kanca internsional
             </li>
-            <li className="text-[#d1d9e6]">
+            <li className="text-[#c5cce0]/90">
               Membangun sistem integrasi dengan teknlogi yang friendly,
               transparan, terukur dengan jangkuan yang luas
             </li>
@@ -83,21 +94,21 @@ const CompanyPage = () => {
       </div>
 
       {/* Founder */}
-      <div className="flex flex-row bg-[#a4bddc] py-12">
-        <div className="container flex flex-col gap-6 px-8 lg:px-0">
+      <div className="flex flex-row bg-[#a4bddc] py-20">
+        <div className="container flex flex-col gap-8 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={FounderTitle} alt="The Founder" />
           </div>
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
               <Placeholder
-                width="400"
-                height="570"
+                height="520"
+                width="390"
                 background="#333"
                 color="#fff"
               />
             </div>
-            <div className="flex basis-7/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+            <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] font-semibold leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
                 <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di
                 Surabaya Indoensia. Sebagai seorang bisnisman dan penggiat
@@ -124,7 +135,7 @@ const CompanyPage = () => {
       </div>
 
       {/* Co Founder */}
-      <div className="flex flex-row bg-[#d3def4] py-12">
+      <div className="flex flex-row bg-[#d5ddf4] py-20">
         <div className="container flex flex-col gap-6 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={CoFounderTitle} alt="Co Founder" />
@@ -132,19 +143,19 @@ const CompanyPage = () => {
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
               <Placeholder
-                width="400"
-                height="570"
+                height={520}
+                width={390}
                 background="#333"
                 color="#fff"
               />
             </div>
-            <div className="flex basis-7/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+            <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] font-semibold leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
-                <b>Heriyadi Natawijaya</b> lahir di Palembang dan tinggal di
-                Depok Indonesia, adlaah Seorang Sutradara iklan, Video Klik dan
-                Animasi Sejak 2009. Heriyadi Natawijaya juga sebagai Pendiri
-                Perakaria & IDsains sebagai Pusat Komunitas Kreatif dan produksi
-                seni di Depok, Indonesia.
+                <b className="text-[#1b1b1d]/90">Heriyadi Natawijaya</b> lahir
+                di Palembang dan tinggal di Depok Indonesia, adlaah Seorang
+                Sutradara iklan, Video Klik dan Animasi Sejak 2009. Heriyadi
+                Natawijaya juga sebagai Pendiri Perakaria & IDsains sebagai
+                Pusat Komunitas Kreatif dan produksi seni di Depok, Indonesia.
               </p>
               <p>
                 Karirnya di dunia Seni dan Perfilman membuatnya bertemu Reno
@@ -164,25 +175,65 @@ const CompanyPage = () => {
           </div>
         </div>
       </div>
-      {/* Special Partner */}
-      <div className="hidden bg-[#fbe5db] py-20 lg:flex">
+
+      {/* Our Hero Desktop View */}
+      <div className="flex flex-col gap-y-16 bg-[#1b1b1b] py-16">
+        <div className="container flex items-center justify-center">
+          <Image src={HeroTitle} alt="Our Hero" />
+        </div>
         <div className="container">
-          <div className="mb-16 flex w-full justify-center">
-            <Image src={SpecialPartnerTitle} alt="Special Partner" />
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {specialPartners.map((partner, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center">
+          <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
+            {Hero.map((data) => (
+              <div
+                className="flex flex-col items-center justify-center text-white"
+                key={data.id}
+              >
+                <div className="pb-3">
                   <Placeholder
-                    width="200"
-                    height="250"
-                    background="#333"
-                    color="#fff"
+                    height={180}
+                    width={155}
+                    background="#fff"
+                    color="#333"
                   />
                 </div>
-                <p className="mt-4">{partner.name}</p>
-                <p className="text-sm font-semibold">{partner.role}</p>
+                <p className="text-base font-semibold capitalize text-white/60">
+                  {data.name}
+                </p>
+                <p className="text-sm font-bold uppercase text-white/80">
+                  {data.position}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Special Partner */}
+      <div className="hidden bg-[#fdf4eb] py-16 lg:flex">
+        <div className="container">
+          <div className="mb-16 flex w-full justify-center">
+            <Image src={FamilyTitle} alt="Special Partner" />
+          </div>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 pb-12 md:grid-cols-2 lg:grid-cols-4">
+            {Family.map((data) => (
+              <div
+                className="flex flex-col items-center justify-center text-black"
+                key={data.id}
+              >
+                <div className="pb-3">
+                  <Placeholder
+                    height={180}
+                    width={155}
+                    background="#fff"
+                    color="#333"
+                  />
+                </div>
+                <p className="text-base font-semibold capitalize text-black/60">
+                  {data.name}
+                </p>
+                <p className="text-sm font-bold uppercase text-black/80">
+                  {data.position}
+                </p>
               </div>
             ))}
           </div>

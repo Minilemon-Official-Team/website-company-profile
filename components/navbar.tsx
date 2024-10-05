@@ -101,12 +101,17 @@ const Navbar = () => {
           </li>
           <li
             className={cn(
-              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
+              "group flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
               pathname === "/company" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/company")}
           >
-            <FlagIcon className="h-5 w-5" fill="#868686" />
+            <FlagIcon
+              className={cn(
+                pathname === "/company" ? "text-[#ffd201]" : "text-[#868686]",
+                "h-5 w-5 group-hover:text-[#ffd201]",
+              )}
+            />
             <span className="mt-1">Company</span>
           </li>
           <li
