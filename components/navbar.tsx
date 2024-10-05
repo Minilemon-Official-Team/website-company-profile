@@ -106,12 +106,17 @@ const Navbar = () => {
           </li>
           <li
             className={cn(
-              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffe15a]",
+              "group flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
               pathname === "/contact" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/contact")}
           >
-            <ArrowIcon className="h-5 w-5" fill="#868686" />
+            <ArrowIcon
+              className={cn(
+                pathname === "/contact" ? "text-[#ffd201]" : "text-[#868686]",
+                "h-5 w-5 group-hover:text-[#ffd201]",
+              )}
+            />
             <span className="mt-1">Contact Us</span>
           </li>
         </ul>

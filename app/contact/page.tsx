@@ -9,6 +9,7 @@ import OfficialTitle from "@/public/title-picture/official-1.png";
 import Image from "next/image";
 import FollowTitle from "@/public/title-picture/follow-1.png";
 import LemonIcon from "@/public/icon/lemon-grey.png";
+import BackgroundImage from "@/public/background/contact.png";
 
 const ContactPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -22,9 +23,18 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col">
       {/* Contact */}
-      <div className="min-h-[45vh] bg-[#1b1b1b]">
-        <div className="container flex flex-col gap-6 px-12 py-16 lg:flex-row lg:gap-0 lg:px-0">
-          <Contact />
+      <div className="relative inset-0 min-h-[45vh] bg-[#d3d5f4] bg-cover bg-center">
+        <Image
+          src={BackgroundImage}
+          alt="Background"
+          quality={100}
+          fill
+          sizes="100vw"
+          objectFit="cover"
+          className="absolute inset-0 z-10"
+        />
+        <div className="container z-20 flex flex-col gap-6 px-12 py-16 lg:flex-row lg:gap-0 lg:px-0">
+          <Contact className="z-20" />
         </div>
       </div>
 

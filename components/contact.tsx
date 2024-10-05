@@ -10,6 +10,7 @@ import { Toaster, toast } from "react-hot-toast";
 
 import { Button } from "./ui/button-sec";
 import ContactUsTitle from "@/public/title-picture/contact-us-1.png";
+import { cn } from "@/lib/utils";
 
 const schema = z.object({
   name: z
@@ -25,7 +26,7 @@ const schema = z.object({
   honeypot: z.string().max(0, { message: "Bot detected" }),
 });
 
-const Contact = () => {
+const Contact = ({ className }: { className?: string }) => {
   const [mounted, setMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
@@ -79,7 +80,12 @@ const Contact = () => {
 
   return (
     <>
-      <div className="flex basis-1/2 flex-col items-center justify-center gap-6">
+      <div
+        className={cn(
+          "flex basis-1/2 flex-col items-center justify-center gap-6",
+          className,
+        )}
+      >
         <div className="">
           <Image src={ContactUsTitle} alt="Contact Us" />
         </div>
@@ -87,7 +93,7 @@ const Contact = () => {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex basis-1/2 flex-col"
+        className={cn("flex basis-1/2 flex-col", className)}
       >
         <div className="flex flex-col gap-2">
           <div className="">
@@ -98,7 +104,7 @@ const Contact = () => {
               {...register("name")}
               id="name"
               placeholder="Name"
-              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
             />
             {errors.name && (
               <p className="text-xs text-red-500">{errors.name.message}</p>
@@ -113,7 +119,7 @@ const Contact = () => {
               id="email"
               type="email"
               placeholder="Email"
-              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
             />
             {errors.email && (
               <p className="text-xs text-red-500">{errors.email.message}</p>
@@ -128,7 +134,7 @@ const Contact = () => {
               id="subject"
               type="text"
               placeholder="Subject"
-              className="w-full rounded-md border border-white/30 bg-transparent p-2 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
             />
             {errors.subject && (
               <p className="text-xs text-red-500">{errors.subject.message}</p>
@@ -143,7 +149,7 @@ const Contact = () => {
               id="message"
               rows={4}
               placeholder="Message"
-              className="w-full rounded-md border border-white/30 bg-transparent p-2 pb-16 text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 pb-16 text-sm text-[#d2def4]"
             />
             {errors.message && (
               <p className="text-xs text-red-500">{errors.message.message}</p>
