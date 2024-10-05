@@ -13,27 +13,54 @@ import MinilemonLiveParentingTitle1 from "@/public/title-picture/minilemon-live-
 import MinilemonLiveParentingTitle2 from "@/public/title-picture/minilemon-live-parenting-2.png";
 import MinilemonPanggungBonekaTitle1 from "@/public/title-picture/panggung-boneka-minilemon-1.png";
 import MinilemonPanggungBonekaTitle2 from "@/public/title-picture/panggung-boneka-minilemon-2.png";
-import ProductTitle from "@/public/title-picture/our-product-1.png";
+import ProductTitle from "@/public/title-picture/our-product-title1.png";
+import BackgroundImage from "@/public/background/product.png";
 
 const ProductPage = () => {
   return (
     <div className="flex flex-col">
+      {/* Hero Section Desktop View */}
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+        <Image
+          src={BackgroundImage}
+          alt="Background"
+          quality={100}
+          fill
+          sizes="100vw"
+          objectFit="cover"
+          className="absolute inset-0 z-10"
+        />
+        <div className="container z-20 flex flex-col justify-center gap-8">
+          <div className="z-20">
+            <Image src={ProductTitle} alt="Our Product" />
+          </div>
+          <div className="z-20 mb-3 flex flex-col leading-loose tracking-wider">
+            <p className="text-[#d3dcf3]">
+              Di era modernisasi dan selera yang semakin beragam, Minilemon
+              memproduksi banyak varian produk digital maupun konvensional, agar
+              nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
+              banyak penggemar khususnya anak-anak usia 3 sampai 7 tahun.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Product 1 */}
-      <div className="bg-[#1b1b1b] py-12">
+      <div className="bg-[#1b1b1b] py-16">
         <div className="mb-8 flex w-full justify-center lg:hidden">
           <Image src={ProductTitle} alt="Our Product" />
         </div>
-        <div className="flex flex-row">
-          <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-            <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+        <div className="mb-2 flex flex-row">
+          <div className="container flex flex-col gap-x-8 lg:flex-row">
+            <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
               <Placeholder
-                height="550"
-                width="350"
+                height={445.2}
+                width={315}
                 background="#333"
                 color="#fff"
               />
             </div>
-            <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#c0cbdf]">
+            <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={PetualanganSiMinilemonTitle1}
@@ -56,14 +83,14 @@ const ProductPage = () => {
                 bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
                 Tigor.{" "}
                 <Link
-                  className="inline-flex items-center text-blue-500 hover:underline"
+                  className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="/story"
                 >
-                  Read More <span className="text-xs">❯</span>
+                  Read More <span className="ml-1 text-xs">❯</span>
                 </Link>
               </p>
-              <Link href={"#"} className="flex flex-row items-center gap-x-4">
-                <span className="rounded-full bg-black p-1 shadow-lg">
+              <Link href={"#"} className="flex flex-row items-center gap-x-2">
+                <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
                   <FaYoutube className="" />
                 </span>
                 Trailer
@@ -74,17 +101,17 @@ const ProductPage = () => {
       </div>
 
       {/* Product 2 */}
-      <div className="flex flex-row bg-[#d2e1f4] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+      <div className="flex flex-row bg-[#d2e1f4] py-16">
+        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
+          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
             <Placeholder
-              width="350"
-              height="500"
+              height={445.2}
+              width={315}
               background="#333"
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+          <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonSaveTheEarthTitle1}
@@ -105,14 +132,14 @@ const ProductPage = () => {
               positif dan tanggung jawab terhadap alam dari setiap langkah
               mereka.{" "}
               <Link
-                className="inline-flex items-center font-bold text-blue-500 hover:underline"
+                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="/story"
               >
-                Read More <span className="text-xs">❯</span>
+                Read More <span className="ml-1 text-xs">❯</span>
               </Link>
             </p>
-            <Link href={"#"} className="flex flex-row items-center gap-x-4">
-              <span className="rounded-full bg-black p-1 shadow-lg">
+            <Link href={"#"} className="flex flex-row items-center gap-x-2">
+              <span className="rounded-full bg-[#333] p-[.4rem] shadow-xl">
                 <FaYoutube className="text-white" />
               </span>
               Trailer
@@ -122,17 +149,17 @@ const ProductPage = () => {
       </div>
 
       {/* Product 3 */}
-      <div className="flex flex-row bg-[#d2f4d3] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+      <div className="flex flex-row bg-[#d2f4d3] py-16">
+        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
+          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
             <Placeholder
-              width="350"
-              height="500"
+              height={445.2}
+              width={315}
               background="#333"
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+          <div className="flex basis-8/12 flex-col gap-y-8 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/80">
             <div className="hidden flex-col lg:flex">
               <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
               <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
@@ -146,14 +173,14 @@ const ProductPage = () => {
               alam, tetapi juga menanamkan nilai-nilai positif dan tanggung
               jawab terhadap alam dalam setiap langkah mereka.{" "}
               <Link
-                className="inline-flex items-center font-bold text-blue-500 hover:underline"
+                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="/story"
               >
-                Read More <span className="text-xs">❯</span>
+                Read More <span className="ml-1 text-xs">❯</span>
               </Link>
             </p>
-            <Link href={"#"} className="flex flex-row items-center gap-x-4">
-              <span className="rounded-full bg-black p-1 shadow-lg">
+            <Link href={"#"} className="flex flex-row items-center gap-x-2">
+              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                 <FaYoutube className="text-white" />
               </span>
               Trailer
@@ -163,17 +190,17 @@ const ProductPage = () => {
       </div>
 
       {/* Product 4 */}
-      <div className="flex flex-row bg-[#f4d3e8] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+      <div className="flex flex-row bg-[#f4d3e8] py-16">
+        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
+          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
             <Placeholder
-              width="350"
-              height="500"
+              height={445.2}
+              width={315}
               background="#333"
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+          <div className="flex basis-8/12 flex-col gap-y-8 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonLiveParentingTitle1}
@@ -195,14 +222,17 @@ const ProductPage = () => {
               dan saran praktis yang dapat langsung diterapkan di rumah.
               Sehingga orang tua dapat ikut berperan mendidik anak-anak mereka.{" "}
               <Link
-                className="inline-flex items-center font-bold text-blue-500 hover:underline"
+                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="/story"
               >
-                Read More <span className="text-xs">❯</span>
+                Read More <span className="ml-1 text-xs">❯</span>
               </Link>
             </p>
-            <Link href={"#"} className="flex flex-row items-center gap-x-4">
-              <span className="rounded-full bg-black p-1 shadow-lg">
+            <Link
+              href={"#"}
+              className="flex flex-row items-center gap-x-2 text-base"
+            >
+              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                 <FaYoutube className="text-white" />
               </span>
               Trailer
@@ -212,17 +242,17 @@ const ProductPage = () => {
       </div>
 
       {/* Produk 5 */}
-      <div className="flex flex-row bg-[#f4efd2] py-12">
-        <div className="container flex flex-col gap-x-6 px-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center justify-center lg:mb-0">
+      <div className="flex flex-row bg-[#f4efd2] py-16">
+        <div className="container flex flex-col gap-x-8 lg:flex-row">
+          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
             <Placeholder
-              width="350"
-              height="500"
+              height={445.2}
+              width={315}
               background="#333"
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 leading-loose tracking-wider text-[#1b1b1d]">
+          <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonPanggungBonekaTitle1}
@@ -245,14 +275,14 @@ const ProductPage = () => {
               bermain dan belajar tentang nilai-nilai persahabatan, gotong
               royong, kejujuran, dan tanggung jawab.{" "}
               <Link
-                className="inline-flex items-center font-bold text-blue-500 hover:underline"
+                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="/story"
               >
-                Read More <span className="text-xs">❯</span>
+                Read More <span className="ml-1 text-xs">❯</span>
               </Link>
             </p>
-            <Link href={"#"} className="flex flex-row items-center gap-x-4">
-              <span className="rounded-full bg-black p-1 shadow-lg">
+            <Link href={"#"} className="flex flex-row items-center gap-x-2">
+              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                 <FaYoutube className="text-white" />
               </span>
               Trailer
