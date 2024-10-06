@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-50 hidden w-full items-center justify-center bg-gradient-to-b from-[#303030] to-[#252525] lg:flex">
-      <div className="flex max-w-screen-lg flex-row items-center py-5 font-semibold">
+      <div className="flex max-w-screen-lg flex-row items-center py-5 text-[15px] font-semibold">
         <ul className="flex flex-row gap-6">
           <li
             className={cn(
