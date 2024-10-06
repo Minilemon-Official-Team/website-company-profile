@@ -15,7 +15,7 @@ const Slider = ({ children, value, className, slider }: SliderProps) => {
     <div className="flex basis-1/2 flex-col">
       <p
         className={cn(
-          "pl-4 text-start font-semibold uppercase italic",
+          "pl-2 text-start font-semibold uppercase italic",
           className,
         )}
       >

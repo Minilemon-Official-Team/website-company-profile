@@ -57,7 +57,7 @@ const Character = ({
       )}
     >
       <div className="container overflow-auto px-8 md:px-0">
-        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-8 md:mx-12 lg:mx-0 lg:flex-row">
+        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-11 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
               id % 2 === 0 ? "lg:order-2" : "lg:order-1",
@@ -107,7 +107,7 @@ const Character = ({
             </div>
             <p
               className={cn(
-                "mb-6 font-semibold leading-relaxed tracking-wide",
+                "mb-6 font-normal leading-relaxed tracking-wide",
                 id % 2 === 0 ? "text-[#cdcdcd]/80" : "text-[#2d2d2d]/70",
                 id % 2 === 0 ? "text-right" : "text-left",
               )}
@@ -125,6 +125,7 @@ const Character = ({
                   value={isInView ? strong : 0}
                   className={cn(
                     id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                    "font-bold",
                   )}
                   slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
                 >
@@ -134,6 +135,7 @@ const Character = ({
                   value={isInView ? creative : 0}
                   className={cn(
                     id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                    "font-bold",
                   )}
                   slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
                 >
@@ -145,6 +147,7 @@ const Character = ({
                   value={isInView ? logic : 0}
                   className={cn(
                     id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                    "font-bold",
                   )}
                   slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
                 >
@@ -154,6 +157,7 @@ const Character = ({
                   value={isInView ? luck : 0}
                   className={cn(
                     id % 2 === 0 ? "text-[#dedede]/90" : "text-[#2a2a2a]/90",
+                    "font-bold",
                   )}
                   slider={cn(id % 2 === 0 ? "bg-[#3e3e3e]" : "bg-[#ededed]")}
                 >

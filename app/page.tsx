@@ -7,6 +7,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
@@ -24,6 +25,8 @@ import CompanyTitle from "@/public/title-picture/company-1.png";
 import { charactersData } from "@/data/characters";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className="flex flex-col items-center justify-center">
       {/* Section 1 */}
@@ -76,7 +79,10 @@ export default function Home() {
             </p>
           </div>
           <div className="flex w-full items-center justify-center lg:items-start lg:justify-start">
-            <ButtonLegacy.Primary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
+            <ButtonLegacy.Primary
+              className="mt-6"
+              onClick={() => router.push("/about")}
+            >
               See More
             </ButtonLegacy.Primary>
           </div>
@@ -179,13 +185,14 @@ export default function Home() {
                 <Splide
                   options={{
                     type: "loop",
-                    interval: 2000,
+                    interval: 4000,
                     perPage: 1,
                     perMove: 1,
                     gap: "0.5rem",
                     drag: "free",
                     focus: "center",
                     pagination: false,
+                    autoplay: true,
                   }}
                 >
                   {charactersData.map((character) => (
@@ -210,14 +217,14 @@ export default function Home() {
           </div>
           <div className="mb-12 mt-4 flex flex-row">
             <div className="flex basis-1/2">
-              <ButtonLegacy.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
+              <ButtonLegacy.Primary onClick={() => router.push("/story")}>
                 See More
-              </ButtonLegacy.Secondary>
+              </ButtonLegacy.Primary>
             </div>
             <div className="flex basis-1/2 justify-center">
-              <ButtonLegacy.Secondary className="w-fit scale-125 self-center font-bold uppercase shadow-md">
+              <ButtonLegacy.Primary onClick={() => router.push("/characters")}>
                 See More
-              </ButtonLegacy.Secondary>
+              </ButtonLegacy.Primary>
             </div>
           </div>
         </div>
@@ -291,9 +298,12 @@ export default function Home() {
               />
             </SplideSlide>
           </Splide>
-          <ButtonLegacy.Secondary className="mt-2 w-fit scale-125 self-center font-bold uppercase shadow-md">
+          <ButtonLegacy.Primary
+            className="mt-2"
+            onClick={() => router.push("/product")}
+          >
             See More
-          </ButtonLegacy.Secondary>
+          </ButtonLegacy.Primary>
         </div>
       </div>
 
@@ -309,9 +319,12 @@ export default function Home() {
             Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
             Pendidikan berbasis seni, hiburan dan teknologi.
           </p>
-          <ButtonLegacy.Secondary className="mt-6 w-fit scale-125 font-bold uppercase shadow-md">
+          <ButtonLegacy.Primary
+            className="mt-6"
+            onClick={() => router.push("/company")}
+          >
             See More
-          </ButtonLegacy.Secondary>
+          </ButtonLegacy.Primary>
         </div>
       </div>
 
