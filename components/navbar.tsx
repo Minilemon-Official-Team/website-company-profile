@@ -32,40 +32,48 @@ const Navbar = () => {
         <ul className="flex flex-row gap-6">
           <li
             className={cn(
-              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
+              "group flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
               pathname === "/about" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/about")}
           >
             <GateIcon
-              className="h-5 w-5"
-              fill={pathname === "/about" ? "#ffd201" : "#868686"}
+              className={cn(
+                pathname === "/about" ? "text-[#ffd201]" : "text-[#868686]",
+                "h-5 w-5 group-hover:text-[#ffd201]",
+              )}
             />
             <span className="mt-1">About Us</span>
           </li>
           <li
             className={cn(
-              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
+              "group flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
               pathname === "/story" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/story")}
           >
             <BookIcon
-              className="h-5 w-5"
-              fill={pathname === "/story" ? "#ffd201" : "#868686"}
+              className={cn(
+                pathname === "/story" ? "text-[#ffd201]" : "text-[#8686868]",
+                "h-5 w-5 group-hover:text-[#ffd201]",
+              )}
             />
             <span className="mt-1">The Story of</span>
           </li>
           <li
             className={cn(
-              "flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
+              "group flex cursor-pointer flex-row items-center gap-1 hover:text-[#ffd201]",
               pathname === "/characters" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/characters")}
           >
             <LemonIcon
-              className="h-5 w-5"
-              fill={pathname === "/characters" ? "#ffd201" : "#868686"}
+              className={cn(
+                pathname === "/characters"
+                  ? "text-[#ffd201]"
+                  : "text-[#868686]",
+                "h-5 w-5 group-hover:text-[#ffd201]",
+              )}
             />
             <span className="mt-1">Characters</span>
           </li>
@@ -130,87 +138,6 @@ const Navbar = () => {
             <span className="mt-1">Contact Us</span>
           </li>
         </ul>
-        {/* <ul className="my-4 flex flex-row items-center gap-6 pt-2 text-[16px] font-semibold tracking-tighter">
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/about" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/about")}
-          >
-            <GiDoorway className="mr-1 h-5 w-5 md:hidden lg:block" />
-            About Us
-          </li>
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/story" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/story")}
-          >
-            <FaBookOpen className="mr-1 h-5 w-5 md:hidden lg:block" />
-            The Story of
-          </li>
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/characters" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/characters")}
-          >
-            <Image
-              src={LemonIcon}
-              alt="lemon-icon"
-              className="mr-1 h-6 w-6 md:hidden lg:block"
-            />
-            Characters
-          </li>
-          <li
-            className="relative h-12 w-32 cursor-pointer px-4 lg:h-14 lg:w-44"
-            onClick={() => router.push("/")}
-          >
-            <Image
-              alt="logo"
-              src={LogoBrand}
-              className=""
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </li>
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/product" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/product")}
-          >
-            <BsBox className="mr-1 h-5 w-5 md:hidden lg:block" />
-            Our Product
-          </li>
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/company" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/company")}
-          >
-            <FaFlag className="mr-1 h-5 w-5 md:hidden lg:block" />
-            Company
-          </li>
-          <li
-            className={cn(
-              "flex cursor-pointer flex-row items-center hover:text-[#ffe15a]",
-              pathname === "/contact" ? "text-[#ffd201]" : "",
-            )}
-            onClick={() => router.push("/contact")}
-          >
-            <BsCursorFill className="mr-1 h-5 w-5 md:hidden lg:block" />
-            Contact Us
-          </li>
-        </ul> */}
       </div>
     </div>
   );
