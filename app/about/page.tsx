@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-full justify-center overflow-hidden py-20">
+      <div className="relative h-full justify-center overflow-hidden py-14">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -27,7 +27,7 @@ const AboutPage = () => {
           <div className="mt-2">
             <Image src={IdeaTitle} alt="Idea" />
           </div>
-          <div className="flex flex-col gap-y-6 font-semibold leading-loose tracking-widest text-[#c5cce2]">
+          <div className="flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
             <p>
               Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
               yang merupakan penutup wajah dari setiap Suku di Indonesia.
@@ -51,7 +51,7 @@ const AboutPage = () => {
       </div>
 
       {/* Message */}
-      <div className="bg-[#d5ddf4] py-10">
+      <div className="bg-[#d5ddf4] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
           <div className="flex justify-end">
             <Image src={MessageTitle} alt="Message" />
@@ -68,7 +68,7 @@ const AboutPage = () => {
       </div>
 
       {/* Treatment */}
-      <div className="bg-[#1b1b1b] py-12">
+      <div className="bg-[#1b1b1b] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-center">
           <div className="flex justify-center">
             <Image src={TreatmentTitle} alt="Treatment" />
@@ -82,7 +82,7 @@ const AboutPage = () => {
       </div>
 
       {/* Concept */}
-      <div className="bg-[#d6f4df] py-16">
+      <div className="bg-[#d6f4df] py-14">
         <div className="container flex flex-col justify-center gap-y-6 text-start">
           <div className="mt-2">
             <Image src={ConceptTitle} alt="Concept" />
@@ -98,7 +98,7 @@ const AboutPage = () => {
       </div>
 
       {/* Psychographic */}
-      <div className="bg-[#f4d8d4] py-16">
+      <div className="bg-[#f4d8d4] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
           <div className="flex justify-end">
             <Image src={PsychographicTitle} alt="Psychographic" />

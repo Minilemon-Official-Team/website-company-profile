@@ -31,8 +31,8 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center">
       {/* Section 1 */}
       <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
-        <div className="container mb-20 mt-12 flex flex-col gap-4 px-10 lg:px-0">
-          <p className="mt-10 text-xl font-bold uppercase tracking-wide text-[#d5ddf4]">
+        <div className="container my-16 flex flex-col gap-4 px-10 lg:px-0">
+          <p className="text-xl font-bold uppercase tracking-wide text-[#d5ddf4]">
             welcome to
           </p>
           <Image src={MinilemonTitle} alt="Minilemon" className="mb-1" />
@@ -155,7 +155,7 @@ export default function Home() {
 
       {/* Story Desktop View */}
       <div className="hidden w-full bg-[#D3DEF4] lg:flex">
-        <div className="container mt-10 flex flex-col gap-y-3">
+        <div className="container my-14 flex flex-col gap-y-3">
           <div className="mt-2 flex flex-row gap-12">
             <div className="basis-1/2">
               <Image src={StoryTitle} alt="Story" />
@@ -215,7 +215,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mb-12 mt-4 flex flex-row">
+          <div className="mt-4 flex flex-row">
             <div className="flex basis-1/2">
               <ButtonLegacy.Primary onClick={() => router.push("/story")}>
                 See More
@@ -232,7 +232,7 @@ export default function Home() {
 
       {/* Product Desktop View */}
       <div className="hidden w-full flex-col bg-[#1b1b1b] lg:flex">
-        <div className="container my-12 flex flex-col items-center justify-center gap-8 px-10 pt-6 md:px-0">
+        <div className="container my-14 flex flex-col items-center justify-center gap-8 px-10 md:px-0">
           <div>
             <Image src={OurProductTitle} alt="Our Product" />
           </div>
@@ -245,6 +245,7 @@ export default function Home() {
               gap: "0.5rem",
               drag: "free",
               focus: "center",
+              arrows: false,
               breakpoints: {
                 768: {
                   perPage: 1,
@@ -330,7 +331,7 @@ export default function Home() {
 
       {/* Contact Us Desktop View */}
       <div className="hidden w-full flex-row bg-[#1b1b1b] lg:flex">
-        <div className="container my-20 flex flex-col gap-12 px-10 md:px-0 lg:flex-row">
+        <div className="container my-14 flex flex-col gap-12 px-10 md:px-0 lg:flex-row">
           <Contact />
         </div>
       </div>

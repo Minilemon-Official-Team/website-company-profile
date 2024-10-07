@@ -57,7 +57,7 @@ const Character = ({
       )}
     >
       <div className="container overflow-auto px-8 md:px-0">
-        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-11 md:mx-12 lg:mx-0 lg:flex-row">
+        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-14 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
               id % 2 === 0 ? "lg:order-2" : "lg:order-1",
@@ -69,7 +69,7 @@ const Character = ({
               <div className="flex">
                 <Image src={namePicture} alt={fullName} />
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-6">
                 <Slider value={isInView ? strong : 0}>Strong</Slider>
                 <Slider value={isInView ? creative : 0}>Creative</Slider>
                 <Slider value={isInView ? logic : 0}>Logic</Slider>
@@ -91,7 +91,7 @@ const Character = ({
           </div>
           <div
             className={cn(
-              "flex basis-8/12 flex-col tracking-wide",
+              "flex basis-8/12 flex-col gap-y-8 tracking-wide",
               id % 2 === 0
                 ? "lg:order-1 lg:text-right"
                 : "lg:order-2 lg:text-left",
@@ -100,14 +100,14 @@ const Character = ({
             <div
               className={cn(
                 id % 2 === 0 ? "justify-end" : "justify-start",
-                "mb-4 mt-10 hidden lg:flex",
+                "mt-10 hidden lg:flex",
               )}
             >
               <Image src={namePicture} alt={fullName} />
             </div>
             <p
               className={cn(
-                "mb-6 font-normal leading-relaxed tracking-wide",
+                "font-normal leading-relaxed tracking-wide",
                 id % 2 === 0 ? "text-[#cdcdcd]/80" : "text-[#2d2d2d]/70",
                 id % 2 === 0 ? "text-right" : "text-left",
               )}
@@ -120,7 +120,7 @@ const Character = ({
                 id % 2 === 0 ? "justify-end" : "justify-start",
               )}
             >
-              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-24">
+              <div className="flex flex-row items-center justify-between gap-x-10 lg:gap-x-20">
                 <Slider
                   value={isInView ? strong : 0}
                   className={cn(
