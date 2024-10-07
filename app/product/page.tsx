@@ -60,7 +60,7 @@ const ProductPage = () => {
                 color="#fff"
               />
             </div>
-            <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-wider text-[#c0cbdf]/90">
+            <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={PetualanganSiMinilemonTitle1}
@@ -111,7 +111,7 @@ const ProductPage = () => {
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-wider text-[#1b1b1d]/70">
+          <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonSaveTheEarthTitle1}
@@ -159,7 +159,7 @@ const ProductPage = () => {
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-8 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/80">
+          <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
             <div className="hidden flex-col lg:flex">
               <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
               <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
@@ -200,7 +200,7 @@ const ProductPage = () => {
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-8 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+          <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonLiveParentingTitle1}
@@ -252,7 +252,7 @@ const ProductPage = () => {
               color="#fff"
             />
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 text-sm font-semibold leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+          <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonPanggungBonekaTitle1}

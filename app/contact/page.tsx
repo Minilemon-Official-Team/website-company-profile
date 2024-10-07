@@ -33,7 +33,7 @@ const ContactPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col gap-6 px-12 py-16 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="container z-20 flex flex-col gap-6 px-12 py-14 lg:flex-row lg:gap-0 lg:px-0">
           <Contact className="z-20" />
         </div>
       </div>
