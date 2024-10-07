@@ -39,7 +39,7 @@ const StoryPage = () => {
             className="relative h-full justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-20"
             style={{
               width: "100%",
-              height: "465px",
+              height: "100%",
             }}
           >
             <Image

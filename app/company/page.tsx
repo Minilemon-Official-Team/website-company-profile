@@ -15,7 +15,7 @@ const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-16">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -58,8 +58,8 @@ const CompanyPage = () => {
       </div>
 
       {/* Visi dan Misi */}
-      <div className="bg-[#1b1b1b] py-12">
-        <div className="container flex flex-col gap-y-8 p-6">
+      <div className="bg-[#1b1b1b] py-14">
+        <div className="container flex flex-col gap-y-10 px-6">
           <div className="flex w-full justify-center">
             <Image src={VisiTitle} alt="Visi dan Misi" />
           </div>
@@ -94,7 +94,7 @@ const CompanyPage = () => {
       </div>
 
       {/* Founder */}
-      <div className="flex flex-row bg-[#a4bddc] py-20">
+      <div className="flex flex-row bg-[#a4bddc] py-14">
         <div className="container flex flex-col gap-8 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={FounderTitle} alt="The Founder" />
@@ -102,13 +102,13 @@ const CompanyPage = () => {
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
               <Placeholder
-                height="520"
-                width="390"
+                height={495}
+                width={350}
                 background="#333"
                 color="#fff"
               />
             </div>
-            <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] font-semibold leading-loose tracking-wide text-[#1b1b1d]/70">
+            <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
                 <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di
                 Surabaya Indoensia. Sebagai seorang bisnisman dan penggiat
@@ -135,7 +135,7 @@ const CompanyPage = () => {
       </div>
 
       {/* Co Founder */}
-      <div className="flex flex-row bg-[#d5ddf4] py-20">
+      <div className="flex flex-row bg-[#d5ddf4] py-14">
         <div className="container flex flex-col gap-6 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={CoFounderTitle} alt="Co Founder" />
@@ -143,13 +143,13 @@ const CompanyPage = () => {
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
               <Placeholder
-                height={520}
-                width={390}
+                height={495}
+                width={350}
                 background="#333"
                 color="#fff"
               />
             </div>
-            <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] font-semibold leading-loose tracking-wide text-[#1b1b1d]/70">
+            <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
                 <b className="text-[#1b1b1d]/90">Heriyadi Natawijaya</b> lahir
                 di Palembang dan tinggal di Depok Indonesia, adlaah Seorang
@@ -177,7 +177,7 @@ const CompanyPage = () => {
       </div>
 
       {/* Our Hero Desktop View */}
-      <div className="flex flex-col gap-y-16 bg-[#1b1b1b] py-16">
+      <div className="flex flex-col gap-y-12 bg-[#1b1b1b] py-14">
         <div className="container flex items-center justify-center">
           <Image src={HeroTitle} alt="Our Hero" />
         </div>
@@ -190,8 +190,8 @@ const CompanyPage = () => {
               >
                 <div className="pb-3">
                   <Placeholder
-                    height={180}
-                    width={155}
+                    height={200}
+                    width={150}
                     background="#fff"
                     color="#333"
                   />
@@ -209,12 +209,12 @@ const CompanyPage = () => {
       </div>
 
       {/* Special Partner */}
-      <div className="hidden bg-[#fdf4eb] py-16 lg:flex">
+      <div className="hidden bg-[#fdf4eb] py-14 lg:flex">
         <div className="container">
           <div className="mb-16 flex w-full justify-center">
             <Image src={FamilyTitle} alt="Special Partner" />
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-16 pb-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
             {Family.map((data) => (
               <div
                 className="flex flex-col items-center justify-center text-black"
@@ -222,8 +222,8 @@ const CompanyPage = () => {
               >
                 <div className="pb-3">
                   <Placeholder
-                    height={180}
-                    width={155}
+                    height={200}
+                    width={150}
                     background="#fff"
                     color="#333"
                   />

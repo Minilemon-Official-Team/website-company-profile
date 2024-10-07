@@ -36,7 +36,7 @@ export const Hero: ContributionProps[] = [
   {
     id: 5,
     photo: Title,
-    name: "Dhimas Ramadhan",
+    name: "Dimas Ramadhan",
     position: "Head of Post-Production",
   },
   {
@@ -87,7 +87,7 @@ export const Family: ContributionProps[] = [
   {
     id: 5,
     photo: Title,
-    name: "Muhammad Ghaza",
+    name: "Ghazariz",
     position: "Game Development",
   },
   {

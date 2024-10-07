@@ -23,7 +23,7 @@ const AboutPage = () => {
           className="absolute inset-0 z-[-1]"
           objectFit="cover"
         />
-        <div className="container flex flex-col justify-center gap-y-6">
+        <div className="container flex flex-col justify-center gap-y-4">
           <div className="mt-2">
             <Image src={IdeaTitle} alt="Idea" />
           </div>
