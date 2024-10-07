@@ -8,8 +8,8 @@ import Contact from "@/components/contact";
 import OfficialTitle from "@/public/title-picture/official-1.png";
 import Image from "next/image";
 import FollowTitle from "@/public/title-picture/follow-1.png";
-import LemonIcon from "@/public/icon/lemon-grey.png";
 import BackgroundImage from "@/public/background/contact.png";
+import { MinilemonDarkIcon } from "@/components/icons";
 
 const ContactPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -48,13 +48,11 @@ const ContactPage = () => {
             </div>
             <div className="flex flex-col gap-y-4">
               <Link className="flex flex-row" href={"#"}>
-                <div>
-                  <Image src={LemonIcon} alt="Lemon" className="" />
-                </div>
+                <MinilemonDarkIcon className="h-6 w-6" />
                 <p>minilemonmedia.id</p>
               </Link>
               <Link className="flex flex-row" href={"#"}>
-                <Image src={LemonIcon} alt="Lemon" className="" />
+                <MinilemonDarkIcon className="h-6 w-6" />
                 <p>store.minilemon.id</p>
               </Link>
               <button className="flex flex-row"></button>
@@ -67,19 +65,19 @@ const ContactPage = () => {
             </div>
             <div className="flex flex-col gap-y-4">
               <Link href={"#"} className="flex flex-row items-center gap-x-4">
-                <span className="flex items-center justify-center rounded-full bg-black p-1 shadow-lg">
+                <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaInstagram className="text-white" />
                 </span>
                 minilemon.studio
               </Link>
               <Link href={"#"} className="flex flex-row items-center gap-x-4">
-                <span className="flex items-center justify-center rounded-full bg-black p-1 shadow-lg">
+                <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaTiktok className="text-white" />
                 </span>
                 minilemon.studio
               </Link>
               <Link href={"#"} className="flex flex-row items-center gap-x-4">
-                <span className="flex items-center justify-center rounded-full bg-black p-1 shadow-lg">
+                <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaYoutube className="text-white" />
                 </span>
                 minilemonindonesia

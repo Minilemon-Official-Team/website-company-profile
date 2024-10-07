@@ -4,15 +4,15 @@ import React from "react";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 
-import { cn } from "../lib/utils";
-import LogoBrand from "../public/logo.png";
+import { cn } from "@/lib/utils";
+import LogoBrand from "@/public/logo.png";
 import {
   ArrowIcon,
   BookIcon,
   CubeIcon,
   FlagIcon,
   GateIcon,
-  LemonIcon,
+  MinilemonGreyIcon,
 } from "./icons";
 
 const Navbar = () => {
@@ -67,14 +67,15 @@ const Navbar = () => {
             )}
             onClick={() => router.push("/characters")}
           >
-            <LemonIcon
+            <MinilemonGreyIcon className="h-5 w-5" />
+            {/* <LemonIcon
               className={cn(
                 pathname === "/characters"
                   ? "text-[#ffd201]"
                   : "text-[#868686]",
                 "h-5 w-5 group-hover:text-[#ffd201]",
               )}
-            />
+            /> */}
             <span className="mt-1">Characters</span>
           </li>
         </ul>

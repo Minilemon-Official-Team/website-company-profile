@@ -76,4 +76,79 @@ const ArrowIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export { FlagIcon, BookIcon, LemonIcon, CubeIcon, GateIcon, ArrowIcon };
+const MinilemonDarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="145"
+    height="157"
+    viewBox="0 0 145 157"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    className={className}
+  >
+    <rect width="145" height="157" fill="url(#pattern0_17_21)" />
+    <defs>
+      <pattern
+        id="pattern0_17_21"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use
+          xlinkHref="#image0_17_21"
+          transform="scale(0.00689655 0.00636943)"
+        />
+      </pattern>
+      <image
+        id="image0_17_21"
+        width="145"
+        height="157"
+        xlinkHref="data:image/png;base64,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"
+      />
+    </defs>
+  </svg>
+);
+
+const MinilemonGreyIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="144"
+    height="156"
+    viewBox="0 0 144 156"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    className={className}
+  >
+    <rect width="144" height="156" fill="url(#pattern0_17_22)" />
+    <defs>
+      <pattern
+        id="pattern0_17_22"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use
+          xlinkHref="#image0_17_22"
+          transform="matrix(0.00820707 0 0 0.00757576 -0.000631313 0)"
+        />
+      </pattern>
+      <image
+        id="image0_17_22"
+        width="122"
+        height="132"
+        xlinkHref="data:image/png;base64,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"
+      />
+    </defs>
+  </svg>
+);
+
+export {
+  FlagIcon,
+  BookIcon,
+  LemonIcon,
+  CubeIcon,
+  GateIcon,
+  ArrowIcon,
+  MinilemonDarkIcon,
+  MinilemonGreyIcon,
+};
