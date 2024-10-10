@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Placeholder } from "placeholder";
 import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+
 import PetualanganSiMinilemonTitle1 from "@/public/title-picture/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title-picture/petualangan-si-minilemon-2.png";
 import MinilemonSaveTheEarthTitle1 from "@/public/title-picture/minilemon-save-the-earth-1.png";
@@ -17,6 +21,61 @@ import ProductTitle from "@/public/title-picture/our-product-title1.png";
 import BackgroundImage from "@/public/background/product.png";
 
 const ProductPage = () => {
+  const [isExpanded1, setIsExpanded1] = useState(false);
+  const [isExpanded2, setIsExpanded2] = useState(false);
+  const [isExpanded3, setIsExpanded3] = useState(false);
+  const [isExpanded4, setIsExpanded4] = useState(false);
+  const [isExpanded5, setIsExpanded5] = useState(false);
+
+  const toggleExpand1 = () => {
+    setIsExpanded1(!isExpanded1);
+  };
+
+  const toggleExpand2 = () => {
+    setIsExpanded2(!isExpanded2);
+  };
+
+  const toggleExpand3 = () => {
+    setIsExpanded3(!isExpanded3);
+  };
+
+  const toggleExpand4 = () => {
+    setIsExpanded4(!isExpanded4);
+  };
+
+  const toggleExpand5 = () => {
+    setIsExpanded5(!isExpanded5);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        when: "afterChildren",
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 },
+  };
+
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
@@ -84,12 +143,59 @@ const ProductPage = () => {
                 Tigor.{" "}
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                  href="/story"
+                  href="javascript:void(0)"
+                  onClick={toggleExpand1}
                 >
-                  Read More <span className="ml-1 text-xs">❯</span>
+                  <span className={isExpanded1 == true ? "hidden" : "flex"}>
+                    Read More{" "}
+                    <span className="ml-1 flex items-center text-xs">❯</span>
+                  </span>
                 </Link>
               </p>
-              <Link href={"#"} className="flex flex-row items-center gap-x-2">
+              <AnimatePresence>
+                {isExpanded1 && (
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
+                  >
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellat temporibus perferendis dicta! Quo repellendus
+                      architecto quibusdam nisi, magnam animi voluptate rerum
+                      expedita ad maxime consequuntur enim amet, voluptatem
+                      aliquam ipsum?
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste ducimus similique illo facilis provident dolorem quam
+                      distinctio voluptate magnam possimus? Consequuntur totam
+                      asperiores itaque laboriosam facilis quam recusandae
+                      quisquam perferendis!
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Explicabo officia odit deserunt optio provident
+                      consequatur tempora impedit numquam voluptatibus incidunt
+                      natus accusantium dignissimos, cupiditate praesentium
+                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      <span
+                        onClick={toggleExpand1}
+                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                      >
+                        Read Less
+                      </span>
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <Link
+                href="javascript:void(0)"
+                className="flex flex-row items-center gap-x-2"
+              >
                 <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
                   <FaYoutube className="" />
                 </span>
@@ -133,11 +239,55 @@ const ProductPage = () => {
               mereka.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="/story"
+                href="javascript:void(0)"
+                onClick={toggleExpand2}
               >
-                Read More <span className="ml-1 text-xs">❯</span>
+                <span className={isExpanded2 === true ? "hidden" : "flex"}>
+                  Read More{" "}
+                  <span className="ml-1 flex items-center text-xs">❯</span>
+                </span>
               </Link>
             </p>
+            <AnimatePresence>
+              {isExpanded2 && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                >
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat temporibus perferendis dicta! Quo repellendus
+                    architecto quibusdam nisi, magnam animi voluptate rerum
+                    expedita ad maxime consequuntur enim amet, voluptatem
+                    aliquam ipsum?
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste ducimus similique illo facilis provident dolorem quam
+                    distinctio voluptate magnam possimus? Consequuntur totam
+                    asperiores itaque laboriosam facilis quam recusandae
+                    quisquam perferendis!
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo officia odit deserunt optio provident consequatur
+                    tempora impedit numquam voluptatibus incidunt natus
+                    accusantium dignissimos, cupiditate praesentium voluptas,
+                    debitis voluptatum velit! Quasi!{" "}
+                    <span
+                      onClick={toggleExpand2}
+                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                    >
+                      Read Less
+                    </span>
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
             <Link href={"#"} className="flex flex-row items-center gap-x-2">
               <span className="rounded-full bg-[#333] p-[.4rem] shadow-xl">
                 <FaYoutube className="text-white" />
@@ -174,11 +324,55 @@ const ProductPage = () => {
               jawab terhadap alam dalam setiap langkah mereka.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="/story"
+                href="javascript:void(0)"
+                onClick={toggleExpand3}
               >
-                Read More <span className="ml-1 text-xs">❯</span>
+                <span className={isExpanded3 === true ? "hidden" : "flex"}>
+                  Read More{" "}
+                  <span className="ml-1 flex items-center text-xs">❯</span>
+                </span>
               </Link>
             </p>
+            <AnimatePresence>
+              {isExpanded3 && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
+                >
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat temporibus perferendis dicta! Quo repellendus
+                    architecto quibusdam nisi, magnam animi voluptate rerum
+                    expedita ad maxime consequuntur enim amet, voluptatem
+                    aliquam ipsum?
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste ducimus similique illo facilis provident dolorem quam
+                    distinctio voluptate magnam possimus? Consequuntur totam
+                    asperiores itaque laboriosam facilis quam recusandae
+                    quisquam perferendis!
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo officia odit deserunt optio provident consequatur
+                    tempora impedit numquam voluptatibus incidunt natus
+                    accusantium dignissimos, cupiditate praesentium voluptas,
+                    debitis voluptatum velit! Quasi!{" "}
+                    <span
+                      onClick={toggleExpand3}
+                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                    >
+                      Read Less
+                    </span>
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
             <Link href={"#"} className="flex flex-row items-center gap-x-2">
               <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                 <FaYoutube className="text-white" />
@@ -223,11 +417,55 @@ const ProductPage = () => {
               Sehingga orang tua dapat ikut berperan mendidik anak-anak mereka.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="/story"
+                href="javascript:void(0)"
+                onClick={toggleExpand4}
               >
-                Read More <span className="ml-1 text-xs">❯</span>
+                <span className={isExpanded4 ? "hidden" : "flex"}>
+                  Read More{" "}
+                  <span className="ml-1 flex items-center text-xs">❯</span>
+                </span>
               </Link>
             </p>
+            <AnimatePresence>
+              {isExpanded4 && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                >
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat temporibus perferendis dicta! Quo repellendus
+                    architecto quibusdam nisi, magnam animi voluptate rerum
+                    expedita ad maxime consequuntur enim amet, voluptatem
+                    aliquam ipsum?
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste ducimus similique illo facilis provident dolorem quam
+                    distinctio voluptate magnam possimus? Consequuntur totam
+                    asperiores itaque laboriosam facilis quam recusandae
+                    quisquam perferendis!
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo officia odit deserunt optio provident consequatur
+                    tempora impedit numquam voluptatibus incidunt natus
+                    accusantium dignissimos, cupiditate praesentium voluptas,
+                    debitis voluptatum velit! Quasi!{" "}
+                    <span
+                      onClick={toggleExpand4}
+                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                    >
+                      Read Less
+                    </span>
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
             <Link
               href={"#"}
               className="flex flex-row items-center gap-x-2 text-base"
@@ -276,11 +514,55 @@ const ProductPage = () => {
               royong, kejujuran, dan tanggung jawab.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="/story"
+                href="javascript:void(0)"
+                onClick={toggleExpand5}
               >
-                Read More <span className="ml-1 text-xs">❯</span>
+                <span className={isExpanded5 ? "hidden" : "flex"}>
+                  Read More{" "}
+                  <span className="ml-1 flex items-center text-xs">❯</span>
+                </span>
               </Link>
             </p>
+            <AnimatePresence>
+              {isExpanded5 && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                >
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat temporibus perferendis dicta! Quo repellendus
+                    architecto quibusdam nisi, magnam animi voluptate rerum
+                    expedita ad maxime consequuntur enim amet, voluptatem
+                    aliquam ipsum?
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste ducimus similique illo facilis provident dolorem quam
+                    distinctio voluptate magnam possimus? Consequuntur totam
+                    asperiores itaque laboriosam facilis quam recusandae
+                    quisquam perferendis!
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Explicabo officia odit deserunt optio provident consequatur
+                    tempora impedit numquam voluptatibus incidunt natus
+                    accusantium dignissimos, cupiditate praesentium voluptas,
+                    debitis voluptatum velit! Quasi!{" "}
+                    <span
+                      onClick={toggleExpand5}
+                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                    >
+                      Read Less
+                    </span>
+                  </motion.p>
+                </motion.div>
+              )}
+            </AnimatePresence>
             <Link href={"#"} className="flex flex-row items-center gap-x-2">
               <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                 <FaYoutube className="text-white" />

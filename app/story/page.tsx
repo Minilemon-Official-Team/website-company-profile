@@ -39,7 +39,7 @@ const StoryPage = () => {
             className="relative h-full justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14"
             style={{
               width: "100%",
-              height: "100%",
+              height: "480px",
             }}
           >
             <Image
@@ -82,7 +82,7 @@ const StoryPage = () => {
             </div>
           </div>
         </div>
-        <div className="container flex flex-grow flex-col gap-8 py-14 font-semibold leading-relaxed tracking-wider">
+        <div className="container flex flex-grow flex-col gap-8 pb-14 font-semibold leading-relaxed tracking-wider">
           <motion.div
             initial="hidden"
             animate="visible"

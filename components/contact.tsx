@@ -93,7 +93,7 @@ const Contact = ({ className }: { className?: string }) => {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className={cn("flex basis-1/2 flex-col px-4", className)}
+        className={cn("flex basis-1/2 flex-col pl-4 pr-14", className)}
       >
         <div className="flex flex-col gap-2">
           <div className="">
