@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 
@@ -13,12 +13,15 @@ import {
   FlagIcon,
   GateIcon,
   MinilemonGreyIcon,
+  MinilemonYellowIcon,
 } from "./icons";
 
 const Navbar = () => {
   const [mounted, setMounted] = React.useState(false);
   const router = useRouter();
   const pathname = usePathname();
+  const [isHovered, setIsHovered] = useState(false);
+  const isActive = pathname === "/characters";
 
   React.useEffect(() => {
     setMounted(true);
@@ -66,16 +69,14 @@ const Navbar = () => {
               pathname === "/characters" ? "text-[#ffd201]" : "",
             )}
             onClick={() => router.push("/characters")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            <MinilemonGreyIcon className="h-5 w-5" />
-            {/* <LemonIcon
-              className={cn(
-                pathname === "/characters"
-                  ? "text-[#ffd201]"
-                  : "text-[#868686]",
-                "h-5 w-5 group-hover:text-[#ffd201]",
-              )}
-            /> */}
+            {isActive || isHovered ? (
+              <MinilemonYellowIcon className="h-5 w-5" />
+            ) : (
+              <MinilemonGreyIcon className="h-5 w-5" />
+            )}
             <span className="mt-1">Characters</span>
           </li>
         </ul>
