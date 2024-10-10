@@ -16,9 +16,9 @@ const Primary = ({ className, children, ...props }: ButtonProps) => (
     )}
     {...props}
   >
-    <div className="absolute left-3 top-0 h-[0.4rem] w-12 rounded-b-full bg-[#707070] group-hover:bg-[#FF8E2B]" />
+    <div className="absolute left-3.5 top-0 h-[0.4rem] w-12 rounded-b-full bg-[#707070] group-hover:bg-[#FF8E2B]" />
     {children}
-    <div className="absolute bottom-0 right-2 h-[0.4rem] w-12 rounded-t-full bg-[#707070] group-hover:bg-[#FF8E2B]" />
+    <div className="absolute bottom-0 right-3.5 h-[0.4rem] w-12 rounded-t-full bg-[#707070] group-hover:bg-[#FF8E2B]" />
   </button>
 );
 

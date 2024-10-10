@@ -100,7 +100,7 @@ const Character = ({
             <div
               className={cn(
                 id % 2 === 0 ? "justify-end" : "justify-start",
-                "mt-10 hidden lg:flex",
+                "hidden lg:flex",
               )}
             >
               <Image src={namePicture} alt={fullName} />

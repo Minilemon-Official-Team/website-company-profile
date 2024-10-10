@@ -193,6 +193,7 @@ export default function Home() {
                     focus: "center",
                     pagination: false,
                     autoplay: true,
+                    arrows: false,
                   }}
                 >
                   {charactersData.map((character) => (
@@ -246,6 +247,7 @@ export default function Home() {
               drag: "free",
               focus: "center",
               arrows: false,
+              pagination: false,
               breakpoints: {
                 768: {
                   perPage: 1,
@@ -260,40 +262,40 @@ export default function Home() {
           >
             <SplideSlide>
               <Placeholder
-                height={445.2}
-                width={315}
+                height={495}
+                width={350}
                 color="#111"
                 background="#d1fae5"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={445.2}
-                width={315}
+                height={495}
+                width={350}
                 color="#222"
                 background="#a7f3d0"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={445.2}
-                width={315}
+                height={495}
+                width={350}
                 color="#333"
                 background="#6ee7b7"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={445.2}
-                width={315}
+                height={495}
+                width={350}
                 color="#444"
                 background="#34d399"
               />
             </SplideSlide>
             <SplideSlide>
               <Placeholder
-                height={445.2}
-                width={315}
+                height={495}
+                width={350}
                 color="#333"
                 background="#10b981"
               />

@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-full justify-center overflow-hidden py-14">
+      <div className="relative h-full justify-center overflow-hidden pb-14 pt-12">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -105,7 +105,7 @@ const AboutPage = () => {
           </div>
           <p className="flex flex-col gap-y-6 leading-loose tracking-wider">
             Membangun pola pikir positif di dalam pertumbuhan anak yang suka
-            bermain, imajinatif, hidup dalam dunia angan-anagan, tidak suka
+            bermain, imajinatif, hidup dalam dunia angan-angan, tidak suka
             larangan, mempunyai sifat ingin tahu dan bersemangat untuk
             coba-coba.
           </p>
