@@ -77,7 +77,7 @@ const Character = ({
               </div>
             </div>
 
-            <div className="relative h-[350px] w-[300px] basis-1/2 lg:basis-full">
+            <div className="relative h-[350px] w-[300px] basis-1/2 overflow-hidden lg:basis-full">
               <Image
                 src={image}
                 alt={fullName}
@@ -86,6 +86,16 @@ const Character = ({
                 style={{
                   objectFit: "contain",
                 }}
+                className={cn(
+                  id === 1 ? "scale-110" : "",
+                  id === 2 ? "scale-110" : "",
+                  id === 4 ? "scale-110" : "",
+                  id === 5 ? "scale-110" : "",
+                  id === 6 ? "scale-110" : "",
+                  id === 7 ? "scale-110" : "",
+                  id === 8 ? "scale-110" : "",
+                  id === 10 ? "scale-110" : "",
+                )}
               />
             </div>
           </div>

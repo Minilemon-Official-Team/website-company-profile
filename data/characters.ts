@@ -2,7 +2,7 @@ import Togar from "../public/togar-new.png";
 import Slamet from "../public/slamet-new.png";
 import Wayan from "../public/Wayan.png";
 import Memey from "../public/memey-new.png";
-import Ucup from "../public/Ucup.png";
+import Ucup from "../public/ucup-new.png";
 import Minggus from "../public/minggus-new.png";
 import Amink from "../public/amink-new.png";
 import Bibie from "../public/bibie-new.png";
