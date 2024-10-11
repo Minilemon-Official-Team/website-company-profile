@@ -76,7 +76,7 @@ const AboutPage = () => {
           <p className="flex flex-col gap-y-6 leading-loose tracking-wider text-[#c2cbde]">
             Sadar akan persoalan-persoalan besar dan mendasar, PT Minilemon
             Nusantara berinisitatif membuat produk-produk anak yang berupa
-            tontonan dan permainan, dengan targe usia 3-7 tahun.
+            tontonan dan permainan, dengan target usia 3-7 tahun.
           </p>
         </div>
       </div>
