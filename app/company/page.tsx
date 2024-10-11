@@ -77,7 +77,7 @@ const CompanyPage = () => {
           <div className="flex w-full justify-center">
             <Image src={MisiTitle} alt="Misi" />
           </div>
-          <ol className="ml-6 list-decimal font-semibold leading-[1.8] tracking-[0.02em] text-[#c5cce0]/90">
+          <ol className="ml-6 list-decimal leading-[1.8] tracking-[0.02em] text-[#c5cce0]/90">
             <li className="text-[#c5cce0]/90">
               Menciptakan produk kreatif dan eduktif yang bekelanjutan
             </li>
