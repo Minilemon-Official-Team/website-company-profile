@@ -111,15 +111,15 @@ const MinilemonDarkIcon = ({ className }: { className?: string }) => (
 
 const MinilemonGreyIcon = ({ className }: { className?: string }) => (
   <svg
-    width="144"
-    height="156"
-    viewBox="0 0 144 156"
+    width="151"
+    height="159"
+    viewBox="0 0 151 159"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     className={className}
   >
-    <rect width="144" height="156" fill="url(#pattern0_17_22)" />
+    <rect width="151" height="159" fill="url(#pattern0_17_22)" />
     <defs>
       <pattern
         id="pattern0_17_22"
@@ -129,7 +129,7 @@ const MinilemonGreyIcon = ({ className }: { className?: string }) => (
       >
         <use
           xlinkHref="#image0_17_22"
-          transform="matrix(0.00820707 0 0 0.00757576 -0.000631313 0)"
+          transform="matrix(0.00782661 0 0 0.00743282 0.025888 0.0125786)"
         />
       </pattern>
       <image
@@ -144,15 +144,15 @@ const MinilemonGreyIcon = ({ className }: { className?: string }) => (
 
 const MinilemonYellowIcon = ({ className }: { className?: string }) => (
   <svg
-    width="143"
-    height="156"
-    viewBox="0 0 143 156"
+    width="151"
+    height="159"
+    viewBox="0 0 151 159"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     className={className}
   >
-    <rect width="143" height="156" fill="url(#pattern0_50_11)" />
+    <rect width="151" height="159" fill="url(#pattern0_50_11)" />
     <defs>
       <pattern
         id="pattern0_50_11"
@@ -162,7 +162,7 @@ const MinilemonYellowIcon = ({ className }: { className?: string }) => (
       >
         <use
           xlinkHref="#image0_50_11"
-          transform="matrix(0.00274098 0 0 0.00251256 -0.00571037 0)"
+          transform="matrix(0.00259576 0 0 0.00246516 0.0210822 0.0125786)"
         />
       </pattern>
       <image
