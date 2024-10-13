@@ -57,11 +57,11 @@ const Character = ({
       )}
     >
       <div className="container overflow-auto px-8 md:px-0">
-        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-6 py-14 md:mx-12 lg:mx-0 lg:flex-row">
+        <div className="mx-8 flex max-w-6xl flex-col justify-center py-14 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
               id % 2 === 0 ? "lg:order-2" : "lg:order-1",
-              "flex basis-4/12 flex-row items-center justify-center gap-4",
+              "relative flex basis-4/12 flex-row items-center justify-center gap-4 overflow-hidden",
             )}
           >
             {/* Mobile Design */}
@@ -77,7 +77,7 @@ const Character = ({
               </div>
             </div>
 
-            <div className="relative h-[350px] w-[300px] basis-1/2 overflow-hidden lg:basis-full">
+            <div className="h-[350px] w-[300px] basis-1/2 gap-4 overflow-hidden lg:basis-full">
               <Image
                 src={image}
                 alt={fullName}
@@ -87,14 +87,14 @@ const Character = ({
                   objectFit: "contain",
                 }}
                 className={cn(
-                  id === 1 ? "scale-110" : "",
-                  id === 2 ? "scale-110" : "",
-                  id === 4 ? "scale-110" : "",
-                  id === 5 ? "scale-110" : "",
-                  id === 6 ? "scale-110" : "",
-                  id === 7 ? "scale-110" : "",
-                  id === 8 ? "scale-110" : "",
-                  id === 10 ? "scale-110" : "",
+                  id === 1 ? "" : "",
+                  id === 2 ? "" : "",
+                  id === 4 ? "" : "",
+                  id === 5 ? "" : "",
+                  id === 6 ? "" : "",
+                  id === 7 ? "" : "",
+                  id === 8 ? "" : "",
+                  id === 10 ? "scale-x-[-1]" : "",
                 )}
               />
             </div>
