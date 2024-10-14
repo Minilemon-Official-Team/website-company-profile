@@ -56,7 +56,7 @@ const Character = ({
         className,
       )}
     >
-      <div className="container overflow-auto px-8 md:px-0">
+      <div className="container px-8 md:px-0">
         <div className="mx-8 flex max-w-6xl flex-col justify-center py-14 md:mx-12 lg:mx-0 lg:flex-row gap-16">
           <div
             className={cn(
