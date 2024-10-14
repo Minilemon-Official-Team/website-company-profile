@@ -1,12 +1,12 @@
 import Togar from "../public/togar-part-2.png";
 import Slamet from "../public/slamet-part-2.png";
-import Wayan from "../public/Wayan-new.png";
-import Memey from "../public/memey-new.png";
+import Wayan from "../public/wayan-part-2.png";
+import Memey from "../public/memey-part-2.png";
 import Ucup from "../public/ucup-part-2.png";
 import Minggus from "../public/minggus-part-2.png";
 import Amink from "../public/amink-part-2.png";
 import Bibie from "../public/bibie-part-2.png";
-import Tigor from "../public/Tigor-new.png";
+import Tigor from "../public/tigor-part-2.png";
 import Rudi from "../public/RU-D1-part-2.png";
 
 import TitleAmink from "@/public/title-picture/amink-title.png";

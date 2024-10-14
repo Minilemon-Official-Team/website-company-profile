@@ -79,7 +79,7 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20 xl:py-32">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -163,25 +163,15 @@ const ProductPage = () => {
                     className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
                   >
                     <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat temporibus perferendis dicta! Quo repellendus
-                      architecto quibusdam nisi, magnam animi voluptate rerum
-                      expedita ad maxime consequuntur enim amet, voluptatem
-                      aliquam ipsum?
-                    </motion.p>
-                    <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Iste ducimus similique illo facilis provident dolorem quam
-                      distinctio voluptate magnam possimus? Consequuntur totam
-                      asperiores itaque laboriosam facilis quam recusandae
-                      quisquam perferendis!
-                    </motion.p>
-                    <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Explicabo officia odit deserunt optio provident
-                      consequatur tempora impedit numquam voluptatibus incidunt
-                      natus accusantium dignissimos, cupiditate praesentium
-                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      Petualangan seru dengan rocket canggih dan mesin portal
+                      Kak Biebie, membawa mereka ke berbagai tempat, mulai dari
+                      Candi Borobudur, Jogjakarta hingga Pelabuhan Surabaya. Di
+                      tengah pencarian, mereka menemukan bahwa Ucup ternyata
+                      diculik oleh kelompok penjahat yang terlibat dalam
+                      perburuan hewan langka secara ilegal. Akankah mereka
+                      berhasil menyelamatkan Ucup dan menggagalkan rencana jahat
+                      para pemburu? Saksikan keseruan dan ketegangan film
+                      &quot;Petualangan si Minilemon&quot;!{" "}
                       <span
                         onClick={toggleExpand1}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
@@ -259,25 +249,24 @@ const ProductPage = () => {
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
                 >
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat temporibus perferendis dicta! Quo repellendus
-                    architecto quibusdam nisi, magnam animi voluptate rerum
-                    expedita ad maxime consequuntur enim amet, voluptatem
-                    aliquam ipsum?
+                    “Berakit-rakit ke hulu, berenang-renang ke tepian.
+                    Bersakit-sakit dahulu, bersenang-senang kemudian.”
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste ducimus similique illo facilis provident dolorem quam
-                    distinctio voluptate magnam possimus? Consequuntur totam
-                    asperiores itaque laboriosam facilis quam recusandae
-                    quisquam perferendis!
+                    Perjalanan Minilemon tidaklah mudah. Mereka menghadapi
+                    berbagai tantangan yang menguji ketangguhan dan
+                    kebijaksanaan mereka. Dari menjaga disiplin, mengatasi
+                    konflik dengan teman, hingga belajar bertahan hidup di alam
+                    liar. Setiap rintangan, seperti membuat api, berinteraksi
+                    dengan hewan liar, dan mencari makanan di hutan, menjadi
+                    pelajaran berharga yang memperkuat persahabatan dan
+                    solidaritas mereka.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo officia odit deserunt optio provident consequatur
-                    tempora impedit numquam voluptatibus incidunt natus
-                    accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "}
+                    Saksikan bagaimana Minilemon mengatasi berbagai tantangan di
+                    alam liar, dengan berbagai cara yang lucu, seru dan
+                    menyenangkan sembari belajar tentang pentingnya menjaga
+                    kelestarian alam kita!{" "}
                     <span
                       onClick={toggleExpand2}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
@@ -437,18 +426,12 @@ const ProductPage = () => {
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
                 >
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat temporibus perferendis dicta! Quo repellendus
-                    architecto quibusdam nisi, magnam animi voluptate rerum
-                    expedita ad maxime consequuntur enim amet, voluptatem
-                    aliquam ipsum?
+                    menciptakan generasi yang kuat dan berkarakter.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste ducimus similique illo facilis provident dolorem quam
-                    distinctio voluptate magnam possimus? Consequuntur totam
-                    asperiores itaque laboriosam facilis quam recusandae
-                    quisquam perferendis!
+                    &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap
+                    hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
+                    YouTube, TikTok, dan Instagram.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -534,25 +517,10 @@ const ProductPage = () => {
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
                 >
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat temporibus perferendis dicta! Quo repellendus
-                    architecto quibusdam nisi, magnam animi voluptate rerum
-                    expedita ad maxime consequuntur enim amet, voluptatem
-                    aliquam ipsum?
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste ducimus similique illo facilis provident dolorem quam
-                    distinctio voluptate magnam possimus? Consequuntur totam
-                    asperiores itaque laboriosam facilis quam recusandae
-                    quisquam perferendis!
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo officia odit deserunt optio provident consequatur
-                    tempora impedit numquam voluptatibus incidunt natus
-                    accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "}
+                    &quot;Panggung Boneka Minilemon&quot; ini dirancang sempurna
+                    untuk anak-anak yang sedang dalam masa pertumbuhan. di mana
+                    kesenangan dan pelajaran hidup menyatu dalam sebuah
+                    pertunjukan.{" "}
                     <span
                       onClick={toggleExpand5}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"

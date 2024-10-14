@@ -57,7 +57,7 @@ const Character = ({
       )}
     >
       <div className="container px-8 md:px-0">
-        <div className="mx-8 flex max-w-6xl flex-col justify-center py-14 md:mx-12 lg:mx-0 lg:flex-row gap-16">
+        <div className="mx-8 flex max-w-6xl flex-col justify-center gap-16 py-14 md:mx-12 lg:mx-0 lg:flex-row">
           <div
             className={cn(
               id % 2 === 0 ? "lg:order-2" : "lg:order-1",
@@ -77,7 +77,7 @@ const Character = ({
               </div>
             </div>
 
-            <div className="h-[350px] w-[500px] absolute z-10 overflow-visible basis-1/2 gap-4 lg:basis-full">
+            <div className="absolute z-10 h-[350px] w-[500px] basis-1/2 gap-4 overflow-visible lg:basis-full">
               <Image
                 src={image}
                 alt={fullName}
@@ -86,22 +86,12 @@ const Character = ({
                 style={{
                   objectFit: "contain",
                 }}
-                className={cn(
-                  id === 1 ? "" : "",
-                  id === 2 ? "" : "",
-                  id === 4 ? "" : "",
-                  id === 5 ? "" : "",
-                  id === 6 ? "" : "",
-                  id === 7 ? "" : "",
-                  id === 8 ? "" : "",
-                  id === 10 ? "scale-x-[-1]" : "",
-                )}
               />
             </div>
           </div>
           <div
             className={cn(
-              "flex basis-8/12 flex-col gap-y-8 tracking-wide z-20",
+              "z-20 flex basis-8/12 flex-col gap-y-8 tracking-wide",
               id % 2 === 0
                 ? "lg:order-1 lg:text-right"
                 : "lg:order-2 lg:text-left",
