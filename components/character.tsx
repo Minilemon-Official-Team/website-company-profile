@@ -57,11 +57,11 @@ const Character = ({
       )}
     >
       <div className="container overflow-auto px-8 md:px-0">
-        <div className="mx-8 flex max-w-6xl flex-col justify-center py-14 md:mx-12 lg:mx-0 lg:flex-row">
+        <div className="mx-8 flex max-w-6xl flex-col justify-center py-14 md:mx-12 lg:mx-0 lg:flex-row gap-16">
           <div
             className={cn(
               id % 2 === 0 ? "lg:order-2" : "lg:order-1",
-              "relative flex basis-4/12 flex-row items-center justify-center gap-4 overflow-hidden",
+              "relative flex basis-4/12 flex-row items-center justify-center gap-4",
             )}
           >
             {/* Mobile Design */}
@@ -77,7 +77,7 @@ const Character = ({
               </div>
             </div>
 
-            <div className="h-[350px] w-[300px] basis-1/2 gap-4 overflow-hidden lg:basis-full">
+            <div className="h-[350px] w-[500px] absolute z-10 overflow-visible basis-1/2 gap-4 lg:basis-full">
               <Image
                 src={image}
                 alt={fullName}
@@ -101,7 +101,7 @@ const Character = ({
           </div>
           <div
             className={cn(
-              "flex basis-8/12 flex-col gap-y-8 tracking-wide",
+              "flex basis-8/12 flex-col gap-y-8 tracking-wide z-20",
               id % 2 === 0
                 ? "lg:order-1 lg:text-right"
                 : "lg:order-2 lg:text-left",
