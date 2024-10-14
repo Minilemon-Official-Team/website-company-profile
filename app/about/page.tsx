@@ -7,7 +7,6 @@ import TreatmentTitle from "@/public/title-picture/treatment-1.png";
 import ConceptTitle from "@/public/title-picture/concept-1.png";
 import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
 import BackgroundImage from "@/public/background/about-new.png";
-import DividerBlue from "@/components/ui/divider/divider-blue";
 
 const AboutPage = () => {
   return (
@@ -47,7 +46,6 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        {/* <DividerBlue className="absolute bottom-0 bg-transparent" /> */}
       </div>
 
       {/* Message */}
