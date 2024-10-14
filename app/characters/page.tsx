@@ -23,7 +23,7 @@ const CharactersPage = () => {
   return (
     <>
       {/* Desktop view */}
-      <div className="relative inset-0 h-full bg-[#dedede] bg-cover bg-center py-20 xl:py-32">
+      <div className="relative inset-0 h-full bg-[#dedede] bg-cover bg-center py-16 2xl:py-20">
         <Image
           src={BackgroundImage}
           alt="Background"

@@ -36,10 +36,10 @@ const StoryPage = () => {
       <div className="flex w-full flex-grow flex-col gap-4">
         <div className="relative font-semibold leading-loose tracking-wider text-[#c3cde1]/90">
           <div
-            className="relative h-full justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14"
+            className="relative flex h-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4]"
             style={{
               width: "100%",
-              height: "480px",
+              height: "500px",
             }}
           >
             <Image
@@ -51,9 +51,16 @@ const StoryPage = () => {
               sizes="100vw"
               style={{
                 objectFit: "cover",
+                height: "100%",
+                width: "100%",
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+                color: "transparent",
               }}
             />
-            <div className="container relative flex flex-col gap-4">
+            <div className="container relative flex flex-col gap-4 pb-5">
               <div className="mb-2">
                 <Image src={StoryTitle} alt="Story" />
               </div>
