@@ -15,7 +15,7 @@ const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20 xl:py-36">
         <Image
           src={BackgroundImage}
           alt="Background"

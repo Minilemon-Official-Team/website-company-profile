@@ -45,7 +45,7 @@ const StoryPage = () => {
             <Image
               src={BackgroundImage}
               alt="Cave"
-              className="absolute z-0 mt-5 pb-20"
+              className="absolute z-0 mt-5 pb-20 xl:pb-8"
               quality={100}
               fill
               sizes="100vw"

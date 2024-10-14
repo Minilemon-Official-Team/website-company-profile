@@ -23,7 +23,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col">
       {/* Contact */}
-      <div className="relative inset-0 min-h-[45vh] bg-[#d3d5f4] bg-cover bg-center py-24">
+      <div className="relative inset-0 min-h-[45vh] bg-[#d3d5f4] bg-cover bg-center py-24 xl:py-40">
         <Image
           src={BackgroundImage}
           alt="Background"

@@ -79,7 +79,7 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20">
+      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-20 xl:py-32">
         <Image
           src={BackgroundImage}
           alt="Background"

@@ -209,16 +209,6 @@ export default function Home() {
                         style={{
                           objectFit: "contain",
                         }}
-                        className={cn(
-                          character.id === 1 ? "scale-125" : "",
-                          character.id === 2 ? "scale-125" : "",
-                          character.id === 4 ? "scale-125" : "",
-                          character.id === 5 ? "scale-125" : "",
-                          character.id === 6 ? "scale-125" : "",
-                          character.id === 7 ? "scale-125" : "",
-                          character.id === 8 ? "scale-125" : "",
-                          character.id === 10 ? "scale-125" : "",
-                        )}
                       />
                     </SplideSlide>
                   ))}
