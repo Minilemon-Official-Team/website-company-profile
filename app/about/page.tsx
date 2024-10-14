@@ -6,28 +6,28 @@ import MessageTitle from "@/public/title-picture/message-1.png";
 import TreatmentTitle from "@/public/title-picture/treatment-1.png";
 import ConceptTitle from "@/public/title-picture/concept-1.png";
 import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
-import BackgroundImage from "@/public/background/about.png";
+import BackgroundImage from "@/public/background/about-new.png";
 import DividerBlue from "@/components/ui/divider/divider-blue";
 
 const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-full justify-center overflow-hidden pb-14 pt-12">
+      <div className="relative h-full justify-center bg-[#d6ddf4] bg-cover bg-center py-16 2xl:py-20">
         <Image
           src={BackgroundImage}
           alt="Background"
           quality={100}
           fill
           sizes="100vw"
-          className="absolute inset-0 z-[-1]"
+          className="absolute inset-0 z-10"
           objectFit="cover"
         />
-        <div className="container flex flex-col justify-center gap-y-4">
-          <div className="mt-2">
+        <div className="container z-20 flex flex-col justify-center gap-y-4 pb-5">
+          <div className="z-20 mt-2">
             <Image src={IdeaTitle} alt="Idea" />
           </div>
-          <div className="flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
+          <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
             <p>
               Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
               yang merupakan penutup wajah dari setiap Suku di Indonesia.
@@ -47,7 +47,7 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-        <DividerBlue className="absolute bottom-0 bg-transparent" />
+        {/* <DividerBlue className="absolute bottom-0 bg-transparent" /> */}
       </div>
 
       {/* Message */}
