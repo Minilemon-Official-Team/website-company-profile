@@ -33,19 +33,15 @@ const StoryPage = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#d2def4]">
-      <div className="flex w-full flex-grow flex-col gap-4">
-        <div className="relative font-semibold leading-loose tracking-wider text-[#c3cde1]/90">
+      <div className="flex w-full flex-grow flex-col">
+        <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
           <div
-            className="relative flex h-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4]"
-            style={{
-              width: "100%",
-              height: "500px",
-            }}
+            className="relative flex w-full h-[44vh] items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4]"
           >
             <Image
               src={BackgroundImage}
               alt="Cave"
-              className="absolute z-0 mt-5 pb-20 xl:pb-8"
+              className="absolute z-0"
               quality={100}
               fill
               sizes="100vw"
@@ -60,7 +56,7 @@ const StoryPage = () => {
                 color: "transparent",
               }}
             />
-            <div className="container relative flex flex-col gap-4 pb-5">
+            <div className="container relative flex flex-col gap-4 mb-3">
               <div className="mb-2">
                 <Image src={StoryTitle} alt="Story" />
               </div>
@@ -89,7 +85,7 @@ const StoryPage = () => {
             </div>
           </div>
         </div>
-        <div className="container flex flex-grow flex-col gap-8 pb-14 font-semibold leading-relaxed tracking-wider">
+        <div className="container flex flex-grow flex-col gap-8 py-14 leading-relaxed tracking-wider">
           <motion.div
             initial="hidden"
             animate="visible"
