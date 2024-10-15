@@ -15,7 +15,7 @@ const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-16 2xl:py-20">
+      <div className="relative inset-0 h-[65vh] bg-[#1b1b1b] bg-cover bg-center flex items-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -25,7 +25,7 @@ const CompanyPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col gap-6">
+        <div className="container z-20 flex flex-col gap-6 pb-4">
           <div className="z-20">
             <Image
               src={PTMinilemonNusantaraTitle}
