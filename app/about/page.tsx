@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-[57vh] justify-center bg-[#d6ddf4] bg-cover bg-center">
+      <div className="relative h-[57vh] justify-center bg-[#d6ddf4] bg-cover bg-center flex items-center">
         <Image
           src={BackgroundImage}
           alt="Background"
