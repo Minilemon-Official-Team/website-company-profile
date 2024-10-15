@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-full justify-center bg-[#d6ddf4] bg-cover bg-center py-16 2xl:py-20">
+      <div className="relative h-[57vh] justify-center bg-[#d6ddf4] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -23,7 +23,7 @@ const AboutPage = () => {
           objectFit="cover"
         />
         <div className="container z-20 flex flex-col justify-center gap-y-4 pb-5">
-          <div className="z-20 mt-2">
+          <div className="z-20">
             <Image src={IdeaTitle} alt="Idea" />
           </div>
           <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
