@@ -23,7 +23,7 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col">
       {/* Contact */}
-      <div className="relative inset-0 min-h-[45vh] bg-[#d3d5f4] bg-cover bg-center py-16 2xl:py-20">
+      <div className="relative inset-0 min-h-[65vh] bg-[#d3d5f4] bg-cover bg-center flex items-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -33,7 +33,7 @@ const ContactPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col gap-6 px-12 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="container z-20 flex flex-col gap-6 px-12 lg:flex-row lg:gap-0 lg:px-0 pb-5">
           <Contact className="z-20" />
         </div>
       </div>
