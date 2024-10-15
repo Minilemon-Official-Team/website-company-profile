@@ -79,7 +79,7 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative inset-0 h-full bg-[#1b1b1b] bg-cover bg-center py-16 2xl:py-20">
+      <div className="relative inset-0 h-[38vh] bg-[#1b1b1b] bg-cover bg-center flex items-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -89,7 +89,7 @@ const ProductPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col justify-center gap-8">
+        <div className="container z-20 flex flex-col justify-center gap-8 mt-2">
           <div className="z-20">
             <Image src={ProductTitle} alt="Our Product" />
           </div>
