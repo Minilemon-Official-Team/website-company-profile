@@ -19,6 +19,10 @@ import MinilemonPanggungBonekaTitle1 from "@/public/title-picture/panggung-bonek
 import MinilemonPanggungBonekaTitle2 from "@/public/title-picture/panggung-boneka-minilemon-2.png";
 import ProductTitle from "@/public/title-picture/our-product-title1.png";
 import BackgroundImage from "@/public/background/product.png";
+import CoverPetualanganMinilemon from "@/public/product/cover-petualangan-minilemon.png";
+import CoverSaveTheEarth from "@/public/product/cover-save-the-earth.png";
+import CoverPanggungBonekaMinilemon from "@/public/product/cover-panggung-boneka-minilemon.png";
+import CoverPostParenting from "@/public/product/cover-poster-parenting.png";
 
 const ProductPage = () => {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -79,7 +83,7 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative inset-0 h-[38vh] bg-[#1b1b1b] bg-cover bg-center flex items-center">
+      <div className="relative inset-0 flex h-[38vh] items-center bg-[#1b1b1b] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -89,7 +93,7 @@ const ProductPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col justify-center gap-8 mt-2">
+        <div className="container z-20 mt-2 flex flex-col justify-center gap-8">
           <div className="z-20">
             <Image src={ProductTitle} alt="Our Product" />
           </div>
@@ -112,12 +116,17 @@ const ProductPage = () => {
         <div className="mb-2 flex flex-row">
           <div className="container flex flex-col gap-x-8 lg:flex-row">
             <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-              <Placeholder
+              <Image
+                src={CoverPetualanganMinilemon}
+                alt="Petualangan Si Minilemon"
+                className="h-[495px] w-[350px]"
+              />
+              {/* <Placeholder
                 height={495}
                 width={350}
                 background="#333"
                 color="#fff"
-              />
+              /> */}
             </div>
             <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
@@ -200,12 +209,17 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#d2e1f4] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Placeholder
+            <Image
+              src={CoverSaveTheEarth}
+              alt="Minilemon Save The Earth"
+              className="h-[495px] w-[350px]"
+            />
+            {/* <Placeholder
               height={495}
               width={350}
               background="#333"
               color="#fff"
-            />
+            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
@@ -376,12 +390,17 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#f4d3e8] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Placeholder
+            <Image
+              src={CoverPostParenting}
+              alt="Minilemon Live Parenting"
+              className="h-[495px] w-[350px]"
+            />
+            {/* <Placeholder
               height={495}
               width={350}
               background="#333"
               color="#fff"
-            />
+            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
@@ -466,12 +485,17 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#f4efd2] py-14">
         <div className="container flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Placeholder
+            <Image
+              src={CoverPanggungBonekaMinilemon}
+              alt="Panggung Boneka Minilemon"
+              className="h-[495px] w-[350px]"
+            />
+            {/* <Placeholder
               height={495}
               width={350}
               background="#333"
               color="#fff"
-            />
+            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
