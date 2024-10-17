@@ -1,27 +1,26 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Placeholder } from "placeholder";
-
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import { useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import Contact from "@/components/contact";
 import DividerBlue from "@/components/ui/divider/divider-blue";
-import MinilemonTitle from "@/public/title-picture/minilemon-1.png";
-import MessageTitle from "@/public/title-picture/message-1.png";
-import TreatmentTitle from "@/public/title-picture/treatment-1.png";
-import ConceptTitle from "@/public/title-picture/concept-1.png";
-import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
-import StoryTitle from "@/public/title-picture/story-2.png";
-import CharacterTitle from "@/public/title-picture/characters-1.png";
-import OurProductTitle from "@/public/title-picture/our-product-1.png";
-import CompanyTitle from "@/public/title-picture/company-1.png";
+import MinilemonTitle from "@/public/title/minilemon-1.png";
+import MessageTitle from "@/public/title/message.png";
+import TreatmentTitle from "@/public/title/treatment.png";
+import ConceptTitle from "@/public/title/concept.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
+import StoryTitle from "@/public/title/story-2.png";
+import CharacterTitle from "@/public/title/characters-1.png";
+import OurProductTitle from "@/public/title/our-product-1.png";
+import CompanyTitle from "@/public/title/company.png";
 import { charactersData } from "@/data/characters";
 
 export default function Home() {

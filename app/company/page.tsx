@@ -1,21 +1,22 @@
 import React from "react";
 import { Placeholder } from "placeholder";
 import Image from "next/image";
-import VisiTitle from "@/public/title-picture/visi-1.png";
-import MisiTitle from "@/public/title-picture/misi-1.png";
-import FounderTitle from "@/public/title-picture/the-founder-1.png";
-import CoFounderTitle from "@/public/title-picture/co-founder-1.png";
-import PTMinilemonNusantaraTitle from "@/public/title-picture/pt.minilemon-nusantara-title.png";
+
+import VisiTitle from "@/public/title/visi.png";
+import MisiTitle from "@/public/title/misi.png";
+import FounderTitle from "@/public/title/the-founder.png";
+import CoFounderTitle from "@/public/title/co-founder.png";
+import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png";
 import BackgroundImage from "@/public/background/company.png";
-import HeroTitle from "@/public/title-picture/our-hero-title.png";
-import FamilyTitle from "@/public/title-picture/our-family-title.png";
+import HeroTitle from "@/public/title/our-hero.png";
+import FamilyTitle from "@/public/title/our-family.png";
 import { Family, Hero } from "@/data/contribution";
 
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative inset-0 h-[65vh] bg-[#1b1b1b] bg-cover bg-center flex items-center">
+      <div className="relative inset-0 flex h-[65vh] items-center bg-[#1b1b1b] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"

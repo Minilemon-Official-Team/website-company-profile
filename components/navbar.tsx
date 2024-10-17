@@ -14,7 +14,7 @@ import {
   GateIcon,
   MinilemonGreyIcon,
   MinilemonYellowIcon,
-} from "./icons";
+} from "@/components/icons";
 
 const Navbar = () => {
   const [mounted, setMounted] = React.useState(false);

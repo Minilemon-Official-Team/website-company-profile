@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
-import IdeaTitle from "@/public/title-picture/idea-1.png";
-import MessageTitle from "@/public/title-picture/message-1.png";
-import TreatmentTitle from "@/public/title-picture/treatment-1.png";
-import ConceptTitle from "@/public/title-picture/concept-1.png";
-import PsychographicTitle from "@/public/title-picture/psychographic-1.png";
+import IdeaTitle from "@/public/title/idea.png";
+import MessageTitle from "@/public/title/message.png";
+import TreatmentTitle from "@/public/title/treatment.png";
+import ConceptTitle from "@/public/title/concept.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
 import BackgroundImage from "@/public/background/about-new.png";
 
 const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative h-[57vh] justify-center bg-[#d6ddf4] bg-cover bg-center flex items-center">
+      <div className="relative flex h-[57vh] items-center justify-center bg-[#d6ddf4] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"

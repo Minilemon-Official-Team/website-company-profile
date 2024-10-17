@@ -7,22 +7,22 @@ import { FaYoutube } from "react-icons/fa6";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-import PetualanganSiMinilemonTitle1 from "@/public/title-picture/petualangan-si-minilemon-1.png";
-import PetualanganSiMinilemonTitle2 from "@/public/title-picture/petualangan-si-minilemon-2.png";
-import MinilemonSaveTheEarthTitle1 from "@/public/title-picture/minilemon-save-the-earth-1.png";
-import MinilemonSaveTheEarthTitle2 from "@/public/title-picture/minilemon-save-the-earth-2.png";
-import MinilemonExplorerTitle1 from "@/public/title-picture/minilemon-explorer-1.png";
-import MinilemonExplorerTitle2 from "@/public/title-picture/minilemon-explorer-2.png";
-import MinilemonLiveParentingTitle1 from "@/public/title-picture/minilemon-live-parenting-1.png";
-import MinilemonLiveParentingTitle2 from "@/public/title-picture/minilemon-live-parenting-2.png";
-import MinilemonPanggungBonekaTitle1 from "@/public/title-picture/panggung-boneka-minilemon-1.png";
-import MinilemonPanggungBonekaTitle2 from "@/public/title-picture/panggung-boneka-minilemon-2.png";
-import ProductTitle from "@/public/title-picture/our-product-title1.png";
+import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
+import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
+import MinilemonSaveTheEarthTitle1 from "@/public/title/minilemon-save-the-earth-1.png";
+import MinilemonSaveTheEarthTitle2 from "@/public/title/minilemon-save-the-earth-2.png";
+import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
+import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
+import MinilemonLiveParentingTitle1 from "@/public/title/minilemon-live-parenting-1.png";
+import MinilemonLiveParentingTitle2 from "@/public/title/minilemon-live-parenting-2.png";
+import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minilemon-1.png";
+import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
+import ProductTitle from "@/public/title/our-product-title1.png";
 import BackgroundImage from "@/public/background/product.png";
-import CoverPetualanganMinilemon from "@/public/product/cover-petualangan-minilemon.png";
-import CoverSaveTheEarth from "@/public/product/cover-save-the-earth.png";
-import CoverPanggungBonekaMinilemon from "@/public/product/cover-panggung-boneka-minilemon.png";
-import CoverPostParenting from "@/public/product/cover-poster-parenting.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
 
 const ProductPage = () => {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -121,12 +121,6 @@ const ProductPage = () => {
                 alt="Petualangan Si Minilemon"
                 className="h-[495px] w-[350px]"
               />
-              {/* <Placeholder
-                height={495}
-                width={350}
-                background="#333"
-                color="#fff"
-              /> */}
             </div>
             <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
@@ -214,12 +208,6 @@ const ProductPage = () => {
               alt="Minilemon Save The Earth"
               className="h-[495px] w-[350px]"
             />
-            {/* <Placeholder
-              height={495}
-              width={350}
-              background="#333"
-              color="#fff"
-            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
@@ -395,12 +383,6 @@ const ProductPage = () => {
               alt="Minilemon Live Parenting"
               className="h-[495px] w-[350px]"
             />
-            {/* <Placeholder
-              height={495}
-              width={350}
-              background="#333"
-              color="#fff"
-            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
@@ -490,12 +472,6 @@ const ProductPage = () => {
               alt="Panggung Boneka Minilemon"
               className="h-[495px] w-[350px]"
             />
-            {/* <Placeholder
-              height={495}
-              width={350}
-              background="#333"
-              color="#fff"
-            /> */}
           </div>
           <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">

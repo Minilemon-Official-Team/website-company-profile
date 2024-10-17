@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import { cn } from "../lib/utils";
-import Slider from "./ui/slider";
+import { cn } from "@/lib/utils";
+import Slider from "@/components/ui/slider";
 import Image, { StaticImageData } from "next/image";
 import { useInView } from "framer-motion";
 
