@@ -110,19 +110,20 @@ const ProductPage = () => {
 
       {/* Product 1 */}
       <div className="bg-[#1b1b1b] py-14">
-        <div className="mb-8 flex w-full justify-center lg:hidden">
-          <Image src={ProductTitle} alt="Our Product" />
-        </div>
         <div className="mb-2 flex flex-row">
-          <div className="container flex flex-col gap-x-8 lg:flex-row">
-            <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-              <Image
-                src={CoverPetualanganMinilemon}
-                alt="Petualangan Si Minilemon"
-                className="h-[495px] w-[350px]"
-              />
+          <div className="container flex flex-row gap-x-8">
+            <div>
+              <div className="relative h-[492px] w-[350px]">
+                <Image
+                  src={CoverPetualanganMinilemon}
+                  alt="Petualangan Si Minilemon"
+                  fill
+                  sizes="100vw"
+                  objectFit="cover"
+                />
+              </div>
             </div>
-            <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
+            <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={PetualanganSiMinilemonTitle1}
@@ -201,15 +202,19 @@ const ProductPage = () => {
 
       {/* Product 2 */}
       <div className="flex flex-row bg-[#d2e1f4] py-14">
-        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Image
-              src={CoverSaveTheEarth}
-              alt="Minilemon Save The Earth"
-              className="h-[495px] w-[350px]"
-            />
+        <div className="container mb-2 flex flex-row gap-x-8">
+          <div>
+            <div className="relative h-[492px] w-[350px]">
+              <Image
+                src={CoverSaveTheEarth}
+                alt="Minilemon Save The Earth"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
+          <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonSaveTheEarthTitle1}
@@ -292,15 +297,17 @@ const ProductPage = () => {
       {/* Product 3 */}
       <div className="flex flex-row bg-[#d2f4d3] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Placeholder
-              height={495}
-              width={350}
-              background="#333"
-              color="#fff"
-            />
+          <div className="mb-0 flex">
+            <div className="relative h-[492px] w-[350px]">
+              <Placeholder
+                height={492}
+                width={350}
+                background="#333"
+                color="#fff"
+              />
+            </div>
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
+          <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
             <div className="hidden flex-col lg:flex">
               <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
               <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
@@ -376,15 +383,19 @@ const ProductPage = () => {
 
       {/* Product 4 */}
       <div className="flex flex-row bg-[#f4d3e8] py-14">
-        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Image
-              src={CoverPostParenting}
-              alt="Minilemon Live Parenting"
-              className="h-[495px] w-[350px]"
-            />
+        <div className="container mb-2 flex flex-row gap-x-8">
+          <div>
+            <div className="relative h-[492px] w-[350px]">
+              <Image
+                src={CoverPostParenting}
+                alt="Minilemon Live Parenting"
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+          <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonLiveParentingTitle1}
@@ -465,15 +476,17 @@ const ProductPage = () => {
 
       {/* Produk 5 */}
       <div className="flex flex-row bg-[#f4efd2] py-14">
-        <div className="container flex flex-col gap-x-8 lg:flex-row">
-          <div className="mb-8 flex basis-4/12 flex-col items-center lg:mb-0">
-            <Image
-              src={CoverPanggungBonekaMinilemon}
-              alt="Panggung Boneka Minilemon"
-              className="h-[495px] w-[350px]"
-            />
+        <div className="container flex flex-row gap-x-8">
+          <div className="">
+            <div className="relative h-[492px] w-[350px]">
+              <Image
+                src={CoverPanggungBonekaMinilemon}
+                alt="Panggung Boneka Minilemon"
+                className="h-[492px] w-[350px]"
+              />
+            </div>
           </div>
-          <div className="flex basis-8/12 flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+          <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonPanggungBonekaTitle1}

@@ -22,6 +22,10 @@ import CharacterTitle from "@/public/title/characters-1.png";
 import OurProductTitle from "@/public/title/our-product-1.png";
 import CompanyTitle from "@/public/title/company.png";
 import { charactersData } from "@/data/characters";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
 
 export default function Home() {
   const router = useRouter();
@@ -236,70 +240,70 @@ export default function Home() {
           <div>
             <Image src={OurProductTitle} alt="Our Product" />
           </div>
-          <Splide
-            options={{
-              type: "loop",
-              interval: 2000,
-              pauseOnHover: false,
-              perPage: 3,
-              gap: "0.5rem",
-              drag: "free",
-              focus: "center",
-              arrows: false,
-              pagination: false,
-              breakpoints: {
-                768: {
-                  perPage: 1,
-                },
-              },
-              AutoScroll: {
+          {/* Change size container for width  according to the example*/}
+          <div>
+            <Splide
+              options={{
+                type: "loop",
+                interval: 2000,
                 pauseOnHover: false,
-                speed: 2,
-              },
-            }}
-            extensions={{ AutoScroll }}
-          >
-            <SplideSlide>
-              <Placeholder
-                height={495}
-                width={350}
-                color="#111"
-                background="#d1fae5"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Placeholder
-                height={495}
-                width={350}
-                color="#222"
-                background="#a7f3d0"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Placeholder
-                height={495}
-                width={350}
-                color="#333"
-                background="#6ee7b7"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Placeholder
-                height={495}
-                width={350}
-                color="#444"
-                background="#34d399"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Placeholder
-                height={495}
-                width={350}
-                color="#333"
-                background="#10b981"
-              />
-            </SplideSlide>
-          </Splide>
+                perPage: 3,
+                height: "492px",
+                gap: "0.5rem",
+                drag: "free",
+                focus: "center",
+                arrows: false,
+                pagination: false,
+                breakpoints: {
+                  768: {
+                    perPage: 1,
+                  },
+                },
+                AutoScroll: {
+                  pauseOnHover: false,
+                  speed: 2,
+                },
+              }}
+              extensions={{ AutoScroll }}
+            >
+              <SplideSlide>
+                <Image
+                  src={CoverPetualanganMinilemon}
+                  alt="Petualangan Minilemon"
+                  className="h-[492px] w-[350px]"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  src={CoverSaveTheEarth}
+                  alt="Minilemon Save The Earth"
+                  className="h-[492px] w-[350px]"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Placeholder
+                  height={493}
+                  width={350}
+                  color="#333"
+                  background="#333"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  src={CoverPostParenting}
+                  alt="Minilemon Live Parenting"
+                  className="h-[492px] w-[350px]"
+                />
+              </SplideSlide>
+              <SplideSlide>
+                <Image
+                  src={CoverPanggungBonekaMinilemon}
+                  alt="Panggung Boneka Minilemon"
+                  className="h-[492px] w-[350px]"
+                />
+              </SplideSlide>
+            </Splide>
+          </div>
           <ButtonLegacy.Primary
             className="mt-2"
             onClick={() => router.push("/product")}
