@@ -13,7 +13,7 @@ const Footer = () => {
   const pathname = usePathname();
 
   return (
-    <div className="relative">
+    <div className="relative hidden lg:block">
       <DividerBlack
         className={cn(
           "absolute top-0",
