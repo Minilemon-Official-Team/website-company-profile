@@ -7,20 +7,18 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import Contact from "@/components/contact";
 import DividerBlue from "@/components/ui/divider/divider-blue";
 import MinilemonTitle from "@/public/title/minilemon-1.png";
-// import MessageTitle from "@/public/title/message.png";
-// import TreatmentTitle from "@/public/title/treatment.png";
-// import ConceptTitle from "@/public/title/concept.png";
-// import PsychographicTitle from "@/public/title/psychographic.png";
-import StoryTitle from "@/public/title/story-2.png";
-import CharacterTitle from "@/public/title/characters-1.png";
-import OurProductTitle from "@/public/title/our-product-1.png";
-import CompanyTitle from "@/public/title/company.png";
+import MessageTitle from "@/public/title/message.png";
+import TreatmentTitle from "@/public/title/treatment.png";
+import ConceptTitle from "@/public/title/concept.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
 import { charactersData } from "@/data/characters";
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
@@ -28,14 +26,535 @@ import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minil
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 
+import BackgroundAboutUs from "@/public/background/about-mobile.png";
+import BackgroundStory from "@/public/background/story-mobile.png";
+import BackgroundCharacter from "@/public/background/character-mobile.png";
+import BackgroundProduct from "@/public/background/product-mobile.png";
+import BackgroundCompany from "@/public/background/company-mobile.png";
+import IdeaTitle from "@/public/title/idea.png";
+import StoryTitle from "@/public/title/story-2.png";
+import CharacterTitle from "@/public/title/characters-1.png";
+import ProductTitle from "@/public/title/our-product-1.png";
+import CompanyTitle from "@/public/title/company.png";
+import ContactTitle from "@/public/title/contact-us-1.png";
+
 export default function Home() {
   const router = useRouter();
   const screenWidth = useScreenWidth();
+  const [mounted, setMounted] = useState(false);
+  const [isExpanded1, setIsExpanded1] = useState(false);
+  const [isExpanded2, setIsExpanded2] = useState(false);
+  const [isExpanded3, setIsExpanded3] = useState(false);
+  const [isExpanded4, setIsExpanded4] = useState(false);
+
+  const toggleExpand1 = () => {
+    setIsExpanded1(!isExpanded1);
+  };
+
+  const toggleExpand2 = () => {
+    setIsExpanded2(!isExpanded2);
+  };
+
+  const toggleExpand3 = () => {
+    setIsExpanded3(!isExpanded3);
+  };
+
+  const toggleExpand4 = () => {
+    setIsExpanded4(!isExpanded4);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        when: "afterChildren",
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 },
+  };
+
+  const secondDivVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5, // Delay the animation of the second div
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: 0, // No delay on exit
+      },
+    },
+  };
+
+  const thirdDivVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1, // Delay the animation of the third div
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: 0, // No delay on exit
+      },
+    },
+  };
+
+  const fourthDivVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1.5, // Delay the animation of the fourth div
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: 0, // No delay on exit
+      },
+    },
+  };
+
+  const fifthDivVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 2, // Delay the animation of the fifth div
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: 0, // No delay on exit
+      },
+    },
+  };
+
+  const sixthDivVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 2.5, // Delay the animation of the sixth div
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        delay: 0, // No delay on exit
+      },
+    },
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <>
       {screenWidth < 1024 ? (
-        <div>Test</div>
+        <div className="text-xs">
+          {/* About Us Section */}
+          <div className="">
+            <div className="relative flex h-full items-center justify-center bg-cover bg-center">
+              <Image
+                src={BackgroundAboutUs}
+                alt="Background"
+                quality={100}
+                fill
+                sizes="100vw"
+                className="absolute inset-0"
+                objectFit="cover"
+              />
+              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+                <div className="z-10">
+                  <Image src={IdeaTitle} alt="Idea" />
+                </div>
+                <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
+                  <p>
+                    Berawal dari cinta dan bangga akan warisan budaya khusunya
+                    topeng yang merupakan penutup wajah dari setiap Suku di
+                    Indonesia.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
+              <div className="max-w-screen-tablet flex flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+                <p>
+                  Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
+                  perjalanan panjanga telah menciptakan tokoh animasi (fiksi)
+                  dengan memadukan topeng sebagai wajah indonesia dan tubuh
+                  lemon yang merupakan buah dengan banyak manfaat bagi kesehatan
+                </p>
+                <ButtonLegacy.Primary
+                  className={cn(
+                    isExpanded1 === true ? "hidden" : "flex",
+                    "mt-4 scale-90",
+                  )}
+                  onClick={toggleExpand1}
+                >
+                  See More
+                </ButtonLegacy.Primary>
+              </div>
+            </div>
+            <AnimatePresence>
+              {isExpanded1 && (
+                <>
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="max-w-screen-tablet flex flex-col gap-y-4 bg-[#f1e3fe] px-6 py-4"
+                  >
+                    <motion.p
+                      variants={paragraphVariants}
+                      className="leading-relaxed tracking-widest"
+                    >
+                      Bernama Minilemon dengan harapan dapat memberi manfaat
+                      positif bai anak-anak indonesia dalam belaja Sejarah,
+                      Budaya, hormat kepada orangtua, gotong royong, menghargai
+                      perbedaan, cinta Bangsa dan Negara, serta ikut serta dalam
+                      penyelamatan Lingkungan hidup di dunia.
+                    </motion.p>
+                  </motion.div>
+                  <motion.div
+                    variants={secondDivVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col justify-end bg-[#d5def4]"
+                  >
+                    <motion.div className="max-w-screen-tablet flex flex-col items-end justify-end px-6">
+                      <motion.div className="">
+                        <Image src={MessageTitle} alt="Message" className="" />
+                      </motion.div>
+                      <motion.p className="text-end">
+                        minimnya hiburan yang mengedepankan kualitas dan edukasi
+                        kepada anak-anak Indonesia, Minilemon berharap mampu
+                        menjadi idola baru, menanamkan nilai-nilai positif di
+                        banyak platform dan gadget yang merupakan kebutuhan gen
+                        z saat ini.
+                      </motion.p>
+                    </motion.div>
+                  </motion.div>
+                  <motion.div
+                    variants={thirdDivVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col justify-end bg-[#1b1b1b]"
+                  >
+                    <motion.div>
+                      <Image
+                        src={TreatmentTitle}
+                        alt="Treatment"
+                        className="scale-[0.7]"
+                      />
+                    </motion.div>
+                    <motion.p className="text-end">
+                      Sadar akan persoalan-persoalan besar dan mendasar, PT
+                      Minilemon Nusantara berinisitatif membuat produk-produk
+                      anak yang berupa tontonan dan permainan, dengan target
+                      usia 3-7 tahun.
+                    </motion.p>
+                  </motion.div>
+                  <motion.div
+                    variants={fourthDivVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col justify-end bg-[#d6f4df]"
+                  >
+                    <motion.div>
+                      <Image
+                        src={ConceptTitle}
+                        alt="Concept"
+                        className="scale-[0.7]"
+                      />
+                    </motion.div>
+                    <motion.p className="text-end">
+                      Minilemon adalah kisah 6 sahabat sepermainan yang berasal
+                      dari suku berbeda-beda yaitu Jawa, Sunda, Papua, Tionghoa,
+                      Batak dan Bali. meskipun berbeda Minilemon selalu
+                      mengedepankan sikap toleransi dan gotong royong, sehingga
+                      saling melengkapi satu dan lainnya dalam setiap kisah yang
+                      mekea lalui.
+                    </motion.p>
+                  </motion.div>
+                  <motion.div
+                    variants={fifthDivVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col justify-end bg-[#f1d9d3]"
+                  >
+                    <motion.div>
+                      <Image
+                        src={PsychographicTitle}
+                        alt="Psychographic"
+                        className="scale-[0.7]"
+                      />
+                    </motion.div>
+                    <motion.p className="text-end">
+                      Membangun pola pikir positif di dalam pertumbuhan anak
+                      yang suka bermain, imajinatif, hidup dalam dunia
+                      angan-angan, tidak suka larangan, mempunyai sifat ingin
+                      tahu dan bersemangat untuk coba-coba.
+                    </motion.p>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+            <ButtonLegacy.Primary
+              className={cn(
+                isExpanded1 === true ? "flex" : "hidden",
+                "scale-90",
+              )}
+              onClick={toggleExpand1}
+            >
+              Read Less
+            </ButtonLegacy.Primary>
+          </div>
+
+          {/* Story Section */}
+          <div>
+            <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
+              <Image
+                src={BackgroundStory}
+                alt="Background Story"
+                quality={100}
+                fill
+                sizes="100vw"
+                className="absolute inset-0"
+                objectFit="cover"
+              />
+              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+                <div className="z-10">
+                  <Image src={StoryTitle} alt="Story" />
+                </div>
+                <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
+                  <p>
+                    Berawal dari kisah Kakek Djoyo yang merupakan seorang
+                    pangeran sah penerus tahta ayahnya, seorang raja di tanah
+                    Jawa. Sejak kecil, Pangeran Djoyo sudah kehilangan ibunya,
+                    seorang permaisuri yang meninggal karena sakit.
+                    Keberadaannya sebagai pewaris sah menjadi ancaman bagi
+                    saudara-saudaranya yang berlomba merebut tahta dengan penuh
+                    intrik dan tipu muslihat yang jahat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
+              <div className="max-w-screen-tablet flex flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+                <p>
+                  Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
+                  meninggalkan istana dan memulai perjalanan panjang untuk
+                  mencari ilmu dan kedamaian.
+                </p>
+                <ButtonLegacy.Primary
+                  className={cn(
+                    isExpanded2 === true ? "hidden" : "flex",
+                    "mt-4 scale-90",
+                  )}
+                  onClick={toggleExpand2}
+                >
+                  See More
+                </ButtonLegacy.Primary>
+              </div>
+            </div>
+            {isExpanded2 && (
+              <>
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className="max-w-screen-tablet flex flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-relaxed tracking-widest"
+                >
+                  <motion.p variants={paragraphVariants}>
+                    Suatu malam, dalam perjalanannya melewati hutan yang lebat,
+                    Pangeran Djoyo tersesat dan ia mendengar sayup-sayup suara
+                    yang memanggil namanya, &quot;Djoyo... Djoyo...
+                    Djoyo...&quot; karena penasaran, Pangeran Djoyo mengikutinya
+                    hingga tiba di depan sebuah gua.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Hujan mulai turun, lalu Djoyo memutuskan untuk berteduh di
+                    dalam gua tersebut, karena gelap dan licin, Djoyo tak
+                    sengaja tergelincir dan jatuh ke dalam lubang yang sangat
+                    dalam.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Saat jatuh ribuan meter, Pangeran Djoyo kehilangan
+                    kesadaran, ia merasa ada sesuatu yang menjaganya dan
+                    melindungi tubuhnya hingga akhirnya tiba di dunia yang
+                    asing, dunia purba yang penuh misteri dengan pohon-pohon
+                    yang menjulang tinggi ke langit. Di sana terdapat kolam
+                    dengan sumber air berwarna hijau, serta sistem cuaca yang
+                    berbeda dari yang diketahuinya.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Pangeran Djoyo mulai merasa lapar dan berusaha mencari
+                    makanan. Di tengah pencariannya, ia menemukan sebuah gua
+                    tersembunyi di antara hutan pohon lemon. Ia memutuskan untuk
+                    beristirahat di sana, sambil menikmati buah lemon segar yang
+                    menyelamatkannya dari rasa lapar dan dahaga di tengah hutan
+                    purba.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Demi tahun berlalu, Pangeran Djoyo terlihat semakin tua dan
+                    mulai tinggal di tengah hutan purba. Ia mengisi waktu dengan
+                    bercocok tanam dan menjaga hutan lemon dari serangan kera
+                    dan kelelawar yang sering muncul di malam hari.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Untuk mengobati rasa rindu pada keluarga dan
+                    sahabat-sahabatnya, Kakek Djoyo mulai membuat topeng-topeng
+                    dari bahan yang ada di sekitarnya. Kecintaannya dengan
+                    Nusantara membuat gua yang ia tinggali dihiasi ribuan topeng
+                    wajah dari kesukuan yang berbeda-beda.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Pada suatu malam, Kakek Djoyo tertidur lelap dan bermimpi.
+                    di dalam mimpinya ia melihat 6 topengnya hidup dan menjelma
+                    menjadi karakter anak-anak dengan tubuh buah lemon yang ia
+                    sebut MINILEMON.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Kakek Djoyo senang dan tertawa melihat anak-anak Minilemon.
+                    Walau wajahnya berasal dari suku yang berbeda, Minilemon
+                    bermain Bersama dengan penuh semangat, saling menghormati
+                    dan bergotong royong.
+                  </motion.p>
+                  <motion.p variants={paragraphVariants}>
+                    Kerinduannya menyebarkan nilai-nilai kebaikan dan keragaman
+                    budaya terpancar dari pribadi Wayan (Bali), Togar (Batak),
+                    Ucup (Sunda), Slamet (Jawa), Memey (Tionghoa) dan Minggus
+                    (Papua) , mereka adalah 6 sahabat sepermainan yang siap
+                    menjadi idola baru untuk anak-anak Indonesia.
+                  </motion.p>
+                </motion.div>
+                <ButtonLegacy.Primary
+                  className={cn(
+                    isExpanded2 === true ? "flex" : "hidden",
+                    "scale-90",
+                  )}
+                  onClick={toggleExpand2}
+                >
+                  Read Less
+                </ButtonLegacy.Primary>
+              </>
+            )}
+          </div>
+
+          {/* Character Section */}
+          <div>
+            <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
+              <Image
+                src={BackgroundCharacter}
+                alt="Background Character"
+                quality={100}
+                fill
+                sizes="100vw"
+                className="absolute inset-0"
+                objectFit="cover"
+              />
+              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+                <div className="z-10">
+                  <Image src={CharacterTitle} alt="Character" />
+                </div>
+                <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
+                  <p>
+                    Minilemon adalah animasi perpaduan topeng dan buah lemon
+                    yang hidup di dalam mimpi kakek Djoyo, terdiri dari 6
+                    karakter utama yang mewakili 6 suku besar di Indonesia,
+                    yaitu Wayan (Bali), Togar (Batak), Ucup (Sunda), Slamet
+                    (Jawa), Memey (Tionghoa) dan Minggus (Papua). Selain itu ada
+                    karakter lain seperti Bibie, Tigor, Amink dan RU-D1 (Robot
+                    ciptaan Bibie) yang meramaikan kisah perjalanan si
+                    Minilemon.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Change character picture and status */}
+            <div>
+              <Splide
+                options={{
+                  type: "loop",
+                  interval: 6000,
+                  perPage: 1,
+                  perMove: 1,
+                  gap: "0.5rem",
+                  drag: "free",
+                  focus: "center",
+                  pagination: false,
+                  autoplay: true,
+                  arrows: false,
+                }}
+              >
+                {charactersData.map((character) => (
+                  <SplideSlide key={character.id}>
+                    <div>
+                      <div>{character.description}</div>
+                      <Image
+                        src={character.namePicture}
+                        alt={character.fullName}
+                      />
+                    </div>
+                  </SplideSlide>
+                ))}
+              </Splide>
+            </div>
+          </div>
+        </div>
       ) : (
         <div className="flex flex-col items-center justify-center">
           {/* Section 1 */}

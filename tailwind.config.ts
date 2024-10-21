@@ -16,6 +16,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        tablet: "450px",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
