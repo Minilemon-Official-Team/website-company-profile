@@ -30,14 +30,14 @@ import { useScreenWidth } from "@/hooks/useScreenWidth";
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
 import BackgroundStory from "@/public/background/story-mobile.png";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
-import BackgroundProduct from "@/public/background/product-mobile.png";
-import BackgroundCompany from "@/public/background/company-mobile.png";
+// import BackgroundProduct from "@/public/background/product-mobile.png";
+// import BackgroundCompany from "@/public/background/company-mobile.png";
 import IdeaTitle from "@/public/title/idea.png";
 import StoryTitle from "@/public/title/story-2.png";
 import CharacterTitle from "@/public/title/characters-1.png";
-import ProductTitle from "@/public/title/our-product-1.png";
+// import ProductTitle from "@/public/title/our-product-1.png";
 import CompanyTitle from "@/public/title/company.png";
-import ContactTitle from "@/public/title/contact-us-1.png";
+// import ContactTitle from "@/public/title/contact-us-1.png";
 
 export default function Home() {
   const router = useRouter();
@@ -45,8 +45,8 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [isExpanded1, setIsExpanded1] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
-  const [isExpanded3, setIsExpanded3] = useState(false);
-  const [isExpanded4, setIsExpanded4] = useState(false);
+  // const [isExpanded3, setIsExpanded3] = useState(false);
+  // const [isExpanded4, setIsExpanded4] = useState(false);
 
   const toggleExpand1 = () => {
     setIsExpanded1(!isExpanded1);
@@ -56,13 +56,13 @@ export default function Home() {
     setIsExpanded2(!isExpanded2);
   };
 
-  const toggleExpand3 = () => {
-    setIsExpanded3(!isExpanded3);
-  };
+  // const toggleExpand3 = () => {
+  //   setIsExpanded3(!isExpanded3);
+  // };
 
-  const toggleExpand4 = () => {
-    setIsExpanded4(!isExpanded4);
-  };
+  // const toggleExpand4 = () => {
+  //   setIsExpanded4(!isExpanded4);
+  // };
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -165,23 +165,23 @@ export default function Home() {
     },
   };
 
-  const sixthDivVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 2.5, // Delay the animation of the sixth div
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        delay: 0, // No delay on exit
-      },
-    },
-  };
+  // const sixthDivVariants = {
+  //   hidden: { opacity: 0, y: 20 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       delay: 2.5, // Delay the animation of the sixth div
+  //     },
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     y: 20,
+  //     transition: {
+  //       delay: 0, // No delay on exit
+  //     },
+  //   },
+  // };
 
   useEffect(() => {
     setMounted(true);
