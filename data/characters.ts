@@ -1,25 +1,26 @@
-import Togar from "../public/togar-part-2.png";
-import Slamet from "../public/slamet-part-2.png";
-import Wayan from "../public/wayan-part-2.png";
-import Memey from "../public/memey-part-2.png";
-import Ucup from "../public/ucup-part-2.png";
-import Minggus from "../public/minggus-part-2.png";
-import Amink from "../public/amink-part-2.png";
-import Bibie from "../public/bibie-part-2.png";
-import Tigor from "../public/tigor-part-2.png";
-import Rudi from "../public/RU-D1-part-2.png";
-
-import TitleAmink from "@/public/title-picture/amink-title.png";
-import TitleBibie from "@/public/title-picture/bibie-title.png";
-import TitleMemey from "@/public/title-picture/memey-title.png";
-import TitleMinggus from "@/public/title-picture/minggus-title.png";
-import TitleRudi from "@/public/title-picture/RU-D1-title.png";
-import TitleSlamet from "@/public/title-picture/slamet-title.png";
-import TitleTigor from "@/public/title-picture/tigor-title.png";
-import TitleTogar from "@/public/title-picture/togar-title.png";
-import TitleUcup from "@/public/title-picture/ucup-title.png";
-import TitleWayan from "@/public/title-picture/wayan-title.png";
 import { StaticImageData } from "next/image";
+
+import Togar from "@/public/characters/togar.png";
+import Slamet from "@/public/characters/slamet.png";
+import Wayan from "@/public/characters/wayan.png";
+import Memey from "@/public/characters/memey.png";
+import Ucup from "@/public/characters/ucup.png";
+import Minggus from "@/public/characters/minggus.png";
+import Amink from "@/public/characters/amink.png";
+import Bibie from "@/public/characters/bibie.png";
+import Tigor from "@/public/characters/tigor.png";
+import Rudi from "@/public/characters/RU-D1.png";
+
+import TitleAmink from "@/public/title/amink-title.png";
+import TitleBibie from "@/public/title/bibie-title.png";
+import TitleMemey from "@/public/title/memey-title.png";
+import TitleMinggus from "@/public/title/minggus-title.png";
+import TitleRudi from "@/public/title/RU-D1-title.png";
+import TitleSlamet from "@/public/title/slamet-title.png";
+import TitleTigor from "@/public/title/tigor-title.png";
+import TitleTogar from "@/public/title/togar-title.png";
+import TitleUcup from "@/public/title/ucup-title.png";
+import TitleWayan from "@/public/title/wayan-title.png";
 
 interface CharacterData {
   id: number;

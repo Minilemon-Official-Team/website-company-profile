@@ -8,7 +8,7 @@ import Image from "next/image";
 import { charactersData } from "@/data/characters";
 import Character from "@/components/character";
 import BackgroundImage from "@/public/background/character.png";
-import CharacterTitle from "@/public/title-picture/character-title.png";
+import CharacterTitle from "@/public/title/character.png";
 
 const CharactersPage = () => {
   const options = {
@@ -23,7 +23,7 @@ const CharactersPage = () => {
   return (
     <>
       {/* Desktop view */}
-      <div className="relative inset-0 h-[40vh] bg-[#dedede] bg-cover bg-center flex items-center">
+      <div className="relative inset-0 flex h-[40vh] items-center bg-[#dedede] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"

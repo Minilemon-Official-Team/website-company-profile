@@ -5,9 +5,10 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { poppins } from "./fonts";
-import { cn } from "../lib/utils";
-import NavigationMobile from "../components/navigation-mobile";
+import { cn } from "@/lib/utils";
+import NavigationMobile from "@/components/navigation-mobile";
 import { PageIndicator } from "@/components/page-indicator";
+import ScreenProvider from "@/providers/screen-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,11 +23,13 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={cn(poppins.className)}>
-        <Navbar />
-        {children}
-        <NavigationMobile />
-        <PageIndicator />
-        <Footer />
+        <ScreenProvider>
+          <Navbar />
+          {children}
+          <NavigationMobile />
+          <PageIndicator />
+          <Footer />
+        </ScreenProvider>
       </body>
     </html>
   );
