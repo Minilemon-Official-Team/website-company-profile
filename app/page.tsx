@@ -16,6 +16,7 @@ import Contact from "@/components/contact";
 import DividerBlue from "@/components/ui/divider/divider-blue";
 import MinilemonTitle from "@/public/title/minilemon-1.png";
 import MessageTitle from "@/public/title/message.png";
+import OurProductTitle from "@/public/title/our-product-1.png";
 import TreatmentTitle from "@/public/title/treatment.png";
 import ConceptTitle from "@/public/title/concept.png";
 import PsychographicTitle from "@/public/title/psychographic.png";
@@ -204,7 +205,7 @@ export default function Home() {
                 className="absolute inset-0"
                 objectFit="cover"
               />
-              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
                   <Image src={IdeaTitle} alt="Idea" />
                 </div>
@@ -218,7 +219,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
-              <div className="max-w-screen-tablet flex flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+              <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
                 <p>
                   Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
                   perjalanan panjanga telah menciptakan tokoh animasi (fiksi)
@@ -245,11 +246,11 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="max-w-screen-tablet flex flex-col gap-y-4 bg-[#f1e3fe] px-6 py-4"
+                    className="flex w-full flex-col items-center gap-y-4 bg-[#f1e3fe] px-6"
                   >
                     <motion.p
+                      className="max-w-screen-tablet px-6 leading-relaxed tracking-widest"
                       variants={paragraphVariants}
-                      className="leading-relaxed tracking-widest"
                     >
                       Bernama Minilemon dengan harapan dapat memberi manfaat
                       positif bai anak-anak indonesia dalam belaja Sejarah,
@@ -264,9 +265,9 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col justify-end bg-[#d5def4]"
+                    className="flex flex-col items-center justify-end bg-[#d5def4]"
                   >
-                    <motion.div className="max-w-screen-tablet flex flex-col items-end justify-end px-6">
+                    <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end px-6">
                       <motion.div className="">
                         <Image src={MessageTitle} alt="Message" className="" />
                       </motion.div>
@@ -373,7 +374,7 @@ export default function Home() {
                 className="absolute inset-0"
                 objectFit="cover"
               />
-              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
                   <Image src={StoryTitle} alt="Story" />
                 </div>
@@ -391,7 +392,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
-              <div className="max-w-screen-tablet flex flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+              <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
                 <p>
                   Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
                   meninggalkan istana dan memulai perjalanan panjang untuk
@@ -416,7 +417,7 @@ export default function Home() {
                   animate="visible"
                   exit="exit"
                   transition={{ duration: 0.5 }}
-                  className="max-w-screen-tablet flex flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-relaxed tracking-widest"
+                  className="flex max-w-screen-tablet flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-relaxed tracking-widest"
                 >
                   <motion.p variants={paragraphVariants}>
                     Suatu malam, dalam perjalanannya melewati hutan yang lebat,
@@ -506,7 +507,7 @@ export default function Home() {
                 className="absolute inset-0"
                 objectFit="cover"
               />
-              <div className="max-w-screen-tablet z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
                   <Image src={CharacterTitle} alt="Character" />
                 </div>
