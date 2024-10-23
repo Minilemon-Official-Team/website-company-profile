@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import React, { useState } from "react";
 
-import { cn } from "@/lib/utils";
-import LogoBrand from "@/public/logo.png";
+import { berlin_sans_fb } from "@/app/fonts";
 import {
   ArrowIcon,
   BookIcon,
@@ -16,7 +15,8 @@ import {
   MinilemonYellowIcon,
 } from "@/components/icons";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
-import { berlin_sans_fb } from "@/app/fonts";
+import { cn } from "@/lib/utils";
+import LogoBrand from "@/public/logo.png";
 import DividerTransparant from "./ui/divider/divider-transparant";
 
 const Navbar = () => {
@@ -40,13 +40,20 @@ const Navbar = () => {
           <div
             className={cn(
               berlin_sans_fb.className,
-              "sticky top-0 z-50 flex flex-col bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e]",
+              "sticky top-0 z-50 flex h-[70px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[100px]",
             )}
           >
-            <div className="relative">
-              <p>Test</p>
-              <DividerTransparant className="" />
+            <div className="relative flex h-full flex-col items-center justify-center">
+              <div className="text-md flex items-center justify-center gap-5 md:text-3xl">
+                <h1 className="text-centers h-full">Selamat datang di dunia</h1>
+                <Image
+                  src={LogoBrand}
+                  alt="Logo Brand"
+                  className="absolute -bottom-4 right-3 w-[100px] md:-bottom-10 md:w-[200px]"
+                />
+              </div>
             </div>
+            <DividerTransparant className="" />
           </div>
         </>
       ) : (
