@@ -44,12 +44,12 @@ const Navbar = () => {
             )}
           >
             <div className="relative flex h-full flex-col items-center justify-center">
-              <div className="text-md flex items-center justify-center gap-5 md:text-3xl">
+              <div className="flex items-center justify-center gap-5 text-sm md:text-3xl">
                 <h1 className="text-centers h-full">Selamat datang di dunia</h1>
                 <Image
                   src={LogoBrand}
                   alt="Logo Brand"
-                  className="absolute -bottom-4 right-3 w-[100px] md:-bottom-10 md:w-[200px]"
+                  className="absolute -bottom-4 right-3 w-[90px] md:-bottom-10 md:w-[200px]"
                 />
               </div>
             </div>
