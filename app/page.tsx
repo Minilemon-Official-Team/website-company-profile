@@ -4,11 +4,11 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Placeholder } from "placeholder";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Contact from "@/components/contact";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
@@ -37,6 +37,7 @@ import IdeaTitle from "@/public/title/idea.png";
 import StoryTitle from "@/public/title/story-2.png";
 // import ProductTitle from "@/public/title/our-product-1.png";
 import CompanyTitle from "@/public/title/company.png";
+import Slider from "@/components/ui/slider";
 // import ContactTitle from "@/public/title/contact-us-1.png";
 
 export default function Home() {
@@ -47,6 +48,7 @@ export default function Home() {
   const [isExpanded2, setIsExpanded2] = useState(false);
   // const [isExpanded3, setIsExpanded3] = useState(false);
   // const [isExpanded4, setIsExpanded4] = useState(false);
+  const ref = useRef(null);
 
   const toggleExpand1 = () => {
     setIsExpanded1(!isExpanded1);
@@ -182,6 +184,11 @@ export default function Home() {
   //     },
   //   },
   // };
+
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.8,
+  });
 
   useEffect(() => {
     setMounted(true);
@@ -420,9 +427,7 @@ export default function Home() {
                   See More
                 </ButtonLegacy.Primary>
               </div>
-            </div>
-            {isExpanded2 && (
-              <>
+              {isExpanded2 && (
                 <motion.div
                   variants={containerVariants}
                   initial="hidden"
@@ -493,18 +498,18 @@ export default function Home() {
                     (Papua) , mereka adalah 6 sahabat sepermainan yang siap
                     menjadi idola baru untuk anak-anak Indonesia.
                   </motion.p>
+                  <ButtonLegacy.Primary
+                    className={cn(
+                      isExpanded2 === true ? "flex" : "hidden",
+                      "scale-90",
+                    )}
+                    onClick={toggleExpand2}
+                  >
+                    Read Less
+                  </ButtonLegacy.Primary>
                 </motion.div>
-                <ButtonLegacy.Primary
-                  className={cn(
-                    isExpanded2 === true ? "flex" : "hidden",
-                    "scale-90",
-                  )}
-                  onClick={toggleExpand2}
-                >
-                  Read Less
-                </ButtonLegacy.Primary>
-              </>
-            )}
+              )}
+            </div>
           </div>
 
           {/* Character Section */}
@@ -542,33 +547,58 @@ export default function Home() {
               </div>
             </div>
             {/* Change character picture and status */}
-            <div>
-              <Splide
-                options={{
-                  type: "loop",
-                  interval: 6000,
-                  perPage: 1,
-                  perMove: 1,
-                  gap: "0.5rem",
-                  drag: "free",
-                  focus: "center",
-                  pagination: false,
-                  autoplay: true,
-                  arrows: false,
-                }}
-              >
-                {charactersData.map((character) => (
-                  <SplideSlide key={character.id}>
-                    <div>
-                      <div>{character.description}</div>
-                      <Image
-                        src={character.namePicture}
-                        alt={character.fullName}
-                      />
-                    </div>
-                  </SplideSlide>
-                ))}
-              </Splide>
+            <div className="flex justify-center bg-[#dedede]">
+              <div className="max-w-screen-tablet px-6">
+                <Splide
+                  options={{
+                    type: "loop",
+                    interval: 4000,
+                    perPage: 1,
+                    perMove: 1,
+                    gap: "0.5rem",
+                    focus: "center",
+                    pagination: false,
+                    autoplay: true,
+                    arrows: false,
+                  }}
+                >
+                  {charactersData.map((character) => (
+                    <SplideSlide key={character.id}>
+                      <div className="flex flex-col">
+                        <div className="flex flex-row">
+                          <div className="basis-1/2">
+                            <Image
+                              src={character.image}
+                              alt={character.fullName}
+                            />
+                          </div>
+                          <div className="flex basis-1/2 flex-col">
+                            <div>
+                              <Image
+                                src={character.namePicture}
+                                alt={character.fullName}
+                              />
+                            </div>
+                            <div className="flex flex-col">
+                              <Slider value={isInView ? character.strong : 0}>
+                                Strong
+                              </Slider>
+                              <Slider value={character.logic}>Logic</Slider>
+                              <Slider value={character.creative}>
+                                Creative
+                              </Slider>
+                              <Slider value={character.luck}>Luck</Slider>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p>{character.description}</p>
+                        </div>
+                      </div>
+                    </SplideSlide>
+                  ))}
+                </Splide>
+              </div>
             </div>
           </div>
         </div>
