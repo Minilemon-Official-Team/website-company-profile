@@ -1,40 +1,40 @@
 "use client";
 
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Placeholder } from "placeholder";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
-import { cn } from "@/lib/utils";
-import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import Contact from "@/components/contact";
+import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import DividerBlue from "@/components/ui/divider/divider-blue";
-import MinilemonTitle from "@/public/title/minilemon-1.png";
-import MessageTitle from "@/public/title/message.png";
-import OurProductTitle from "@/public/title/our-product-1.png";
-import TreatmentTitle from "@/public/title/treatment.png";
-import ConceptTitle from "@/public/title/concept.png";
-import PsychographicTitle from "@/public/title/psychographic.png";
 import { charactersData } from "@/data/characters";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
-import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPostParenting from "@/public/product/poster-parenting.png";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import { cn } from "@/lib/utils";
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import ConceptTitle from "@/public/title/concept.png";
+import MessageTitle from "@/public/title/message.png";
+import MinilemonTitle from "@/public/title/minilemon-1.png";
+import OurProductTitle from "@/public/title/our-product-1.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
+import TreatmentTitle from "@/public/title/treatment.png";
 
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
-import BackgroundStory from "@/public/background/story-mobile.png";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
+import BackgroundStory from "@/public/background/story-mobile.png";
 // import BackgroundProduct from "@/public/background/product-mobile.png";
 // import BackgroundCompany from "@/public/background/company-mobile.png";
+import CharacterTitle from "@/public/title/characters-1.png";
 import IdeaTitle from "@/public/title/idea.png";
 import StoryTitle from "@/public/title/story-2.png";
-import CharacterTitle from "@/public/title/characters-1.png";
 // import ProductTitle from "@/public/title/our-product-1.png";
 import CompanyTitle from "@/public/title/company.png";
 // import ContactTitle from "@/public/title/contact-us-1.png";
@@ -207,9 +207,9 @@ export default function Home() {
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
-                  <Image src={IdeaTitle} alt="Idea" />
+                  <Image src={IdeaTitle} alt="Idea" className="w-[70px]" />
                 </div>
-                <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
+                <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
                   <p>
                     Berawal dari cinta dan bangga akan warisan budaya khusunya
                     topeng yang merupakan penutup wajah dari setiap Suku di
@@ -246,18 +246,20 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex w-full flex-col items-center gap-y-4 bg-[#f1e3fe] px-6"
+                    className="flex flex-col items-center bg-[#f1e3fe]"
                   >
-                    <motion.p
-                      className="max-w-screen-tablet px-6 leading-relaxed tracking-widest"
-                      variants={paragraphVariants}
-                    >
-                      Bernama Minilemon dengan harapan dapat memberi manfaat
-                      positif bai anak-anak indonesia dalam belaja Sejarah,
-                      Budaya, hormat kepada orangtua, gotong royong, menghargai
-                      perbedaan, cinta Bangsa dan Negara, serta ikut serta dalam
-                      penyelamatan Lingkungan hidup di dunia.
-                    </motion.p>
+                    <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
+                      <motion.p
+                        className="leading-relaxed tracking-widest"
+                        variants={paragraphVariants}
+                      >
+                        Bernama Minilemon dengan harapan dapat memberi manfaat
+                        positif bai anak-anak indonesia dalam belaja Sejarah,
+                        Budaya, hormat kepada orangtua, gotong royong,
+                        menghargai perbedaan, cinta Bangsa dan Negara, serta
+                        ikut serta dalam penyelamatan Lingkungan hidup di dunia.
+                      </motion.p>
+                    </motion.div>
                   </motion.div>
                   <motion.div
                     variants={secondDivVariants}
@@ -267,11 +269,15 @@ export default function Home() {
                     transition={{ duration: 0.5 }}
                     className="flex flex-col items-center justify-end bg-[#d5def4]"
                   >
-                    <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end px-6">
+                    <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
                       <motion.div className="">
-                        <Image src={MessageTitle} alt="Message" className="" />
+                        <Image
+                          src={MessageTitle}
+                          alt="Message"
+                          className="w-[190px]"
+                        />
                       </motion.div>
-                      <motion.p className="text-end">
+                      <motion.p className="text-end leading-relaxed tracking-widest">
                         minimnya hiburan yang mengedepankan kualitas dan edukasi
                         kepada anak-anak Indonesia, Minilemon berharap mampu
                         menjadi idola baru, menanamkan nilai-nilai positif di
@@ -286,21 +292,23 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col justify-end bg-[#1b1b1b]"
+                    className="flex flex-col items-center justify-center bg-[#1b1b1b]"
                   >
-                    <motion.div>
-                      <Image
-                        src={TreatmentTitle}
-                        alt="Treatment"
-                        className="scale-[0.7]"
-                      />
+                    <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+                      <motion.div>
+                        <Image
+                          src={TreatmentTitle}
+                          alt="Treatment"
+                          className="scale-[0.7]"
+                        />
+                      </motion.div>
+                      <motion.p className="max-w-screen-tablet text-center text-sm leading-relaxed tracking-widest text-[#c5cce2]">
+                        Sadar akan persoalan-persoalan besar dan mendasar, PT
+                        Minilemon Nusantara berinisitatif membuat produk-produk
+                        anak yang berupa tontonan dan permainan, dengan target
+                        usia 3-7 tahun.
+                      </motion.p>
                     </motion.div>
-                    <motion.p className="text-end">
-                      Sadar akan persoalan-persoalan besar dan mendasar, PT
-                      Minilemon Nusantara berinisitatif membuat produk-produk
-                      anak yang berupa tontonan dan permainan, dengan target
-                      usia 3-7 tahun.
-                    </motion.p>
                   </motion.div>
                   <motion.div
                     variants={fourthDivVariants}
@@ -308,23 +316,25 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col justify-end bg-[#d6f4df]"
+                    className="flex flex-col items-center justify-center bg-[#d6f4df]"
                   >
-                    <motion.div>
-                      <Image
-                        src={ConceptTitle}
-                        alt="Concept"
-                        className="scale-[0.7]"
-                      />
+                    <motion.div className="flex max-w-screen-tablet flex-col items-start justify-center gap-4 px-6 py-4">
+                      <motion.div>
+                        <Image
+                          src={ConceptTitle}
+                          alt="Concept"
+                          className="w-[200px]"
+                        />
+                      </motion.div>
+                      <motion.p className="text-start leading-relaxed tracking-widest">
+                        Minilemon adalah kisah 6 sahabat sepermainan yang
+                        berasal dari suku berbeda-beda yaitu Jawa, Sunda, Papua,
+                        Tionghoa, Batak dan Bali. meskipun berbeda Minilemon
+                        selalu mengedepankan sikap toleransi dan gotong royong,
+                        sehingga saling melengkapi satu dan lainnya dalam setiap
+                        kisah yang mekea lalui.
+                      </motion.p>
                     </motion.div>
-                    <motion.p className="text-end">
-                      Minilemon adalah kisah 6 sahabat sepermainan yang berasal
-                      dari suku berbeda-beda yaitu Jawa, Sunda, Papua, Tionghoa,
-                      Batak dan Bali. meskipun berbeda Minilemon selalu
-                      mengedepankan sikap toleransi dan gotong royong, sehingga
-                      saling melengkapi satu dan lainnya dalam setiap kisah yang
-                      mekea lalui.
-                    </motion.p>
                   </motion.div>
                   <motion.div
                     variants={fifthDivVariants}
@@ -332,34 +342,36 @@ export default function Home() {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col justify-end bg-[#f1d9d3]"
+                    className="flex flex-col items-center justify-end bg-[#f1d9d3]"
                   >
-                    <motion.div>
-                      <Image
-                        src={PsychographicTitle}
-                        alt="Psychographic"
-                        className="scale-[0.7]"
-                      />
+                    <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
+                      <motion.div className="">
+                        <Image
+                          src={PsychographicTitle}
+                          alt="Psychographic"
+                          className="w-[250px]"
+                        />
+                      </motion.div>
+                      <motion.p className="text-end leading-relaxed tracking-widest">
+                        Membangun pola pikir positif di dalam pertumbuhan anak
+                        yang suka bermain, imajinatif, hidup dalam dunia
+                        angan-angan, tidak suka larangan, mempunyai sifat ingin
+                        tahu dan bersemangat untuk coba-coba.
+                      </motion.p>
                     </motion.div>
-                    <motion.p className="text-end">
-                      Membangun pola pikir positif di dalam pertumbuhan anak
-                      yang suka bermain, imajinatif, hidup dalam dunia
-                      angan-angan, tidak suka larangan, mempunyai sifat ingin
-                      tahu dan bersemangat untuk coba-coba.
-                    </motion.p>
+                    <ButtonLegacy.Primary
+                      className={cn(
+                        isExpanded1 === true ? "flex" : "hidden",
+                        "my-7 scale-90",
+                      )}
+                      onClick={toggleExpand1}
+                    >
+                      Read Less
+                    </ButtonLegacy.Primary>
                   </motion.div>
                 </>
               )}
             </AnimatePresence>
-            <ButtonLegacy.Primary
-              className={cn(
-                isExpanded1 === true ? "flex" : "hidden",
-                "scale-90",
-              )}
-              onClick={toggleExpand1}
-            >
-              Read Less
-            </ButtonLegacy.Primary>
           </div>
 
           {/* Story Section */}
@@ -376,7 +388,7 @@ export default function Home() {
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
-                  <Image src={StoryTitle} alt="Story" />
+                  <Image src={StoryTitle} alt="Story" className="w-[100px]" />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
                   <p>
@@ -509,7 +521,11 @@ export default function Home() {
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
                 <div className="z-10">
-                  <Image src={CharacterTitle} alt="Character" />
+                  <Image
+                    src={CharacterTitle}
+                    alt="Character"
+                    className="w-[200px]"
+                  />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
                   <p>
