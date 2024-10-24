@@ -787,12 +787,12 @@ export default function Home() {
                         Sebagai anak bangsa yang baik dan cinta tanah air, PT
                         Minilemon Nusantara mengambil tanggung jawab untuk
                         berkontribusi memberikan edukasi dan harapan untuk
-                        kemajuan bangsa. Dengan menciptakan "Good character" PT
-                        Minilemon Nusantara diharapkan dapat berperan kreatif
-                        untuk mempersiapkan generasi muda dan anak-anak
-                        Indonesia yang tangguh, cinta tanah air, dengan membawa
-                        nilai-nilai kebaikan dan budaya yang merupakan warisan
-                        yang selalu kita banggakan.
+                        kemajuan bangsa. Dengan menciptakan &quot;Good
+                        character&quot; PT Minilemon Nusantara diharapkan dapat
+                        berperan kreatif untuk mempersiapkan generasi muda dan
+                        anak-anak Indonesia yang tangguh, cinta tanah air,
+                        dengan membawa nilai-nilai kebaikan dan budaya yang
+                        merupakan warisan yang selalu kita banggakan.
                       </motion.p>
                     </motion.div>
                     <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
@@ -888,10 +888,10 @@ export default function Home() {
                             baik dan menjadi teladan teruntuk anak-anak
                             Indonesia, sehinga buah lemon yang dikenal banyak
                             manfaatnya, sangat cocok dipadukan dengan topeng,
-                            untuk menjadi "THE GOOD CHARACTER" dengan "WAJAH
-                            INDONESIA". Dengan ide yang brilian, "BAPAK
-                            MINILEMON" merupakan julukan yang pantas dilekatkan
-                            dengan Reno Halsamer.
+                            untuk menjadi &quot;THE GOOD CHARACTER&quot; dengan
+                            &quot;WAJAH INDONESIA&quot;. Dengan ide yang
+                            brilian, &quot;BAPAK MINILEMON&quot; merupakan
+                            julukan yang pantas dilekatkan dengan Reno Halsamer.
                           </motion.p>
                         </motion.div>
                       </motion.div>
