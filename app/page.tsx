@@ -29,17 +29,18 @@ import TreatmentTitle from "@/public/title/treatment.png";
 
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
-import BackgroundStory from "@/public/background/story-mobile.png";
-import BackgroundProduct from "@/public/background/product-mobile.png";
 import BackgroundCompany from "@/public/background/company-mobile.png";
+import BackgroundProduct from "@/public/background/product-mobile.png";
+import BackgroundStory from "@/public/background/story-mobile.png";
 import CharacterTitle from "@/public/title/characters-1.png";
 import IdeaTitle from "@/public/title/idea.png";
 import StoryTitle from "@/public/title/story-2.png";
 // import ProductTitle from "@/public/title/our-product-1.png";
-import CompanyTitle from "@/public/title/company.png";
 import Slider from "@/components/ui/slider";
+import CompanyTitle from "@/public/title/company.png";
 import Link from "next/link";
 // import ContactTitle from "@/public/title/contact-us-1.png";
+import ContactMobile from "@/components/contact-mobile";
 import { Hero } from "@/data/contribution";
 import CoFounderTitle from "@/public/title/co-founder.png";
 import MisiTitle from "@/public/title/misi.png";
@@ -1050,6 +1051,7 @@ export default function Home() {
                 </>
               )}
             </AnimatePresence>
+            <ContactMobile />
           </div>
         </div>
       ) : (
