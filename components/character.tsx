@@ -64,19 +64,6 @@ const Character = ({
               "relative flex basis-4/12 flex-row items-center justify-center gap-4",
             )}
           >
-            {/* Mobile Design */}
-            <div className="order-2 flex basis-1/2 flex-col gap-6 lg:hidden lg:basis-0">
-              <div className="flex">
-                <Image src={namePicture} alt={fullName} />
-              </div>
-              <div className="flex flex-col gap-6">
-                <Slider value={isInView ? strong : 0}>Strong</Slider>
-                <Slider value={isInView ? creative : 0}>Creative</Slider>
-                <Slider value={isInView ? logic : 0}>Logic</Slider>
-                <Slider value={isInView ? luck : 0}>Luck</Slider>
-              </div>
-            </div>
-
             <div className="absolute z-10 h-[350px] w-[500px] basis-1/2 gap-4 overflow-visible lg:basis-full">
               <Image
                 src={image}
