@@ -32,14 +32,14 @@ const Slider = ({ children, value, className, slider }: SliderProps) => {
             className="absolute inset-y-0 left-0 h-full bg-gradient-to-b from-[#fef085] to-[#ffa914]"
             initial={{ width: "0%" }}
             animate={{ width: `${value}%` }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "linear" }}
           />
         </div>
         <motion.div
-          className="absolute top-0"
+          className="absolute top-1 lg:top-0"
           initial={{ left: "0%" }}
           animate={{ left: `${value}%` }}
-          transition={{ duration: 2, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "linear" }}
         >
           <Assets.IconSlider className="absolute -left-4 h-4 w-6 lg:h-6 lg:w-6" />
         </motion.div>

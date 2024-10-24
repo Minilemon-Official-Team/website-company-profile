@@ -4,11 +4,11 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Placeholder } from "placeholder";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import Contact from "@/components/contact";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
@@ -30,7 +30,7 @@ import TreatmentTitle from "@/public/title/treatment.png";
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
 import BackgroundStory from "@/public/background/story-mobile.png";
-// import BackgroundProduct from "@/public/background/product-mobile.png";
+import BackgroundProduct from "@/public/background/product-mobile.png";
 // import BackgroundCompany from "@/public/background/company-mobile.png";
 import CharacterTitle from "@/public/title/characters-1.png";
 import IdeaTitle from "@/public/title/idea.png";
@@ -38,6 +38,7 @@ import StoryTitle from "@/public/title/story-2.png";
 // import ProductTitle from "@/public/title/our-product-1.png";
 import CompanyTitle from "@/public/title/company.png";
 import Slider from "@/components/ui/slider";
+import Link from "next/link";
 // import ContactTitle from "@/public/title/contact-us-1.png";
 
 export default function Home() {
@@ -48,7 +49,6 @@ export default function Home() {
   const [isExpanded2, setIsExpanded2] = useState(false);
   // const [isExpanded3, setIsExpanded3] = useState(false);
   // const [isExpanded4, setIsExpanded4] = useState(false);
-  const ref = useRef(null);
 
   const toggleExpand1 = () => {
     setIsExpanded1(!isExpanded1);
@@ -184,11 +184,6 @@ export default function Home() {
   //     },
   //   },
   // };
-
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0.8,
-  });
 
   useEffect(() => {
     setMounted(true);
@@ -548,14 +543,14 @@ export default function Home() {
             </div>
             {/* Change character picture and status */}
             <div className="flex justify-center bg-[#dedede]">
-              <div className="max-w-screen-tablet px-6">
+              <div className="max-w-screen-tablet px-6 py-12">
                 <Splide
                   options={{
                     type: "loop",
                     interval: 4000,
                     perPage: 1,
                     perMove: 1,
-                    gap: "0.5rem",
+                    gap: "5rem",
                     focus: "center",
                     pagination: false,
                     autoplay: true,
@@ -564,8 +559,8 @@ export default function Home() {
                 >
                   {charactersData.map((character) => (
                     <SplideSlide key={character.id}>
-                      <div className="flex flex-col">
-                        <div className="flex flex-row">
+                      <div className="flex h-full max-w-screen-tablet flex-col gap-y-4">
+                        <div className="flex flex-1 basis-1/2 flex-row">
                           <div className="basis-1/2">
                             <Image
                               src={character.image}
@@ -577,28 +572,111 @@ export default function Home() {
                               <Image
                                 src={character.namePicture}
                                 alt={character.fullName}
+                                className="w-[100px]"
                               />
                             </div>
                             <div className="flex flex-col">
-                              <Slider value={isInView ? character.strong : 0}>
+                              <Slider
+                                value={character.strong}
+                                slider="bg-[#ededed]"
+                              >
                                 Strong
                               </Slider>
-                              <Slider value={character.logic}>Logic</Slider>
-                              <Slider value={character.creative}>
+                              <Slider
+                                value={character.logic}
+                                slider="bg-[#ededed]"
+                              >
+                                Logic
+                              </Slider>
+                              <Slider
+                                value={character.creative}
+                                slider="bg-[#ededed]"
+                              >
                                 Creative
                               </Slider>
-                              <Slider value={character.luck}>Luck</Slider>
+                              <Slider
+                                value={character.luck}
+                                slider="bg-[#ededed]"
+                              >
+                                Luck
+                              </Slider>
                             </div>
                           </div>
                         </div>
-                        <div>
-                          <p>{character.description}</p>
+                        <div className="flex-1 basis-1/2">
+                          <p className="text-sm">{character.description}</p>
                         </div>
                       </div>
                     </SplideSlide>
                   ))}
                 </Splide>
               </div>
+            </div>
+          </div>
+
+          {/* Product Section */}
+          <div>
+            <div className="relative flex flex-col items-center justify-center bg-cover bg-center py-4">
+              <Image
+                src={BackgroundProduct}
+                alt="Background Product"
+                fill
+                sizes="100vw"
+                className="absolute inset-0"
+                objectFit="cover"
+              />
+              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6">
+                <div className="z-10">
+                  <Image
+                    src={OurProductTitle}
+                    alt="Our Product"
+                    className="w-[200px]"
+                  />
+                </div>
+                <div className="z-10 flex flex-col leading-relaxed tracking-widest text-[#d3dcf3]">
+                  <p>
+                    Di era modernisasi dan selera yang semakin beragam,
+                    Minilemon memproduksi banyak varian produk digital maupun
+                    konvensional, agar nilai-nilai edukasi dan karakter positif,
+                    dapat menjangkau ke banyak penggemar khususnya anak-anak
+                    usia 3 sampai 7 tahun.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center justify-center gap-y-4 bg-[#1b1b1b] p-6">
+              <div className="flex items-center justify-center">
+                <Image
+                  src={CoverPetualanganMinilemon}
+                  alt="Petualangan Minilemon"
+                  className="h-[492px] w-[350px]"
+                />
+              </div>
+              <div className="flex max-w-[350px] flex-col gap-y-6 text-xs leading-loose tracking-wider text-[#c0cbdf]/90">
+                <p>
+                  Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar
+                  yang tanpa sengaja memicu kejar-kerjaran menegangkan dengan
+                  sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
+                  menghilang setelah menemukan mesin portal misterius diruang
+                  rahasia Kak Bibie.
+                </p>
+                <p>
+                  Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan
+                  siap bertualang mencari Ucup dengan bantuan Kak Bibie dan
+                  Paman Tigor.{" "}
+                  <Link
+                    className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+                    href="javascript:void(0)"
+                  >
+                    <span className={isExpanded1 == true ? "hidden" : "flex"}>
+                      Read More{" "}
+                      <span className="ml-1 flex items-center text-xs">❯</span>
+                    </span>
+                  </Link>
+                </p>
+              </div>
+              <div>Trailer</div>
             </div>
           </div>
         </div>
