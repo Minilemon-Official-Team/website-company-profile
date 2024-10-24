@@ -1,16 +1,15 @@
-import React from "react";
-import { Placeholder } from "placeholder";
 import Image from "next/image";
+import { Placeholder } from "placeholder";
 
-import VisiTitle from "@/public/title/visi.png";
-import MisiTitle from "@/public/title/misi.png";
-import FounderTitle from "@/public/title/the-founder.png";
-import CoFounderTitle from "@/public/title/co-founder.png";
-import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png";
-import BackgroundImage from "@/public/background/company.png";
-import HeroTitle from "@/public/title/our-hero.png";
-import FamilyTitle from "@/public/title/our-family.png";
 import { Family, Hero } from "@/data/contribution";
+import BackgroundImage from "@/public/background/company.png";
+import CoFounderTitle from "@/public/title/co-founder.png";
+import MisiTitle from "@/public/title/misi.png";
+import FamilyTitle from "@/public/title/our-family.png";
+import HeroTitle from "@/public/title/our-hero.png";
+import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png";
+import FounderTitle from "@/public/title/the-founder.png";
+import VisiTitle from "@/public/title/visi.png";
 
 const CompanyPage = () => {
   return (
