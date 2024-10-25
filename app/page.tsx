@@ -205,7 +205,7 @@ export default function Home() {
       {screenWidth < 1024 ? (
         <div className="text-xs">
           {/* About Us Section */}
-          <div className="">
+          <div>
             <div className="relative flex h-full items-center justify-center bg-cover bg-center">
               <Image
                 src={BackgroundAboutUs}
@@ -221,7 +221,7 @@ export default function Home() {
                   <Image src={IdeaTitle} alt="Idea" className="w-[70px]" />
                 </div>
                 <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p>
+                  <p id="home">
                     Berawal dari cinta dan bangga akan warisan budaya khusunya
                     topeng yang merupakan penutup wajah dari setiap Suku di
                     Indonesia.
@@ -398,11 +398,11 @@ export default function Home() {
                 objectFit="cover"
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
-                <div className="z-10">
+                <div className="z-10 scroll-mt-[50vh]">
                   <Image src={StoryTitle} alt="Story" className="w-[100px]" />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p>
+                  <p id="story">
                     Berawal dari kisah Kakek Djoyo yang merupakan seorang
                     pangeran sah penerus tahta ayahnya, seorang raja di tanah
                     Jawa. Sejak kecil, Pangeran Djoyo sudah kehilangan ibunya,
@@ -537,7 +537,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p>
+                  <p id="character">
                     Minilemon adalah animasi perpaduan topeng dan buah lemon
                     yang hidup di dalam mimpi kakek Djoyo, terdiri dari 6
                     karakter utama yang mewakili 6 suku besar di Indonesia,
@@ -643,7 +643,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 flex flex-col leading-relaxed tracking-widest text-[#d3dcf3]">
-                  <p>
+                  <p id="product">
                     Di era modernisasi dan selera yang semakin beragam,
                     Minilemon memproduksi banyak varian produk digital maupun
                     konvensional, agar nilai-nilai edukasi dan karakter positif,
@@ -689,7 +689,7 @@ export default function Home() {
             </div>
           </div>
           {/* Company Section */}
-          <div className="">
+          <div>
             <div className="relative flex h-full items-center justify-center bg-cover bg-center py-10">
               <Image
                 src={BackgroundCompany}
@@ -709,7 +709,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p>
+                  <p id="company">
                     PT. Minilemon Nusantaraadlah perusahaan yang berdomisili di
                     Surabaya dan Jakarta, Indonesia. Yang berorientasi pada
                     Pendidikan Karakter Anak dan nilai-nilai kebaikan memlalui

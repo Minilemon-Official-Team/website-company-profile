@@ -1,14 +1,14 @@
-import React from "react";
 import { Metadata } from "next";
+import React from "react";
 import "./globals.css";
 
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { poppins } from "./fonts";
-import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar";
 import NavigationMobile from "@/components/navigation-mobile";
 import { PageIndicator } from "@/components/page-indicator";
+import { cn } from "@/lib/utils";
 import ScreenProvider from "@/providers/screen-provider";
+import { poppins } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +21,7 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={cn(poppins.className)}>
         <ScreenProvider>
           <Navbar />
