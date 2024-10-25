@@ -216,7 +216,7 @@ export default function Home() {
                 className="absolute inset-0"
                 objectFit="cover"
               />
-              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
+              <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 pb-5 pt-10">
                 <div className="z-10">
                   <Image src={IdeaTitle} alt="Idea" className="w-[70px]" />
                 </div>
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
-              <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+              <div className="flex max-w-screen-tablet flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
                 <p>
                   Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
                   perjalanan panjanga telah menciptakan tokoh animasi (fiksi)

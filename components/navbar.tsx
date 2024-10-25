@@ -17,7 +17,7 @@ import {
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 import { cn } from "@/lib/utils";
 import LogoBrand from "@/public/logo.png";
-import DividerTransparant from "./ui/divider/divider-transparant";
+import DividerGray from "./ui/divider/divider-gray";
 
 const Navbar = () => {
   const [mounted, setMounted] = React.useState(false);
@@ -49,11 +49,11 @@ const Navbar = () => {
                 <Image
                   src={LogoBrand}
                   alt="Logo Brand"
-                  className="absolute -bottom-4 right-3 w-[90px] md:-bottom-10 md:w-[200px]"
+                  className="absolute -bottom-4 right-3 z-10 w-[100px] md:-bottom-10 md:w-[200px]"
                 />
               </div>
             </div>
-            <DividerTransparant className="" />
+            <DividerGray className="" />
           </div>
         </>
       ) : (
