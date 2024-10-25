@@ -855,12 +855,15 @@ export default function Home() {
                         />
                       </motion.div>
                       <motion.div>
-                        <motion.img
+                        {/* <motion.img
                           src="https://via.placeholder.com/200x250"
                           alt="Founder Image"
                           className="float-left mr-4 w-1/2 rounded-md shadow-lg"
-                        />
+                        /> */}
 
+                        <div className="float-left mr-4 flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                          200x250
+                        </div>
                         <motion.div>
                           <motion.p
                             className="text-start text-sm leading-relaxed tracking-widest"
@@ -915,12 +918,14 @@ export default function Home() {
                         />
                       </motion.div>
                       <motion.div>
-                        <motion.img
+                        {/* <motion.img
                           src="https://via.placeholder.com/200x250"
                           alt="Founder Image"
                           className="float-left mr-4 w-1/2 rounded-md shadow-lg"
-                        />
-
+                        /> */}
+                        <div className="float-left mr-4 flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                          200x250
+                        </div>
                         <motion.div>
                           <motion.p
                             className="text-start text-sm leading-relaxed tracking-widest"
@@ -985,11 +990,14 @@ export default function Home() {
                             key={index}
                             className="flex w-full flex-col items-center justify-start gap-2"
                           >
-                            <motion.img
-                              src="https://via.placeholder.com/200x250"
+                            {/* <motion.img
+                              src="https://picsum.photos/id/200/200/250?grayscale"
                               alt="Founder Image"
                               className="w-full"
-                            />
+                            /> */}
+                            <div className="flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                              200x250
+                            </div>
                             <motion.p className="text-center text-sm leading-relaxed tracking-widest">
                               {item.name}
                             </motion.p>
@@ -1023,11 +1031,14 @@ export default function Home() {
                             key={index}
                             className="flex w-full flex-col items-center justify-start gap-2"
                           >
-                            <motion.img
-                              src="https://via.placeholder.com/200x250"
+                            {/* <motion.img
+                              src="https://picsum.photos/seed/picsum/200/250"
                               alt="Founder Image"
                               className="w-full"
-                            />
+                            /> */}
+                            <div className="flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                              200x250
+                            </div>
                             <motion.p className="text-center text-sm leading-relaxed tracking-widest">
                               {item.name}
                             </motion.p>
