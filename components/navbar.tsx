@@ -15,6 +15,7 @@ import {
   MinilemonYellowIcon,
 } from "@/components/icons";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
+import useScrollY from "@/hooks/useScrollY";
 import { cn } from "@/lib/utils";
 import LogoBrand from "@/public/logo.png";
 import DividerGray from "./ui/divider/divider-gray";
@@ -26,6 +27,7 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const isActive = pathname === "/characters";
   const screenWidth = useScreenWidth();
+  const scrollY = useScrollY();
 
   React.useEffect(() => {
     setMounted(true);
@@ -40,20 +42,31 @@ const Navbar = () => {
           <div
             className={cn(
               berlin_sans_fb.className,
-              "sticky top-0 z-50 flex h-[70px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[100px]",
+              "z-50 flex h-[70px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[100px]",
+              scrollY > 500 ? "fixed bottom-0 left-0 w-full" : "sticky top-0",
             )}
           >
             <div className="relative flex h-full flex-col items-center justify-center">
               <div className="flex items-center justify-center gap-5 text-sm md:text-3xl">
-                <h1 className="text-centers h-full">Selamat datang di dunia</h1>
+                {scrollY > 500 ? (
+                  ""
+                ) : (
+                  <h1 className="h-full text-center">
+                    Selamat datang di dunia
+                  </h1>
+                )}
+
                 <Image
                   src={LogoBrand}
                   alt="Logo Brand"
-                  className="absolute -bottom-4 right-3 z-10 w-[100px] md:-bottom-10 md:w-[200px]"
+                  className={cn(
+                    "absolute right-3 z-20 w-[100px] md:-bottom-10 md:w-[200px]",
+                    scrollY > 500 ? "-top-4" : "-bottom-4",
+                  )}
                 />
               </div>
+              <DividerGray />
             </div>
-            <DividerGray className="" />
           </div>
         </>
       ) : (

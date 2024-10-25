@@ -1,11 +1,14 @@
 "use client";
 
+import useScrollY from "@/hooks/useScrollY";
+import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
 const NavigationMobile = () => {
   const [numberlink, setNumberlink] = useState<number>(0);
+  const scrollY = useScrollY();
   const NAV_LINK = [
     "#home",
     "#story",
@@ -79,8 +82,18 @@ const NavigationMobile = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 left-1/4 z-50 flex w-fit items-center justify-center lg:hidden">
-      <div className="flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl bg-black px-8 py-2">
+    <div
+      className={cn(
+        "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center lg:hidden",
+        scrollY > 500 ? "bottom-3" : "bottom-0",
+      )}
+    >
+      <div
+        className={cn(
+          "flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl px-8 py-2",
+          scrollY > 500 ? "bg-transparent" : "bg-black",
+        )}
+      >
         <FaPlay
           onClick={() => handleLink("prev")}
           className={`h-4 w-4 scale-x-[-1] cursor-pointer text-yellow-500 ${numberlink === 0 ? "cursor-not-allowed opacity-50" : ""}`}
