@@ -402,7 +402,7 @@ export default function Home() {
                   <Image src={StoryTitle} alt="Story" className="w-[100px]" />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p id="story">
+                  <p>
                     Berawal dari kisah Kakek Djoyo yang merupakan seorang
                     pangeran sah penerus tahta ayahnya, seorang raja di tanah
                     Jawa. Sejak kecil, Pangeran Djoyo sudah kehilangan ibunya,
@@ -416,7 +416,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
               <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
-                <p>
+                <p id="story">
                   Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
                   meninggalkan istana dan memulai perjalanan panjang untuk
                   mencari ilmu dan kedamaian.

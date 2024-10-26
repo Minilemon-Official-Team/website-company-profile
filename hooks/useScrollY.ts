@@ -1,21 +1,24 @@
+import { useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const useScrollY = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
+  const scrollY = useMotionValue(0);
+  const [scrollYValue, setScrollYValue] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const updateScrollY = () => {
+      scrollY.set(window.scrollY);
+      setScrollYValue(scrollY.get());
+    };
+
+    window.addEventListener("scroll", updateScrollY);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", updateScrollY);
     };
-  }, []);
+  }, [scrollY]);
 
-  return scrollY;
+  return scrollYValue;
 };
 
 export default useScrollY;
