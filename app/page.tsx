@@ -1,54 +1,65 @@
 "use client";
 
+// External Libraries
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Placeholder } from "placeholder";
 import { useEffect, useState } from "react";
 
+// Local Components and Utilities
 import Contact from "@/components/contact";
+import ContactMobile from "@/components/contact-mobile";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import DividerBlue from "@/components/ui/divider/divider-blue";
-import { charactersData } from "@/data/characters";
+import Slider from "@/components/ui/slider";
 import { useScreenWidth } from "@/hooks/useScreenWidth";
 import { cn } from "@/lib/utils";
-import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
-import CoverPostParenting from "@/public/product/poster-parenting.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
-import ConceptTitle from "@/public/title/concept.png";
-import MessageTitle from "@/public/title/message.png";
-import MinilemonTitle from "@/public/title/minilemon-1.png";
-import OurProductTitle from "@/public/title/our-product-1.png";
-import PsychographicTitle from "@/public/title/psychographic.png";
-import TreatmentTitle from "@/public/title/treatment.png";
 
+// Data
+import { charactersData } from "@/data/characters";
+import { Hero } from "@/data/contribution";
+
+// Background Images
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
 import BackgroundCompany from "@/public/background/company-mobile.png";
 import BackgroundProduct from "@/public/background/product-mobile.png";
 import BackgroundStory from "@/public/background/story-mobile.png";
+
+// Product Cover Images
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+
+// Titles
 import CharacterTitle from "@/public/title/characters-1.png";
-import IdeaTitle from "@/public/title/idea.png";
-import StoryTitle from "@/public/title/story-2.png";
-// import ProductTitle from "@/public/title/our-product-1.png";
-import Slider from "@/components/ui/slider";
-import CompanyTitle from "@/public/title/company.png";
-import Link from "next/link";
-// import ContactTitle from "@/public/title/contact-us-1.png";
-import ContactMobile from "@/components/contact-mobile";
-import { Hero } from "@/data/contribution";
 import CoFounderTitle from "@/public/title/co-founder.png";
+import CompanyTitle from "@/public/title/company.png";
+import ConceptTitle from "@/public/title/concept.png";
+import IdeaTitle from "@/public/title/idea.png";
+import MessageTitle from "@/public/title/message.png";
+import MinilemonTitle from "@/public/title/minilemon-1.png";
 import MisiTitle from "@/public/title/misi.png";
 import OurFamilyTile from "@/public/title/our-family.png";
 import OurHeroTile from "@/public/title/our-hero.png";
+import OurProductTitle from "@/public/title/our-product-1.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
 import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
+import StoryTitle from "@/public/title/story-2.png";
 import TheFounderTitle from "@/public/title/the-founder.png";
+import TreatmentTitle from "@/public/title/treatment.png";
 import VisiTitle from "@/public/title/visi.png";
+
+// Unused Imports (Commented Out)
+// import ProductTitle from "@/public/title/our-product-1.png";
+// import ContactTitle from "@/public/title/contact-us-1.png";
 
 export default function Home() {
   const router = useRouter();
@@ -56,24 +67,23 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [isExpanded1, setIsExpanded1] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
-  // const [isExpanded3, setIsExpanded3] = useState(false);
-  // const [isExpanded4, setIsExpanded4] = useState(false);
+  const [isExpanded3, setIsExpanded3] = useState(false);
+  const [isExpanded4, setIsExpanded4] = useState(false);
 
-  const toggleExpand1 = () => {
-    setIsExpanded1(!isExpanded1);
+  const toggleExpand = (type: string) => {
+    if (type == "about") {
+      setIsExpanded1(!isExpanded1);
+    }
+    if (type == "story") {
+      setIsExpanded2(!isExpanded2);
+    }
+    if (type == "product") {
+      setIsExpanded3(!isExpanded3);
+    }
+    if (type == "company") {
+      setIsExpanded4(!isExpanded4);
+    }
   };
-
-  const toggleExpand2 = () => {
-    setIsExpanded2(!isExpanded2);
-  };
-
-  // const toggleExpand3 = () => {
-  //   setIsExpanded3(!isExpanded3);
-  // };
-
-  // const toggleExpand4 = () => {
-  //   setIsExpanded4(!isExpanded4);
-  // };
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -242,7 +252,7 @@ export default function Home() {
                     isExpanded1 === true ? "hidden" : "flex",
                     "mt-4 scale-90",
                   )}
-                  onClick={toggleExpand1}
+                  onClick={() => toggleExpand("about")}
                 >
                   See More
                 </ButtonLegacy.Primary>
@@ -375,7 +385,7 @@ export default function Home() {
                         isExpanded1 === true ? "flex" : "hidden",
                         "my-7 scale-90",
                       )}
-                      onClick={toggleExpand1}
+                      onClick={() => toggleExpand("about")}
                     >
                       Read Less
                     </ButtonLegacy.Primary>
@@ -426,7 +436,7 @@ export default function Home() {
                     isExpanded2 === true ? "hidden" : "flex",
                     "mt-4 scale-90",
                   )}
-                  onClick={toggleExpand2}
+                  onClick={() => toggleExpand("story")}
                 >
                   See More
                 </ButtonLegacy.Primary>
@@ -507,7 +517,7 @@ export default function Home() {
                       isExpanded2 === true ? "flex" : "hidden",
                       "scale-90",
                     )}
-                    onClick={toggleExpand2}
+                    onClick={() => toggleExpand("story")}
                   >
                     Read Less
                   </ButtonLegacy.Primary>
@@ -730,17 +740,17 @@ export default function Home() {
                 </p>
                 <ButtonLegacy.Primary
                   className={cn(
-                    isExpanded1 === true ? "hidden" : "flex",
+                    isExpanded4 === true ? "hidden" : "flex",
                     "mt-4 scale-90",
                   )}
-                  onClick={toggleExpand1}
+                  onClick={() => toggleExpand("company")}
                 >
                   See More
                 </ButtonLegacy.Primary>
               </div>
             </div>
             <AnimatePresence>
-              {isExpanded1 && (
+              {isExpanded4 && (
                 <>
                   <motion.div
                     variants={containerVariants}
@@ -1054,7 +1064,7 @@ export default function Home() {
                         isExpanded1 === true ? "flex" : "hidden",
                         "my-7 scale-90",
                       )}
-                      onClick={toggleExpand1}
+                      onClick={() => toggleExpand("company")}
                     >
                       Read Less
                     </ButtonLegacy.Primary>

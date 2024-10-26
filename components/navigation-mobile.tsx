@@ -10,14 +10,15 @@ import {
 } from "@/components/icons";
 import useScrollY from "@/hooks/useScrollY";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
 const NavigationMobile = () => {
-  const [numberlink, setNumberlink] = useState<number>(0);
+  const [currentLinkIndex, setCurrentLinkIndex] = useState<number>(0);
   const [isNavigating, setIsNavigating] = useState(false);
   const scrollY = useScrollY();
-  const NAV_LINK = [
+
+  const NAV_LINKS = [
     "#home",
     "#story",
     "#character",
@@ -26,7 +27,7 @@ const NavigationMobile = () => {
     "#contact",
   ];
 
-  const LINK_LOGO = [
+  const LINK_ICONS = [
     <GateIcon className="h-5 w-5 text-[#ffd201]" />,
     <BookIcon className="h-5 w-5 text-[#ffd201]" />,
     <MinilemonYellowIcon className="h-5 w-5 text-[#ffd201]" />,
@@ -35,61 +36,10 @@ const NavigationMobile = () => {
     <ArrowIcon className="h-5 w-5 text-[#ffd201]" />,
   ];
 
-  useEffect(() => {
-    const updateCurrentLink = () => {
-      if (isNavigating) return;
+  // Function to scroll element to the center of the viewport
+  const scrollToCenter = useCallback((element: HTMLElement | null) => {
+    if (!element) return;
 
-      NAV_LINK.forEach((link, index) => {
-        const element = document.querySelector(link);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top + window.scrollY;
-          const viewportCenter = window.innerHeight / 2;
-
-          if (
-            window.scrollY >= elementTop - viewportCenter &&
-            window.scrollY < elementTop + rect.height - viewportCenter &&
-            index !== numberlink
-          ) {
-            setNumberlink(index);
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", updateCurrentLink);
-    return () => {
-      window.removeEventListener("scroll", updateCurrentLink);
-    };
-  }, [numberlink, isNavigating]);
-
-  const handleLink = (type: "prev" | "next") => {
-    let newIndex = numberlink;
-
-    if (type === "prev" && numberlink > 0) {
-      newIndex = numberlink - 1;
-    } else if (type === "next" && numberlink < NAV_LINK.length - 1) {
-      newIndex = numberlink + 1;
-    }
-
-    setIsNavigating(true);
-    setTimeout(() => {
-      window.history.pushState(null, "", NAV_LINK[newIndex]);
-      setNumberlink(newIndex);
-
-      const newHash = NAV_LINK[newIndex];
-      if (newHash !== "#") {
-        const element = document.querySelector(newHash);
-        if (element) {
-          scrollToCenter(element);
-        }
-      }
-
-      setTimeout(() => setIsNavigating(false), 500);
-    }, 200);
-  };
-
-  const scrollToCenter = (element: any) => {
     const elementTop = element.getBoundingClientRect().top + window.scrollY;
     const viewportCenter = window.innerHeight / 2;
     const offset = elementTop - viewportCenter + element.offsetHeight / 2;
@@ -98,7 +48,71 @@ const NavigationMobile = () => {
       top: offset,
       behavior: "smooth",
     });
-  };
+  }, []);
+
+  // Update the current link index based on scroll position
+  // Update the current link index based on scroll position
+  const updateCurrentLink = useCallback(() => {
+    if (isNavigating) return;
+
+    NAV_LINKS.forEach((link, index) => {
+      const element = document.querySelector(link) as HTMLElement | null;
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        const elementTop = rect.top + window.scrollY;
+        const viewportCenter = window.innerHeight / 2;
+
+        if (
+          window.scrollY >= elementTop - viewportCenter &&
+          window.scrollY < elementTop + rect.height - viewportCenter &&
+          index !== currentLinkIndex
+        ) {
+          setCurrentLinkIndex(index);
+
+          // Update the URL hash without scrolling the page
+          window.history.replaceState(null, "", NAV_LINKS[index]);
+        }
+      }
+    });
+  }, [currentLinkIndex, isNavigating]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", updateCurrentLink);
+    return () => {
+      window.removeEventListener("scroll", updateCurrentLink);
+    };
+  }, [updateCurrentLink]);
+
+  // Handle navigation between links
+  const handleLinkNavigation = useCallback(
+    (direction: "prev" | "next") => {
+      if (isNavigating) return;
+
+      let newIndex = currentLinkIndex;
+
+      if (direction === "prev" && currentLinkIndex > 0) {
+        newIndex -= 1;
+      } else if (
+        direction === "next" &&
+        currentLinkIndex < NAV_LINKS.length - 1
+      ) {
+        newIndex += 1;
+      }
+
+      setIsNavigating(true);
+      setTimeout(() => {
+        const newHash = NAV_LINKS[newIndex];
+        setCurrentLinkIndex(newIndex);
+        window.history.pushState(null, "", newHash);
+
+        const element = document.querySelector(newHash) as HTMLElement | null;
+        scrollToCenter(element);
+
+        setTimeout(() => setIsNavigating(false), 500);
+      }, 200);
+    },
+    [currentLinkIndex, isNavigating, scrollToCenter],
+  );
 
   return (
     <div
@@ -114,16 +128,22 @@ const NavigationMobile = () => {
         )}
       >
         <FaPlay
-          onClick={() => handleLink("prev")}
-          className={`h-4 w-4 scale-x-[-1] cursor-pointer text-yellow-500 ${numberlink === 0 ? "cursor-not-allowed opacity-50" : ""}`}
+          onClick={() => handleLinkNavigation("prev")}
+          aria-label="Previous section"
+          className={cn(
+            "h-4 w-4 scale-x-[-1] cursor-pointer text-yellow-500",
+            currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
+          )}
         />
-        {/* <p className="font-semibold text-xl text-yellow-500">
-          {NAV_LINK[numberlink].replace("#", "") || "Home"}
-          </p> */}
-        <div className="mx-5">{LINK_LOGO[numberlink]}</div>
+        <div className="mx-5">{LINK_ICONS[currentLinkIndex]}</div>
         <FaPlay
-          onClick={() => handleLink("next")}
-          className={`h-4 w-4 cursor-pointer text-yellow-500 ${numberlink === NAV_LINK.length - 1 ? "cursor-not-allowed opacity-50" : ""}`}
+          onClick={() => handleLinkNavigation("next")}
+          aria-label="Next section"
+          className={cn(
+            "h-4 w-4 cursor-pointer text-yellow-500",
+            currentLinkIndex === NAV_LINKS.length - 1 &&
+              "cursor-not-allowed opacity-50",
+          )}
         />
       </div>
     </div>
