@@ -1,12 +1,6 @@
-export const secondDivVariants: {
-  hidden: { opacity: number; y: number };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: number | { delay: number };
-  };
-  exit: { opacity: number; y: number; transition: { delay: number } };
-} = {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+export const secondDivVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -19,16 +13,7 @@ export const secondDivVariants: {
     transition: { delay: 0 },
   },
 };
-
-export const thirdDivVariants: {
-  hidden: { opacity: number; y: number };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: number | { delay: number };
-  };
-  exit: { opacity: number; y: number; transition: { delay: number } };
-} = {
+export const thirdDivVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -41,16 +26,7 @@ export const thirdDivVariants: {
     transition: { delay: 0 },
   },
 };
-
-export const fourthDivVariants: {
-  hidden: { opacity: number; y: number };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: number | { delay: number };
-  };
-  exit: { opacity: number; y: number; transition: { delay: number } };
-} = {
+export const fourthDivVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -63,16 +39,7 @@ export const fourthDivVariants: {
     transition: { delay: 0 },
   },
 };
-
-export const fifthDivVariants: {
-  hidden: { opacity: number; y: number };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: number | { delay: number };
-  };
-  exit: { opacity: number; y: number; transition: { delay: number } };
-} = {
+export const fifthDivVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -85,16 +52,7 @@ export const fifthDivVariants: {
     transition: { delay: 0 },
   },
 };
-
-export const sixthDivVariants: {
-  hidden: { opacity: number; y: number };
-  visible: {
-    opacity: number;
-    y: number;
-    transition: number | { delay: number };
-  };
-  exit: { opacity: number; y: number; transition: { delay: number } };
-} = {
+export const sixthDivVariants: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
