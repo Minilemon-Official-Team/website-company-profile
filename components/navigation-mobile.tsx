@@ -36,12 +36,11 @@ const NavigationMobile = () => {
     <ArrowIcon className="h-5 w-5 text-[#ffd201]" />,
   ];
 
-  // Function to scroll element to the center of the viewport
   const scrollToCenter = useCallback((element: HTMLElement | null) => {
     if (!element) return;
 
     const elementTop = element.getBoundingClientRect().top + window.scrollY;
-    const viewportCenter = window.innerHeight / 2;
+    const viewportCenter = window.innerHeight / 3;
     const offset = elementTop - viewportCenter + element.offsetHeight / 2;
 
     window.scrollTo({
@@ -50,8 +49,6 @@ const NavigationMobile = () => {
     });
   }, []);
 
-  // Update the current link index based on scroll position
-  // Update the current link index based on scroll position
   const updateCurrentLink = useCallback(() => {
     if (isNavigating) return;
 
@@ -68,8 +65,6 @@ const NavigationMobile = () => {
           index !== currentLinkIndex
         ) {
           setCurrentLinkIndex(index);
-
-          // Update the URL hash without scrolling the page
           window.history.replaceState(null, "", NAV_LINKS[index]);
         }
       }
@@ -83,7 +78,6 @@ const NavigationMobile = () => {
     };
   }, [updateCurrentLink]);
 
-  // Handle navigation between links
   const handleLinkNavigation = useCallback(
     (direction: "prev" | "next") => {
       if (isNavigating) return;
@@ -117,14 +111,16 @@ const NavigationMobile = () => {
   return (
     <div
       className={cn(
-        "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center lg:hidden",
-        scrollY > 500 ? "bottom-3" : "bottom-0",
+        "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center transition-all duration-300 ease-out lg:hidden",
+        scrollY > 50
+          ? "fade-slide-in bottom-3 md:bottom-5"
+          : "fade-slide-out bottom-0",
       )}
     >
       <div
         className={cn(
-          "flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl px-8 py-2",
-          scrollY > 500 ? "bg-transparent" : "bg-black",
+          "flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl px-8 py-2.5 transition-all duration-300 ease-out",
+          scrollY > 50 ? "bg-transparent fade-out" : "bg-black fade-in",
         )}
       >
         <FaPlay

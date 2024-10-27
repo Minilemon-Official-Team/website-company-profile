@@ -165,7 +165,7 @@ export default function Home() {
                   <Image src={IdeaTitle} alt="Idea" className="w-[70px]" />
                 </div>
                 <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p id="home">
+                  <p>
                     Berawal dari cinta dan bangga akan warisan budaya khusunya
                     topeng yang merupakan penutup wajah dari setiap Suku di
                     Indonesia.
@@ -175,7 +175,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
               <div className="flex max-w-screen-tablet flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
-                <p>
+                <p id="home">
                   Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
                   perjalanan panjanga telah menciptakan tokoh animasi (fiksi)
                   dengan memadukan topeng sebagai wajah indonesia dan tubuh
@@ -342,7 +342,7 @@ export default function Home() {
                 objectFit="cover"
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
-                <div className="z-10 scroll-mt-[50vh]">
+                <div id="story" className="z-10 scroll-mt-[50vh]">
                   <Image src={StoryTitle} alt="Story" className="w-[100px]" />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
@@ -360,7 +360,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
               <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
-                <p id="story">
+                <p>
                   Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
                   meninggalkan istana dan memulai perjalanan panjang untuk
                   mencari ilmu dan kedamaian.
@@ -473,7 +473,7 @@ export default function Home() {
                 objectFit="cover"
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
-                <div className="z-10">
+                <div id="character" className="z-10">
                   <Image
                     src={CharacterTitle}
                     alt="Character"
@@ -481,7 +481,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p id="character">
+                  <p>
                     Minilemon adalah animasi perpaduan topeng dan buah lemon
                     yang hidup di dalam mimpi kakek Djoyo, terdiri dari 6
                     karakter utama yang mewakili 6 suku besar di Indonesia,
@@ -579,7 +579,7 @@ export default function Home() {
                 objectFit="cover"
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6">
-                <div className="z-10">
+                <div id="product" className="z-10">
                   <Image
                     src={OurProductTitle}
                     alt="Our Product"
@@ -587,7 +587,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 flex flex-col leading-relaxed tracking-widest text-[#d3dcf3]">
-                  <p id="product">
+                  <p>
                     Di era modernisasi dan selera yang semakin beragam,
                     Minilemon memproduksi banyak varian produk digital maupun
                     konvensional, agar nilai-nilai edukasi dan karakter positif,
@@ -645,7 +645,7 @@ export default function Home() {
                 objectFit="cover"
               />
               <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
-                <div className="z-10">
+                <div id="company" className="z-10">
                   <Image
                     src={PtMinilemonNusantaraMobileTitle}
                     alt="PtMinilemonNusantaraMobileTitle"
@@ -653,7 +653,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
-                  <p id="company">
+                  <p>
                     PT. Minilemon Nusantaraadlah perusahaan yang berdomisili di
                     Surabaya dan Jakarta, Indonesia. Yang berorientasi pada
                     Pendidikan Karakter Anak dan nilai-nilai kebaikan memlalui
