@@ -1,4 +1,12 @@
-export const secondDivVariants: any = {
+export const secondDivVariants: {
+  hidden: { opacity: number; y: number };
+  visible: {
+    opacity: number;
+    y: number;
+    transition: number | { delay: number };
+  };
+  exit: { opacity: number; y: number; transition: { delay: number } };
+} = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -12,7 +20,15 @@ export const secondDivVariants: any = {
   },
 };
 
-export const thirdDivVariants: any = {
+export const thirdDivVariants: {
+  hidden: { opacity: number; y: number };
+  visible: {
+    opacity: number;
+    y: number;
+    transition: number | { delay: number };
+  };
+  exit: { opacity: number; y: number; transition: { delay: number } };
+} = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -26,7 +42,15 @@ export const thirdDivVariants: any = {
   },
 };
 
-export const fourthDivVariants: any = {
+export const fourthDivVariants: {
+  hidden: { opacity: number; y: number };
+  visible: {
+    opacity: number;
+    y: number;
+    transition: number | { delay: number };
+  };
+  exit: { opacity: number; y: number; transition: { delay: number } };
+} = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -40,7 +64,15 @@ export const fourthDivVariants: any = {
   },
 };
 
-export const fifthDivVariants: any = {
+export const fifthDivVariants: {
+  hidden: { opacity: number; y: number };
+  visible: {
+    opacity: number;
+    y: number;
+    transition: number | { delay: number };
+  };
+  exit: { opacity: number; y: number; transition: { delay: number } };
+} = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -54,7 +86,15 @@ export const fifthDivVariants: any = {
   },
 };
 
-export const sixthDivVariants: any = {
+export const sixthDivVariants: {
+  hidden: { opacity: number; y: number };
+  visible: {
+    opacity: number;
+    y: number;
+    transition: number | { delay: number };
+  };
+  exit: { opacity: number; y: number; transition: { delay: number } };
+} = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
