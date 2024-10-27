@@ -1,27 +1,6 @@
 "use client";
 
-// External Libraries
-import "@splidejs/react-splide/css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-
-// Local Components and Utilities
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
-import { cn } from "@/lib/utils";
-
-// Background Images
-import BackgroundAboutUs from "@/public/background/about-mobile.png";
-
-// Titles
-import ConceptTitle from "@/public/title/concept.png";
-import IdeaTitle from "@/public/title/idea.png";
-import MessageTitle from "@/public/title/message.png";
-import PsychographicTitle from "@/public/title/psychographic.png";
-import TreatmentTitle from "@/public/title/treatment.png";
-import { useState } from "react";
-
-// animations
 import { containerVariants } from "@/lib/animations/containerVariants";
 import {
   fifthDivVariants,
@@ -30,6 +9,18 @@ import {
   thirdDivVariants,
 } from "@/lib/animations/divVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
+import { cn } from "@/lib/utils";
+import BackgroundAboutUs from "@/public/background/about-mobile.png";
+import ConceptTitle from "@/public/title/concept.png";
+import IdeaTitle from "@/public/title/idea.png";
+import MessageTitle from "@/public/title/message.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
+import TreatmentTitle from "@/public/title/treatment.png";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function AboutUsSection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);

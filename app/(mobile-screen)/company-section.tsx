@@ -1,6 +1,5 @@
 "use client";
 
-import ContactMobile from "@/components/contact-mobile";
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import { Hero } from "@/data/contribution";
 import { containerVariants } from "@/lib/animations/containerVariants";
@@ -398,7 +397,6 @@ function CompanySection() {
           </>
         )}
       </AnimatePresence>
-      <ContactMobile />
     </div>
   );
 }
