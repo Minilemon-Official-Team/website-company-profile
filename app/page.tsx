@@ -3,7 +3,6 @@
 // External Libraries
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // Local Components and Utilities
@@ -29,7 +28,6 @@ import WelcomeSectionDesktop from "./(desktop-screen)/welcome-section";
 // import ContactTitle from "@/public/title/contact-us-1.png";
 
 export default function Home() {
-  const router = useRouter();
   const screenWidth = useScreenWidth();
   const [mounted, setMounted] = useState(false);
 

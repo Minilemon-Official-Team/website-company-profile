@@ -67,6 +67,7 @@ function ProductSection() {
             <Link
               className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
               href="javascript:void(0)"
+              onClick={toggleExpand}
             >
               <span className={isExpanded == true ? "hidden" : "flex"}>
                 Read More{" "}

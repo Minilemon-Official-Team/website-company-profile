@@ -10,7 +10,7 @@ import {
 } from "@/components/icons";
 import useScrollY from "@/hooks/useScrollY";
 import { cn } from "@/lib/utils";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
 const NavigationMobile = () => {
@@ -18,22 +18,18 @@ const NavigationMobile = () => {
   const [isNavigating, setIsNavigating] = useState(false);
   const scrollY = useScrollY();
 
-  const NAV_LINKS = [
-    "#home",
-    "#story",
-    "#character",
-    "#product",
-    "#company",
-    "#contact",
-  ];
+  const NAV_LINKS = useMemo(
+    () => ["#home", "#story", "#character", "#product", "#company", "#contact"],
+    [],
+  );
 
   const LINK_ICONS = [
-    <GateIcon className="h-5 w-5 text-[#ffd201]" />,
-    <BookIcon className="h-5 w-5 text-[#ffd201]" />,
-    <MinilemonYellowIcon className="h-5 w-5 text-[#ffd201]" />,
-    <CubeIcon className="h-5 w-5 text-[#ffd201]" />,
-    <FlagIcon className="h-5 w-5 text-[#ffd201]" />,
-    <ArrowIcon className="h-5 w-5 text-[#ffd201]" />,
+    <GateIcon key="gate" className="h-5 w-5 text-[#ffd201]" />,
+    <BookIcon key="book" className="h-5 w-5 text-[#ffd201]" />,
+    <MinilemonYellowIcon key="minilemon" className="h-5 w-5 text-[#ffd201]" />,
+    <CubeIcon key="cube" className="h-5 w-5 text-[#ffd201]" />,
+    <FlagIcon key="flag" className="h-5 w-5 text-[#ffd201]" />,
+    <ArrowIcon key="arrow" className="h-5 w-5 text-[#ffd201]" />,
   ];
 
   const scrollToCenter = useCallback((element: HTMLElement | null) => {
@@ -69,7 +65,7 @@ const NavigationMobile = () => {
         }
       }
     });
-  }, [currentLinkIndex, isNavigating]);
+  }, [currentLinkIndex, isNavigating, NAV_LINKS]);
 
   useEffect(() => {
     window.addEventListener("scroll", updateCurrentLink);
@@ -105,7 +101,7 @@ const NavigationMobile = () => {
         setTimeout(() => setIsNavigating(false), 500);
       }, 200);
     },
-    [currentLinkIndex, isNavigating, scrollToCenter],
+    [currentLinkIndex, isNavigating, scrollToCenter, NAV_LINKS],
   );
 
   return (
