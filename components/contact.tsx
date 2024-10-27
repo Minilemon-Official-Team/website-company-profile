@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import * as z from "zod";
-import Image from "next/image";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Toaster, toast } from "react-hot-toast";
+import * as z from "zod";
 
 import { Button } from "@/components/ui/button-sec";
-import ContactUsTitle from "@/public/title/contact-us.png";
 import { cn } from "@/lib/utils";
+import ContactUsTitle from "@/public/title/contact-us.png";
 
 const schema = z.object({
   name: z
@@ -86,10 +86,12 @@ const Contact = ({ className }: { className?: string }) => {
           className,
         )}
       >
-        <div className="">
+        <div>
           <Image src={ContactUsTitle} alt="Contact Us" />
         </div>
-        <p className="text-3xl text-[#d2def4]">How can we help you?</p>
+        <p id="contact" className="text-3xl text-[#d2def4]">
+          How can we help you?
+        </p>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
