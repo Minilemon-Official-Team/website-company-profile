@@ -114,13 +114,13 @@ export default function Home() {
     exit: { opacity: 0, y: 20 },
   };
 
-  const secondDivVariants = {
+  const createDivVariants = (delay: any) => ({
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.5, // Delay the animation of the second div
+        delay, // Use the passed delay for the animation
       },
     },
     exit: {
@@ -130,79 +130,13 @@ export default function Home() {
         delay: 0, // No delay on exit
       },
     },
-  };
+  });
 
-  const thirdDivVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1, // Delay the animation of the third div
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        delay: 0, // No delay on exit
-      },
-    },
-  };
-
-  const fourthDivVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1.5, // Delay the animation of the fourth div
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        delay: 0, // No delay on exit
-      },
-    },
-  };
-
-  const fifthDivVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 2, // Delay the animation of the fifth div
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        delay: 0, // No delay on exit
-      },
-    },
-  };
-
-  // const sixthDivVariants = {
-  //   hidden: { opacity: 0, y: 20 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       delay: 2.5, // Delay the animation of the sixth div
-  //     },
-  //   },
-  //   exit: {
-  //     opacity: 0,
-  //     y: 20,
-  //     transition: {
-  //       delay: 0, // No delay on exit
-  //     },
-  //   },
-  // };
+  const secondDivVariants = createDivVariants(0.5);
+  const thirdDivVariants = createDivVariants(1);
+  const fourthDivVariants = createDivVariants(1.5);
+  const fifthDivVariants = createDivVariants(2);
+  const sixthDivVariants = createDivVariants(2.5);
 
   useEffect(() => {
     setMounted(true);
