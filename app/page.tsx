@@ -23,10 +23,6 @@ import ProductSectionDesktop from "./(desktop-screen)/product-section";
 import StorySectionDesktop from "./(desktop-screen)/story-section";
 import WelcomeSectionDesktop from "./(desktop-screen)/welcome-section";
 
-// Unused Imports (Commented Out)
-// import ProductTitle from "@/public/title/our-product-1.png";
-// import ContactTitle from "@/public/title/contact-us-1.png";
-
 export default function Home() {
   const screenWidth = useScreenWidth();
   const [mounted, setMounted] = useState(false);
