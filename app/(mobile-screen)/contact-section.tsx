@@ -15,7 +15,7 @@ const ContactSection = () => {
       {/* Contact */}
       <div className="relative inset-0 flex min-h-[60vh] items-center bg-[#1b1b1b] bg-cover bg-center py-5">
         <div className="container z-20 flex flex-col gap-6 px-12 pb-5 lg:flex-row lg:gap-0 lg:px-0">
-          <Contact className="z-20" />
+          <Contact className="z-20" titleWidth={"w-[230px]"} />
         </div>
       </div>
 
@@ -25,16 +25,16 @@ const ContactSection = () => {
           {/* Section Official */}
           <div className="flex flex-col items-center gap-y-8 lg:basis-1/2">
             <div>
-              <Image src={OfficialTitle} alt="Official" />
+              <Image src={OfficialTitle} alt="Official" className="w-[200px]" />
             </div>
             <div className="flex flex-col gap-y-4">
               <Link className="flex flex-row" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
-                <p>minilemonmedia.id</p>
+                <p className="text-[16px]">minilemonmedia.id</p>
               </Link>
               <Link className="flex flex-row" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
-                <p>store.minilemon.id</p>
+                <p className="text-[16px]">store.minilemon.id</p>
               </Link>
               <button className="flex flex-row"></button>
             </div>
@@ -42,22 +42,31 @@ const ContactSection = () => {
           {/* Section Social */}
           <div className="flex flex-col items-center justify-center gap-y-8 lg:basis-1/2">
             <div className="">
-              <Image src={FollowTitle} alt="Follow" />
+              <Image src={FollowTitle} alt="Follow" className="w-[190px]" />
             </div>
             <div className="flex flex-col gap-y-4">
-              <Link href={"#"} className="flex flex-row items-center gap-x-4">
+              <Link
+                href={"#"}
+                className="flex flex-row items-center gap-x-4 text-[16px]"
+              >
                 <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaInstagram className="text-white" />
                 </span>
                 minilemon.studio
               </Link>
-              <Link href={"#"} className="flex flex-row items-center gap-x-4">
+              <Link
+                href={"#"}
+                className="flex flex-row items-center gap-x-4 text-[16px]"
+              >
                 <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaTiktok className="text-white" />
                 </span>
                 minilemon.studio
               </Link>
-              <Link href={"#"} className="flex flex-row items-center gap-x-4">
+              <Link
+                href={"#"}
+                className="flex flex-row items-center gap-x-4 text-[16px]"
+              >
                 <span className="flex items-center justify-center rounded-full bg-[#333] p-1 shadow-lg">
                   <FaYoutube className="text-white" />
                 </span>
