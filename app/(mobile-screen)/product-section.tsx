@@ -89,10 +89,10 @@ const ProductSection = () => {
         />
         <div className="z-20 mx-auto mt-2 flex max-w-screen-tablet flex-col justify-center gap-8 px-6">
           <div className="z-20">
-            <Image src={ProductTitle} alt="Our Product" className="w-[250px]" />
+            <Image src={ProductTitle} alt="Our Product" className="w-[260px]" />
           </div>
-          <div className="z-20 mb-3 flex flex-col leading-loose tracking-wider">
-            <p className="text-sm leading-loose tracking-wider text-[#d3dcf3]">
+          <div className="z-20 mb-3 flex flex-col leading-7 tracking-wider">
+            <p className="text-sm leading-7 tracking-wider text-[#d3dcf3]">
               Di era modernisasi dan selera yang semakin beragam, Minilemon
               memproduksi banyak varian produk digital maupun konvensional, agar
               nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
@@ -115,7 +115,7 @@ const ProductSection = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="flex flex-col gap-y-6 text-start text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
+            <div className="flex flex-col gap-y-6 text-start text-sm leading-7 tracking-wider text-[#c0cbdf]/90">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={PetualanganSiMinilemonTitle1}
@@ -206,7 +206,7 @@ const ProductSection = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
+          <div className="flex flex-col gap-y-6 text-sm leading-7 tracking-wider text-[#1b1b1d]/70">
             <div className="hidden flex-col lg:flex">
               <Image
                 src={MinilemonSaveTheEarthTitle1}
@@ -315,7 +315,7 @@ const ProductSection = () => {
                   color="#fff"
                 />
               </div>
-              <motion.div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
+              <motion.div className="flex flex-col gap-y-8 text-sm leading-7 tracking-[.07em] text-[#1b1b1d]/80">
                 <div className="hidden flex-col lg:flex">
                   <Image
                     src={MinilemonExplorerTitle1}
@@ -415,7 +415,7 @@ const ProductSection = () => {
                   className="object-cover"
                 />
               </div>
-              <motion.div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+              <motion.div className="flex flex-col gap-y-8 text-sm leading-7 tracking-[.07em] text-[#1b1b1d]/70">
                 <div className="hidden flex-col lg:flex">
                   <Image
                     src={MinilemonLiveParentingTitle1}
@@ -514,7 +514,7 @@ const ProductSection = () => {
                   />
                 </div>
               </div>
-              <motion.div className="flex flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
+              <motion.div className="flex flex-col gap-y-6 text-sm leading-7 tracking-[.07em] text-[#1b1b1d]/70">
                 <div className="hidden flex-col lg:flex">
                   <Image
                     src={MinilemonPanggungBonekaTitle1}

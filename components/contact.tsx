@@ -26,7 +26,13 @@ const schema = z.object({
   honeypot: z.string().max(0, { message: "Bot detected" }),
 });
 
-const Contact = ({ className }: { className?: string }) => {
+const Contact = ({
+  className,
+  titleWidth,
+}: {
+  className?: string;
+  titleWidth?: string;
+}) => {
   const [mounted, setMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const {
@@ -87,15 +93,18 @@ const Contact = ({ className }: { className?: string }) => {
         )}
       >
         <div>
-          <Image src={ContactUsTitle} alt="Contact Us" />
+          <Image src={ContactUsTitle} alt="Contact Us" className={titleWidth} />
         </div>
-        <p id="contact" className="text-3xl text-[#d2def4]">
+        <p id="contact" className="text-2xl text-[#d2def4] lg:text-3xl">
           How can we help you?
         </p>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className={cn("flex basis-1/2 flex-col pl-4 pr-14", className)}
+        className={cn(
+          "flex basis-1/2 flex-col pl-4 pr-[1rem] lg:pr-14",
+          className,
+        )}
       >
         <div className="flex flex-col gap-2">
           <div className="">
@@ -161,7 +170,7 @@ const Contact = ({ className }: { className?: string }) => {
           <Button.Primary
             type="submit"
             disabled={isSubmitting}
-            className="mt-4 w-fit scale-125 font-bold uppercase shadow-md"
+            className="mt-4 w-fit scale-90 font-bold uppercase shadow-md lg:scale-125"
           >
             {isSubmitting ? "Sending..." : "Submit"}
           </Button.Primary>

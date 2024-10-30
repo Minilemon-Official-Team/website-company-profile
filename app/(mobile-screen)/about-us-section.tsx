@@ -43,7 +43,7 @@ export default function AboutUsSection() {
         />
         <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 pb-5 pt-10">
           <div className="z-10">
-            <Image src={IdeaTitle} alt="Idea" className="w-[70px]" />
+            <Image src={IdeaTitle} alt="Idea" className="w-[100px]" />
           </div>
           <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
             <p>
@@ -136,7 +136,7 @@ export default function AboutUsSection() {
                   <Image
                     src={TreatmentTitle}
                     alt="Treatment"
-                    className="scale-[0.7]"
+                    className="w-[320px]"
                   />
                 </motion.div>
                 <motion.p className="max-w-screen-tablet text-center text-sm leading-relaxed tracking-widest text-[#c5cce2]">
@@ -160,7 +160,7 @@ export default function AboutUsSection() {
                   <Image
                     src={ConceptTitle}
                     alt="Concept"
-                    className="w-[200px]"
+                    className="w-[180px]"
                   />
                 </motion.div>
                 <motion.p className="text-start leading-relaxed tracking-widest">
@@ -185,7 +185,7 @@ export default function AboutUsSection() {
                   <Image
                     src={PsychographicTitle}
                     alt="Psychographic"
-                    className="w-[250px]"
+                    className="w-[270px]"
                   />
                 </motion.div>
                 <motion.p className="text-end leading-relaxed tracking-widest">
