@@ -45,13 +45,13 @@ function CharacterSection() {
           <Splide
             options={{
               type: "loop",
-              interval: 4000,
-              perPage: 1,
-              perMove: 1,
+              // interval: 4000,
+              // perPage: 1,
+              // perMove: 1,
               gap: "5rem",
               focus: "center",
               pagination: false,
-              autoplay: true,
+              // autoplay: true,
               arrows: false,
             }}
           >

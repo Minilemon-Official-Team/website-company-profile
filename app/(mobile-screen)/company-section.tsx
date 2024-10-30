@@ -49,10 +49,10 @@ function CompanySection() {
             <Image
               src={PtMinilemonNusantaraMobileTitle}
               alt="PtMinilemonNusantaraMobileTitle"
-              className="w-[270px]"
+              className="w-[290px]"
             />
           </div>
-          <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
+          <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">
             <p>
               PT. Minilemon Nusantaraadlah perusahaan yang berdomisili di
               Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
@@ -63,7 +63,7 @@ function CompanySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-5">
-        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-3 leading-relaxed tracking-widest">
+        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-3 leading-7 tracking-widest">
           <p>
             Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
             melakukan pendekatan terhadap pendidikan, mulai dari film animasi,
@@ -94,7 +94,7 @@ function CompanySection() {
             >
               <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
                 <motion.p
-                  className="leading-relaxed tracking-widest"
+                  className="leading-7 tracking-widest"
                   variants={paragraphVariants}
                 >
                   PT. Minilemon Nusantara adalah perusahaan persero terbatas
@@ -123,7 +123,7 @@ function CompanySection() {
                   />
                 </motion.div>
                 <motion.p
-                  className="max-w-screen-tablet text-start text-sm leading-relaxed tracking-widest text-[#c5cce2]"
+                  className="max-w-screen-tablet text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
                   variants={paragraphVariants}
                 >
                   Sebagai anak bangsa yang baik dan cinta tanah air, PT
@@ -148,7 +148,7 @@ function CompanySection() {
                   <motion.ul>
                     <motion.li>
                       <motion.p
-                        className="text-sm leading-relaxed tracking-widest text-[#c5cce2]"
+                        className="text-sm leading-7 tracking-widest text-[#c5cce2]"
                         variants={paragraphVariants}
                       >
                         1. Menciptakan produk kreatif dan edukatif yang
@@ -157,7 +157,7 @@ function CompanySection() {
                     </motion.li>
                     <motion.li>
                       <motion.p
-                        className="text-sm leading-relaxed tracking-widest text-[#c5cce2]"
+                        className="text-sm leading-7 tracking-widest text-[#c5cce2]"
                         variants={paragraphVariants}
                       >
                         2. Membangun ekosistem yang mandiri, kreatif dan punya
@@ -166,7 +166,7 @@ function CompanySection() {
                     </motion.li>
                     <motion.li>
                       <motion.p
-                        className="text-sm leading-relaxed tracking-widest text-[#c5cce2]"
+                        className="text-sm leading-7 tracking-widest text-[#c5cce2]"
                         variants={paragraphVariants}
                       >
                         3. Membangun sistem integrasi dengan teknologi yang
@@ -200,12 +200,12 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x250
+                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                    200x180
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-relaxed tracking-widest"
+                      className="text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
                       <motion.span className="mr-2 font-bold">
@@ -223,7 +223,7 @@ function CompanySection() {
                       masyarakat Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-relaxed tracking-widest"
+                      className="mt-5 text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
                       Karakter animasi minilemon diharapkan menjadi figur baik
@@ -260,17 +260,18 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x250
+                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                    200x180
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-relaxed tracking-widest"
+                      className="text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="mr-2 font-bold">
+                      <motion.span className="text-nowrap font-bold">
                         Heriyadi Natawijaya
                       </motion.span>
+                      <br />
                       Lahir di Palembang dan tinggal di Depok Indonesia, adalah
                       Seorang Sutradara Iklan, Video Klip dan Animasi Sejak
                       2009. Heriyadi Natawijaya juga sebagai Pendiri Perakaria
@@ -278,7 +279,7 @@ function CompanySection() {
                       seni di Depok, Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-relaxed tracking-widest"
+                      className="mt-5 text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
                       Karirnya di dunia Seni dan Perfilman membuatnya bertemu
@@ -288,7 +289,7 @@ function CompanySection() {
                       budaya.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-relaxed tracking-widest"
+                      className="mt-5 text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
                       Pengalaman panjang sebagai kepala Seni, dan kecintaannya
@@ -319,7 +320,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-relaxed tracking-widest text-[#c5cce2]">
+                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -330,13 +331,13 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x250
+                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                        200x160
                       </div>
-                      <motion.p className="text-center text-sm leading-relaxed tracking-widest">
+                      <motion.p className="text-center text-sm leading-7 tracking-widest">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-relaxed tracking-widest">
+                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
                         {item.position}
                       </motion.p>
                     </motion.div>
@@ -360,7 +361,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-relaxed tracking-widest">
+                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -371,13 +372,13 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[250px] w-[200px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x250
+                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                        200x160
                       </div>
-                      <motion.p className="text-center text-sm leading-relaxed tracking-widest">
+                      <motion.p className="text-center text-sm leading-7 tracking-widest">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-relaxed tracking-widest">
+                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
                         {item.position}
                       </motion.p>
                     </motion.div>

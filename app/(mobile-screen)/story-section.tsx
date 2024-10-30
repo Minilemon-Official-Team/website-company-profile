@@ -5,7 +5,7 @@ import { containerVariants } from "@/lib/animations/containerVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
 import BackgroundStory from "@/public/background/story-mobile.png";
-import StoryTitle from "@/public/title/story-2.png";
+import StoryTitle from "@/public/title/story.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { motion } from "framer-motion";
@@ -33,9 +33,9 @@ function StorySection() {
         />
         <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
           <div id="story" className="z-10 scroll-mt-[50vh]">
-            <Image src={StoryTitle} alt="Story" className="w-[100px]" />
+            <Image src={StoryTitle} alt="Story" className="w-[115px]" />
           </div>
-          <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
+          <div className="z-10 flex flex-col gap-y-6 leading-7 tracking-widest text-[#c5cce2]">
             <p>
               Berawal dari kisah Kakek Djoyo yang merupakan seorang pangeran sah
               penerus tahta ayahnya, seorang raja di tanah Jawa. Sejak kecil,
@@ -48,7 +48,7 @@ function StorySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
-        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-relaxed tracking-widest">
+        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-7 tracking-widest">
           <p>
             Dengan hati yang berat, Pangeran Djoyo memutuskan untuk meninggalkan
             istana dan memulai perjalanan panjang untuk mencari ilmu dan
@@ -71,7 +71,7 @@ function StorySection() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="flex max-w-screen-tablet flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-relaxed tracking-widest"
+            className="flex max-w-screen-tablet flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-7 tracking-widest"
           >
             <motion.p variants={paragraphVariants}>
               Suatu malam, dalam perjalanannya melewati hutan yang lebat,
@@ -131,15 +131,17 @@ function StorySection() {
               adalah 6 sahabat sepermainan yang siap menjadi idola baru untuk
               anak-anak Indonesia.
             </motion.p>
-            <ButtonLegacy.Primary
-              className={cn(
-                isExpanded === true ? "flex" : "hidden",
-                "scale-90",
-              )}
-              onClick={toggleExpand}
-            >
-              Read Less
-            </ButtonLegacy.Primary>
+            <div className="flex w-full items-center justify-center">
+              <ButtonLegacy.Primary
+                className={cn(
+                  isExpanded === true ? "flex" : "hidden",
+                  "scale-90",
+                )}
+                onClick={toggleExpand}
+              >
+                Read Less
+              </ButtonLegacy.Primary>
+            </div>
           </motion.div>
         )}
       </div>
