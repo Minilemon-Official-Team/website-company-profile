@@ -69,7 +69,7 @@ const MobileNavbar = () => {
       >
         <div className="relative flex h-full flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-5">
-            <h1 className="pt-10px mr-[60px] h-full text-center text-[19px] leading-10 tracking-wide">
+            <h1 className="mr-[60px] h-full pt-[10px] text-center text-[19px] leading-10 tracking-wide">
               Selamat datang di dunia
             </h1>
             <Image

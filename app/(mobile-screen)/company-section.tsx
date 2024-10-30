@@ -260,7 +260,7 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-1 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
+                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
                     200x180
                   </div>
                   <motion.div>
