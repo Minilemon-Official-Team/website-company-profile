@@ -92,7 +92,10 @@ const ProductSection = () => {
             <Image src={ProductTitle} alt="Our Product" className="w-[260px]" />
           </div>
           <div className="z-20 mb-3 flex flex-col leading-7 tracking-wider">
-            <p className="text-sm leading-7 tracking-wider text-[#d3dcf3]">
+            <p
+              id="product"
+              className="text-sm leading-7 tracking-wider text-[#d3dcf3]"
+            >
               Di era modernisasi dan selera yang semakin beragam, Minilemon
               memproduksi banyak varian produk digital maupun konvensional, agar
               nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
