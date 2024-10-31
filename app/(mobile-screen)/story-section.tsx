@@ -33,7 +33,7 @@ function StorySection() {
         />
         <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
           <div id="story" className="z-10 scroll-mt-[50vh]">
-            <Image src={StoryTitle} alt="Story" className="w-[115px]" />
+            <Image src={StoryTitle} alt="Story" className="w-[125px]" />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-7 tracking-widest text-[#c5cce2]">
             <p>

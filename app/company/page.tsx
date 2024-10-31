@@ -95,7 +95,7 @@ const CompanyPage = () => {
 
       {/* Founder */}
       <div className="flex flex-row bg-[#a4bddc] py-14">
-        <div className="container flex flex-col gap-8 px-8 lg:px-0">
+        <div className="container flex flex-col gap-4 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={FounderTitle} alt="The Founder" />
           </div>

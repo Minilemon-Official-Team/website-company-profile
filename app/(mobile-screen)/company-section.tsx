@@ -62,7 +62,7 @@ function CompanySection() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-5">
+      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-4">
         <div className="flex max-w-screen-tablet flex-col items-center px-6 py-3 leading-7 tracking-widest">
           <p>
             Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
@@ -92,7 +92,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center bg-[#e7e7e7] pb-5"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 pb-4">
                 <motion.p
                   className="leading-7 tracking-widest"
                   variants={paragraphVariants}
@@ -112,7 +112,7 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#1b1b1b] py-5"
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
               <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
@@ -200,17 +200,18 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x180
+                  <div className="float-left mr-4 flex h-[200px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                    Founder
                   </div>
                   <motion.div>
                     <motion.p
                       className="text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="mr-2 font-bold">
+                      <motion.span className="mr-2 text-[1.25rem] font-bold">
                         Reno Halsamer
                       </motion.span>
+                      <br />
                       Adalah Pria yang lahir dan tinggal di Surabaya Indonesia.
                       Sebagai seorang bisnisman dan penggiat Museum seni
                       khususnya Topeng Indonesia, Sejak tahun 2015 di Surabaya,
@@ -260,15 +261,15 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x180
+                  <div className="float-left mr-4 flex h-[200px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                    CoFounder
                   </div>
                   <motion.div>
                     <motion.p
                       className="text-start text-sm leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="text-nowrap font-bold">
+                      <motion.span className="text-nowrap text-[1.25rem] font-bold">
                         Heriyadi Natawijaya
                       </motion.span>
                       <br />
@@ -310,7 +311,7 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#1b1b1b] py-5"
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
               <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
@@ -320,7 +321,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
+                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -331,13 +332,13 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x160
+                      <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
+                        hero
                       </div>
-                      <motion.p className="text-center text-sm leading-7 tracking-widest">
+                      <motion.p className="text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
+                      <motion.p className="text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-widest sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
@@ -351,7 +352,7 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#fff4ec] py-5"
+              className="flex flex-col items-center justify-center bg-[#fff4ec]"
             >
               <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
@@ -361,7 +362,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest">
+                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -372,13 +373,13 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x160
+                      <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
+                        family
                       </div>
-                      <motion.p className="text-center text-sm leading-7 tracking-widest">
+                      <motion.p className="text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
+                      <motion.p className="text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-widest sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>

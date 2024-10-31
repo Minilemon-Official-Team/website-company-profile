@@ -24,7 +24,7 @@ function CharacterSection() {
         />
         <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
           <div id="character" className="z-10">
-            <Image src={CharacterTitle} alt="Character" className="w-[200px]" />
+            <Image src={CharacterTitle} alt="Character" className="w-[220px]" />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
             <p>
