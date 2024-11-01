@@ -1,28 +1,28 @@
 "use client";
 
-import Link from "next/link";
-import React, { useState } from "react";
-import { Placeholder } from "placeholder";
-import { FaYoutube } from "react-icons/fa6";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { Placeholder } from "placeholder";
+import { useState } from "react";
+import { FaYoutube } from "react-icons/fa6";
 
-import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
-import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
-import MinilemonSaveTheEarthTitle1 from "@/public/title/minilemon-save-the-earth-1.png";
-import MinilemonSaveTheEarthTitle2 from "@/public/title/minilemon-save-the-earth-2.png";
+import BackgroundImage from "@/public/background/product.png";
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
 import MinilemonLiveParentingTitle1 from "@/public/title/minilemon-live-parenting-1.png";
 import MinilemonLiveParentingTitle2 from "@/public/title/minilemon-live-parenting-2.png";
+import MinilemonSaveTheEarthTitle1 from "@/public/title/minilemon-save-the-earth-1.png";
+import MinilemonSaveTheEarthTitle2 from "@/public/title/minilemon-save-the-earth-2.png";
+import ProductTitle from "@/public/title/our-product-title1.png";
 import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minilemon-1.png";
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
-import ProductTitle from "@/public/title/our-product-title1.png";
-import BackgroundImage from "@/public/background/product.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
-import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPostParenting from "@/public/product/poster-parenting.png";
+import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
+import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
 
 const ProductPage = () => {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -93,7 +93,7 @@ const ProductPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 mt-2 flex flex-col justify-center gap-8">
+        <div className="container z-20 mt-2 flex flex-col justify-center gap-4">
           <div className="z-20">
             <Image src={ProductTitle} alt="Our Product" />
           </div>

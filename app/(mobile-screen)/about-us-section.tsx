@@ -41,9 +41,13 @@ export default function AboutUsSection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 pb-5 pt-10">
+        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 pb-6 pt-10">
           <div className="z-10">
-            <Image src={IdeaTitle} alt="Idea" className="w-[100px]" />
+            <Image
+              src={IdeaTitle}
+              alt="Idea"
+              className="w-[90px] sm:w-[100px]"
+            />
           </div>
           <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
             <p>
@@ -113,7 +117,7 @@ export default function AboutUsSection() {
                   <Image
                     src={MessageTitle}
                     alt="Message"
-                    className="w-[190px]"
+                    className="w-[160px] sm:w-[190px]"
                   />
                 </motion.div>
                 <motion.p className="text-end leading-relaxed tracking-widest">
@@ -137,10 +141,10 @@ export default function AboutUsSection() {
                   <Image
                     src={TreatmentTitle}
                     alt="Treatment"
-                    className="w-[320px]"
+                    className="w-[170px] sm:w-[320px]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-tablet text-center text-sm leading-relaxed tracking-widest text-[#c5cce2]">
+                <motion.p className="max-w-screen-tablet text-center text-xs leading-relaxed tracking-widest text-[#c5cce2] sm:text-sm">
                   Sadar akan persoalan-persoalan besar dan mendasar, PT
                   Minilemon Nusantara berinisitatif membuat produk-produk anak
                   yang berupa tontonan dan permainan, dengan target usia 3-7
@@ -161,7 +165,7 @@ export default function AboutUsSection() {
                   <Image
                     src={ConceptTitle}
                     alt="Concept"
-                    className="w-[180px]"
+                    className="w-[160px] sm:w-[180px]"
                   />
                 </motion.div>
                 <motion.p className="text-start leading-relaxed tracking-widest">
@@ -186,7 +190,7 @@ export default function AboutUsSection() {
                   <Image
                     src={PsychographicTitle}
                     alt="Psychographic"
-                    className="w-[270px]"
+                    className="w-[170px] sm:w-[270px]"
                   />
                 </motion.div>
                 <motion.p className="text-end leading-relaxed tracking-widest">
