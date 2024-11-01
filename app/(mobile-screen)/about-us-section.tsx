@@ -46,7 +46,7 @@ export default function AboutUsSection() {
             <Image
               src={IdeaTitle}
               alt="Idea"
-              className="w-[90px] sm:w-[100px]"
+              className="400:w-[100px] w-[80px]"
             />
           </div>
           <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">

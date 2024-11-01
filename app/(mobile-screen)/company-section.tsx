@@ -49,7 +49,7 @@ function CompanySection() {
             <Image
               src={PtMinilemonNusantaraMobileTitle}
               alt="PtMinilemonNusantaraMobileTitle"
-              className="w-[290px]"
+              className="400:w-[290px] w-[240px]"
             />
           </div>
           <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">

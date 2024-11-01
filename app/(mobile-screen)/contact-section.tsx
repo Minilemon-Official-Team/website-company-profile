@@ -15,7 +15,7 @@ const ContactSection = () => {
       {/* Contact */}
       <div className="relative inset-0 flex min-h-[60vh] justify-center bg-[#1b1b1b] bg-cover bg-center py-5">
         <div className="max-w-screen-640 z-20 flex w-full flex-col items-center gap-6 px-6 pb-5 lg:flex-row lg:gap-0 lg:px-0">
-          <Contact className="z-20" titleWidth={"w-[230px]"} />
+          <Contact className="z-20" titleWidth={"w-[210px] 400:w-[230px]"} />
         </div>
       </div>
 
@@ -25,7 +25,11 @@ const ContactSection = () => {
           {/* Section Official */}
           <div className="flex flex-col items-center gap-y-8 lg:basis-1/2">
             <div>
-              <Image src={OfficialTitle} alt="Official" className="w-[200px]" />
+              <Image
+                src={OfficialTitle}
+                alt="Official"
+                className="400:w-[200px] w-[180px]"
+              />
             </div>
             <div className="flex flex-col gap-y-4">
               <Link className="flex flex-row" href={"#"}>
@@ -42,7 +46,11 @@ const ContactSection = () => {
           {/* Section Social */}
           <div className="flex flex-col items-center justify-center gap-y-8 lg:basis-1/2">
             <div className="">
-              <Image src={FollowTitle} alt="Follow" className="w-[190px]" />
+              <Image
+                src={FollowTitle}
+                alt="Follow"
+                className="400:w-[200px] w-[180px]"
+              />
             </div>
             <div className="flex flex-col gap-y-4">
               <Link
