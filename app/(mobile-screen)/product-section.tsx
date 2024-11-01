@@ -86,7 +86,7 @@ const ProductSection = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="z-20 mx-auto mt-4 flex max-w-screen-tablet flex-col justify-center gap-4 px-6">
+        <div className="max-w-screen-450 z-20 mx-auto mt-4 flex flex-col justify-center gap-4 px-6">
           <div className="z-20">
             <Image
               src={ProductTitle}
@@ -96,7 +96,6 @@ const ProductSection = () => {
           </div>
           <div className="z-20 mb-3 flex flex-col leading-[1.6rem] tracking-wider sm:leading-7">
             <p className="text-sm leading-[1.6rem] tracking-wider text-[#d3dcf3] sm:leading-7">
-
               Di era modernisasi dan selera yang semakin beragam, Minilemon
               memproduksi banyak varian produk digital maupun konvensional, agar
               nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
@@ -108,7 +107,7 @@ const ProductSection = () => {
 
       {/* Product 1 */}
       <div className="w-full bg-[#1b1b1b] py-14">
-        <div className="mx-auto max-w-screen-tablet px-6">
+        <div className="max-w-screen-450 mx-auto px-6">
           <div className="container flex flex-col items-center justify-center gap-4">
             <div className="relative h-[396px] w-full sm:h-[492px]">
               <Image
@@ -199,7 +198,7 @@ const ProductSection = () => {
 
       {/* Product 2 */}
       <div className="w-full bg-[#d2e1f4] py-14">
-        <div className="mx-auto max-w-screen-tablet px-6">
+        <div className="max-w-screen-450 mx-auto px-6">
           <div className="container flex flex-col items-center justify-center gap-4">
             <div className="relative h-[396px] w-full sm:h-[492px]">
               <Image
@@ -312,7 +311,7 @@ const ProductSection = () => {
             transition={{ duration: 0.5 }}
             className="w-full bg-[#d2f4d3] py-14"
           >
-            <motion.div className="mx-auto max-w-screen-tablet px-6">
+            <motion.div className="max-w-screen-450 mx-auto px-6">
               <motion.div className="container flex flex-col items-center justify-center gap-4">
                 {/* <div className="relative h-[396px] w-[280px] sm:h-[492px] sm:w-[350px]">
                   <Placeholder
@@ -430,7 +429,7 @@ const ProductSection = () => {
             transition={{ duration: 0.5 }}
             className="w-full bg-[#f4d3e8] py-14"
           >
-            <motion.div className="mx-auto max-w-screen-tablet px-6">
+            <motion.div className="max-w-screen-450 mx-auto px-6">
               <motion.div className="container flex flex-col items-center justify-center gap-4">
                 <div className="relative h-[396px] w-full sm:h-[492px]">
                   <Image
@@ -535,7 +534,7 @@ const ProductSection = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-row bg-[#f4efd2] py-14"
           >
-            <motion.div className="mx-auto max-w-screen-tablet px-6">
+            <motion.div className="max-w-screen-450 mx-auto px-6">
               <motion.div className="container flex flex-col items-center justify-center gap-4">
                 <div className="relative h-[396px] w-full sm:h-[492px]">
                   <Image

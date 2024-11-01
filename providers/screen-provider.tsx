@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { useScreenWidth } from "@/hooks/useScreenWidth";
@@ -9,6 +9,7 @@ const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
   const screenWidth = useScreenWidth();
   const router = useRouter();
   const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // Redirect to the home page if the screen width is less than 1024x
@@ -16,6 +17,12 @@ const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
       router.push("/");
     }
   }, [pathname, router, screenWidth]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   if (screenWidth < 299) {
     return (
