@@ -96,6 +96,7 @@ const ProductSection = () => {
           </div>
           <div className="z-20 mb-3 flex flex-col leading-[1.6rem] tracking-wider sm:leading-7">
             <p className="text-sm leading-[1.6rem] tracking-wider text-[#d3dcf3] sm:leading-7">
+
               Di era modernisasi dan selera yang semakin beragam, Minilemon
               memproduksi banyak varian produk digital maupun konvensional, agar
               nilai-nilai edukasi dan karakter positif, dapat menjangkau ke

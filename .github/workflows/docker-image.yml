@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-job-main  
+      cancel-in-progress: true  
 
     steps:
     - name: Checkout code
@@ -41,5 +44,9 @@ jobs:
           docker stop company-profile-container || true &&
           docker rm company-profile-container || true &&
           docker pull rifkinauvaldzaki/company-profile:latest &&
+
+          # delete <none> tags
+          docker image prune -f &&
+
           docker run -d --name company-profile-container -p 3003:3003 rifkinauvaldzaki/company-profile:latest
         "

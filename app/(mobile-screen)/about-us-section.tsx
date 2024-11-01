@@ -51,8 +51,9 @@ export default function AboutUsSection() {
           </div>
           <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
             <p>
-              Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
-              yang merupakan penutup wajah dari setiap Suku di Indonesia.
+              <span className="bg-pink-500">Test</span>Berawal dari cinta dan
+              bangga akan warisan budaya khusunya topeng yang merupakan penutup
+              wajah dari setiap Suku di Indonesia.
             </p>
           </div>
         </div>
