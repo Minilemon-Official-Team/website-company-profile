@@ -22,7 +22,7 @@ function CharacterSection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="max-w-screen-450 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
           <div id="character" className="z-10">
             <Image src={CharacterTitle} alt="Character" className="w-[220px]" />
           </div>
@@ -41,7 +41,7 @@ function CharacterSection() {
       </div>
       {/* Change character picture and status */}
       <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-screen-tablet px-6 py-12">
+        <div className="max-w-screen-450 px-6 py-12">
           <Splide
             options={{
               type: "loop",
@@ -57,7 +57,7 @@ function CharacterSection() {
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="flex h-full max-w-screen-tablet flex-col gap-y-4">
+                <div className="max-w-screen-450 flex h-full flex-col gap-y-4">
                   <div className="flex flex-1 basis-1/2 flex-row">
                     <div className="basis-1/2">
                       <Image src={character.image} alt={character.fullName} />
