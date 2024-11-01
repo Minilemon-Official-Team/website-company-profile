@@ -41,7 +41,7 @@ export default function AboutUsSection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="max-w-screen-450 z-10 flex flex-col justify-center gap-y-4 px-6 pb-6 pt-10">
+        <div className="max-w-screen-640 z-10 flex flex-col justify-center gap-y-4 px-6 pb-6 pt-10">
           <div className="z-10">
             <Image
               src={IdeaTitle}
@@ -61,7 +61,7 @@ export default function AboutUsSection() {
         id="home"
         className="flex flex-col items-center justify-center bg-[#f2e3fe]"
       >
-        <div className="max-w-screen-450 flex flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
+        <div className="max-w-screen-640 flex flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
           <p>
             Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
             perjalanan panjanga telah menciptakan tokoh animasi (fiksi) dengan
@@ -90,7 +90,7 @@ export default function AboutUsSection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center bg-[#f1e3fe]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-end justify-end gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-end justify-end gap-4 px-6 py-4">
                 <motion.p
                   className="leading-relaxed tracking-widest"
                   variants={paragraphVariants}
@@ -111,7 +111,7 @@ export default function AboutUsSection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-end bg-[#d5def4]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-end justify-end gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-end justify-end gap-4 px-6 py-4">
                 <motion.div className="">
                   <Image
                     src={MessageTitle}
@@ -135,7 +135,7 @@ export default function AboutUsSection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={TreatmentTitle}
@@ -143,7 +143,7 @@ export default function AboutUsSection() {
                     className="w-[190px] sm:w-[320px]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-450 text-center text-xs leading-relaxed tracking-widest text-[#c5cce2] sm:text-sm">
+                <motion.p className="max-w-screen-640 text-center text-xs leading-relaxed tracking-widest text-[#c5cce2] sm:text-sm">
                   Sadar akan persoalan-persoalan besar dan mendasar, PT
                   Minilemon Nusantara berinisitatif membuat produk-produk anak
                   yang berupa tontonan dan permainan, dengan target usia 3-7
@@ -159,7 +159,7 @@ export default function AboutUsSection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#d6f4df]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-start justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-start justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={ConceptTitle}
@@ -184,7 +184,7 @@ export default function AboutUsSection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-end bg-[#f1d9d3]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-end justify-end gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-end justify-end gap-4 px-6 py-4">
                 <motion.div className="">
                   <Image
                     src={PsychographicTitle}
