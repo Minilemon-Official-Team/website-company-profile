@@ -91,7 +91,7 @@ const ProductSection = () => {
             <Image
               src={ProductTitle}
               alt="Our Product"
-              className="w-[220px] sm:w-[260px]"
+              className="400:w-[210px] w-[190px]"
             />
           </div>
           <div className="z-20 mb-3 flex flex-col leading-[1.6rem] tracking-wider sm:leading-7">

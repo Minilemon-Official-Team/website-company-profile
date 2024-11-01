@@ -33,9 +33,13 @@ function StorySection() {
         />
         <div className="max-w-screen-640 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
           <div id="story" className="z-10 scroll-mt-[50vh]">
-            <Image src={StoryTitle} alt="Story" className="w-[125px]" />
+            <Image
+              src={StoryTitle}
+              alt="Story"
+              className="400:w-[125px] w-[110px]"
+            />
           </div>
-          <div className="z-10 flex flex-col gap-y-6 leading-7 tracking-widest text-[#c5cce2]">
+          <div className="z-10 flex flex-col gap-y-6 leading-6 tracking-widest text-[#c5cce2]">
             <p>
               Berawal dari kisah Kakek Djoyo yang merupakan seorang pangeran sah
               penerus tahta ayahnya, seorang raja di tanah Jawa. Sejak kecil,
@@ -48,7 +52,7 @@ function StorySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
-        <div className="max-w-screen-640 flex flex-col items-center px-6 py-4 leading-7 tracking-widest">
+        <div className="max-w-screen-640 flex flex-col items-center px-6 py-4 leading-6 tracking-widest">
           <p>
             Dengan hati yang berat, Pangeran Djoyo memutuskan untuk meninggalkan
             istana dan memulai perjalanan panjang untuk mencari ilmu dan
@@ -71,7 +75,7 @@ function StorySection() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="max-w-screen-640 flex flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-7 tracking-widest"
+            className="max-w-screen-640 flex flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-6 tracking-widest"
           >
             <motion.p variants={paragraphVariants}>
               Suatu malam, dalam perjalanannya melewati hutan yang lebat,
