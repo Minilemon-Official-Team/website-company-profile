@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <>
       {screenWidth < 1024 ? (
-        <div className="text-xs">
+        <div className="w-full text-xs">
           <AboutUsSection />
           <StorySection />
           <CharacterSection />

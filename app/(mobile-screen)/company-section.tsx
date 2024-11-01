@@ -44,7 +44,7 @@ function CompanySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="max-w-screen-450 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="max-w-screen-640 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
           <div id="company" className="z-10">
             <Image
               src={PtMinilemonNusantaraMobileTitle}
@@ -63,7 +63,7 @@ function CompanySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-4">
-        <div className="max-w-screen-450 flex flex-col items-center px-6 py-3 leading-7 tracking-widest">
+        <div className="max-w-screen-640 flex flex-col items-center px-6 py-3 leading-7 tracking-widest">
           <p>
             Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
             melakukan pendekatan terhadap pendidikan, mulai dari film animasi,
@@ -92,7 +92,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center bg-[#e7e7e7] pb-5"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-end justify-end gap-4 px-6 pb-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-end justify-end gap-4 px-6 pb-4">
                 <motion.p
                   className="leading-7 tracking-widest"
                   variants={paragraphVariants}
@@ -114,7 +114,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={VisiTitle}
@@ -123,7 +123,7 @@ function CompanySection() {
                   />
                 </motion.div>
                 <motion.p
-                  className="max-w-screen-450 text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
+                  className="max-w-screen-640 text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
                   variants={paragraphVariants}
                 >
                   Sebagai anak bangsa yang baik dan cinta tanah air, PT
@@ -136,7 +136,7 @@ function CompanySection() {
                   dan budaya yang merupakan warisan yang selalu kita banggakan.
                 </motion.p>
               </motion.div>
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={MisiTitle}
@@ -144,7 +144,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-450 text-start">
+                <motion.p className="max-w-screen-640 text-start">
                   <motion.ul>
                     <motion.li>
                       <motion.p
@@ -185,7 +185,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#a4bcdc] py-5"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div className="mb-3">
                   <Image
                     src={TheFounderTitle}
@@ -247,7 +247,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#d3def4] py-5"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={CoFounderTitle}
@@ -313,7 +313,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={OurHeroTile}
@@ -321,7 +321,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="max-w-screen-450 grid grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
+                <motion.div className="max-w-screen-640 grid grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -354,7 +354,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#fff4ec]"
             >
-              <motion.div className="max-w-screen-450 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={OurFamilyTile}
@@ -362,7 +362,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="max-w-screen-450 grid grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
+                <motion.div className="max-w-screen-640 grid grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
