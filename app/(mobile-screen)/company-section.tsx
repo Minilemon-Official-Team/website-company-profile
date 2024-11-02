@@ -200,15 +200,15 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 flex h-[200px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     Founder
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-7 tracking-widest"
+                      className="text-start text-[.80rem] leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="mr-2 text-[1.25rem] font-bold">
+                      <motion.span className="mr-2 font-bold">
                         Reno Halsamer
                       </motion.span>
                       <br />
@@ -261,15 +261,15 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 flex h-[200px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     CoFounder
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-7 tracking-widest"
+                      className="text-start text-[.80rem] leading-7 tracking-widest"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="text-nowrap text-[1.25rem] font-bold">
+                      <motion.span className="text-nowrap font-bold">
                         Heriyadi Natawijaya
                       </motion.span>
                       <br />
