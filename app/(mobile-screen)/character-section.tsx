@@ -27,7 +27,7 @@ function CharacterSection() {
             <Image
               src={CharacterTitle}
               alt="Character"
-              className="400:w-[210px] w-[180px]"
+              className="400:w-[230px] w-[200px]"
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
