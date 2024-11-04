@@ -61,7 +61,7 @@ function CharacterSection() {
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="max-w-screen-360 400:max-w-screen-400 640:max-w-screen-640 450:max-w-screen-450 flex h-full flex-col gap-y-4">
+                <div className="max-w-screen-300 400:max-w-screen-400 640:max-w-screen-640 450:max-w-screen-450 flex h-full flex-col gap-y-4">
                   <div className="flex flex-1 basis-1/2 flex-row">
                     <div className="basis-1/2">
                       <Image src={character.image} alt={character.fullName} />
