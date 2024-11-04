@@ -214,7 +214,7 @@ const CompanyPage = () => {
           <div className="mb-16 flex w-full justify-center">
             <Image src={FamilyTitle} alt="Special Partner" />
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-3 gap-x-8 gap-y-12 pb-12">
             {Family.map((data) => (
               <div
                 className="flex flex-col items-center justify-center text-black"
