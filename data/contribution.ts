@@ -53,41 +53,46 @@ export const Hero: ContributionProps[] = [
 export const Family: ContributionProps[] = [
   {
     id: 1,
+    name: "Wathin Ciptawan",
+    position: "Business Consultant",
+  },
+  {
+    id: 2,
     name: "Anis Ilahi Wahdati",
     position: "Business Development",
   },
   {
-    id: 2,
+    id: 3,
     name: "Biwara Sakti Pracihara",
     position: "Creative Program Analyst",
   },
   {
-    id: 3,
+    id: 4,
     name: "Francisca Diwati",
     position: "Public Relation",
   },
   {
-    id: 4,
+    id: 5,
     name: "Andi Hardjani",
     position: "Head of Visual Development",
   },
   {
-    id: 5,
+    id: 6,
     name: "Ghazariz",
     position: "Game Development",
   },
   {
-    id: 6,
+    id: 7,
     name: "Fahmi Arif",
     position: "IT Development",
   },
   {
-    id: 7,
+    id: 8,
     name: "Joy Jordan",
     position: "Audio Production",
   },
   {
-    id: 8,
+    id: 9,
     name: "Evan Tanazal",
     position: "Motion Designer",
   },
