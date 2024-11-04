@@ -44,7 +44,7 @@ function CompanySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 pt-3">
           <div id="company" className="z-10">
             <Image
               src={PtMinilemonNusantaraMobileTitle}
@@ -54,9 +54,9 @@ function CompanySection() {
           </div>
           <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">
             <p>
-              PT. Minilemon Nusantaraadlah perusahaan yang berdomisili di
+              PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
               Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
-              Karakter Anak dan nilai-nilai kebaikan memlalui berbagai Program
+              Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
               Pendidikan berbasis seni, hiburan, dan teknologi.
             </p>
           </div>
