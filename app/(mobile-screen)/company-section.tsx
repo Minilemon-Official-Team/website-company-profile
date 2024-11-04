@@ -185,8 +185,8 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#a4bcdc] py-5"
             >
-              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
-                <motion.div className="mb-3">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 pb-4">
+                <motion.div>
                   <Image
                     src={TheFounderTitle}
                     alt="TheFounderTitle"
@@ -200,12 +200,12 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mr-4 mb-1 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     Founder
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-widest"
+                      className="text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       <motion.span className="mr-2 font-bold">
@@ -247,7 +247,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#d3def4] py-5"
             >
-              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 pb-4">
                 <motion.div>
                   <Image
                     src={CoFounderTitle}
@@ -261,12 +261,12 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mr-4 mb-1 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     CoFounder
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-widest"
+                      className="text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       <motion.span className="text-nowrap font-bold">
