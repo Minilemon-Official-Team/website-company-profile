@@ -75,7 +75,7 @@ const MobileNavbar = () => {
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -bottom-5 right-3 z-20 w-[100px] md:-bottom-10"
+              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -bottom-5 right-3 z-20 w-[110px] md:-bottom-10"
             />
           </div>
           <DividerGray />
