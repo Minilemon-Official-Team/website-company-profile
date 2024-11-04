@@ -22,12 +22,12 @@ function CharacterSection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="max-w-screen-640 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4">
           <div id="character" className="z-10">
             <Image
               src={CharacterTitle}
               alt="Character"
-              className="400:w-[230px] w-[200px]"
+              className="w-[200px] 400:w-[230px]"
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
@@ -45,7 +45,7 @@ function CharacterSection() {
       </div>
       {/* Change character picture and status */}
       <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-screen-360 400:max-w-screen-400 640:max-w-screen-640 450:max-w-screen-450 p-6">
+        <div className="max-w-[360px] p-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
               type: "loop",
@@ -61,12 +61,12 @@ function CharacterSection() {
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="max-w-screen-300 400:max-w-screen-400 640:max-w-screen-640 450:max-w-screen-450 flex h-full flex-col gap-y-4">
+                <div className="flex h-full max-w-screen-300 flex-col gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-1 basis-1/2 flex-row">
                     <div className="basis-1/2">
                       <Image src={character.image} alt={character.fullName} />
                     </div>
-                    <div className="flex basis-1/2 gap-3 flex-col">
+                    <div className="flex basis-1/2 flex-col gap-3">
                       <div>
                         <Image
                           src={character.namePicture}
@@ -74,7 +74,7 @@ function CharacterSection() {
                           className="w-[100px]"
                         />
                       </div>
-                      <div className="flex gap-2 flex-col">
+                      <div className="flex flex-col gap-2">
                         <Slider value={character.strong} slider="bg-[#ededed]">
                           Strong
                         </Slider>
