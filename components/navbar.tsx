@@ -52,7 +52,7 @@ const MobileNavbar = () => {
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -top-6 right-3 z-20 w-[80px] md:-top-10 md:w-[200px]"
+              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -top-6 right-3 z-20 w-[100px] md:-top-10 md:w-[200px]"
             />
           </div>
           <DividerGray />
@@ -69,13 +69,13 @@ const MobileNavbar = () => {
       >
         <div className="relative flex h-full flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-5">
-            <h1 className="mr-[60px] h-full pt-[10px] text-center text-[19px] leading-10 tracking-wide">
+            <h1 className="mr-[65px] h-full pt-[10px] text-center text-[18px] leading-10 tracking-wide">
               Selamat datang di dunia
             </h1>
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -bottom-6 right-3 z-20 w-[80px] md:-bottom-10"
+              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -bottom-5 right-3 z-20 w-[100px] md:-bottom-10"
             />
           </div>
           <DividerGray />
