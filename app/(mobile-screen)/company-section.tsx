@@ -226,7 +226,7 @@ function CompanySection() {
                       masyarakat Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Karakter animasi minilemon diharapkan menjadi figur baik
@@ -283,7 +283,7 @@ function CompanySection() {
                       seni di Depok, Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Karirnya di dunia Seni dan Perfilman membuatnya bertemu
@@ -293,7 +293,7 @@ function CompanySection() {
                       budaya.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Pengalaman panjang sebagai kepala Seni, dan kecintaannya
