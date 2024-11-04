@@ -140,7 +140,7 @@ export default function AboutUsSection() {
                   <Image
                     src={TreatmentTitle}
                     alt="Treatment"
-                    className="w-[190px] sm:w-[320px]"
+                    className="w-[210px] sm:w-[320px]"
                   />
                 </motion.div>
                 <motion.p className="max-w-screen-640 text-center text-xs leading-relaxed tracking-widest text-[#c5cce2] sm:text-sm">
