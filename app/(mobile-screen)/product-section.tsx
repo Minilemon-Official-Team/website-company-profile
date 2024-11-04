@@ -114,7 +114,7 @@ const ProductSection = () => {
                 src={CoverPetualanganMinilemon}
                 alt="Petualangan Si Minilemon"
                 layout="fill"
-                objectFit="cover"
+                objectFit="fill"
                 className="w-full"
               />
             </div>
@@ -205,7 +205,7 @@ const ProductSection = () => {
                 src={CoverSaveTheEarth}
                 alt="Minilemon Save The Earth"
                 layout="fill"
-                objectFit="cover"
+                objectFit="fill"
                 className="w-full"
               />
             </div>
@@ -326,7 +326,7 @@ const ProductSection = () => {
                     src={""}
                     alt="product 3"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
@@ -436,7 +436,7 @@ const ProductSection = () => {
                     src={CoverPostParenting}
                     alt="Minilemon Live Parenting"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
@@ -541,7 +541,7 @@ const ProductSection = () => {
                     src={CoverPanggungBonekaMinilemon}
                     alt="Panggung Boneka Minilemon"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
