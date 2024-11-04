@@ -34,7 +34,7 @@ function CompanySection() {
 
   return (
     <div>
-      <div className="relative flex h-full items-center justify-center bg-cover bg-center py-10">
+      <div className="relative flex h-full items-center justify-center bg-cover bg-center py-6">
         <Image
           src={BackgroundCompany}
           alt="BackgroundCompany"
@@ -114,7 +114,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="max-w-screen-640 flex flex-col items-center justify-center gap-4 px-6 pt-4">
                 <motion.div>
                   <Image
                     src={VisiTitle}
