@@ -86,12 +86,12 @@ const ProductSection = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="max-w-screen-640 z-20 mx-auto mt-4 flex flex-col justify-center gap-4 px-6">
+        <div className="max-w-screen-640 z-20 mx-auto flex flex-col justify-center gap-4 px-6">
           <div className="z-20">
             <Image
               src={ProductTitle}
               alt="Our Product"
-              className="400:w-[210px] w-[190px]"
+              className="400:w-[260px] w-[230px]"
             />
           </div>
           <div className="z-20 mb-3 flex flex-col leading-[1.6rem] tracking-wider sm:leading-7">
@@ -114,7 +114,7 @@ const ProductSection = () => {
                 src={CoverPetualanganMinilemon}
                 alt="Petualangan Si Minilemon"
                 layout="fill"
-                objectFit="cover"
+                objectFit="fill"
                 className="w-full"
               />
             </div>
@@ -205,7 +205,7 @@ const ProductSection = () => {
                 src={CoverSaveTheEarth}
                 alt="Minilemon Save The Earth"
                 layout="fill"
-                objectFit="cover"
+                objectFit="fill"
                 className="w-full"
               />
             </div>
@@ -326,7 +326,7 @@ const ProductSection = () => {
                     src={""}
                     alt="product 3"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
@@ -436,7 +436,7 @@ const ProductSection = () => {
                     src={CoverPostParenting}
                     alt="Minilemon Live Parenting"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
@@ -541,7 +541,7 @@ const ProductSection = () => {
                     src={CoverPanggungBonekaMinilemon}
                     alt="Panggung Boneka Minilemon"
                     layout="fill"
-                    objectFit="cover"
+                    objectFit="fill"
                     className="w-full"
                   />
                 </div>
