@@ -61,9 +61,9 @@ function CharacterSection() {
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="flex h-full max-w-full flex-col gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+                <div className="flex h-full max-w-full flex-col items-center gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-1 basis-1/2 flex-row">
-                    <div className="flex basis-1/2 items-center justify-center">
+                    <div className="flex basis-1/2 gap-2 items-center justify-center">
                       <Image src={character.image} alt={character.fullName} />
                     </div>
                     <div className="flex basis-1/2 flex-col justify-center">
@@ -74,7 +74,7 @@ function CharacterSection() {
                           className="w-[100px]"
                         />
                       </div>
-                      <div className="flex flex-col">
+                      <div className="flex gap-2 flex-col">
                         <Slider value={character.strong} slider="bg-[#ededed]">
                           Strong
                         </Slider>
