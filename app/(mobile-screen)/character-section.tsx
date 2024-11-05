@@ -45,7 +45,7 @@ function CharacterSection() {
       </div>
       {/* Change character picture and status */}
       <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-screen-300 px-6 py-12 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+        <div className="max-w-full p-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
               type: "loop",
@@ -61,7 +61,7 @@ function CharacterSection() {
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="flex h-full max-w-screen-300 flex-col gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+                <div className="flex h-full max-w-full flex-col gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-1 basis-1/2 flex-row">
                     <div className="flex basis-1/2 items-center justify-center">
                       <Image src={character.image} alt={character.fullName} />
