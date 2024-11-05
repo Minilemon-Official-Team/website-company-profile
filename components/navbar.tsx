@@ -52,7 +52,7 @@ const MobileNavbar = () => {
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -top-6 right-3 z-20 w-[100px] md:-top-10 md:w-[200px]"
+              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -top-6 right-3 z-20 w-[90px] md:-top-10 md:w-[200px]"
             />
           </div>
           <DividerGray />
@@ -75,7 +75,7 @@ const MobileNavbar = () => {
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="400:w-[100px] 450:w-[120px] 640:w-[150px] absolute -bottom-5 right-3 z-20 w-[110px] md:-bottom-10"
+              className="400:w-[120px] 450:w-[140px] 640:w-[160px] absolute -bottom-5 right-3 z-20 w-[100px] md:-bottom-10"
             />
           </div>
           <DividerGray />
