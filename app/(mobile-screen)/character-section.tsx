@@ -27,7 +27,7 @@ function CharacterSection() {
             <Image
               src={CharacterTitle}
               alt="Character"
-              className="w-[200px] 400:w-[230px]"
+              className="w-[180px] 400:w-[210px]"
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
@@ -45,7 +45,7 @@ function CharacterSection() {
       </div>
       {/* Change character picture and status */}
       <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-[360px] p-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+        <div className="max-w-screen-300 px-6 py-12 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
               type: "loop",
@@ -63,10 +63,10 @@ function CharacterSection() {
               <SplideSlide key={character.id}>
                 <div className="flex h-full max-w-screen-300 flex-col gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-1 basis-1/2 flex-row">
-                    <div className="basis-1/2">
+                    <div className="flex basis-1/2 items-center justify-center">
                       <Image src={character.image} alt={character.fullName} />
                     </div>
-                    <div className="flex basis-1/2 flex-col gap-3">
+                    <div className="flex basis-1/2 flex-col justify-center">
                       <div>
                         <Image
                           src={character.namePicture}
@@ -74,7 +74,7 @@ function CharacterSection() {
                           className="w-[100px]"
                         />
                       </div>
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col">
                         <Slider value={character.strong} slider="bg-[#ededed]">
                           Strong
                         </Slider>
