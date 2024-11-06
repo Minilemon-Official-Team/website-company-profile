@@ -97,7 +97,7 @@ const Contact = ({
         </div>
         <p
           id="contact"
-          className="400:text-xl text-lg text-[#d2def4] md:text-2xl lg:text-3xl"
+          className="400:text-xl text-xl text-[#d2def4] md:text-2xl lg:text-3xl"
         >
           How can we help you?
         </p>
