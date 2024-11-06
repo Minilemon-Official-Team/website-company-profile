@@ -93,7 +93,7 @@ export const charactersData: CharacterData[] = [
     strong: 40,
     logic: 80,
     creative: 70,
-    luck: 20,
+    luck: 30,
   },
   {
     id: 6,
@@ -117,7 +117,7 @@ export const charactersData: CharacterData[] = [
     strong: 10,
     logic: 80,
     creative: 80,
-    luck: 20,
+    luck: 30,
   },
   {
     id: 8,
@@ -139,9 +139,9 @@ export const charactersData: CharacterData[] = [
       "TIGOR adalah paman Togar yang maniak coklat. Dalam perjalanan Minilemon ia ditugaskan untuk menjaga anak-anak Minilemon, tetapi sikapnya yang pemalas, kolot, suka pamer dan mau enak sendiri, Sering kali justru merepotkan anak-anak Minilemon.",
     image: Tigor,
     strong: 95,
-    logic: 20,
+    logic: 30,
     creative: 30,
-    luck: 10,
+    luck: 25,
   },
   {
     id: 10,
@@ -153,6 +153,6 @@ export const charactersData: CharacterData[] = [
     strong: 40,
     logic: 95,
     creative: 40,
-    luck: 10,
+    luck: 25,
   },
 ];
