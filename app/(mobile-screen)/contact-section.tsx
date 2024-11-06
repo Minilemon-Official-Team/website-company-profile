@@ -21,7 +21,7 @@ const ContactSection = () => {
 
       {/* Social */}
       <div className="flex min-h-[40vh] items-center bg-[#d2d5f4] pb-10">
-        <div className="container flex flex-col justify-center gap-6 px-12 py-16 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="container flex flex-col justify-center gap-6 px-12 pt-8 pb-16 lg:flex-row lg:gap-0 lg:px-0">
           {/* Section Official */}
           <div className="flex flex-col items-center gap-y-8 lg:basis-1/2">
             <div>
