@@ -88,7 +88,7 @@ const Contact = ({
     <>
       <div
         className={cn(
-          "flex basis-1/2 flex-col items-center justify-center gap-6",
+          "flex basis-1/2 flex-col items-center justify-center gap-4 lg:gap-6",
           className,
         )}
       >
