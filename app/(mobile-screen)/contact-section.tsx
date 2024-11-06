@@ -14,7 +14,7 @@ const ContactSection = () => {
     <div className="flex flex-col">
       {/* Contact */}
       <div className="relative inset-0 flex min-h-[60vh] justify-center bg-[#1b1b1b] bg-cover bg-center py-5">
-        <div className="max-w-screen-640 z-20 flex w-full flex-col items-center gap-6 px-6 pb-5 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="max-w-screen-640 z-20 flex w-full flex-col items-center gap-6 px-6 lg:flex-row lg:gap-0 lg:px-0">
           <Contact className="z-20" titleWidth={"w-[210px] 400:w-[230px]"} />
         </div>
       </div>
