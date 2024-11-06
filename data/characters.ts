@@ -45,7 +45,7 @@ export const charactersData: CharacterData[] = [
     strong: 80,
     logic: 40,
     creative: 20,
-    luck: 80,
+    luck: 70,
   },
   {
     id: 2,
@@ -55,9 +55,9 @@ export const charactersData: CharacterData[] = [
       "SLAMET dibesarkan di lingkungan pesantren Jawa Tengah. Berperilaku santun, kaku dan penurut. setiap pendapatnya memiliki dalil yang ia dapatkan dari Gus nya di pesantren.",
     image: Slamet,
     strong: 40,
-    logic: 80,
-    creative: 20,
-    luck: 80,
+    logic: 50,
+    creative: 40,
+    luck: 95,
   },
   {
     id: 3,
@@ -66,10 +66,10 @@ export const charactersData: CharacterData[] = [
     description:
       "WAYAN besar di tanah Bali, ia mempunyai jiwa seni yang sering kali mengkedepankan imajinasi dari pada akalnya. Walau selebor, banyak aktifitas Minilemon yang berasal dari gagasan Wayan.",
     image: Wayan,
-    strong: 20,
-    logic: 40,
-    creative: 80,
-    luck: 80,
+    strong: 55,
+    logic: 30,
+    creative: 90,
+    luck: 40,
   },
   {
     id: 4,
@@ -78,10 +78,10 @@ export const charactersData: CharacterData[] = [
     description:
       "MEMEY besar di lingkungan Tionghoa. Rajin, Disiplin, dan demokratis. Pribadinya yang cerewet manjadikan Memey menjadi tokoh penting untuk memastikan setiap misi Minilemon terselesaikan.",
     image: Memey,
-    strong: 40,
-    logic: 20,
-    creative: 40,
-    luck: 80,
+    strong: 60,
+    logic: 95,
+    creative: 30,
+    luck: 40,
   },
   {
     id: 5,
@@ -92,8 +92,8 @@ export const charactersData: CharacterData[] = [
     image: Ucup,
     strong: 40,
     logic: 80,
-    creative: 20,
-    luck: 80,
+    creative: 70,
+    luck: 20,
   },
   {
     id: 6,
@@ -102,10 +102,10 @@ export const charactersData: CharacterData[] = [
     description:
       "MINGGUS besar di tanah Papua. Berhati lembut, suka bernyanyi dan menari, Minggus mempunyai postur yang besar, menjadikan Minggus sebagai pelindung teman-temannya terutama Memey.",
     image: Minggus,
-    strong: 80,
+    strong: 100,
     logic: 40,
-    creative: 20,
-    luck: 80,
+    creative: 50,
+    luck: 40,
   },
   {
     id: 7,
@@ -114,10 +114,10 @@ export const charactersData: CharacterData[] = [
     description:
       "Aming adalah sepupu memey yang datang dari ibu kota, sebagai anak muda yg gemar dengan hal-hal kekinian, Aming sering kali merasa diri nya lebih up to date, modern dan terkesan pamer dimata teman-temannya. walaupun cuek, ia merupakan sosok pekerja keras dan senang berbagi hal baru, agar teman-temannya bisa ikut merasakan kesuksesan dan indahnya hidup dalam kemewahan",
     image: Amink,
-    strong: 40,
-    logic: 20,
-    creative: 40,
-    luck: 80,
+    strong: 10,
+    logic: 80,
+    creative: 80,
+    luck: 20,
   },
   {
     id: 8,
@@ -126,10 +126,10 @@ export const charactersData: CharacterData[] = [
     description:
       "BIBIE Pemuda genius dari tanah Betawi. Seorang ahli teknologi dan otak dari penciptaan Portal Bibie, Bibie sangat mahir dalam dunia Sains dan teknologi, karna itu membuat Biebie sangat tergantung dengan teknologi dan gadget-gadgetnya.",
     image: Bibie,
-    strong: 40,
-    logic: 80,
-    creative: 20,
-    luck: 80,
+    strong: 50,
+    logic: 100,
+    creative: 90,
+    luck: 45,
   },
   {
     id: 9,
@@ -138,10 +138,10 @@ export const charactersData: CharacterData[] = [
     description:
       "TIGOR adalah paman Togar yang maniak coklat. Dalam perjalanan Minilemon ia ditugaskan untuk menjaga anak-anak Minilemon, tetapi sikapnya yang pemalas, kolot, suka pamer dan mau enak sendiri, Sering kali justru merepotkan anak-anak Minilemon.",
     image: Tigor,
-    strong: 40,
+    strong: 100,
     logic: 20,
-    creative: 40,
-    luck: 80,
+    creative: 30,
+    luck: 10,
   },
   {
     id: 10,
@@ -151,8 +151,8 @@ export const charactersData: CharacterData[] = [
       "RU-DI adalah robot canggih buatan Biebie yang lebih dari sekadar asisten lab. Dengan Al luar biasa, RU-DI mampu mencari dan mengolah informasi secara presisi, menjadikannya partner tak tergantikan. Dilengkapi peralatan mutakhir, ia membantu tim Minilemon dalam petualangan, menjadi pelindung dan penunjuk jalan. Meski logis dan tampak kaku, RU-DI menunjukkan loyalitas dan emosi yang menjadikannya teman yang dapat diandalkan di saat-saat genting.",
     image: Rudi,
     strong: 40,
-    logic: 80,
-    creative: 20,
-    luck: 80,
+    logic: 100,
+    creative: 40,
+    luck: 10,
   },
 ];
