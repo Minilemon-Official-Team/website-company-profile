@@ -63,10 +63,10 @@ function CharacterSection() {
               <SplideSlide key={character.id}>
                 <div className="flex h-full max-w-full flex-col items-center justify-center gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-row">
-                    <div className="flex basis-1/2 items-center justify-center gap-2">
+                    <div className="flex basis-1/2 items-center justify-center">
                       <Image src={character.image} alt={character.fullName} />
                     </div>
-                    <div className="flex basis-1/2 flex-col justify-center">
+                    <div className="flex basis-1/2 gap-3 flex-col justify-center">
                       <div>
                         <Image
                           src={character.namePicture}
