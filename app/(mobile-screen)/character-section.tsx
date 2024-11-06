@@ -74,7 +74,7 @@ function CharacterSection() {
                           className="w-[100px]"
                         />
                       </div>
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-3">
                         <Slider value={character.strong} slider="bg-[#ededed]">
                           Strong
                         </Slider>
