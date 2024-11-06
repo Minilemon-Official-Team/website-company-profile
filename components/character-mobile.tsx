@@ -45,7 +45,7 @@ const Character = ({ strong, logic, creative, luck }: CharacterProps) => {
             <div className="basis-1/2">
               <Image src={data.image} alt={data.fullName} />
             </div>
-            <div className="flex basis-1/2 gap-2 flex-col">
+            <div className="flex basis-1/2 gap-3 flex-col">
               <div>
                 <Image src={data.namePicture} alt={data.fullName} />
               </div>
