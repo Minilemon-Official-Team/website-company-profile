@@ -115,7 +115,6 @@ function CompanySection() {
               className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
-
                 <motion.div>
                   <Image
                     src={VisiTitle}
@@ -188,7 +187,6 @@ function CompanySection() {
             >
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div className="mb-3">
-
                   <Image
                     src={TheFounderTitle}
                     alt="TheFounderTitle"
@@ -202,7 +200,7 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 mb-1 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mb-1 mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     Founder
                   </div>
                   <motion.div>
@@ -250,7 +248,6 @@ function CompanySection() {
               className="flex flex-col items-center justify-center bg-[#d3def4] py-5"
             >
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
-
                 <motion.div>
                   <Image
                     src={CoFounderTitle}
@@ -264,7 +261,7 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 mb-1 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
+                  <div className="float-left mb-1 mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
                     CoFounder
                   </div>
                   <motion.div>
@@ -272,7 +269,7 @@ function CompanySection() {
                       className="text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="text-nowrap font-bold">
+                      <motion.span className="font-bold">
                         Heriyadi Natawijaya
                       </motion.span>
                       <br />
@@ -338,10 +335,10 @@ function CompanySection() {
                       <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
                         hero
                       </div>
-                      <motion.p className="text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-tight 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
@@ -379,10 +376,10 @@ function CompanySection() {
                       <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
                         family
                       </div>
-                      <motion.p className="text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-tight 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
