@@ -321,7 +321,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
@@ -362,7 +362,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-[1-rem] gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
                   {Family.map((item, index) => (
                     <motion.div
                       key={index}
