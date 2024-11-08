@@ -338,7 +338,7 @@ function CompanySection() {
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-tight 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
@@ -379,7 +379,7 @@ function CompanySection() {
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-tight 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
