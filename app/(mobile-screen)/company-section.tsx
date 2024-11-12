@@ -205,7 +205,7 @@ function CompanySection() {
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-wider"
+                      className="text-start text-[.80rem] leading-7 tracking-wider -mt-2"
                       variants={paragraphVariants}
                     >
                       <motion.span className="mr-2 font-bold">
@@ -266,7 +266,7 @@ function CompanySection() {
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-wider"
+                      className="text-start text-[.80rem] leading-7 tracking-wider -mt-2"
                       variants={paragraphVariants}
                     >
                       <motion.span className="font-bold">
