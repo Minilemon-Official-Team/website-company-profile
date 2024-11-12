@@ -205,7 +205,7 @@ function CompanySection() {
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-wider -mt-2"
+                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       <motion.span className="mr-2 font-bold">
@@ -266,7 +266,7 @@ function CompanySection() {
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-[.80rem] leading-7 tracking-wider -mt-2"
+                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       <motion.span className="font-bold">
@@ -321,18 +321,18 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
-                      className="flex w-full flex-col items-center justify-start gap-2"
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
                     >
                       {/* <motion.img
                               src="https://picsum.photos/id/200/200/250?grayscale"
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
+                      <div className="flex h-[180px] w-full items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
                         hero
                       </div>
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
@@ -362,18 +362,18 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest">
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest sm:gap-20">
                   {Family.map((item, index) => (
                     <motion.div
                       key={index}
-                      className="flex w-full flex-col items-center justify-start gap-2"
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
                     >
                       {/* <motion.img
                               src="https://picsum.photos/seed/picsum/200/250"
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[180px] w-[140px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
+                      <div className="flex h-[180px] w-full items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
                         family
                       </div>
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
