@@ -24,22 +24,12 @@ const NavigationMobile = () => {
   );
 
   const LINK_ICONS = [
-    // <GateIcon key="gate" className="w-5 h-5 text-[#ffd201]" />,
-    // <BookIcon key="book" className="w-5 h-5 text-[#ffd201]" />,
-    // <MinilemonYellowIcon key="minilemon" className="w-5 h-5 text-[#ffd201]" />,
-    // <CubeIcon key="cube" className="w-5 h-5 text-[#ffd201]" />,
-    // <FlagIcon key="flag" className="w-5 h-5 text-[#ffd201]" />,
-    // <ArrowIcon key="arrow" className="w-5 h-5 text-[#ffd201]" />,
     "About",
     "Story",
     "Character",
     "Product",
     "Company",
     "Contact",
-    <a href="#home">
-      <House className="h-5 w-5 text-xl text-[#ffd201]" />
-      {/* <GateIcon key="gate" className="w-5 h-5 text-[#ffd201]" /> */}
-    </a>,
   ];
 
   const scrollToCenter = useCallback((element: HTMLElement | null) => {
