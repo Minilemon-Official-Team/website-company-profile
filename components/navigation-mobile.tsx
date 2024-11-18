@@ -1,35 +1,45 @@
 "use client";
 
-import {
-  ArrowIcon,
-  BookIcon,
-  CubeIcon,
-  FlagIcon,
-  GateIcon,
-  MinilemonYellowIcon,
-} from "@/components/icons";
-import useScrollY from "@/hooks/useScrollY";
+import useScrollPercentage from "@/hooks/useScrollPercentage";
 import { cn } from "@/lib/utils";
+import { House } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
 const NavigationMobile = () => {
   const [currentLinkIndex, setCurrentLinkIndex] = useState<number>(0);
   const [isNavigating, setIsNavigating] = useState(false);
-  const scrollY = useScrollY();
+  const { scrollPercent } = useScrollPercentage();
 
   const NAV_LINKS = useMemo(
-    () => ["#home", "#story", "#character", "#product", "#company", "#contact"],
+    () => [
+      "#about",
+      "#story",
+      "#character",
+      "#product",
+      "#company",
+      "#contact",
+    ],
     [],
   );
 
   const LINK_ICONS = [
-    <GateIcon key="gate" className="h-5 w-5 text-[#ffd201]" />,
-    <BookIcon key="book" className="h-5 w-5 text-[#ffd201]" />,
-    <MinilemonYellowIcon key="minilemon" className="h-5 w-5 text-[#ffd201]" />,
-    <CubeIcon key="cube" className="h-5 w-5 text-[#ffd201]" />,
-    <FlagIcon key="flag" className="h-5 w-5 text-[#ffd201]" />,
-    <ArrowIcon key="arrow" className="h-5 w-5 text-[#ffd201]" />,
+    // <GateIcon key="gate" className="w-5 h-5 text-[#ffd201]" />,
+    // <BookIcon key="book" className="w-5 h-5 text-[#ffd201]" />,
+    // <MinilemonYellowIcon key="minilemon" className="w-5 h-5 text-[#ffd201]" />,
+    // <CubeIcon key="cube" className="w-5 h-5 text-[#ffd201]" />,
+    // <FlagIcon key="flag" className="w-5 h-5 text-[#ffd201]" />,
+    // <ArrowIcon key="arrow" className="w-5 h-5 text-[#ffd201]" />,
+    "About",
+    "Story",
+    "Character",
+    "Product",
+    "Company",
+    "Contact",
+    <a href="#home">
+      <House className="h-5 w-5 text-xl text-[#ffd201]" />
+      {/* <GateIcon key="gate" className="w-5 h-5 text-[#ffd201]" /> */}
+    </a>,
   ];
 
   const scrollToCenter = useCallback((element: HTMLElement | null) => {
@@ -108,7 +118,7 @@ const NavigationMobile = () => {
     <div
       className={cn(
         "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center transition-all duration-300 ease-out lg:hidden",
-        scrollY > 50
+        scrollPercent >= 100
           ? "fade-slide-in bottom-3 md:bottom-5"
           : "fade-slide-out bottom-0",
       )}
@@ -116,7 +126,9 @@ const NavigationMobile = () => {
       <div
         className={cn(
           "flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl px-8 py-2.5 transition-all duration-300 ease-out",
-          scrollY > 50 ? "bg-transparent fade-out" : "bg-black fade-in",
+          scrollPercent >= 100
+            ? "bg-transparent fade-out"
+            : "bg-[#121212] fade-in",
         )}
       >
         <FaPlay
@@ -127,7 +139,15 @@ const NavigationMobile = () => {
             currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
           )}
         />
-        <div className="mx-5">{LINK_ICONS[currentLinkIndex]}</div>
+        {scrollPercent >= 100 ? (
+          <a href="#home">
+            <House className="h-5 w-5 text-xl text-[#ffd201]" />
+          </a>
+        ) : (
+          <div className="font-bold tracking-wider text-[#ffd201]">
+            {LINK_ICONS[currentLinkIndex]}
+          </div>
+        )}
         <FaPlay
           onClick={() => handleLinkNavigation("next")}
           aria-label="Next section"
