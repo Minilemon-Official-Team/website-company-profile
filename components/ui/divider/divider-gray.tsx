@@ -1,13 +1,11 @@
 "use client";
 
 import useScrollPercentage from "@/hooks/useScrollPercentage";
-import useScrollY from "@/hooks/useScrollY";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 export default function DividerGray() {
   const [windowWidth, setWindowWidth] = useState(1280);
-  const scrollY = useScrollY();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
