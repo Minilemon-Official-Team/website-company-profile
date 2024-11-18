@@ -14,29 +14,29 @@ const ContactSection = () => {
     <div className="flex flex-col">
       {/* Contact */}
       <div className="relative inset-0 flex min-h-[60vh] justify-center bg-[#1b1b1b] bg-cover bg-center py-5">
-        <div className="max-w-screen-640 z-20 flex w-full flex-col items-center gap-6 px-6 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="z-20 flex w-full max-w-screen-640 flex-col items-center gap-6 px-6 lg:flex-row lg:gap-0 lg:px-0">
           <Contact className="z-20" titleWidth={"w-[210px] 400:w-[230px]"} />
         </div>
       </div>
 
       {/* Social */}
       <div className="flex min-h-[40vh] items-center bg-[#d2d5f4] pb-10">
-        <div className="container flex flex-col justify-center gap-6 px-12 pt-8 pb-16 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="container flex flex-col justify-center gap-6 px-12 pb-16 pt-8 lg:flex-row lg:gap-0 lg:px-0">
           {/* Section Official */}
           <div className="flex flex-col items-center gap-y-8 lg:basis-1/2">
             <div>
               <Image
                 src={OfficialTitle}
                 alt="Official"
-                className="400:w-[200px] w-[180px]"
+                className="w-[180px] 400:w-[200px]"
               />
             </div>
             <div className="flex flex-col gap-y-4">
-              <Link className="flex gap-x-4 flex-row" href={"#"}>
+              <Link className="flex flex-row gap-x-4" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
                 <p className="text-[16px]">minilemonmedia.id</p>
               </Link>
-              <Link className="flex gap-x-4 flex-row" href={"#"}>
+              <Link className="flex flex-row gap-x-4" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
                 <p className="text-[16px]">store.minilemon.id</p>
               </Link>
@@ -49,7 +49,7 @@ const ContactSection = () => {
               <Image
                 src={FollowTitle}
                 alt="Follow"
-                className="400:w-[200px] w-[180px]"
+                className="w-[180px] 400:w-[200px]"
               />
             </div>
             <div className="flex flex-col gap-y-4">
