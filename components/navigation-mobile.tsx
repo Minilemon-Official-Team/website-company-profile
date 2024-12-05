@@ -10,6 +10,19 @@ const NavigationMobile = () => {
   const [currentLinkIndex, setCurrentLinkIndex] = useState<number>(0);
   const [isNavigating, setIsNavigating] = useState(false);
   const { scrollPercent } = useScrollPercentage();
+  const [isHeaderActive, setIsHeaderActive] = useState(true);
+  const [isFooterActive, setIsFooterActive] = useState(false);
+
+  useEffect(() => {
+    if (scrollPercent > 99) {
+      setIsHeaderActive(false);
+      setIsFooterActive(true);
+    }
+    if (scrollPercent < 2) {
+      setIsHeaderActive(true);
+      setIsFooterActive(false);
+    }
+  }, [scrollPercent]);
 
   const NAV_LINKS = useMemo(
     () => [
@@ -108,17 +121,15 @@ const NavigationMobile = () => {
     <div
       className={cn(
         "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center transition-all duration-300 ease-out lg:hidden",
-        scrollPercent >= 100
-          ? "fade-slide-in bottom-3 md:bottom-5"
-          : "fade-slide-out bottom-0",
+        isHeaderActive && "fade-slide-out bottom-0",
+        isFooterActive && "fade-slide-in bottom-2 md:bottom-5",
       )}
     >
       <div
         className={cn(
           "flex w-fit flex-row items-center justify-center gap-x-6 rounded-t-3xl px-8 py-2.5 transition-all duration-300 ease-out",
-          scrollPercent >= 100
-            ? "bg-transparent fade-out"
-            : "bg-[#121212] fade-in",
+          isHeaderActive && "bg-[#121212] fade-in",
+          isFooterActive && "bg-transparent fade-out",
         )}
       >
         <FaPlay
@@ -131,7 +142,7 @@ const NavigationMobile = () => {
         />
         {scrollPercent >= 100 ? (
           <a href="#home">
-            <House className="h-5 w-5 text-xl text-[#ffd201]" />
+            <House className="mx-6 h-5 w-5 text-xl text-[#ffd201]" />
           </a>
         ) : (
           <div className="font-bold tracking-wider text-[#ffd201]">

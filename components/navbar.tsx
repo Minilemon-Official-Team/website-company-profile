@@ -17,8 +17,9 @@ import LogoBrand from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
-import DividerGray from "./ui/divider/divider-gray";
+import React, { useEffect, useState } from "react";
+import DividerMobileFooter from "./ui/divider/divider-mobile-footer";
+import DividerMobileHeader from "./ui/divider/divider-mobile-header";
 
 export default function Navbar() {
   const [mounted, setMounted] = React.useState(false);
@@ -34,7 +35,20 @@ export default function Navbar() {
 }
 
 const MobileNavbar = () => {
+  const [isHeaderActive, setIsHeaderActive] = useState(true);
+  const [isFooterActive, setIsFooterActive] = useState(false);
   const { scrollPercent } = useScrollPercentage();
+
+  useEffect(() => {
+    if (scrollPercent > 99) {
+      setIsHeaderActive(false);
+      setIsFooterActive(true);
+    }
+    if (scrollPercent < 2) {
+      setIsHeaderActive(true);
+      setIsFooterActive(false);
+    }
+  }, [scrollPercent]);
 
   return (
     <>
@@ -42,23 +56,15 @@ const MobileNavbar = () => {
       <div
         className={cn(
           berlin_sans_fb.className,
-          "sticky top-0 z-50 flex flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[80px]",
-          scrollPercent >= 100
+          "sticky top-0 z-50 flex h-[60px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[80px]",
+          !isHeaderActive
             ? "-translate-y-60 duration-300"
             : "translate-y-0 duration-300",
-          scrollPercent >= 1 ? "h-[55px]" : "h-[60px]",
         )}
       >
         <div className="relative flex h-full flex-col items-center justify-center">
           <div className="flex items-center justify-center gap-5">
-            <h1
-              className={cn(
-                "mr-[65px] h-full pt-[10px] text-center text-[18px] leading-10 tracking-wide",
-                scrollPercent > 1
-                  ? "-translate-y-60 duration-300"
-                  : "translate-y-0 duration-300",
-              )}
-            >
+            <h1 className="mr-[65px] h-full pt-[10px] text-center text-[18px] leading-10 tracking-wide">
               Selamat datang di dunia
             </h1>
             <Image
@@ -67,7 +73,7 @@ const MobileNavbar = () => {
               className="absolute -bottom-7 right-3 z-20 w-[100px] 400:w-[120px] 450:w-[140px] 640:w-[160px] md:-bottom-10"
             />
           </div>
-          <DividerGray />
+          <DividerMobileHeader />
         </div>
       </div>
 
@@ -76,7 +82,7 @@ const MobileNavbar = () => {
         className={cn(
           berlin_sans_fb.className,
           "fixed bottom-0 z-50 flex h-[60px] w-full flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[80px]",
-          scrollPercent >= 100
+          isFooterActive
             ? "translate-y-0 duration-300"
             : "translate-y-60 duration-300",
         )}
@@ -89,7 +95,7 @@ const MobileNavbar = () => {
               className="absolute -top-6 right-3 z-20 w-[90px] 400:w-[100px] 450:w-[120px] 640:w-[150px] md:-top-10 md:w-[200px]"
             />
           </div>
-          <DividerGray />
+          <DividerMobileFooter />
         </div>
       </div>
     </>
