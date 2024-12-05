@@ -1,11 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { FaYoutube } from "react-icons/fa6";
-
 import {
   fifthDivVariants,
   fourthDivVariants,
@@ -27,6 +21,11 @@ import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minile
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FaYoutube } from "react-icons/fa6";
 
 const ProductSection = () => {
   const [isExpanded1, setIsExpanded1] = useState<boolean>(false);
@@ -34,14 +33,12 @@ const ProductSection = () => {
   const [isExpanded3, setIsExpanded3] = useState<boolean>(false);
   const [isExpanded4, setIsExpanded4] = useState<boolean>(false);
   const [isExpanded5, setIsExpanded5] = useState<boolean>(false);
-  const [isExpanded6, setIsExpanded6] = useState<boolean>(false);
 
   const toggleExpand1 = () => setIsExpanded1(!isExpanded1);
   const toggleExpand2 = () => setIsExpanded2(!isExpanded2);
   const toggleExpand3 = () => setIsExpanded3(!isExpanded3);
   const toggleExpand4 = () => setIsExpanded4(!isExpanded4);
   const toggleExpand5 = () => setIsExpanded5(!isExpanded5);
-  const toggleExpand6 = () => setIsExpanded6(!isExpanded6);
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
