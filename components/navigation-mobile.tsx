@@ -2,7 +2,6 @@
 
 import useScrollPercentage from "@/hooks/useScrollPercentage";
 import { cn } from "@/lib/utils";
-import { House } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
@@ -132,32 +131,34 @@ const NavigationMobile = () => {
           isFooterActive && "bg-transparent fade-out",
         )}
       >
-        <FaPlay
-          onClick={() => handleLinkNavigation("prev")}
-          aria-label="Previous section"
-          className={cn(
-            "h-4 w-4 scale-x-[-1] cursor-pointer text-yellow-500",
-            currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
-          )}
-        />
         {scrollPercent >= 100 ? (
-          <a href="#home">
-            <House className="mx-6 h-5 w-5 text-xl text-[#ffd201]" />
-          </a>
+          <p className="font-bold text-[#ffd201] tracking-wider">
+            terima kasih dan sampai jumpa kembali
+          </p>
         ) : (
-          <div className="font-bold tracking-wider text-[#ffd201]">
-            {LINK_ICONS[currentLinkIndex]}
-          </div>
+          <>
+            <FaPlay
+              onClick={() => handleLinkNavigation("prev")}
+              aria-label="Previous section"
+              className={cn(
+                "h-4 w-4 scale-x-[-1] cursor-pointer text-yellow-500",
+                currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
+              )}
+            />
+            <div className="font-bold text-[#ffd201] tracking-wider">
+              {LINK_ICONS[currentLinkIndex]}
+            </div>
+            <FaPlay
+              onClick={() => handleLinkNavigation("next")}
+              aria-label="Next section"
+              className={cn(
+                "h-4 w-4 cursor-pointer text-yellow-500",
+                currentLinkIndex === NAV_LINKS.length - 1 &&
+                  "cursor-not-allowed opacity-50",
+              )}
+            />
+          </>
         )}
-        <FaPlay
-          onClick={() => handleLinkNavigation("next")}
-          aria-label="Next section"
-          className={cn(
-            "h-4 w-4 cursor-pointer text-yellow-500",
-            currentLinkIndex === NAV_LINKS.length - 1 &&
-              "cursor-not-allowed opacity-50",
-          )}
-        />
       </div>
     </div>
   );
