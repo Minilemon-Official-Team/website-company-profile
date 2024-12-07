@@ -23,17 +23,21 @@ import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function CompanySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
+    if (isExpanded && scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div>
+    <div ref={scrollRef}>
       <div className="relative flex h-full items-center justify-center bg-cover bg-center py-6">
         <Image
           src={BackgroundCompany}
