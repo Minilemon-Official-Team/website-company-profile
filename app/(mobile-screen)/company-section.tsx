@@ -2,6 +2,7 @@
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import { Family, Hero } from "@/data/contribution";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import {
   fifthDivVariants,
@@ -21,12 +22,24 @@ import TheFounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function CompanySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const companyInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (companyInView) {
+      setCurrentLink("#company");
+    }
+  }, [companyInView, currentLink]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -47,6 +60,7 @@ function CompanySection() {
         <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 pt-3">
           <div id="company" className="z-10">
             <Image
+              ref={refInView}
               src={PtMinilemonNusantaraMobileTitle}
               alt="PtMinilemonNusantaraMobileTitle"
               className="w-[240px] 400:w-[290px]"

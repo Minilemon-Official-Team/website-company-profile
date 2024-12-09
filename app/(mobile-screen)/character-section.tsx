@@ -2,14 +2,28 @@
 
 import Slider from "@/components/ui/slider";
 import { charactersData } from "@/data/characters";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
 import CharacterTitle from "@/public/title/characters-1.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useInView } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 function CharacterSection() {
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const characterInView = useInView(refInView);
+
+  useEffect(() => {
+    if (characterInView) {
+      setCurrentLink("#character");
+    }
+  }, [characterInView, currentLink]);
+
   return (
     <div>
       <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
@@ -31,7 +45,7 @@ function CharacterSection() {
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-            <p className="">
+            <p ref={refInView}>
               Minilemon adalah animasi perpaduan topeng dan buah lemon yang
               hidup di dalam mimpi kakek Djoyo, terdiri dari 6 karakter utama
               yang mewakili 6 suku besar di Indonesia, yaitu Wayan (Bali), Togar
@@ -66,7 +80,7 @@ function CharacterSection() {
                     <div className="flex basis-1/2 items-center justify-center">
                       <Image src={character.image} alt={character.fullName} />
                     </div>
-                    <div className="flex basis-1/2 gap-3 flex-col justify-center">
+                    <div className="flex basis-1/2 flex-col justify-center gap-3">
                       <div>
                         <Image
                           src={character.namePicture}

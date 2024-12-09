@@ -1,27 +1,19 @@
 "use client";
 
 import useScrollPercentage from "@/hooks/useScrollPercentage";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { cn } from "@/lib/utils";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaPlay } from "react-icons/fa6";
 
 const NavigationMobile = () => {
-  const [currentLinkIndex, setCurrentLinkIndex] = useState<number>(0);
-  const [isNavigating, setIsNavigating] = useState(false);
-  const { scrollPercent } = useScrollPercentage();
   const [isHeaderActive, setIsHeaderActive] = useState(true);
   const [isFooterActive, setIsFooterActive] = useState(false);
+  const [currentLinkIndex, setCurrentLinkIndex] = useState(0);
+  const [isNavigating, setIsNavigating] = useState(false);
 
-  useEffect(() => {
-    if (scrollPercent > 99) {
-      setIsHeaderActive(false);
-      setIsFooterActive(true);
-    }
-    if (scrollPercent < 2) {
-      setIsHeaderActive(true);
-      setIsFooterActive(false);
-    }
-  }, [scrollPercent]);
+  const { scrollPercent } = useScrollPercentage();
+  const { setCurrentLink } = useUpdateCurrentLink();
 
   const NAV_LINKS = useMemo(
     () => [
@@ -35,86 +27,64 @@ const NavigationMobile = () => {
     [],
   );
 
-  const LINK_ICONS = [
-    "About",
-    "Story",
-    "Character",
-    "Product",
-    "Company",
-    "Contact",
-  ];
-
-  const scrollToCenter = useCallback((element: HTMLElement | null) => {
+  const scrollToPosition = useCallback((element: HTMLElement | null) => {
     if (!element) return;
 
-    const elementTop = element.getBoundingClientRect().top + window.scrollY;
-    const viewportCenter = window.innerHeight / 3;
-    const offset = elementTop - viewportCenter + element.offsetHeight / 2;
-
-    window.scrollTo({
-      top: offset,
-      behavior: "smooth",
-    });
+    const offset =
+      element.getBoundingClientRect().top +
+      window.scrollY -
+      window.innerHeight * 0.1;
+    window.scrollTo({ top: offset, behavior: "smooth" });
   }, []);
-
-  const updateCurrentLink = useCallback(() => {
-    if (isNavigating) return;
-
-    NAV_LINKS.forEach((link, index) => {
-      const element = document.querySelector(link) as HTMLElement | null;
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const elementTop = rect.top + window.scrollY;
-        const viewportCenter = window.innerHeight / 2;
-
-        if (
-          window.scrollY >= elementTop - viewportCenter &&
-          window.scrollY < elementTop + rect.height - viewportCenter &&
-          index !== currentLinkIndex
-        ) {
-          setCurrentLinkIndex(index);
-          window.history.replaceState(null, "", NAV_LINKS[index]);
-        }
-      }
-    });
-  }, [currentLinkIndex, isNavigating, NAV_LINKS]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", updateCurrentLink);
-    return () => {
-      window.removeEventListener("scroll", updateCurrentLink);
-    };
-  }, [updateCurrentLink]);
 
   const handleLinkNavigation = useCallback(
     (direction: "prev" | "next") => {
       if (isNavigating) return;
 
-      let newIndex = currentLinkIndex;
-
-      if (direction === "prev" && currentLinkIndex > 0) {
-        newIndex -= 1;
-      } else if (
-        direction === "next" &&
-        currentLinkIndex < NAV_LINKS.length - 1
-      ) {
-        newIndex += 1;
-      }
+      const newIndex =
+        direction === "prev"
+          ? Math.max(currentLinkIndex - 1, 0)
+          : Math.min(currentLinkIndex + 1, NAV_LINKS.length - 1);
 
       setIsNavigating(true);
-      setTimeout(() => {
-        const newHash = NAV_LINKS[newIndex];
-        setCurrentLinkIndex(newIndex);
-        window.history.pushState(null, "", newHash);
+      const newHash = NAV_LINKS[newIndex];
 
+      setTimeout(() => {
+        setCurrentLink(newHash);
+        setCurrentLinkIndex(newIndex);
         const element = document.querySelector(newHash) as HTMLElement | null;
-        scrollToCenter(element);
+        scrollToPosition(element);
 
         setTimeout(() => setIsNavigating(false), 500);
       }, 200);
     },
-    [currentLinkIndex, isNavigating, scrollToCenter, NAV_LINKS],
+    [
+      currentLinkIndex,
+      isNavigating,
+      scrollToPosition,
+      NAV_LINKS,
+      setCurrentLink,
+    ],
   );
+
+  useEffect(() => {
+    const currentHashIndex = NAV_LINKS.findIndex(
+      (link) => link === window.location.hash,
+    );
+    if (currentHashIndex !== -1 && currentHashIndex !== currentLinkIndex) {
+      setCurrentLinkIndex(currentHashIndex);
+    }
+  }, [NAV_LINKS, currentLinkIndex, window.location.hash]);
+
+  useEffect(() => {
+    if (scrollPercent > 99) {
+      setIsHeaderActive(false);
+      setIsFooterActive(true);
+    } else if (scrollPercent < 2) {
+      setIsHeaderActive(true);
+      setIsFooterActive(false);
+    }
+  }, [scrollPercent]);
 
   return (
     <div
@@ -132,8 +102,8 @@ const NavigationMobile = () => {
         )}
       >
         {scrollPercent >= 100 ? (
-          <p className="font-bold text-[#ffd201] tracking-wider">
-            terima kasih dan sampai jumpa kembali
+          <p className="md:text-md text-center text-xs font-bold tracking-wider text-[#ffd201] sm:text-sm">
+            Terima kasih dan sampai jumpa kembali
           </p>
         ) : (
           <>
@@ -145,8 +115,8 @@ const NavigationMobile = () => {
                 currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
               )}
             />
-            <div className="font-bold text-[#ffd201] tracking-wider">
-              {LINK_ICONS[currentLinkIndex]}
+            <div className="font-bold tracking-wider text-[#ffd201]">
+              {NAV_LINKS[currentLinkIndex].slice(1)}
             </div>
             <FaPlay
               onClick={() => handleLinkNavigation("next")}

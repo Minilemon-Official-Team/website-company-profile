@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
@@ -8,12 +9,24 @@ import BackgroundStory from "@/public/background/story-mobile.png";
 import StoryTitle from "@/public/title/story.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function StorySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const storyInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (storyInView) {
+      setCurrentLink("#story");
+    }
+  }, [storyInView, currentLink]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -31,12 +44,15 @@ function StorySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="max-w-screen-640 z-10 flex flex-col justify-center gap-y-4 px-6 py-4">
+        <div
+          ref={refInView}
+          className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4"
+        >
           <div id="story" className="z-10 scroll-mt-[50vh]">
             <Image
               src={StoryTitle}
               alt="Story"
-              className="400:w-[125px] w-[110px]"
+              className="w-[110px] 400:w-[125px]"
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-5 tracking-widest text-[#c5cce2]">
@@ -52,7 +68,7 @@ function StorySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
-        <div className="max-w-screen-640 flex flex-col items-center px-6 py-4 leading-5 tracking-widest">
+        <div className="flex max-w-screen-640 flex-col items-center px-6 py-4 leading-5 tracking-widest">
           <p>
             Dengan hati yang berat, Pangeran Djoyo memutuskan untuk meninggalkan
             istana dan memulai perjalanan panjang untuk mencari ilmu dan
@@ -75,7 +91,7 @@ function StorySection() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="max-w-screen-640 flex flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-5 tracking-widest"
+            className="flex max-w-screen-640 flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-5 tracking-widest"
           >
             <motion.p variants={paragraphVariants}>
               Suatu malam, dalam perjalanannya melewati hutan yang lebat,
