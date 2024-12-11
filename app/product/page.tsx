@@ -342,25 +342,28 @@ const ProductPage = () => {
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
                 >
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat temporibus perferendis dicta! Quo repellendus
-                    architecto quibusdam nisi, magnam animi voluptate rerum
-                    expedita ad maxime consequuntur enim amet, voluptatem
-                    aliquam ipsum?
+                    Minilemon Explorer adalah game petualangan eksplorasi
+                    bertema cozy dan seru yang cocok untuk semua kalangan!
+                    Ceritakan perjalanan enam anak Minilemon yang berlayar
+                    menjelajahi lautan Nusantara dan akhirnya tiba di Pulau Run,
+                    Maluku Tengah. Bersama Togar menyusuri keindahan pulau ini,
+                    sembari menjalankan misi utama: menemukan 10 harta karun
+                    tersembunyi yang tersebar di seluruh penjuru pulau. Rasakan
+                    sensasi bertualang, bercocok tanam, dan menjelajahi alam
+                    sambil menikmati gameplay yang menyenangkan dan ramah anak.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste ducimus similique illo facilis provident dolorem quam
-                    distinctio voluptate magnam possimus? Consequuntur totam
-                    asperiores itaque laboriosam facilis quam recusandae
-                    quisquam perferendis!
+                    Game ini akan terus berkembang dengan memperluas peta ke
+                    berbagai lokasi ikonik di Nusantara seperti Kalimantan,
+                    Sumatera, Sulawesi, Bali, Papua, NTB, dan NTT. Setiap
+                    wilayah menghadirkan tema unik dan mekanik permainan baru.
+                    Dalam rencana ke depan Minilemon Explorer akan bisa
+                    menikmati gameplay bertema Pramuka di Jogja, lengkap dengan
+                    aktivitas memancing, berburu, dan membangun tenda.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo officia odit deserunt optio provident consequatur
-                    tempora impedit numquam voluptatibus incidunt natus
-                    accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "}
+                    Mari bergabung dalam petualangan seru di Minilemon Explorer
+                    dan jelajahi kekayaan Nusantara!{" "}
                     <span
                       onClick={toggleExpand3}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
