@@ -41,12 +41,17 @@ function CompanySection() {
     }
   }, [companyInView, currentLink]);
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   const toggleExpand = () => {
+    if (isExpanded && scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div>
+    <div ref={scrollRef}>
       <div className="relative flex h-full items-center justify-center bg-cover bg-center py-6">
         <Image
           src={BackgroundCompany}

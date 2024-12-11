@@ -8,7 +8,7 @@ import CharacterTitle from "@/public/title/characters-1.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -23,6 +23,15 @@ function CharacterSection() {
       setCurrentLink("#character");
     }
   }, [characterInView, currentLink]);
+
+  const floatingAnimation = {
+    y: [0, -10, 0],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  };
 
   return (
     <div>
@@ -63,13 +72,9 @@ function CharacterSection() {
           <Splide
             options={{
               type: "loop",
-              // interval: 4000,
-              // perPage: 1,
-              // perMove: 1,
               gap: "5rem",
               focus: "center",
               pagination: false,
-              // autoplay: true,
               arrows: false,
             }}
           >
@@ -77,9 +82,12 @@ function CharacterSection() {
               <SplideSlide key={character.id}>
                 <div className="flex h-full max-w-full flex-col items-center justify-center gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
                   <div className="flex flex-row">
-                    <div className="flex basis-1/2 items-center justify-center">
+                    <motion.div
+                      animate={floatingAnimation}
+                      className="flex basis-1/2 items-center justify-center"
+                    >
                       <Image src={character.image} alt={character.fullName} />
-                    </div>
+                    </motion.div>
                     <div className="flex basis-1/2 flex-col justify-center gap-3">
                       <div>
                         <Image

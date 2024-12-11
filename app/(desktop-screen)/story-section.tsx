@@ -50,7 +50,7 @@ function StorySection() {
                   focus: "center",
                   pagination: false,
                   autoplay: true,
-                  arrows: false,
+                  arrows: true,
                 }}
               >
                 {charactersData.map((character) => (
