@@ -11,6 +11,9 @@ import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png
 import FounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 
+import Reno from "@/public/contributors/Reno.jpg";
+import Heri from "@/public/contributors/Heri.jpg";
+
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
@@ -101,12 +104,13 @@ const CompanyPage = () => {
           </div>
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Placeholder
+              <Image src={Reno} alt="Reno Halsamer" width={350} height={495} />
+              {/* <Placeholder
                 height={495}
                 width={350}
                 background="#333"
                 color="#fff"
-              />
+              /> */}
             </div>
             <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
@@ -142,12 +146,18 @@ const CompanyPage = () => {
           </div>
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Placeholder
+              <Image
+                src={Heri}
+                alt="Heriyadi Natawijaya"
+                width={350}
+                height={495}
+              />
+              {/* <Placeholder
                 height={495}
                 width={350}
                 background="#333"
                 color="#fff"
-              />
+              /> */}
             </div>
             <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
@@ -189,12 +199,21 @@ const CompanyPage = () => {
                 key={data.id}
               >
                 <div className="pb-3">
-                  <Placeholder
-                    height={200}
-                    width={150}
-                    background="#fff"
-                    color="#333"
-                  />
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
                 </div>
                 <p className="text-base font-semibold capitalize text-white/60">
                   {data.name}
@@ -221,12 +240,21 @@ const CompanyPage = () => {
                 key={data.id}
               >
                 <div className="pb-3">
-                  <Placeholder
-                    height={200}
-                    width={150}
-                    background="#fff"
-                    color="#333"
-                  />
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
                 </div>
                 <p className="text-base font-semibold capitalize text-black/60">
                   {data.name}
