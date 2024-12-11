@@ -1,13 +1,5 @@
 "use client";
 
-import { Button as ButtonLegacy } from "@/components/ui/button-sec";
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { FaYoutube } from "react-icons/fa6";
-
 import {
   fifthDivVariants,
   fourthDivVariants,
@@ -29,6 +21,11 @@ import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minile
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FaYoutube } from "react-icons/fa6";
 
 const ProductSection = () => {
   const [isExpanded1, setIsExpanded1] = useState<boolean>(false);
@@ -36,14 +33,12 @@ const ProductSection = () => {
   const [isExpanded3, setIsExpanded3] = useState<boolean>(false);
   const [isExpanded4, setIsExpanded4] = useState<boolean>(false);
   const [isExpanded5, setIsExpanded5] = useState<boolean>(false);
-  const [isExpanded6, setIsExpanded6] = useState<boolean>(false);
 
   const toggleExpand1 = () => setIsExpanded1(!isExpanded1);
   const toggleExpand2 = () => setIsExpanded2(!isExpanded2);
   const toggleExpand3 = () => setIsExpanded3(!isExpanded3);
   const toggleExpand4 = () => setIsExpanded4(!isExpanded4);
   const toggleExpand5 = () => setIsExpanded5(!isExpanded5);
-  const toggleExpand6 = () => setIsExpanded6(!isExpanded6);
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -288,33 +283,22 @@ const ProductSection = () => {
                 Trailer
               </Link>
             </div>
-            <ButtonLegacy.Primary
-              className={cn(
-                isExpanded6 === true ? "hidden" : "flex",
-                "mt-10 scale-90",
-              )}
-              onClick={toggleExpand6}
-            >
-              See More
-            </ButtonLegacy.Primary>
           </div>
         </div>
       </div>
 
-      {isExpanded6 && (
-        <AnimatePresence>
-          {/* Product 3 */}
-          <motion.div
-            variants={thirdDivVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.5 }}
-            className="w-full bg-[#d2f4d3] py-14"
-          >
-            <motion.div className="mx-auto max-w-screen-640 px-6">
-              <motion.div className="container flex flex-col items-center justify-center gap-4">
-                {/* <div className="relative h-[396px] w-[280px] sm:h-[492px] sm:w-[350px]">
+      {/* Product 3 */}
+      <motion.div
+        variants={thirdDivVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+        className="w-full bg-[#d2f4d3] py-14"
+      >
+        <motion.div className="mx-auto max-w-screen-640 px-6">
+          <motion.div className="container flex flex-col items-center justify-center gap-4">
+            {/* <div className="relative w-[280px] sm:w-[350px] h-[396px] sm:h-[492px]">
                   <Placeholder
                     height={492}
                     width={350}
@@ -322,316 +306,283 @@ const ProductSection = () => {
                     color="#fff"
                   />
                 </div> */}
-                <div className="relative h-[396px] w-full bg-gray-200 sm:h-[492px]">
-                  <Image
-                    src={""}
-                    alt="product 3"
-                    layout="fill"
-                    objectFit="fill"
-                    className="w-full"
-                  />
-                </div>
+            <div className="relative h-[396px] w-full bg-gray-200 sm:h-[492px]">
+              <Image
+                src={""}
+                alt="product 3"
+                layout="fill"
+                objectFit="fill"
+                className="w-full"
+              />
+            </div>
 
-                <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
-                  <div className="hidden flex-col lg:flex">
-                    <Image
-                      src={MinilemonExplorerTitle1}
-                      alt="Minilemon Explorer"
-                    />
-                    <Image
-                      src={MinilemonExplorerTitle2}
-                      alt="Minilemon Explorer"
-                    />
-                  </div>
-                  <motion.p variants={paragraphVariants}>
-                    Dengan menyadari betapa pentingnya menjaga dan melestarikan
-                    alam, Minilemon yang di pimpin oleh Kak Bibie memulai
-                    petualangan seru melalui serial animasi pramuka. Dalam
-                    petualangan ini, mereka tidak hanya belajar lebih dalam
-                    tentang ekosistem yang rumit, keanekaragaman hayati yang
-                    menakjubkan, dan pentingnya konservasi alam, tetapi juga
-                    menanamkan nilai-nilai positif dan tanggung jawab terhadap
-                    alam dalam setiap langkah mereka.{" "}
-                    <Link
-                      className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                      href="javascript:void(0)"
-                      onClick={toggleExpand3}
-                    >
-                      <span
-                        className={isExpanded3 === true ? "hidden" : "flex"}
-                      >
-                        Read More{" "}
-                        <span className="ml-1 flex items-center text-xs">
-                          ❯
-                        </span>
-                      </span>
-                    </Link>
-                  </motion.p>
-                  <AnimatePresence>
-                    {isExpanded3 && (
-                      <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ duration: 0.5 }}
-                        className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
-                      >
-                        <motion.p variants={paragraphVariants}>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Repellat temporibus perferendis dicta! Quo
-                          repellendus architecto quibusdam nisi, magnam animi
-                          voluptate rerum expedita ad maxime consequuntur enim
-                          amet, voluptatem aliquam ipsum?
-                        </motion.p>
-                        <motion.p variants={paragraphVariants}>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Iste ducimus similique illo facilis provident
-                          dolorem quam distinctio voluptate magnam possimus?
-                          Consequuntur totam asperiores itaque laboriosam
-                          facilis quam recusandae quisquam perferendis!
-                        </motion.p>
-                        <motion.p variants={paragraphVariants}>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Explicabo officia odit deserunt optio provident
-                          consequatur tempora impedit numquam voluptatibus
-                          incidunt natus accusantium dignissimos, cupiditate
-                          praesentium voluptas, debitis voluptatum velit! Quasi!{" "}
-                          <span
-                            onClick={toggleExpand3}
-                            className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                          >
-                            Read Less
-                          </span>
-                        </motion.p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  <Link
-                    href={"#"}
-                    className="flex flex-row items-center gap-x-2"
-                  >
-                    <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                      <FaYoutube className="text-white" />
-                    </span>
-                    Trailer
-                  </Link>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          {/* Product 4 */}
-          <motion.div
-            variants={fourthDivVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.5 }}
-            className="w-full bg-[#f4d3e8] py-14"
-          >
-            <motion.div className="mx-auto max-w-screen-640 px-6">
-              <motion.div className="container flex flex-col items-center justify-center gap-4">
-                <div className="relative h-[396px] w-full sm:h-[492px]">
-                  <Image
-                    src={CoverPostParenting}
-                    alt="Minilemon Live Parenting"
-                    layout="fill"
-                    objectFit="fill"
-                    className="w-full"
-                  />
-                </div>
-
-                <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
-                  <div className="hidden flex-col lg:flex">
-                    <Image
-                      src={MinilemonLiveParentingTitle1}
-                      alt="Minilemon Live Parenting"
-                    />
-                    <Image
-                      src={MinilemonLiveParentingTitle2}
-                      alt="Minilemon Live Parenting"
-                    />
-                  </div>
-                  <motion.p variants={paragraphVariants}>
-                    Minilemon percaya bahwa pendidikan karakter anak tidak hanya
-                    mengandalkan tontonan edukasi saja, akan tetapi dibutuhkan
-                    juga peran aktif orang tua dalam membimbing anak-anak
-                    mereka.
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    &quot;Sahabat Minilemon Parenting&quot; adalah program yang
-                    dirancang khusus untuk membantu para bunda dengan memberikan
-                    tips dan saran praktis yang dapat langsung diterapkan di
-                    rumah. Sehingga orang tua dapat ikut berperan mendidik
-                    anak-anak mereka.{" "}
-                    <Link
-                      className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                      href="javascript:void(0)"
-                      onClick={toggleExpand4}
-                    >
-                      <span className={isExpanded4 ? "hidden" : "flex"}>
-                        Read More{" "}
-                        <span className="ml-1 flex items-center text-xs">
-                          ❯
-                        </span>
-                      </span>
-                    </Link>
-                  </motion.p>
-                  <AnimatePresence>
-                    {isExpanded4 && (
-                      <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ duration: 0.5 }}
-                        className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
-                      >
-                        <motion.p variants={paragraphVariants}>
-                          menciptakan generasi yang kuat dan berkarakter.
-                        </motion.p>
-                        <motion.p variants={paragraphVariants}>
-                          &quot;Sahabat Minilemon Parenting&quot; ditayangkan
-                          setiap hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di
-                          platform YouTube, TikTok, dan Instagram.
-                        </motion.p>
-                        <motion.p variants={paragraphVariants}>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Explicabo officia odit deserunt optio provident
-                          consequatur tempora impedit numquam voluptatibus
-                          incidunt natus accusantium dignissimos, cupiditate
-                          praesentium voluptas, debitis voluptatum velit! Quasi!{" "}
-                          <span
-                            onClick={toggleExpand4}
-                            className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                          >
-                            Read Less
-                          </span>
-                        </motion.p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  <Link
-                    href={"#"}
-                    className="flex flex-row items-center gap-x-2 text-base"
-                  >
-                    <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                      <FaYoutube className="text-white" />
-                    </span>
-                    Trailer
-                  </Link>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          {/* Produk 5 */}
-          <motion.div
-            variants={fifthDivVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ duration: 0.5 }}
-            className="flex flex-row bg-[#f4efd2] py-14"
-          >
-            <motion.div className="mx-auto max-w-screen-640 px-6">
-              <motion.div className="container flex flex-col items-center justify-center gap-4">
-                <div className="relative h-[396px] w-full sm:h-[492px]">
-                  <Image
-                    src={CoverPanggungBonekaMinilemon}
-                    alt="Panggung Boneka Minilemon"
-                    layout="fill"
-                    objectFit="fill"
-                    className="w-full"
-                  />
-                </div>
-
-                <motion.div className="flex flex-col gap-y-6 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
-                  <div className="hidden flex-col lg:flex">
-                    <Image
-                      src={MinilemonPanggungBonekaTitle1}
-                      alt="Panggung Boneka Minilemon"
-                    />
-                    <Image
-                      src={MinilemonPanggungBonekaTitle2}
-                      alt="Panggung Boneka Minilemon"
-                    />
-                  </div>
-                  <motion.p variants={paragraphVariants}>
-                    &quot;Panggung Boneka Minilemon&quot; adlaah program
-                    pertunjukan boneka yang menghadirkan kisah-kisah lucu dan
-                    seru dari keseharian Minilemon.
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    Selain mengundang tawa dan penuh kejutan, certa
-                    &quot;Panggung Boneka Minilemon&quot; selalu disertai dengan
-                    pesan-pesan moral yang positif. Melalui karakter Minilemon,
-                    anak-anak diajak untuk bermain dan belajar tentang
-                    nilai-nilai persahabatan, gotong royong, kejujuran, dan
-                    tanggung jawab.{" "}
-                    <Link
-                      className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                      href="javascript:void(0)"
-                      onClick={toggleExpand5}
-                    >
-                      <span className={isExpanded5 ? "hidden" : "flex"}>
-                        Read More{" "}
-                        <span className="ml-1 flex items-center text-xs">
-                          ❯
-                        </span>
-                      </span>
-                    </Link>
-                  </motion.p>
-                  <AnimatePresence>
-                    {isExpanded5 && (
-                      <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ duration: 0.5 }}
-                        className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
-                      >
-                        <motion.p variants={paragraphVariants}>
-                          &quot;Panggung Boneka Minilemon&quot; ini dirancang
-                          sempurna untuk anak-anak yang sedang dalam masa
-                          pertumbuhan. di mana kesenangan dan pelajaran hidup
-                          menyatu dalam sebuah pertunjukan.{" "}
-                          <span
-                            onClick={toggleExpand5}
-                            className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                          >
-                            Read Less
-                          </span>
-                        </motion.p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                  <Link
-                    href={"#"}
-                    className="flex flex-row items-center gap-x-2"
-                  >
-                    <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                      <FaYoutube className="text-white" />
-                    </span>
-                    Trailer
-                  </Link>
-                </motion.div>
-                <ButtonLegacy.Primary
-                  className={cn(
-                    isExpanded6 === true ? "flex" : "hidden",
-                    "mt-10 scale-90",
-                  )}
-                  onClick={toggleExpand6}
+            <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
+              <div className="hidden flex-col lg:flex">
+                <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
+                <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
+              </div>
+              <motion.p variants={paragraphVariants}>
+                Dengan menyadari betapa pentingnya menjaga dan melestarikan
+                alam, Minilemon yang di pimpin oleh Kak Bibie memulai
+                petualangan seru melalui serial animasi pramuka. Dalam
+                petualangan ini, mereka tidak hanya belajar lebih dalam tentang
+                ekosistem yang rumit, keanekaragaman hayati yang menakjubkan,
+                dan pentingnya konservasi alam, tetapi juga menanamkan
+                nilai-nilai positif dan tanggung jawab terhadap alam dalam
+                setiap langkah mereka.{" "}
+                <Link
+                  className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+                  href="javascript:void(0)"
+                  onClick={toggleExpand3}
                 >
-                  Read Less
-                </ButtonLegacy.Primary>
-              </motion.div>
+                  <span className={isExpanded3 === true ? "hidden" : "flex"}>
+                    Read More{" "}
+                    <span className="ml-1 flex items-center text-xs">❯</span>
+                  </span>
+                </Link>
+              </motion.p>
+              <AnimatePresence>
+                {isExpanded3 && (
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
+                  >
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellat temporibus perferendis dicta! Quo repellendus
+                      architecto quibusdam nisi, magnam animi voluptate rerum
+                      expedita ad maxime consequuntur enim amet, voluptatem
+                      aliquam ipsum?
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste ducimus similique illo facilis provident dolorem quam
+                      distinctio voluptate magnam possimus? Consequuntur totam
+                      asperiores itaque laboriosam facilis quam recusandae
+                      quisquam perferendis!
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Explicabo officia odit deserunt optio provident
+                      consequatur tempora impedit numquam voluptatibus incidunt
+                      natus accusantium dignissimos, cupiditate praesentium
+                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      <span
+                        onClick={toggleExpand3}
+                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                      >
+                        Read Less
+                      </span>
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <Link href={"#"} className="flex flex-row items-center gap-x-2">
+                <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
+                  <FaYoutube className="text-white" />
+                </span>
+                Trailer
+              </Link>
             </motion.div>
           </motion.div>
-        </AnimatePresence>
-      )}
+        </motion.div>
+      </motion.div>
+
+      {/* Product 4 */}
+      <motion.div
+        variants={fourthDivVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+        className="w-full bg-[#f4d3e8] py-14"
+      >
+        <motion.div className="mx-auto max-w-screen-640 px-6">
+          <motion.div className="container flex flex-col items-center justify-center gap-4">
+            <div className="relative h-[396px] w-full sm:h-[492px]">
+              <Image
+                src={CoverPostParenting}
+                alt="Minilemon Live Parenting"
+                layout="fill"
+                objectFit="fill"
+                className="w-full"
+              />
+            </div>
+
+            <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+              <div className="hidden flex-col lg:flex">
+                <Image
+                  src={MinilemonLiveParentingTitle1}
+                  alt="Minilemon Live Parenting"
+                />
+                <Image
+                  src={MinilemonLiveParentingTitle2}
+                  alt="Minilemon Live Parenting"
+                />
+              </div>
+              <motion.p variants={paragraphVariants}>
+                Minilemon percaya bahwa pendidikan karakter anak tidak hanya
+                mengandalkan tontonan edukasi saja, akan tetapi dibutuhkan juga
+                peran aktif orang tua dalam membimbing anak-anak mereka.
+              </motion.p>
+              <motion.p variants={paragraphVariants}>
+                &quot;Sahabat Minilemon Parenting&quot; adalah program yang
+                dirancang khusus untuk membantu para bunda dengan memberikan
+                tips dan saran praktis yang dapat langsung diterapkan di rumah.
+                Sehingga orang tua dapat ikut berperan mendidik anak-anak
+                mereka.{" "}
+                <Link
+                  className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+                  href="javascript:void(0)"
+                  onClick={toggleExpand4}
+                >
+                  <span className={isExpanded4 ? "hidden" : "flex"}>
+                    Read More{" "}
+                    <span className="ml-1 flex items-center text-xs">❯</span>
+                  </span>
+                </Link>
+              </motion.p>
+              <AnimatePresence>
+                {isExpanded4 && (
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                  >
+                    <motion.p variants={paragraphVariants}>
+                      menciptakan generasi yang kuat dan berkarakter.
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap
+                      hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
+                      YouTube, TikTok, dan Instagram.
+                    </motion.p>
+                    <motion.p variants={paragraphVariants}>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Explicabo officia odit deserunt optio provident
+                      consequatur tempora impedit numquam voluptatibus incidunt
+                      natus accusantium dignissimos, cupiditate praesentium
+                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      <span
+                        onClick={toggleExpand4}
+                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                      >
+                        Read Less
+                      </span>
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <Link
+                href={"#"}
+                className="flex flex-row items-center gap-x-2 text-base"
+              >
+                <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
+                  <FaYoutube className="text-white" />
+                </span>
+                Trailer
+              </Link>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      {/* Produk 5 */}
+      <motion.div
+        variants={fifthDivVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+        className="flex flex-row bg-[#f4efd2] py-14"
+      >
+        <motion.div className="mx-auto max-w-screen-640 px-6">
+          <motion.div className="container flex flex-col items-center justify-center gap-4">
+            <div className="relative h-[396px] w-full sm:h-[492px]">
+              <Image
+                src={CoverPanggungBonekaMinilemon}
+                alt="Panggung Boneka Minilemon"
+                layout="fill"
+                objectFit="fill"
+                className="w-full"
+              />
+            </div>
+
+            <motion.div className="flex flex-col gap-y-6 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+              <div className="hidden flex-col lg:flex">
+                <Image
+                  src={MinilemonPanggungBonekaTitle1}
+                  alt="Panggung Boneka Minilemon"
+                />
+                <Image
+                  src={MinilemonPanggungBonekaTitle2}
+                  alt="Panggung Boneka Minilemon"
+                />
+              </div>
+              <motion.p variants={paragraphVariants}>
+                &quot;Panggung Boneka Minilemon&quot; adlaah program pertunjukan
+                boneka yang menghadirkan kisah-kisah lucu dan seru dari
+                keseharian Minilemon.
+              </motion.p>
+              <motion.p variants={paragraphVariants}>
+                Selain mengundang tawa dan penuh kejutan, certa &quot;Panggung
+                Boneka Minilemon&quot; selalu disertai dengan pesan-pesan moral
+                yang positif. Melalui karakter Minilemon, anak-anak diajak untuk
+                bermain dan belajar tentang nilai-nilai persahabatan, gotong
+                royong, kejujuran, dan tanggung jawab.{" "}
+                <Link
+                  className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+                  href="javascript:void(0)"
+                  onClick={toggleExpand5}
+                >
+                  <span className={isExpanded5 ? "hidden" : "flex"}>
+                    Read More{" "}
+                    <span className="ml-1 flex items-center text-xs">❯</span>
+                  </span>
+                </Link>
+              </motion.p>
+              <AnimatePresence>
+                {isExpanded5 && (
+                  <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                  >
+                    <motion.p variants={paragraphVariants}>
+                      &quot;Panggung Boneka Minilemon&quot; ini dirancang
+                      sempurna untuk anak-anak yang sedang dalam masa
+                      pertumbuhan. di mana kesenangan dan pelajaran hidup
+                      menyatu dalam sebuah pertunjukan.{" "}
+                      <span
+                        onClick={toggleExpand5}
+                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                      >
+                        Read Less
+                      </span>
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <Link href={"#"} className="flex flex-row items-center gap-x-2">
+                <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
+                  <FaYoutube className="text-white" />
+                </span>
+                Trailer
+              </Link>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
