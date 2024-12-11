@@ -3,15 +3,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Placeholder } from "placeholder";
 import { useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 
 import BackgroundImage from "@/public/background/product.png";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
+
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
 import MinilemonLiveParentingTitle1 from "@/public/title/minilemon-live-parenting-1.png";
@@ -298,13 +298,20 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#d2f4d3] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-0 flex">
-            <div className="relative h-[492px] w-[350px]">
-              <Placeholder
-                height={492}
-                width={350}
-                background="#333"
-                color="#fff"
-              />
+            <div className="relative flex h-[492px] w-[350px] flex-col items-center justify-center bg-gray-500">
+              {/* <Image
+                src={}
+                alt="Minilemon Explorer!"
+                fill
+                sizes=""
+                className="object-cover"
+              /> */}
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Coming Soon
+              </p>
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Minilemon Explorer!
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
