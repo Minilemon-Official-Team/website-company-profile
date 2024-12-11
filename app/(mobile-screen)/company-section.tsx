@@ -1,4 +1,10 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { Placeholder } from "placeholder";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import { Family, Hero } from "@/data/contribution";
@@ -12,6 +18,7 @@ import {
 } from "@/lib/animations/divVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
+
 import BackgroundCompany from "@/public/background/company-mobile.png";
 import CoFounderTitle from "@/public/title/co-founder.png";
 import MisiTitle from "@/public/title/misi.png";
@@ -20,11 +27,8 @@ import OurHeroTile from "@/public/title/our-hero.png";
 import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
 import TheFounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
-import "@splidejs/react-splide/css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import Reno from "@/public/contributors/Reno.jpg";
+import Heri from "@/public/contributors/Heri.jpg";
 
 function CompanySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -219,8 +223,14 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mb-1 mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
-                    Founder
+                  <div className="float-left mb-1 mr-4">
+                    <Image
+                      src={Reno}
+                      alt="Reno Halsamer"
+                      width={144}
+                      height={200}
+                    />
+                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
                   </div>
                   <motion.div>
                     <motion.p
@@ -280,8 +290,14 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mb-1 mr-4 flex h-[200px] w-[144px] items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[250px]">
-                    CoFounder
+                  <div className="float-left mb-1 mr-4">
+                    <Image
+                      src={Heri}
+                      alt="Heriyadi Natawijaya"
+                      width={144}
+                      height={200}
+                    />
+                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
                   </div>
                   <motion.div>
                     <motion.p
@@ -351,8 +367,22 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[180px] w-full items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
-                        hero
+
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
@@ -392,8 +422,21 @@ function CompanySection() {
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[180px] w-full items-center justify-center bg-gray-400 text-xl text-gray-800/50 sm:h-[200px] sm:w-[160px]">
-                        family
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
                       <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}

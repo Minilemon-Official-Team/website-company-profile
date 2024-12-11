@@ -11,6 +11,11 @@ import David from "@/public/contributors/David.jpg";
 import Watin from "@/public/contributors/Watin.jpg";
 import Ghaza from "@/public/contributors/Ghaza.jpg";
 import Joy from "@/public/contributors/Joy.jpg";
+import Evan from "@/public/contributors/Evan.jpg";
+
+// Belum ada place untuk foto
+// import Andepp from "@/public/contributors/Andepp.jpg";
+// import Siska from "@/public/contributors/Siska.jpg";
 
 interface ContributionProps {
   id: number;
@@ -117,5 +122,6 @@ export const Family: ContributionProps[] = [
     id: 9,
     name: "Evan Tanazal",
     position: "Motion Designer",
+    photo: Evan,
   },
 ];
