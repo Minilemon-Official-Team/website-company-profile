@@ -1,5 +1,6 @@
 "use client";
 
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import {
   fifthDivVariants,
   fourthDivVariants,
@@ -21,10 +22,10 @@ import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minile
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 
 const ProductSection = () => {
@@ -39,6 +40,19 @@ const ProductSection = () => {
   const toggleExpand3 = () => setIsExpanded3(!isExpanded3);
   const toggleExpand4 = () => setIsExpanded4(!isExpanded4);
   const toggleExpand5 = () => setIsExpanded5(!isExpanded5);
+
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const productInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (productInView) {
+      setCurrentLink("#product");
+    }
+  }, [productInView, currentLink]);
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -84,6 +98,7 @@ const ProductSection = () => {
         <div className="z-20 mx-auto flex max-w-screen-640 flex-col justify-center gap-4 px-6">
           <div className="z-20">
             <Image
+              ref={refInView}
               src={ProductTitle}
               alt="Our Product"
               id="product"

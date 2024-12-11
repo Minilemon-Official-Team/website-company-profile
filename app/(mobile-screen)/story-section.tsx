@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
@@ -8,12 +9,25 @@ import BackgroundStory from "@/public/background/story-mobile.png";
 import StoryTitle from "@/public/title/story.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function StorySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const storyInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (storyInView) {
+      setCurrentLink("#story");
+    }
+  }, [storyInView, currentLink]);
+
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
@@ -35,7 +49,10 @@ function StorySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4">
+        <div
+          ref={refInView}
+          className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4"
+        >
           <div id="story" className="z-10 scroll-mt-[50vh]">
             <Image
               src={StoryTitle}

@@ -92,13 +92,10 @@ const Contact = ({
           className,
         )}
       >
-        <div>
+        <div id="contact">
           <Image src={ContactUsTitle} alt="Contact Us" className={titleWidth} />
         </div>
-        <p
-          id="contact"
-          className="400:text-xl text-xl text-[#d2def4] md:text-2xl lg:text-3xl"
-        >
+        <p className="text-xl text-[#d2def4] 400:text-xl md:text-2xl lg:text-3xl">
           How can we help you?
         </p>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import {
   fifthDivVariants,
@@ -18,12 +19,23 @@ import PsychographicTitle from "@/public/title/psychographic.png";
 import TreatmentTitle from "@/public/title/treatment.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function AboutUsSection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const aboutInView = useInView(refInView);
+
+  useEffect(() => {
+    if (aboutInView) {
+      setCurrentLink("#about");
+    }
+  }, [aboutInView, currentLink]);
+
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
@@ -51,6 +63,8 @@ export default function AboutUsSection() {
         >
           <div className="z-10">
             <Image
+              ref={refInView}
+              id="about"
               src={IdeaTitle}
               alt="Idea"
               className="w-[80px] 400:w-[100px]"
@@ -64,10 +78,7 @@ export default function AboutUsSection() {
           </div>
         </div>
       </div>
-      <div
-        id="about"
-        className="flex flex-col items-center justify-center bg-[#f2e3fe]"
-      >
+      <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
         <div className="flex max-w-screen-640 flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
           <p>
             Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
