@@ -62,15 +62,15 @@ const MobileNavbar = () => {
             : "translate-y-0 duration-300",
         )}
       >
-        <div className="relative flex flex-col justify-center items-center h-full">
-          <div className="flex justify-center items-center gap-5">
-            <h1 className="mr-[65px] pt-[10px] h-full text-[18px] text-center leading-10 tracking-wide">
+        <div className="relative flex h-full flex-col items-center justify-center">
+          <div className="flex items-center justify-center gap-5">
+            <h1 className="mr-[65px] h-full pt-[10px] text-center text-[18px] leading-10 tracking-wide">
               Selamat datang di dunia
             </h1>
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="right-3 -bottom-7 md:-bottom-10 z-20 absolute w-[100px] 400:w-[120px] 450:w-[140px] 640:w-[160px]"
+              className="absolute -bottom-8 right-3 z-20 w-[100px] 400:w-[120px] 450:w-[140px] 640:w-[160px] md:-bottom-10"
             />
           </div>
           <DividerMobileHeader />
@@ -87,12 +87,12 @@ const MobileNavbar = () => {
             : "translate-y-60 duration-300",
         )}
       >
-        <div className="relative flex flex-col justify-center items-center h-full">
-          <div className="flex justify-center items-center gap-5 text-sm md:text-3xl">
+        <div className="relative flex h-full flex-col items-center justify-center">
+          <div className="flex items-center justify-center gap-5 text-sm md:text-3xl">
             <Image
               src={LogoBrand}
               alt="Logo Brand"
-              className="-top-10 right-3 z-20 absolute w-[90px] 400:w-[100px] 450:w-[120px] 640:w-[150px] md:w-[200px]"
+              className="absolute -top-8 right-3 z-20 w-[90px] 400:w-[100px] 450:w-[120px] 640:w-[150px] md:w-[200px]"
             />
           </div>
           <DividerMobileFooter />
@@ -108,8 +108,8 @@ const DesktopNavbar = () => {
   const isActive = pathname === "/characters";
 
   return (
-    <div className="top-0 z-50 sticky flex justify-center items-center bg-gradient-to-b from-[#303030] to-[#252525] w-full">
-      <div className="flex flex-row items-center py-5 max-w-screen-lg font-semibold text-[15px]">
+    <div className="sticky top-0 z-50 flex w-full items-center justify-center bg-gradient-to-b from-[#303030] to-[#252525]">
+      <div className="flex max-w-screen-lg flex-row items-center py-5 text-[15px] font-semibold">
         <ul className="flex flex-row gap-6">
           <li>
             <Link
@@ -158,15 +158,15 @@ const DesktopNavbar = () => {
               onMouseLeave={() => setIsHovered(false)}
             >
               {isActive || isHovered ? (
-                <MinilemonYellowIcon className="w-5 h-5" />
+                <MinilemonYellowIcon className="h-5 w-5" />
               ) : (
-                <MinilemonGreyIcon className="w-5 h-5" />
+                <MinilemonGreyIcon className="h-5 w-5" />
               )}
               <span className="mt-1">Characters</span>
             </Link>
           </li>
         </ul>
-        <div className="relative flex flex-row w-44 h-14 cursor-pointer">
+        <div className="relative flex h-14 w-44 cursor-pointer flex-row">
           <Link href="/">
             <Image
               alt="logo"

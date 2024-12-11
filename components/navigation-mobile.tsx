@@ -89,6 +89,7 @@ const NavigationMobile = () => {
   return (
     <div
       className={cn(
+        scrollPercent >= 1 ? null : "translate-y-12",
         "fixed inset-x-0 z-50 mx-auto flex w-fit items-center justify-center transition-all duration-300 ease-out lg:hidden",
         isHeaderActive && "fade-slide-out bottom-0",
         isFooterActive && "fade-slide-in bottom-2 md:bottom-5",
@@ -102,7 +103,7 @@ const NavigationMobile = () => {
         )}
       >
         {scrollPercent >= 100 ? (
-          <p className="md:text-md text-center text-xs font-bold tracking-wider text-[#ffd201] sm:text-sm">
+          <p className="md:text-md text-nowrap text-center text-xs font-bold tracking-wider text-[#ffd201] sm:text-sm">
             Terima kasih dan sampai jumpa kembali
           </p>
         ) : (
@@ -115,7 +116,7 @@ const NavigationMobile = () => {
                 currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
               )}
             />
-            <div className="font-bold tracking-wider text-[#ffd201]">
+            <div className="font-bold capitalize tracking-wider text-[#ffd201]">
               {NAV_LINKS[currentLinkIndex].slice(1)}
             </div>
             <FaPlay
