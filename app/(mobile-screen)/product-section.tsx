@@ -8,9 +8,10 @@ import {
 } from "@/lib/animations/divVariants";
 import BackgroundImage from "@/public/background/product-mobile.png";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
+
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
 import MinilemonLiveParentingTitle1 from "@/public/title/minilemon-live-parenting-1.png";
@@ -321,14 +322,20 @@ const ProductSection = () => {
                     color="#fff"
                   />
                 </div> */}
-            <div className="relative h-[396px] w-full bg-gray-200 sm:h-[492px]">
-              <Image
+            <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
+              {/* <Image
                 src={""}
                 alt="product 3"
                 layout="fill"
                 objectFit="fill"
                 className="w-full"
-              />
+              /> */}
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Coming Soon
+              </p>
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Minilemon Explorer!
+              </p>
             </div>
 
             <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
@@ -367,25 +374,29 @@ const ProductSection = () => {
                     className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
                   >
                     <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat temporibus perferendis dicta! Quo repellendus
-                      architecto quibusdam nisi, magnam animi voluptate rerum
-                      expedita ad maxime consequuntur enim amet, voluptatem
-                      aliquam ipsum?
+                      Minilemon Explorer adalah game petualangan eksplorasi
+                      bertema cozy dan seru yang cocok untuk semua kalangan!
+                      Ceritakan perjalanan enam anak Minilemon yang berlayar
+                      menjelajahi lautan Nusantara dan akhirnya tiba di Pulau
+                      Run, Maluku Tengah. Bersama Togar menyusuri keindahan
+                      pulau ini, sembari menjalankan misi utama: menemukan 10
+                      harta karun tersembunyi yang tersebar di seluruh penjuru
+                      pulau. Rasakan sensasi bertualang, bercocok tanam, dan
+                      menjelajahi alam sambil menikmati gameplay yang
+                      menyenangkan dan ramah anak.
                     </motion.p>
                     <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Iste ducimus similique illo facilis provident dolorem quam
-                      distinctio voluptate magnam possimus? Consequuntur totam
-                      asperiores itaque laboriosam facilis quam recusandae
-                      quisquam perferendis!
+                      Game ini akan terus berkembang dengan memperluas peta ke
+                      berbagai lokasi ikonik di Nusantara seperti Kalimantan,
+                      Sumatera, Sulawesi, Bali, Papua, NTB, dan NTT. Setiap
+                      wilayah menghadirkan tema unik dan mekanik permainan baru.
+                      Dalam rencana ke depan Minilemon Explorer akan bisa
+                      menikmati gameplay bertema Pramuka di Jogja, lengkap
+                      dengan aktivitas memancing, berburu, dan membangun tenda.
                     </motion.p>
                     <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Explicabo officia odit deserunt optio provident
-                      consequatur tempora impedit numquam voluptatibus incidunt
-                      natus accusantium dignissimos, cupiditate praesentium
-                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      Mari bergabung dalam petualangan seru di Minilemon
+                      Explorer dan jelajahi kekayaan Nusantara!{" "}
                       <span
                         onClick={toggleExpand3}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
