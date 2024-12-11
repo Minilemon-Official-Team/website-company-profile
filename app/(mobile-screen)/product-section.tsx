@@ -307,14 +307,20 @@ const ProductSection = () => {
                     color="#fff"
                   />
                 </div> */}
-            <div className="relative h-[396px] w-full bg-gray-200 sm:h-[492px]">
-              <Image
+            <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
+              {/* <Image
                 src={""}
                 alt="product 3"
                 layout="fill"
                 objectFit="fill"
                 className="w-full"
-              />
+              /> */}
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Coming Soon
+              </p>
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Minilemon Explorer!
+              </p>
             </div>
 
             <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
