@@ -12,10 +12,8 @@ import Watin from "@/public/contributors/Watin.jpg";
 import Ghaza from "@/public/contributors/Ghaza.jpg";
 import Joy from "@/public/contributors/Joy.jpg";
 import Evan from "@/public/contributors/Evan.jpg";
-
-// Belum ada place untuk foto
-// import Andepp from "@/public/contributors/Andepp.jpg";
-// import Siska from "@/public/contributors/Siska.jpg";
+import Andepp from "@/public/contributors/Andepp.jpg";
+import Siska from "@/public/contributors/Siska.jpg";
 
 interface ContributionProps {
   id: number;
@@ -95,11 +93,13 @@ export const Family: ContributionProps[] = [
     id: 4,
     name: "Francisca Diwati",
     position: "Public Relation",
+    photo: Siska,
   },
   {
     id: 5,
     name: "Andi Hardjani",
     position: "Head of Visual Development",
+    photo: Andepp,
   },
   {
     id: 6,
