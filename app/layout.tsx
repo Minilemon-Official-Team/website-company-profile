@@ -1,19 +1,22 @@
 import { Metadata } from "next";
 import React from "react";
 import "./globals.css";
+import { poppins } from "./fonts";
+
+import ScreenProvider from "@/providers/screen-provider";
+import { siteConfig } from "@/config/site";
 
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import NavigationMobile from "@/components/navigation-mobile";
 import { PageIndicator } from "@/components/page-indicator";
 import { cn } from "@/lib/utils";
-import ScreenProvider from "@/providers/screen-provider";
-import { poppins } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Minilemon Universe",
   description:
     "PT. Minilemon Nusantara adalah perusahaan yang berorientasi pada Pendidikan Karakter Anak melalui berbagai Program Pendidikan berbasis seni, hiburan dan teknologi.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
 };
 
 interface LayoutProps {
