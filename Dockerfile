@@ -16,6 +16,7 @@ COPY tsconfig.json ./
 
 
 RUN npm install
+RUN npm install sharp
 
 FROM deps as build
 
@@ -25,16 +26,11 @@ RUN npm run build
 
 FROM base as final
 
-RUN apk add --no-cache \
-    build-base \
-    vips-dev \
-    bash
-    
+
 ENV NODE_ENV production
 
-RUN npm install --production && npm install sharp
-
 USER root
+
 RUN mkdir -p .next/cache && chmod -R 777 .next/cache
 
 USER node
