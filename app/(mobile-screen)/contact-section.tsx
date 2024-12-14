@@ -5,34 +5,57 @@ import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 import Contact from "@/components/contact";
 import { MinilemonDarkIcon } from "@/components/icons";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import FollowTitle from "@/public/title/follow.png";
 import OfficialTitle from "@/public/title/official.png";
+import { useInView } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const ContactSection = () => {
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const contactInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (contactInView) {
+      setCurrentLink("#contact");
+    }
+  }, [contactInView, currentLink]);
+
   return (
     <div className="flex flex-col">
       {/* Contact */}
-      <div className="relative inset-0 flex min-h-[60vh] items-center bg-[#1b1b1b] bg-cover bg-center py-5">
-        <div className="container z-20 flex flex-col gap-6 px-12 pb-5 lg:flex-row lg:gap-0 lg:px-0">
-          <Contact className="z-20" titleWidth={"w-[230px]"} />
+      <div
+        ref={refInView}
+        className="relative inset-0 flex min-h-[60vh] justify-center bg-[#1b1b1b] bg-cover bg-center py-5"
+      >
+        <div className="z-20 flex w-full max-w-screen-640 flex-col items-center gap-6 px-6 lg:flex-row lg:gap-0 lg:px-0">
+          <Contact className="z-20" titleWidth={"w-[210px] 400:w-[230px]"} />
         </div>
       </div>
 
       {/* Social */}
       <div className="flex min-h-[40vh] items-center bg-[#d2d5f4] pb-10">
-        <div className="container flex flex-col justify-center gap-6 px-12 py-16 lg:flex-row lg:gap-0 lg:px-0">
+        <div className="container flex flex-col justify-center gap-6 px-12 pb-16 pt-8 lg:flex-row lg:gap-0 lg:px-0">
           {/* Section Official */}
           <div className="flex flex-col items-center gap-y-8 lg:basis-1/2">
             <div>
-              <Image src={OfficialTitle} alt="Official" className="w-[200px]" />
+              <Image
+                src={OfficialTitle}
+                alt="Official"
+                className="w-[180px] 400:w-[200px]"
+              />
             </div>
             <div className="flex flex-col gap-y-4">
-              <Link className="flex flex-row" href={"#"}>
+              <Link className="flex flex-row gap-x-4" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
                 <p className="text-[16px]">minilemonmedia.id</p>
               </Link>
-              <Link className="flex flex-row" href={"#"}>
+              <Link className="flex flex-row gap-x-4" href={"#"}>
                 <MinilemonDarkIcon className="h-6 w-6" />
                 <p className="text-[16px]">store.minilemon.id</p>
               </Link>
@@ -42,7 +65,11 @@ const ContactSection = () => {
           {/* Section Social */}
           <div className="flex flex-col items-center justify-center gap-y-8 lg:basis-1/2">
             <div className="">
-              <Image src={FollowTitle} alt="Follow" className="w-[190px]" />
+              <Image
+                src={FollowTitle}
+                alt="Follow"
+                className="w-[180px] 400:w-[200px]"
+              />
             </div>
             <div className="flex flex-col gap-y-4">
               <Link

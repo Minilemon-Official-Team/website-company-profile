@@ -2,14 +2,37 @@
 
 import Slider from "@/components/ui/slider";
 import { charactersData } from "@/data/characters";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
 import CharacterTitle from "@/public/title/characters-1.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 function CharacterSection() {
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const characterInView = useInView(refInView);
+
+  useEffect(() => {
+    if (characterInView) {
+      setCurrentLink("#character");
+    }
+  }, [characterInView, currentLink]);
+
+  const floatingAnimation = {
+    y: [0, -10, 0],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  };
+
   return (
     <div>
       <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
@@ -22,12 +45,16 @@ function CharacterSection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4">
           <div id="character" className="z-10">
-            <Image src={CharacterTitle} alt="Character" className="w-[200px]" />
+            <Image
+              src={CharacterTitle}
+              alt="Character"
+              className="w-[180px] 400:w-[210px]"
+            />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-            <p>
+            <p ref={refInView}>
               Minilemon adalah animasi perpaduan topeng dan buah lemon yang
               hidup di dalam mimpi kakek Djoyo, terdiri dari 6 karakter utama
               yang mewakili 6 suku besar di Indonesia, yaitu Wayan (Bali), Togar
@@ -41,28 +68,27 @@ function CharacterSection() {
       </div>
       {/* Change character picture and status */}
       <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-screen-tablet px-6 py-12">
+        <div className="max-w-full p-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
               type: "loop",
-              // interval: 4000,
-              // perPage: 1,
-              // perMove: 1,
               gap: "5rem",
               focus: "center",
               pagination: false,
-              // autoplay: true,
               arrows: false,
             }}
           >
             {charactersData.map((character) => (
               <SplideSlide key={character.id}>
-                <div className="flex h-full max-w-screen-tablet flex-col gap-y-4">
-                  <div className="flex flex-1 basis-1/2 flex-row">
-                    <div className="basis-1/2">
+                <div className="flex h-full max-w-full flex-col items-center justify-center gap-y-4 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+                  <div className="flex flex-row">
+                    <motion.div
+                      animate={floatingAnimation}
+                      className="flex basis-1/2 items-center justify-center"
+                    >
                       <Image src={character.image} alt={character.fullName} />
-                    </div>
-                    <div className="flex basis-1/2 flex-col">
+                    </motion.div>
+                    <div className="flex basis-1/2 flex-col justify-center gap-3">
                       <div>
                         <Image
                           src={character.namePicture}
@@ -70,7 +96,7 @@ function CharacterSection() {
                           className="w-[100px]"
                         />
                       </div>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col gap-3">
                         <Slider value={character.strong} slider="bg-[#ededed]">
                           Strong
                         </Slider>
@@ -89,7 +115,7 @@ function CharacterSection() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex-1 basis-1/2">
+                  <div>
                     <p className="text-sm">{character.description}</p>
                   </div>
                 </div>

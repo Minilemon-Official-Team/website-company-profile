@@ -1,28 +1,28 @@
 "use client";
 
-import Link from "next/link";
-import React, { useState } from "react";
-import { Placeholder } from "placeholder";
-import { FaYoutube } from "react-icons/fa6";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
+import { FaYoutube } from "react-icons/fa6";
 
-import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
-import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
-import MinilemonSaveTheEarthTitle1 from "@/public/title/minilemon-save-the-earth-1.png";
-import MinilemonSaveTheEarthTitle2 from "@/public/title/minilemon-save-the-earth-2.png";
+import BackgroundImage from "@/public/background/product.png";
+import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
+import CoverPostParenting from "@/public/product/poster-parenting.png";
+import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
+
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
 import MinilemonLiveParentingTitle1 from "@/public/title/minilemon-live-parenting-1.png";
 import MinilemonLiveParentingTitle2 from "@/public/title/minilemon-live-parenting-2.png";
+import MinilemonSaveTheEarthTitle1 from "@/public/title/minilemon-save-the-earth-1.png";
+import MinilemonSaveTheEarthTitle2 from "@/public/title/minilemon-save-the-earth-2.png";
+import ProductTitle from "@/public/title/our-product-title1.png";
 import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minilemon-1.png";
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
-import ProductTitle from "@/public/title/our-product-title1.png";
-import BackgroundImage from "@/public/background/product.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
-import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
-import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPostParenting from "@/public/product/poster-parenting.png";
+import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
+import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
 
 const ProductPage = () => {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -93,7 +93,7 @@ const ProductPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 mt-2 flex flex-col justify-center gap-8">
+        <div className="container z-20 mt-2 flex flex-col justify-center gap-4">
           <div className="z-20">
             <Image src={ProductTitle} alt="Our Product" />
           </div>
@@ -298,13 +298,20 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#d2f4d3] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-0 flex">
-            <div className="relative h-[492px] w-[350px]">
-              <Placeholder
-                height={492}
-                width={350}
-                background="#333"
-                color="#fff"
-              />
+            <div className="relative flex h-[492px] w-[350px] flex-col items-center justify-center bg-gray-500">
+              {/* <Image
+                src={}
+                alt="Minilemon Explorer!"
+                fill
+                sizes=""
+                className="object-cover"
+              /> */}
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Coming Soon
+              </p>
+              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
+                Minilemon Explorer!
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
@@ -342,25 +349,28 @@ const ProductPage = () => {
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
                 >
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Repellat temporibus perferendis dicta! Quo repellendus
-                    architecto quibusdam nisi, magnam animi voluptate rerum
-                    expedita ad maxime consequuntur enim amet, voluptatem
-                    aliquam ipsum?
+                    Minilemon Explorer adalah game petualangan eksplorasi
+                    bertema cozy dan seru yang cocok untuk semua kalangan!
+                    Ceritakan perjalanan enam anak Minilemon yang berlayar
+                    menjelajahi lautan Nusantara dan akhirnya tiba di Pulau Run,
+                    Maluku Tengah. Bersama Togar menyusuri keindahan pulau ini,
+                    sembari menjalankan misi utama: menemukan 10 harta karun
+                    tersembunyi yang tersebar di seluruh penjuru pulau. Rasakan
+                    sensasi bertualang, bercocok tanam, dan menjelajahi alam
+                    sambil menikmati gameplay yang menyenangkan dan ramah anak.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste ducimus similique illo facilis provident dolorem quam
-                    distinctio voluptate magnam possimus? Consequuntur totam
-                    asperiores itaque laboriosam facilis quam recusandae
-                    quisquam perferendis!
+                    Game ini akan terus berkembang dengan memperluas peta ke
+                    berbagai lokasi ikonik di Nusantara seperti Kalimantan,
+                    Sumatera, Sulawesi, Bali, Papua, NTB, dan NTT. Setiap
+                    wilayah menghadirkan tema unik dan mekanik permainan baru.
+                    Dalam rencana ke depan Minilemon Explorer akan bisa
+                    menikmati gameplay bertema Pramuka di Jogja, lengkap dengan
+                    aktivitas memancing, berburu, dan membangun tenda.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo officia odit deserunt optio provident consequatur
-                    tempora impedit numquam voluptatibus incidunt natus
-                    accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "}
+                    Mari bergabung dalam petualangan seru di Minilemon Explorer
+                    dan jelajahi kekayaan Nusantara!{" "}
                     <span
                       onClick={toggleExpand3}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"

@@ -7,17 +7,22 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./providers/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     container: {
       center: true,
       screens: {
+        xs: "300px",
         "2xl": "1070px",
       },
     },
     extend: {
       screens: {
-        tablet: "450px",
+        300: "300px",
+        400: "400px",
+        450: "450px",
+        640: "640px",
       },
       colors: {
         background: "hsl(var(--background))",

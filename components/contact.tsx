@@ -88,26 +88,26 @@ const Contact = ({
     <>
       <div
         className={cn(
-          "flex basis-1/2 flex-col items-center justify-center gap-6",
+          "flex basis-1/2 flex-col items-center justify-center gap-4 lg:gap-6",
           className,
         )}
       >
-        <div>
+        <div id="contact">
           <Image src={ContactUsTitle} alt="Contact Us" className={titleWidth} />
         </div>
-        <p id="contact" className="text-2xl text-[#d2def4] lg:text-3xl">
+        <p className="text-xl text-[#d2def4] 400:text-xl md:text-2xl lg:text-3xl">
           How can we help you?
         </p>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className={cn(
-          "flex basis-1/2 flex-col pl-4 pr-[1rem] lg:pr-14",
+          "flex w-full basis-1/2 flex-col pl-4 pr-[1rem] lg:pr-14",
           className,
         )}
       >
-        <div className="flex flex-col gap-2">
-          <div className="">
+        <div className="flex flex-col items-center gap-2">
+          <div className="w-full">
             <label htmlFor="name" className="sr-only">
               Name
             </label>
@@ -121,7 +121,7 @@ const Contact = ({
               <p className="text-xs text-red-500">{errors.name.message}</p>
             )}
           </div>
-          <div>
+          <div className="w-full">
             <label htmlFor="email" className="sr-only">
               Email
             </label>
@@ -136,7 +136,7 @@ const Contact = ({
               <p className="text-xs text-red-500">{errors.email.message}</p>
             )}
           </div>
-          <div>
+          <div className="w-full">
             <label htmlFor="subject" className="sr-only">
               Subject
             </label>
@@ -151,7 +151,7 @@ const Contact = ({
               <p className="text-xs text-red-500">{errors.subject.message}</p>
             )}
           </div>
-          <div>
+          <div className="w-full">
             <label htmlFor="message" className="sr-only">
               Message
             </label>

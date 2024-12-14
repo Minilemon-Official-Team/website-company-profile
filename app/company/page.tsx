@@ -11,11 +11,14 @@ import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png
 import FounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 
+import Reno from "@/public/contributors/Reno.jpg";
+import Heri from "@/public/contributors/Heri.jpg";
+
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative inset-0 flex h-[65vh] items-center bg-[#1b1b1b] bg-cover bg-center">
+      <div className="relative flex flex-col items-center bg-[#1b1b1b] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -25,7 +28,7 @@ const CompanyPage = () => {
           objectFit="cover"
           className="absolute inset-0 z-10"
         />
-        <div className="container z-20 flex flex-col gap-6 pb-4">
+        <div className="container z-20 flex flex-col gap-6 py-14">
           <div className="z-20">
             <Image
               src={PTMinilemonNusantaraTitle}
@@ -59,7 +62,7 @@ const CompanyPage = () => {
 
       {/* Visi dan Misi */}
       <div className="bg-[#1b1b1b] py-14">
-        <div className="container flex flex-col gap-y-10 px-6">
+        <div className="container flex flex-col gap-y-10">
           <div className="flex w-full justify-center">
             <Image src={VisiTitle} alt="Visi dan Misi" />
           </div>
@@ -95,18 +98,19 @@ const CompanyPage = () => {
 
       {/* Founder */}
       <div className="flex flex-row bg-[#a4bddc] py-14">
-        <div className="container flex flex-col gap-8 px-8 lg:px-0">
+        <div className="container flex flex-col gap-4 px-8 lg:px-0">
           <div className="flex w-full justify-center lg:justify-start">
             <Image src={FounderTitle} alt="The Founder" />
           </div>
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Placeholder
+              <Image src={Reno} alt="Reno Halsamer" width={350} height={495} />
+              {/* <Placeholder
                 height={495}
                 width={350}
                 background="#333"
                 color="#fff"
-              />
+              /> */}
             </div>
             <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
@@ -142,12 +146,18 @@ const CompanyPage = () => {
           </div>
           <div className="flex flex-col gap-6 lg:flex-row">
             <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Placeholder
+              <Image
+                src={Heri}
+                alt="Heriyadi Natawijaya"
+                width={350}
+                height={495}
+              />
+              {/* <Placeholder
                 height={495}
                 width={350}
                 background="#333"
                 color="#fff"
-              />
+              /> */}
             </div>
             <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
@@ -189,12 +199,21 @@ const CompanyPage = () => {
                 key={data.id}
               >
                 <div className="pb-3">
-                  <Placeholder
-                    height={200}
-                    width={150}
-                    background="#fff"
-                    color="#333"
-                  />
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
                 </div>
                 <p className="text-base font-semibold capitalize text-white/60">
                   {data.name}
@@ -214,19 +233,28 @@ const CompanyPage = () => {
           <div className="mb-16 flex w-full justify-center">
             <Image src={FamilyTitle} alt="Special Partner" />
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-12 pb-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-3 gap-x-8 gap-y-12 pb-12">
             {Family.map((data) => (
               <div
                 className="flex flex-col items-center justify-center text-black"
                 key={data.id}
               >
                 <div className="pb-3">
-                  <Placeholder
-                    height={200}
-                    width={150}
-                    background="#fff"
-                    color="#333"
-                  />
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
                 </div>
                 <p className="text-base font-semibold capitalize text-black/60">
                   {data.name}

@@ -1,7 +1,14 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { Placeholder } from "placeholder";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
-import { Hero } from "@/data/contribution";
+import { Family, Hero } from "@/data/contribution";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import {
   fifthDivVariants,
@@ -11,6 +18,7 @@ import {
 } from "@/lib/animations/divVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
+
 import BackgroundCompany from "@/public/background/company-mobile.png";
 import CoFounderTitle from "@/public/title/co-founder.png";
 import MisiTitle from "@/public/title/misi.png";
@@ -19,22 +27,36 @@ import OurHeroTile from "@/public/title/our-hero.png";
 import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
 import TheFounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
-import "@splidejs/react-splide/css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
+import Reno from "@/public/contributors/Reno.jpg";
+import Heri from "@/public/contributors/Heri.jpg";
 
 function CompanySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const companyInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (companyInView) {
+      setCurrentLink("#company");
+    }
+  }, [companyInView, currentLink]);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
+    if (isExpanded && scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div>
-      <div className="relative flex h-full items-center justify-center bg-cover bg-center py-10">
+    <div ref={scrollRef}>
+      <div className="relative flex h-full items-center justify-center bg-cover bg-center py-6">
         <Image
           src={BackgroundCompany}
           alt="BackgroundCompany"
@@ -44,26 +66,27 @@ function CompanySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
+        <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 pt-3">
           <div id="company" className="z-10">
             <Image
+              ref={refInView}
               src={PtMinilemonNusantaraMobileTitle}
               alt="PtMinilemonNusantaraMobileTitle"
-              className="w-[290px]"
+              className="w-[240px] 400:w-[290px]"
             />
           </div>
           <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">
             <p>
-              PT. Minilemon Nusantaraadlah perusahaan yang berdomisili di
+              PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
               Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
-              Karakter Anak dan nilai-nilai kebaikan memlalui berbagai Program
+              Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
               Pendidikan berbasis seni, hiburan, dan teknologi.
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-5">
-        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-3 leading-7 tracking-widest">
+      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-4">
+        <div className="flex max-w-screen-640 flex-col items-center px-6 py-3 leading-7 tracking-widest">
           <p>
             Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
             melakukan pendekatan terhadap pendidikan, mulai dari film animasi,
@@ -92,7 +115,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center bg-[#e7e7e7] pb-5"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-end justify-end gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-end justify-end gap-4 px-6 pb-4">
                 <motion.p
                   className="leading-7 tracking-widest"
                   variants={paragraphVariants}
@@ -112,9 +135,9 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#1b1b1b] py-5"
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={VisiTitle}
@@ -123,7 +146,7 @@ function CompanySection() {
                   />
                 </motion.div>
                 <motion.p
-                  className="max-w-screen-tablet text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
+                  className="max-w-screen-640 text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
                   variants={paragraphVariants}
                 >
                   Sebagai anak bangsa yang baik dan cinta tanah air, PT
@@ -136,7 +159,7 @@ function CompanySection() {
                   dan budaya yang merupakan warisan yang selalu kita banggakan.
                 </motion.p>
               </motion.div>
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={MisiTitle}
@@ -144,7 +167,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-tablet text-start">
+                <motion.p className="max-w-screen-640 text-start">
                   <motion.ul>
                     <motion.li>
                       <motion.p
@@ -185,7 +208,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#a4bcdc] py-5"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div className="mb-3">
                   <Image
                     src={TheFounderTitle}
@@ -200,17 +223,24 @@ function CompanySection() {
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
 
-                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x180
+                  <div className="float-left mb-1 mr-4">
+                    <Image
+                      src={Reno}
+                      alt="Reno Halsamer"
+                      width={144}
+                      height={200}
+                    />
+                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-7 tracking-widest"
+                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       <motion.span className="mr-2 font-bold">
                         Reno Halsamer
                       </motion.span>
+                      <br />
                       Adalah Pria yang lahir dan tinggal di Surabaya Indonesia.
                       Sebagai seorang bisnisman dan penggiat Museum seni
                       khususnya Topeng Indonesia, Sejak tahun 2015 di Surabaya,
@@ -223,7 +253,7 @@ function CompanySection() {
                       masyarakat Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Karakter animasi minilemon diharapkan menjadi figur baik
@@ -246,7 +276,7 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#d3def4] py-5"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={CoFounderTitle}
@@ -260,15 +290,21 @@ function CompanySection() {
                           alt="Founder Image"
                           className="float-left shadow-lg mr-4 rounded-md w-1/2"
                         /> */}
-                  <div className="float-left mr-4 flex h-[250px] w-[180px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                    200x180
+                  <div className="float-left mb-1 mr-4">
+                    <Image
+                      src={Heri}
+                      alt="Heriyadi Natawijaya"
+                      width={144}
+                      height={200}
+                    />
+                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
                   </div>
                   <motion.div>
                     <motion.p
-                      className="text-start text-sm leading-7 tracking-widest"
+                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
-                      <motion.span className="text-nowrap font-bold">
+                      <motion.span className="font-bold">
                         Heriyadi Natawijaya
                       </motion.span>
                       <br />
@@ -279,7 +315,7 @@ function CompanySection() {
                       seni di Depok, Indonesia.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Karirnya di dunia Seni dan Perfilman membuatnya bertemu
@@ -289,7 +325,7 @@ function CompanySection() {
                       budaya.
                     </motion.p>
                     <motion.p
-                      className="mt-5 text-start text-sm leading-7 tracking-widest"
+                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
                       variants={paragraphVariants}
                     >
                       Pengalaman panjang sebagai kepala Seni, dan kecintaannya
@@ -310,9 +346,9 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#1b1b1b] py-5"
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={OurHeroTile}
@@ -320,24 +356,38 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest text-[#c5cce2]">
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
                   {Hero.map((item, index) => (
                     <motion.div
                       key={index}
-                      className="flex w-full flex-col items-center justify-start gap-2"
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
                     >
                       {/* <motion.img
                               src="https://picsum.photos/id/200/200/250?grayscale"
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x160
+
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
-                      <motion.p className="text-center text-sm leading-7 tracking-widest">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>
@@ -351,9 +401,9 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#fff4ec] py-5"
+              className="flex flex-col items-center justify-center bg-[#fff4ec]"
             >
-              <motion.div className="flex max-w-screen-tablet flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
                     src={OurFamilyTile}
@@ -361,24 +411,37 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-tablet grid-cols-2 gap-10 text-start text-sm leading-7 tracking-widest">
-                  {Hero.map((item, index) => (
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest sm:gap-20">
+                  {Family.map((item, index) => (
                     <motion.div
                       key={index}
-                      className="flex w-full flex-col items-center justify-start gap-2"
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
                     >
                       {/* <motion.img
                               src="https://picsum.photos/seed/picsum/200/250"
                               alt="Founder Image"
                               className="w-full"
                             /> */}
-                      <div className="flex h-[200px] w-[160px] items-center justify-center bg-gray-400 text-xl text-gray-800/50">
-                        200x160
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
-                      <motion.p className="text-center text-sm leading-7 tracking-widest">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-center text-sm font-bold uppercase leading-7 tracking-widest">
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {item.position}
                       </motion.p>
                     </motion.div>

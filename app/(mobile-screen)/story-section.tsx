@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
@@ -8,19 +9,36 @@ import BackgroundStory from "@/public/background/story-mobile.png";
 import StoryTitle from "@/public/title/story.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function StorySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const { currentLink, setCurrentLink } = useUpdateCurrentLink();
+
+  const refInView = useRef(null);
+  const storyInView = useInView(refInView, {
+    amount: 1,
+  });
+
+  useEffect(() => {
+    if (storyInView) {
+      setCurrentLink("#story");
+    }
+  }, [storyInView, currentLink]);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const toggleExpand = () => {
+    if (isExpanded && scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div>
+    <div ref={scrollRef}>
       <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
         <Image
           src={BackgroundStory}
@@ -31,11 +49,18 @@ function StorySection() {
           className="absolute inset-0"
           objectFit="cover"
         />
-        <div className="z-10 flex max-w-screen-tablet flex-col justify-center gap-y-4 px-6 py-4">
+        <div
+          ref={refInView}
+          className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4"
+        >
           <div id="story" className="z-10 scroll-mt-[50vh]">
-            <Image src={StoryTitle} alt="Story" className="w-[115px]" />
+            <Image
+              src={StoryTitle}
+              alt="Story"
+              className="w-[110px] 400:w-[125px]"
+            />
           </div>
-          <div className="z-10 flex flex-col gap-y-6 leading-7 tracking-widest text-[#c5cce2]">
+          <div className="z-10 flex flex-col gap-y-6 leading-5 tracking-widest text-[#c5cce2]">
             <p>
               Berawal dari kisah Kakek Djoyo yang merupakan seorang pangeran sah
               penerus tahta ayahnya, seorang raja di tanah Jawa. Sejak kecil,
@@ -48,7 +73,7 @@ function StorySection() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
-        <div className="flex max-w-screen-tablet flex-col items-center px-6 py-4 leading-7 tracking-widest">
+        <div className="flex max-w-screen-640 flex-col items-center px-6 py-4 leading-5 tracking-widest">
           <p>
             Dengan hati yang berat, Pangeran Djoyo memutuskan untuk meninggalkan
             istana dan memulai perjalanan panjang untuk mencari ilmu dan
@@ -71,7 +96,7 @@ function StorySection() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="flex max-w-screen-tablet flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-7 tracking-widest"
+            className="flex max-w-screen-640 flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-5 tracking-widest"
           >
             <motion.p variants={paragraphVariants}>
               Suatu malam, dalam perjalanannya melewati hutan yang lebat,

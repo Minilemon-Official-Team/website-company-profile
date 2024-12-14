@@ -47,10 +47,7 @@ const Carousel = ({
   };
 
   return (
-    <div
-      ref={carouselRef}
-      className="relative mx-auto w-full max-w-screen-tablet"
-    >
+    <div ref={carouselRef} className="max-w-screen-640 relative mx-auto w-full">
       <div>
         <AnimatePresence initial={false} custom={currentIndex}>
           <motion.div

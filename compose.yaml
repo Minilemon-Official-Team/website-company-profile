@@ -9,15 +9,17 @@
 # https://github.com/docker/awesome-compose
 services:
   server:
-    image: rifkinauvaldzaki/company-profile:latest  
-    container_name: company-profile-container
+    image: rifkinauvaldzaki/company-profile:latest
+    container_name: company-profile-container  
     environment:
-      - NODE_ENV=production   
-    env_file:
-      - ./.env.prod
-    command: npm start -- -p 3003 
-    ports:
-      - "3003:3003" 
+      NODE_ENV: production
+   
+    command: npm start -- -p 3003
+    expose:
+      - 3003  # Expose port 3002 within the Docker network
+    
+  
+
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the
@@ -50,3 +52,4 @@ services:
 # secrets:
 #   db-password:
 #     file: db/password.txt
+
