@@ -25,6 +25,11 @@ RUN npm run build
 
 FROM base as final
 
+RUN apk add --no-cache \
+    build-base \
+    vips-dev \
+    bash
+    
 ENV NODE_ENV production
 
 RUN npm install --production && npm install sharp
