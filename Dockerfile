@@ -28,11 +28,14 @@ COPY . .
 RUN npm run build
 
 
+
 # Create a minimal production image to run the built Next.js app.
 FROM base as final
 
 # Set environment variables for production.
 ENV NODE_ENV production
+
+RUN npm install --production && npm install sharp
 
 USER root
 
