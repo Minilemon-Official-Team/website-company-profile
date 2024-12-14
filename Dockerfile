@@ -34,6 +34,10 @@ FROM base as final
 # Set environment variables for production.
 ENV NODE_ENV production
 
+USER root
+
+RUN mkdir -p .next/cache && chmod -R 777 .next/cache
+
 # Run the application as a non-root user for security.
 USER node
 
