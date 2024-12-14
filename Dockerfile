@@ -1,51 +1,54 @@
 # syntax=docker/dockerfile:1
 
-
+# Use the specified Node.js version
 ARG NODE_VERSION=20.8.0
 
+# Base image
 FROM node:${NODE_VERSION}-alpine as base
 
-# Set the working directory inside the container.
+# Set the working directory
 WORKDIR /usr/src/app
 
-# Install dependencies 
+# Add necessary build tools for Alpine
+RUN apk add --no-cache python3 make g++
+
+# Dependencies stage
 FROM base as deps
 
-# Copy only the package.json, package-lock.json, and tsconfig.json for cache purposes.
-COPY package*.json ./  
-COPY tsconfig.json ./  
+# Copy only essential files for installing dependencies
+COPY package*.json ./
 
-# Install both production and development dependencies, 
-# as TypeScript requires some devDependencies to build.
-RUN npm install
+# Install only production dependencies
+RUN npm ci --omit=dev
 
-
+# Build stage
 FROM deps as build
 
-
+# Copy all source files
 COPY . .
 
+# Build the Next.js application
 RUN npm run build
 
-
-# Create a minimal production image to run the built Next.js app.
+# Final production stage
 FROM base as final
 
-# Set environment variables for production.
+# Set environment for production
 ENV NODE_ENV production
 
-# Run the application as a non-root user for security.
+# Run the application as a non-root user
+RUN chown -R node:node /usr/src/app
 USER node
 
-# Copy only the necessary files from the previous stages.
+# Copy necessary files from previous stages
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/.next ./.next
 COPY --from=build /usr/src/app/public ./public
 COPY --from=build /usr/src/app/package.json ./package.json
 COPY --from=build /usr/src/app/next.config.mjs ./next.config.mjs
 
-# Expose the default Next.js port.
+# Expose the port
 EXPOSE 3003
 
-# Start the app,
-CMD ["npm", "run", "start", "--", "-p", "3003"]
+# Start the application
+CMD ["next", "start", "-p", "3003"]
