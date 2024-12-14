@@ -11,6 +11,7 @@ import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minil
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
+import ComingSoon from "@/public/product/coming-soon.jpg"; 
 
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
@@ -299,19 +300,13 @@ const ProductPage = () => {
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-0 flex">
             <div className="relative flex h-[492px] w-[350px] flex-col items-center justify-center bg-gray-500">
-              {/* <Image
-                src={}
+              <Image
+                src={ComingSoon}
                 alt="Minilemon Explorer!"
                 fill
-                sizes=""
+                sizes="100vw"
                 className="object-cover"
-              /> */}
-              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
-                Coming Soon
-              </p>
-              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
-                Minilemon Explorer!
-              </p>
+              />
             </div>
           </div>
           <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">

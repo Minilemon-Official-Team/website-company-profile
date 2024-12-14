@@ -11,6 +11,7 @@ import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minil
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
+import ComingSoon from "@/public/product/coming-soon.jpg"; 
 
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
@@ -323,19 +324,13 @@ const ProductSection = () => {
                   />
                 </div> */}
             <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
-              {/* <Image
-                src={""}
-                alt="product 3"
+              <Image
+                src={ComingSoon}
+                alt="coming soon"
                 layout="fill"
                 objectFit="fill"
                 className="w-full"
-              /> */}
-              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
-                Coming Soon
-              </p>
-              <p className="animate-pulse text-center font-semibold tracking-wide text-gray-200">
-                Minilemon Explorer!
-              </p>
+              />
             </div>
 
             <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">

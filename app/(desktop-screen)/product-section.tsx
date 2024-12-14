@@ -5,6 +5,8 @@ import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minil
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
+import ComingSoon from "@/public/product/coming-soon.jpg"; 
+
 import OurProductTitle from "@/public/title/our-product-1.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -12,7 +14,6 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Placeholder } from "placeholder";
 
 function ProductSection() {
   return (
@@ -62,11 +63,10 @@ function ProductSection() {
               />
             </SplideSlide>
             <SplideSlide>
-              <Placeholder
-                height={493}
-                width={350}
-                color="#333"
-                background="#333"
+            <Image
+                src={ComingSoon}
+                alt="Minilemon Explorer!"
+                className="h-[492px] w-[350px]"
               />
             </SplideSlide>
             <SplideSlide>

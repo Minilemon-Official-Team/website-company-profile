@@ -7,13 +7,18 @@ import Erik from "@/public/contributors/Erik.jpg";
 import Dimas from "@/public/contributors/Dimas.jpg";
 import Ostin from "@/public/contributors/Ostin.jpg";
 import David from "@/public/contributors/David.jpg";
+import Auriga from "@/public/contributors/Auriga.jpg"
 
+import Anis from "@/public/contributors/Anis.jpg"
+import Biwara from "@/public/contributors/Biwara.jpg"
+import Fahmi from "@/public/contributors/Fahmi.jpg"
 import Watin from "@/public/contributors/Watin.jpg";
 import Ghaza from "@/public/contributors/Ghaza.jpg";
 import Joy from "@/public/contributors/Joy.jpg";
 import Evan from "@/public/contributors/Evan.jpg";
 import Andepp from "@/public/contributors/Andepp.jpg";
 import Siska from "@/public/contributors/Siska.jpg";
+
 
 interface ContributionProps {
   id: number;
@@ -57,6 +62,7 @@ export const Hero: ContributionProps[] = [
     id: 6,
     name: "Auriga Favian Vereno",
     position: "Head of Animation",
+    photo: Auriga,
   },
   {
     id: 7,
@@ -76,18 +82,20 @@ export const Family: ContributionProps[] = [
   {
     id: 1,
     name: "Wathin Ciptawan",
-    position: "Business Consultant",
+    position: "Business Management",
     photo: Watin,
   },
   {
     id: 2,
     name: "Anis Ilahi Wahdati",
     position: "Business Development",
+    photo: Anis,
   },
   {
     id: 3,
     name: "Biwara Sakti Pracihara",
     position: "Creative Program Analyst",
+    photo: Biwara,
   },
   {
     id: 4,
@@ -111,6 +119,7 @@ export const Family: ContributionProps[] = [
     id: 7,
     name: "Fahmi Arif",
     position: "IT Development",
+    photo: Fahmi,
   },
   {
     id: 8,
