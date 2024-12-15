@@ -315,13 +315,7 @@ const ProductPage = () => {
               <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
             </div>
             <p>
-              Dengan menyadari betapa pentingnya menjaga dan melestarikan alam,
-              Minilemon yang di pimpin oleh Kak Bibie memulai petualangan seru
-              melalui serial animasi pramuka. Dalam petualangan ini, mereka
-              tidak hanya belajar lebih dalam tentang ekosistem yang rumit,
-              keanekaragaman hayati yang menakjubkan, dan pentingnya konservasi
-              alam, tetapi juga menanamkan nilai-nilai positif dan tanggung
-              jawab terhadap alam dalam setiap langkah mereka.{" "}
+              Minilemon Explorer adalah game petualangan eksplorasi bertema cozy dan seru yang cocok untuk semua kalangan! Ceritakan perjalanan enam anak Minilemon yang berlayar menjelajahi lautan Nusantara dan akhirnya tiba di Pulau Run, Maluku Tengah. Bersama Togar menyusuri keindahan pulau ini, sembari menjalankan misi utama: menemukan 10 harta karun tersembunyi yang tersebar di seluruh penjuru pulau. Rasakan sensasi bertualang, bercocok tanam, dan menjelajahi alam sambil menikmati gameplay yang menyenangkan dan ramah anak.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="javascript:void(0)"
@@ -343,17 +337,6 @@ const ProductPage = () => {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
                 >
-                  <motion.p variants={paragraphVariants}>
-                    Minilemon Explorer adalah game petualangan eksplorasi
-                    bertema cozy dan seru yang cocok untuk semua kalangan!
-                    Ceritakan perjalanan enam anak Minilemon yang berlayar
-                    menjelajahi lautan Nusantara dan akhirnya tiba di Pulau Run,
-                    Maluku Tengah. Bersama Togar menyusuri keindahan pulau ini,
-                    sembari menjalankan misi utama: menemukan 10 harta karun
-                    tersembunyi yang tersebar di seluruh penjuru pulau. Rasakan
-                    sensasi bertualang, bercocok tanam, dan menjelajahi alam
-                    sambil menikmati gameplay yang menyenangkan dan ramah anak.
-                  </motion.p>
                   <motion.p variants={paragraphVariants}>
                     Game ini akan terus berkembang dengan memperluas peta ke
                     berbagai lokasi ikonik di Nusantara seperti Kalimantan,
