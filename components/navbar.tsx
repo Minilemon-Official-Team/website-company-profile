@@ -40,7 +40,7 @@ const MobileNavbar = () => {
   const { scrollPercent } = useScrollPercentage();
 
   useEffect(() => {
-    if (scrollPercent > 99) {
+    if (scrollPercent > 98) {
       setIsHeaderActive(false);
       setIsFooterActive(true);
     }
@@ -57,7 +57,7 @@ const MobileNavbar = () => {
         className={cn(
           berlin_sans_fb.className,
           "sticky top-0 z-50 flex h-[60px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[80px]",
-          !isHeaderActive
+          scrollPercent > 2
             ? "-translate-y-60 duration-300"
             : "translate-y-0 duration-300",
         )}
