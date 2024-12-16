@@ -35,17 +35,14 @@ export default function Navbar() {
 }
 
 const MobileNavbar = () => {
-  const [isHeaderActive, setIsHeaderActive] = useState(true);
   const [isFooterActive, setIsFooterActive] = useState(false);
   const { scrollPercent } = useScrollPercentage();
 
   useEffect(() => {
-    if (scrollPercent > 99) {
-      setIsHeaderActive(false);
+    if (scrollPercent > 98) {
       setIsFooterActive(true);
     }
     if (scrollPercent < 2) {
-      setIsHeaderActive(true);
       setIsFooterActive(false);
     }
   }, [scrollPercent]);
@@ -57,7 +54,7 @@ const MobileNavbar = () => {
         className={cn(
           berlin_sans_fb.className,
           "sticky top-0 z-50 flex h-[60px] flex-col justify-between bg-gradient-to-b from-[#111] to-[#353535] text-center text-[#eeca0e] md:h-[80px]",
-          !isHeaderActive
+          scrollPercent > 2
             ? "-translate-y-60 duration-300"
             : "translate-y-0 duration-300",
         )}
