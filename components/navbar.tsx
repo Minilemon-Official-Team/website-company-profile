@@ -35,17 +35,14 @@ export default function Navbar() {
 }
 
 const MobileNavbar = () => {
-  const [isHeaderActive, setIsHeaderActive] = useState(true);
   const [isFooterActive, setIsFooterActive] = useState(false);
   const { scrollPercent } = useScrollPercentage();
 
   useEffect(() => {
     if (scrollPercent > 98) {
-      setIsHeaderActive(false);
       setIsFooterActive(true);
     }
     if (scrollPercent < 2) {
-      setIsHeaderActive(true);
       setIsFooterActive(false);
     }
   }, [scrollPercent]);
