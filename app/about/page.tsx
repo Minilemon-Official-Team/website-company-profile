@@ -1,18 +1,17 @@
-import React from "react";
 import Image from "next/image";
 
+import BackgroundImage from "@/public/background/about-new.png";
+import ConceptTitle from "@/public/title/concept.png";
 import IdeaTitle from "@/public/title/idea.png";
 import MessageTitle from "@/public/title/message.png";
-import TreatmentTitle from "@/public/title/treatment.png";
-import ConceptTitle from "@/public/title/concept.png";
 import PsychographicTitle from "@/public/title/psychographic.png";
-import BackgroundImage from "@/public/background/about-new.png";
+import TreatmentTitle from "@/public/title/treatment.png";
 
 const AboutPage = () => {
   return (
     <div className="flex flex-col">
       {/* Idea */}
-      <div className="relative flex h-[57vh] items-center justify-center bg-[#d6ddf4] bg-cover bg-center">
+      <div className="relative flex items-center justify-center bg-[#d6ddf4] bg-cover bg-center py-5">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -20,7 +19,6 @@ const AboutPage = () => {
           fill
           sizes="100vw"
           className="absolute inset-0 z-10"
-          objectFit="cover"
         />
         <div className="container z-20 flex flex-col justify-center gap-y-4 pb-5">
           <div className="z-20">
@@ -28,18 +26,18 @@ const AboutPage = () => {
           </div>
           <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
             <p>
-              Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
+              Berawal dari cinta dan bangga akan warisan budaya khusunya topeng,
               yang merupakan penutup wajah dari setiap Suku di Indonesia.
             </p>
             <p>
               <b>Reno Halsamer (Founder dTopeng Kingdom Foundation)</b> melalui
-              perjalanan panjanga telah menciptakan tokoh animasi (fiksi) dengan
-              memadukan topeng sebagai wajah indonesia dan tubuh lemon yang
+              perjalanan panjang telah menciptakan tokoh animasi (fiksi) dengan
+              memadukan topeng sebagai wajah Indonesia dan tubuh lemon yang
               merupakan buah dengan banyak manfaat bagi kesehatan
             </p>
             <p>
               Bernama <b>Minilemon</b> dengan harapan dapat memberi manfaat
-              positif bai anak-anak indonesia dalam belaja Sejarah, Budaya,
+              positif bagi anak-anak indonesia dalam belaja Sejarah, Budaya,
               hormat kepada orangtua, gotong royong, menghargai perbedaan, cinta
               Bangsa dan Negara, serta ikut serta dalam penyelamatan Lingkungan
               hidup di dunia.
@@ -90,7 +88,7 @@ const AboutPage = () => {
             berbeda-beda yaitu Jawa, Sunda, Papua, Tionghoa, Batak dan Bali.
             meskipun berbeda Minilemon selalu mengedepankan sikap toleransi dan
             gotong royong, sehingga saling melengkapi satu dan lainnya dalam
-            setiap kisah yang mekea lalui.
+            setiap kisah yang mereka lalui.
           </p>
         </div>
       </div>
