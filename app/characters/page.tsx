@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
 
-import { charactersData } from "@/data/characters";
 import Character from "@/components/character";
+import { charactersData } from "@/data/characters";
 import BackgroundImage from "@/public/background/character.png";
 import CharacterTitle from "@/public/title/character.png";
 
@@ -23,14 +22,13 @@ const CharactersPage = () => {
   return (
     <>
       {/* Desktop view */}
-      <div className="relative inset-0 flex h-[40vh] items-center bg-[#dedede] bg-cover bg-center">
+      <div className="relative inset-0 flex items-center bg-[#dedede] bg-cover bg-center py-14">
         <Image
           src={BackgroundImage}
           alt="Background"
           quality={100}
           fill
           sizes="100vw"
-          objectFit="cover"
           className="absolute inset-0 z-10"
         />
         <div className="container z-20 flex flex-col justify-center gap-8">
