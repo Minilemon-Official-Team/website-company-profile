@@ -1,46 +1,42 @@
-# syntax=docker/dockerfile:1
+FROM node:18-alpine AS base
 
-ARG NODE_VERSION=20.8.0
+FROM base AS deps
 
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
 
-FROM node:${NODE_VERSION}-alpine as base
+COPY package.json ./
 
-WORKDIR /usr/src/app
-
-# Install dependencies 
-FROM base as deps
-
-
-COPY package*.json ./  
-COPY tsconfig.json ./  
+RUN npm update && npm install && npm install sharp
 
 
-RUN npm install
-RUN npm install sharp
 
-FROM deps as build
-
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 RUN npm run build
 
-FROM base as final
-
+FROM base AS runner
+WORKDIR /app
 
 ENV NODE_ENV production
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-USER root
+COPY --from=builder /app/public ./public
 
-RUN mkdir -p .next/cache && chmod -R 777 .next/cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
 
-USER node
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/.next ./.next
-COPY --from=build /usr/src/app/public ./public
-COPY --from=build /usr/src/app/package.json ./package.json
-COPY --from=build /usr/src/app/next.config.mjs ./next.config.mjs
+USER nextjs
 
 EXPOSE 3003
 
-CMD ["npm", "run", "start", "--", "-p", "3003"]
+ENV PORT 3003
+
+CMD ["node", "server.js"]
