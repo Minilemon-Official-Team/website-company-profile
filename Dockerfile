@@ -1,58 +1,42 @@
-# syntax=docker/dockerfile:1
+FROM node:18-alpine AS base
+
+FROM base AS deps
+
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+COPY package.json ./
+
+RUN npm update && npm install && npm install sharp
 
 
-ARG NODE_VERSION=20.8.0
 
-FROM node:${NODE_VERSION}-alpine as base
-
-# Set the working directory inside the container.
-WORKDIR /usr/src/app
-
-# Install dependencies 
-FROM base as deps
-
-# Copy only the package.json, package-lock.json, and tsconfig.json for cache purposes.
-COPY package*.json ./  
-COPY tsconfig.json ./  
-
-# Install both production and development dependencies, 
-# as TypeScript requires some devDependencies to build.
-RUN npm install
-
-
-FROM deps as build
-
-
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 RUN npm run build
 
+FROM base AS runner
+WORKDIR /app
 
-
-# Create a minimal production image to run the built Next.js app.
-FROM base as final
-
-# Set environment variables for production.
 ENV NODE_ENV production
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-RUN npm install --production && npm install sharp
+COPY --from=builder /app/public ./public
 
-USER root
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
 
-RUN mkdir -p .next/cache/images && chown -R node:node .next/cache && chmod -R 755 .next/cache
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Run the application as a non-root user for security.
-USER node
+USER nextjs
 
-# Copy only the necessary files from the previous stages.
-COPY --from=deps /usr/src/app/node_modules ./node_modules
-COPY --from=build /usr/src/app/.next ./.next
-COPY --from=build /usr/src/app/public ./public
-COPY --from=build /usr/src/app/package.json ./package.json
-COPY --from=build /usr/src/app/next.config.mjs ./next.config.mjs
-
-# Expose the default Next.js port.
 EXPOSE 3003
 
-# Start the app,
-CMD ["npm", "run", "start", "--", "-p", "3003"]
+ENV PORT 3003
+
+CMD ["node", "server.js"]
