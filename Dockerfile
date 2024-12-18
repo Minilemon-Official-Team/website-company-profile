@@ -39,7 +39,7 @@ RUN npm install --production && npm install sharp
 
 USER root
 
-RUN mkdir -p .next/cache && chmod -R 777 .next/cache
+RUN mkdir -p .next/cache/images && chown -R node:node .next/cache && chmod -R 755 .next/cache
 
 # Run the application as a non-root user for security.
 USER node

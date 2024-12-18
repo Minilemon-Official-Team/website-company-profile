@@ -1,0 +1,28 @@
+name: Check Docker Container Status
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'The branch to run the check on'
+        required: true
+        default: 'main'
+
+jobs:
+  check-container:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check if Docker container is running
+      env:
+        SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+      run: |
+        sleep 180  
+        sshpass -p "${SERVER_PASSWORD}" ssh -o StrictHostKeyChecking=no technova@103.142.21.43 "
+          if docker ps --filter 'name=company-profile-container' --filter 'status=running' | grep -q 'company-profile-container'; then
+            echo 'Docker container is running.'
+          else
+            echo 'Docker container is not running.'
+            exit 1
+          fi
+        "
