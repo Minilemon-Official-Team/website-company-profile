@@ -94,7 +94,7 @@ function CharacterSection() {
                         <Image
                           src={character.namePicture}
                           alt={character.fullName}
-                          className="w-[100px]"
+                          height={30}
                         />
                       </div>
                       <div className="flex flex-col gap-3">
