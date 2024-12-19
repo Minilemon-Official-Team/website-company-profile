@@ -11,8 +11,8 @@ import PTMinilemonNusantaraTitle from "@/public/title/pt-minilemon-nusantara.png
 import FounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 
-import Reno from "@/public/contributors/Reno.jpg";
 import Heri from "@/public/contributors/Heri.jpg";
+import Reno from "@/public/contributors/Reno.jpg";
 
 const CompanyPage = () => {
   return (
@@ -25,7 +25,6 @@ const CompanyPage = () => {
           quality={100}
           fill
           sizes="100vw"
-          objectFit="cover"
           className="absolute inset-0 z-10"
         />
         <div className="container z-20 flex flex-col gap-6 py-14">
@@ -38,7 +37,7 @@ const CompanyPage = () => {
           <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-[0.07em] text-[#c5cce0]">
             <p>
               PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
-              Surabaya dan Jakarta, Indoensia. Yang berorientasi pada Pendidikan
+              Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
               Karakter Anak dan nilai - nilai kebaikan melalui berbagai Program
               Pendidikan berbasis seni, hiburan dan teknologi.
             </p>
@@ -115,7 +114,7 @@ const CompanyPage = () => {
             <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
                 <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di
-                Surabaya Indoensia. Sebagai seorang bisnisman dan penggiat
+                Surabaya Indonesia. Sebagai seorang bisnisman dan penggiat
                 Museum seni khususnya Topeng Indonesia, Sejak tahun 2015 di
                 Surabaya, ditengah situasi yang dirasa mundurnya kecintaan
                 masyarakat terhadap seni dan budaya, Reno Halsamer mencetuskan
@@ -162,8 +161,8 @@ const CompanyPage = () => {
             <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
               <p>
                 <b className="text-[#1b1b1d]/90">Heriyadi Natawijaya</b> lahir
-                di Palembang dan tinggal di Depok Indonesia, adlaah Seorang
-                Sutradara iklan, Video Klik dan Animasi Sejak 2009. Heriyadi
+                di Palembang dan tinggal di Depok Indonesia, adalah Seorang
+                Sutradara iklan, Video Klip dan Animasi Sejak 2009. Heriyadi
                 Natawijaya juga sebagai Pendiri Perakaria & IDsains sebagai
                 Pusat Komunitas Kreatif dan produksi seni di Depok, Indonesia.
               </p>
