@@ -34,7 +34,7 @@ const StoryPage = () => {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#d2def4]">
       <div className="flex w-full flex-grow flex-col">
         <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
-          <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-5">
+          <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14">
             <Image
               src={BackgroundImage}
               alt="Cave"
