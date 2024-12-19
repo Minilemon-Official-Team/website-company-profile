@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 import Contact from "@/components/contact";
+import { MinilemonDarkIcon } from "@/components/icons";
+import BackgroundImage from "@/public/background/contact.png";
+import FollowTitle from "@/public/title/follow.png";
 import OfficialTitle from "@/public/title/official.png";
 import Image from "next/image";
-import FollowTitle from "@/public/title/follow.png";
-import BackgroundImage from "@/public/background/contact.png";
-import { MinilemonDarkIcon } from "@/components/icons";
 
 const ContactPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -23,14 +23,13 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col">
       {/* Contact */}
-      <div className="relative inset-0 flex min-h-[60vh] items-center bg-[#d3d5f4] bg-cover bg-center">
+      <div className="relative flex min-h-[60vh] items-center bg-[#d3d5f4] bg-cover bg-center py-16">
         <Image
           src={BackgroundImage}
           alt="Background"
           quality={100}
           fill
           sizes="100vw"
-          objectFit="cover"
           className="absolute inset-0 z-10"
         />
         <div className="container z-20 flex flex-col gap-6 px-12 pb-5 lg:flex-row lg:gap-0 lg:px-0">
