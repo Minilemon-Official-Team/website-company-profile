@@ -1,8 +1,7 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import BackgroundImage from "@/public/background/story.png";
 import StoryTitle from "@/public/title/story.png";
@@ -35,7 +34,7 @@ const StoryPage = () => {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#d2def4]">
       <div className="flex w-full flex-grow flex-col">
         <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
-          <div className="relative flex h-[44vh] w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4]">
+          <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14">
             <Image
               src={BackgroundImage}
               alt="Cave"
@@ -44,7 +43,6 @@ const StoryPage = () => {
               fill
               sizes="100vw"
               style={{
-                objectFit: "cover",
                 height: "100%",
                 width: "100%",
                 left: 0,
@@ -119,10 +117,10 @@ const StoryPage = () => {
               lapar dan dahaga di tengah hutan purba.
             </motion.p>
             <motion.p variants={paragraphVariants}>
-              Demi tahun berlalu, Pangeran Djoyo terlihat semakin tua dan mulai
-              tinggal di tengah hutan purba. Ia mengisi waktu dengan bercocok
-              tanam dan menjaga hutan lemon dari serangan kera dan kelelawar
-              yang sering muncul di malam hari.
+              Tahun demi tahun berlalu, Pangeran Djoyo terlihat semakin tua dan
+              mulai tinggal di tengah hutan purba. Ia mengisi waktu dengan
+              bercocok tanam dan menjaga hutan lemon dari serangan kera dan
+              kelelawar yang sering muncul di malam hari.
             </motion.p>
             <motion.p variants={paragraphVariants}>
               Untuk mengobati rasa rindu pada keluarga dan sahabat-sahabatnya,
