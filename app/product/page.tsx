@@ -7,11 +7,11 @@ import { useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 
 import BackgroundImage from "@/public/background/product.png";
+import ComingSoon from "@/public/product/coming-soon.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
-import ComingSoon from "@/public/product/coming-soon.jpg"; 
 
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
@@ -84,14 +84,13 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative inset-0 flex h-[38vh] items-center bg-[#1b1b1b] bg-cover bg-center">
+      <div className="relative flex items-center bg-[#1b1b1b] bg-cover bg-center py-14">
         <Image
           src={BackgroundImage}
           alt="Background"
           quality={100}
           fill
           sizes="100vw"
-          objectFit="cover"
           className="absolute inset-0 z-10"
         />
         <div className="container z-20 mt-2 flex flex-col justify-center gap-4">
@@ -136,14 +135,14 @@ const ProductPage = () => {
                 />
               </div>
               <p>
-                Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar
-                yang tanpa sengaja memicu kejar-kerjaran menegangkan dengan
+                Petualangan Minilemon dimulai dari kecerobohan Ucup dan Togar
+                yang tanpa sengaja memicu kejar-kejaran menegangkan dengan
                 sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
                 menghilang setelah menemukan mesin portal misterius diruang
                 rahasia Kak Bibie.
               </p>
               <p className="">
-                Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan siap
+                Dengan kejadian itu, Anak-anak Minilemon mulai bersatu dan siap
                 bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
                 Tigor.{" "}
                 <Link
@@ -227,7 +226,7 @@ const ProductPage = () => {
               />
             </div>
             <p>
-              Dengan menyadari betapa pentingnya meenjaga dan melestarikan alam,
+              Dengan menyadari betapa pentingnya menjaga dan melestarikan alam,
               Minilemon yang di pimpin Kak Biebie, memulai petualangan mereka
               dalam serial animasi &quot;Minilemon Save The Earth&quot;. Di
               sini, mereka tidak hanya belajar lebih dalam tentang ekosistem
@@ -315,7 +314,14 @@ const ProductPage = () => {
               <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
             </div>
             <p>
-              Minilemon Explorer adalah game petualangan eksplorasi bertema cozy dan seru yang cocok untuk semua kalangan! Ceritakan perjalanan enam anak Minilemon yang berlayar menjelajahi lautan Nusantara dan akhirnya tiba di Pulau Run, Maluku Tengah. Bersama Togar menyusuri keindahan pulau ini, sembari menjalankan misi utama: menemukan 10 harta karun tersembunyi yang tersebar di seluruh penjuru pulau. Rasakan sensasi bertualang, bercocok tanam, dan menjelajahi alam sambil menikmati gameplay yang menyenangkan dan ramah anak.{" "}
+              Minilemon Explorer adalah game petualangan eksplorasi bertema cozy
+              dan seru yang cocok untuk semua kalangan! Ceritakan perjalanan
+              enam anak Minilemon yang berlayar menjelajahi lautan Nusantara dan
+              akhirnya tiba di Pulau Run, Maluku Tengah. Bersama Togar menyusuri
+              keindahan pulau ini, sembari menjalankan misi utama: menemukan 10
+              harta karun tersembunyi yang tersebar di seluruh penjuru pulau.
+              Rasakan sensasi bertualang, bercocok tanam, dan menjelajahi alam
+              sambil menikmati gameplay yang menyenangkan dan ramah anak.{" "}
               <Link
                 className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                 href="javascript:void(0)"
@@ -434,11 +440,11 @@ const ProductPage = () => {
                     YouTube, TikTok, dan Instagram.
                   </motion.p>
                   <motion.p variants={paragraphVariants}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Explicabo officia odit deserunt optio provident consequatur
                     tempora impedit numquam voluptatibus incidunt natus
                     accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "}
+                    debitis voluptatum velit! Quasi!{" "} */}
                     <span
                       onClick={toggleExpand4}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
