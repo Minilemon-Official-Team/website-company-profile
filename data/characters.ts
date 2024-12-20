@@ -1,15 +1,15 @@
 import { StaticImageData } from "next/image";
 
-import Togar from "@/public/characters/togar.png";
-import Slamet from "@/public/characters/slamet.png";
-import Wayan from "@/public/characters/wayan.png";
-import Memey from "@/public/characters/memey.png";
-import Ucup from "@/public/characters/ucup.png";
-import Minggus from "@/public/characters/minggus.png";
 import Amink from "@/public/characters/amink.png";
 import Bibie from "@/public/characters/bibie.png";
-import Tigor from "@/public/characters/tigor.png";
+import Memey from "@/public/characters/memey.png";
+import Minggus from "@/public/characters/minggus.png";
 import Rudi from "@/public/characters/RU-D1.png";
+import Slamet from "@/public/characters/slamet.png";
+import Tigor from "@/public/characters/tigor.png";
+import Togar from "@/public/characters/togar.png";
+import Ucup from "@/public/characters/ucup.png";
+import Wayan from "@/public/characters/wayan.png";
 
 import TitleAmink from "@/public/title/amink-title.png";
 import TitleBibie from "@/public/title/bibie-title.png";
@@ -52,7 +52,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleSlamet,
     fullName: "Slamet",
     description:
-      "SLAMET dibesarkan di lingkungan pesantren Jawa Tengah. Berperilaku santun, kaku dan penurut. setiap pendapatnya memiliki dalil yang ia dapatkan dari Gus nya di pesantren.",
+      "SLAMET dibesarkan di lingkungan pesantren Jawa Tengah. Berperilaku santun, lurus dan penurut. setiap pendapatnya memiliki dalil yang ia dapatkan dari Gus nya di pesantren.",
     image: Slamet,
     strong: 40,
     logic: 50,
