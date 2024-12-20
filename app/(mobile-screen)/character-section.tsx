@@ -1,5 +1,6 @@
 "use client";
 
+import SwipeIndicator from "@/components/swipe-indicator";
 import Slider from "@/components/ui/slider";
 import { charactersData } from "@/data/characters";
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
@@ -67,8 +68,8 @@ function CharacterSection() {
         </div>
       </div>
       {/* Change character picture and status */}
-      <div className="flex justify-center bg-[#dedede]">
-        <div className="max-w-full p-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
+      <div className="flex flex-col items-center justify-center bg-[#dedede] py-6">
+        <div className="max-w-full px-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
               type: "loop",
@@ -93,7 +94,7 @@ function CharacterSection() {
                         <Image
                           src={character.namePicture}
                           alt={character.fullName}
-                          className="w-[100px]"
+                          height={30}
                         />
                       </div>
                       <div className="flex flex-col gap-3">
@@ -123,6 +124,7 @@ function CharacterSection() {
             ))}
           </Splide>
         </div>
+        <SwipeIndicator />
       </div>
     </div>
   );
