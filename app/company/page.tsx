@@ -43,9 +43,9 @@ const CompanyPage = () => {
             </p>
             <p>
               Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
-              melakukan pendekatan terhadap Pendidikan, mulai dari film aniasi,
-              game, panggung boneka, podcast parenting dan berbai macem program
-              lainnya yang membawa karakter positif bagi anak-anak.
+              melakukan pendekatan terhadap Pendidikan, mulai dari film animasi,
+              game, panggung boneka, podcast parenting dan berbagai macam
+              program lainnya yang membawa karakter positif bagi anak-anak.
             </p>
             <p>
               PT. Minilemon Nusantara adalah perusahaan persero terbatas yang
@@ -81,15 +81,15 @@ const CompanyPage = () => {
           </div>
           <ol className="ml-6 list-decimal leading-[1.8] tracking-[0.02em] text-[#c5cce0]/90">
             <li className="text-[#c5cce0]/90">
-              Menciptakan produk kreatif dan eduktif yang bekelanjutan
+              Menciptakan produk kreatif dan edukatif yang bekelanjutan
             </li>
             <li className="text-[#c5cce0]/90">
               Membangung ekosistem yang mandiri, kreatif dan punya daya saing
-              kuat di kanca internsional
+              kuat di kancah internsional
             </li>
             <li className="text-[#c5cce0]/90">
               Membangun sistem integrasi dengan teknlogi yang friendly,
-              transparan, terukur dengan jangkuan yang luas
+              transparan, terukur dengan jangkauan yang luas
             </li>
           </ol>
         </div>
