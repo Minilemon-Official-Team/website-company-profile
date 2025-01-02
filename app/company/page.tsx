@@ -84,7 +84,7 @@ const CompanyPage = () => {
               Menciptakan produk kreatif dan edukatif yang bekelanjutan
             </li>
             <li className="text-[#c5cce0]/90">
-              Membangung ekosistem yang mandiri, kreatif dan punya daya saing
+              Membangun ekosistem yang mandiri, kreatif dan punya daya saing
               kuat di kancah internsional
             </li>
             <li className="text-[#c5cce0]/90">
