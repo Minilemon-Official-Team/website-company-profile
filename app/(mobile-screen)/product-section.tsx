@@ -11,7 +11,7 @@ import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minil
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
-import ComingSoon from "@/public/product/coming-soon.jpg"; 
+import ComingSoon from "@/public/product/coming-soon.jpg";
 
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
@@ -483,14 +483,7 @@ const ProductSection = () => {
                     <motion.p variants={paragraphVariants}>
                       &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap
                       hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
-                      YouTube, TikTok, dan Instagram.
-                    </motion.p>
-                    <motion.p variants={paragraphVariants}>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Explicabo officia odit deserunt optio provident
-                      consequatur tempora impedit numquam voluptatibus incidunt
-                      natus accusantium dignissimos, cupiditate praesentium
-                      voluptas, debitis voluptatum velit! Quasi!{" "}
+                      YouTube, TikTok, dan Instagram.{" "}
                       <span
                         onClick={toggleExpand4}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"

@@ -5,7 +5,7 @@ import Slider from "@/components/ui/slider";
 import { charactersData } from "@/data/characters";
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import BackgroundCharacter from "@/public/background/character-mobile.png";
-import CharacterTitle from "@/public/title/characters-1.png";
+import CharacterTitle from "@/public/title/character.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
@@ -23,7 +23,7 @@ function CharacterSection() {
     if (characterInView) {
       setCurrentLink("#character");
     }
-  }, [characterInView, currentLink]);
+  }, [characterInView, currentLink, setCurrentLink]);
 
   const floatingAnimation = {
     y: [0, -10, 0],
@@ -68,7 +68,7 @@ function CharacterSection() {
         </div>
       </div>
       {/* Change character picture and status */}
-      <div className="flex flex-col items-center justify-center bg-[#dedede] py-6">
+      <div className="flex flex-col items-center justify-center gap-y-2 bg-[#dedede] py-6">
         <div className="max-w-full px-6 400:max-w-screen-400 450:max-w-screen-450 640:max-w-screen-640">
           <Splide
             options={{
@@ -89,7 +89,7 @@ function CharacterSection() {
                     >
                       <Image src={character.image} alt={character.fullName} />
                     </motion.div>
-                    <div className="flex basis-1/2 flex-col justify-center gap-3">
+                    <div className="flex basis-1/2 flex-col justify-center gap-8">
                       <div>
                         <Image
                           src={character.namePicture}
@@ -97,27 +97,42 @@ function CharacterSection() {
                           height={30}
                         />
                       </div>
-                      <div className="flex flex-col gap-3">
-                        <Slider value={character.strong} slider="bg-[#ededed]">
+                      <div className="flex flex-col gap-5">
+                        <Slider
+                          value={character.strong}
+                          slider="bg-[#ededed]"
+                          className="font-bold"
+                        >
                           Strong
                         </Slider>
-                        <Slider value={character.logic} slider="bg-[#ededed]">
+                        <Slider
+                          value={character.logic}
+                          className="font-bold"
+                          slider="bg-[#ededed]"
+                        >
                           Logic
                         </Slider>
                         <Slider
                           value={character.creative}
                           slider="bg-[#ededed]"
+                          className="font-bold"
                         >
                           Creative
                         </Slider>
-                        <Slider value={character.luck} slider="bg-[#ededed]">
+                        <Slider
+                          value={character.luck}
+                          slider="bg-[#ededed]"
+                          className="font-bold"
+                        >
                           Luck
                         </Slider>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <p className="text-sm">{character.description}</p>
+                    <p className="text-sm font-semibold leading-loose">
+                      {character.description}
+                    </p>
                   </div>
                 </div>
               </SplideSlide>
