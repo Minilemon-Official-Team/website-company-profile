@@ -437,14 +437,7 @@ const ProductPage = () => {
                   <motion.p variants={paragraphVariants}>
                     &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap
                     hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
-                    YouTube, TikTok, dan Instagram.
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Explicabo officia odit deserunt optio provident consequatur
-                    tempora impedit numquam voluptatibus incidunt natus
-                    accusantium dignissimos, cupiditate praesentium voluptas,
-                    debitis voluptatum velit! Quasi!{" "} */}
+                    YouTube, TikTok, dan Instagram.{" "}
                     <span
                       onClick={toggleExpand4}
                       className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
