@@ -16,5 +16,5 @@ export const luckiest_guy = Luckiest_Guy({
 export const berlin_sans_fb = localFont({
   src: "./BRLNSR.ttf",
   display: "swap",
-  weight: "normal",
+  weight: "400",
 });

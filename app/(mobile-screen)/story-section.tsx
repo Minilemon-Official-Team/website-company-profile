@@ -41,7 +41,7 @@ function StorySection() {
     setTimeout(() => {
       const titleElement = document.getElementById("story");
       if (titleElement) {
-        const yOffset = -90;
+        const yOffset = -16;
         const yPosition =
           titleElement.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: yPosition, behavior: "smooth" });
