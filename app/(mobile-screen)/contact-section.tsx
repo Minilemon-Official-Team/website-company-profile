@@ -24,7 +24,7 @@ const ContactSection = () => {
     if (contactInView) {
       setCurrentLink("#contact");
     }
-  }, [contactInView, currentLink]);
+  }, [contactInView, currentLink, setCurrentLink]);
 
   return (
     <div className="flex flex-col">

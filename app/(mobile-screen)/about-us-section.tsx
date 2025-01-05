@@ -34,7 +34,7 @@ export default function AboutUsSection() {
     if (aboutInView) {
       setCurrentLink("#about");
     }
-  }, [aboutInView, currentLink]);
+  }, [aboutInView, currentLink, setCurrentLink]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -43,6 +43,18 @@ export default function AboutUsSection() {
       scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setIsExpanded(!isExpanded);
+  };
+
+  const scrollToHeader = () => {
+    setTimeout(() => {
+      const titleElement = document.getElementById("about");
+      if (titleElement) {
+        const yOffset = -90;
+        const yPosition =
+          titleElement.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: yPosition, behavior: "smooth" });
+      }
+    }, 400);
   };
 
   return (
@@ -222,7 +234,10 @@ export default function AboutUsSection() {
                   isExpanded === true ? "flex" : "hidden",
                   "mb-7 mt-3 scale-90",
                 )}
-                onClick={toggleExpand}
+                onClick={() => {
+                  toggleExpand();
+                  scrollToHeader();
+                }}
               >
                 Read Less
               </ButtonLegacy.Primary>

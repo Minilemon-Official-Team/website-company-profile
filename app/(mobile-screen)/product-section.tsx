@@ -54,7 +54,7 @@ const ProductSection = () => {
     if (productInView) {
       setCurrentLink("#product");
     }
-  }, [productInView, currentLink]);
+  }, [productInView, currentLink, setCurrentLink]);
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },

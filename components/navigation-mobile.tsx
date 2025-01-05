@@ -74,7 +74,7 @@ const NavigationMobile = () => {
     if (currentHashIndex !== -1 && currentHashIndex !== currentLinkIndex) {
       setCurrentLinkIndex(currentHashIndex);
     }
-  }, [NAV_LINKS, currentLinkIndex, window.location.hash]);
+  }, [NAV_LINKS, currentLinkIndex]);
 
   useEffect(() => {
     if (scrollPercent > 99) {
