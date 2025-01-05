@@ -32,13 +32,13 @@ function StorySection() {
 
   const toggleExpand = () => {
     if (isExpanded && scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div ref={scrollRef}>
+    <div>
       <div className="relative flex h-full items-center justify-center bg-[#060816] bg-cover bg-center">
         <Image
           src={BackgroundStory}
@@ -53,7 +53,7 @@ function StorySection() {
           ref={refInView}
           className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 py-4"
         >
-          <div id="story" className="z-10 scroll-mt-[50vh]">
+          <div ref={scrollRef} id="story" className="z-10 scroll-mt-[50vh]">
             <Image
               src={StoryTitle}
               alt="Story"

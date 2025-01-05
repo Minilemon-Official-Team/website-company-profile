@@ -1,10 +1,10 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import "@splidejs/react-splide/css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { Placeholder } from "placeholder";
-import "@splidejs/react-splide/css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { useEffect, useRef, useState } from "react";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import { Family, Hero } from "@/data/contribution";
@@ -20,6 +20,8 @@ import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
 
 import BackgroundCompany from "@/public/background/company-mobile.png";
+import Heri from "@/public/contributors/Heri.jpg";
+import Reno from "@/public/contributors/Reno.jpg";
 import CoFounderTitle from "@/public/title/co-founder.png";
 import MisiTitle from "@/public/title/misi.png";
 import OurFamilyTile from "@/public/title/our-family.png";
@@ -27,8 +29,6 @@ import OurHeroTile from "@/public/title/our-hero.png";
 import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
 import TheFounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
-import Reno from "@/public/contributors/Reno.jpg";
-import Heri from "@/public/contributors/Heri.jpg";
 
 function CompanySection() {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
@@ -49,13 +49,13 @@ function CompanySection() {
 
   const toggleExpand = () => {
     if (isExpanded && scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div ref={scrollRef}>
+    <div>
       <div className="relative flex h-full items-center justify-center bg-cover bg-center py-6">
         <Image
           src={BackgroundCompany}
@@ -67,7 +67,7 @@ function CompanySection() {
           objectFit="cover"
         />
         <div className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 pt-3">
-          <div id="company" className="z-10">
+          <div ref={scrollRef} id="company" className="z-10">
             <Image
               ref={refInView}
               src={PtMinilemonNusantaraMobileTitle}

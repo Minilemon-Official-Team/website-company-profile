@@ -40,13 +40,13 @@ export default function AboutUsSection() {
 
   const toggleExpand = () => {
     if (isExpanded && scrollRef.current) {
-      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setIsExpanded(!isExpanded);
   };
 
   return (
-    <div ref={scrollRef}>
+    <div>
       <div className="relative flex h-full items-center justify-center bg-cover bg-center">
         <Image
           src={BackgroundAboutUs}
@@ -61,7 +61,7 @@ export default function AboutUsSection() {
           id="home"
           className="z-10 flex max-w-screen-640 flex-col justify-center gap-y-4 px-6 pb-6 pt-10"
         >
-          <div className="z-10">
+          <div ref={scrollRef} className="z-10">
             <Image
               ref={refInView}
               id="about"
