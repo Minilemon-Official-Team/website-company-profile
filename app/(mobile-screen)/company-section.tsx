@@ -43,7 +43,7 @@ function CompanySection() {
     if (companyInView) {
       setCurrentLink("#company");
     }
-  }, [companyInView, currentLink]);
+  }, [companyInView, currentLink, setCurrentLink]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -52,6 +52,18 @@ function CompanySection() {
       scrollRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     setIsExpanded(!isExpanded);
+  };
+
+  const scrollToHeader = () => {
+    setTimeout(() => {
+      const titleElement = document.getElementById("company");
+      if (titleElement) {
+        const yOffset = -90;
+        const yPosition =
+          titleElement.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: yPosition, behavior: "smooth" });
+      }
+    }, 400);
   };
 
   return (
@@ -453,7 +465,10 @@ function CompanySection() {
                   isExpanded === true ? "flex" : "hidden",
                   "my-7 scale-90",
                 )}
-                onClick={toggleExpand}
+                onClick={() => {
+                  toggleExpand();
+                  scrollToHeader();
+                }}
               >
                 Read Less
               </ButtonLegacy.Primary>
