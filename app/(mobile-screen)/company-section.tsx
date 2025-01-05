@@ -31,6 +31,7 @@ import TheFounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 
 function CompanySection() {
+  const [isMounted, setIsMounted] = useState(false);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const { currentLink, setCurrentLink } = useUpdateCurrentLink();
 
@@ -54,11 +55,17 @@ function CompanySection() {
     setIsExpanded(!isExpanded);
   };
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   const scrollToHeader = () => {
     setTimeout(() => {
       const titleElement = document.getElementById("company");
       if (titleElement) {
-        const yOffset = -90;
+        const yOffset = -16;
         const yPosition =
           titleElement.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: yPosition, behavior: "smooth" });

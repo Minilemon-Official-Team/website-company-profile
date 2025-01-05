@@ -31,17 +31,20 @@ import { useEffect, useRef, useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 
 const ProductSection = () => {
-  const [isExpanded1, setIsExpanded1] = useState<boolean>(false);
-  const [isExpanded2, setIsExpanded2] = useState<boolean>(false);
-  const [isExpanded3, setIsExpanded3] = useState<boolean>(false);
-  const [isExpanded4, setIsExpanded4] = useState<boolean>(false);
-  const [isExpanded5, setIsExpanded5] = useState<boolean>(false);
+  const [isExpanded, setIsExpanded] = useState<Record<number, boolean>>({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+  });
 
-  const toggleExpand1 = () => setIsExpanded1(!isExpanded1);
-  const toggleExpand2 = () => setIsExpanded2(!isExpanded2);
-  const toggleExpand3 = () => setIsExpanded3(!isExpanded3);
-  const toggleExpand4 = () => setIsExpanded4(!isExpanded4);
-  const toggleExpand5 = () => setIsExpanded5(!isExpanded5);
+  const toggleExpand = (index: number) => {
+    setIsExpanded((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
 
   const { currentLink, setCurrentLink } = useUpdateCurrentLink();
 
@@ -85,6 +88,18 @@ const ProductSection = () => {
     exit: { opacity: 0, y: 20 },
   };
 
+  const scrollToTopProduct = (productId: number) => {
+    setTimeout(() => {
+      const productElement = document.getElementById(`product-${productId}`);
+      if (productElement) {
+        const yOffset = 0;
+        const yPosition =
+          productElement.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: yPosition, behavior: "smooth" });
+      }
+    }, 800);
+  };
+
   return (
     <div className="flex w-full flex-col">
       <div className="relative inset-0 flex h-[38vh] items-center bg-[#1b1b1b] bg-cover bg-center">
@@ -119,7 +134,7 @@ const ProductSection = () => {
       </div>
 
       {/* Product 1 */}
-      <div className="w-full bg-[#1b1b1b] py-14">
+      <div className="w-full bg-[#1b1b1b] py-14" id="product-1">
         <div className="mx-auto max-w-screen-640 px-6">
           <div className="container flex flex-col items-center justify-center gap-4">
             <div className="relative h-[396px] w-full sm:h-[492px]">
@@ -157,16 +172,16 @@ const ProductSection = () => {
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
-                  onClick={toggleExpand1}
+                  onClick={() => toggleExpand(1)}
                 >
-                  <span className={isExpanded1 == true ? "hidden" : "flex"}>
+                  <span className={isExpanded[1] == true ? "hidden" : "flex"}>
                     Read More{" "}
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
               </p>
               <AnimatePresence>
-                {isExpanded1 && (
+                {isExpanded[1] && (
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -186,7 +201,10 @@ const ProductSection = () => {
                       para pemburu? Saksikan keseruan dan ketegangan film
                       &quot;Petualangan si Minilemon&quot;!{" "}
                       <span
-                        onClick={toggleExpand1}
+                        onClick={() => {
+                          toggleExpand(1);
+                          scrollToTopProduct(1);
+                        }}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                       >
                         Read Less
@@ -210,7 +228,7 @@ const ProductSection = () => {
       </div>
 
       {/* Product 2 */}
-      <div className="w-full bg-[#d2e1f4] py-14">
+      <div className="w-full bg-[#d2e1f4] py-14" id="product-2">
         <div className="mx-auto max-w-screen-640 px-6">
           <div className="container flex flex-col items-center justify-center gap-4">
             <div className="relative h-[396px] w-full sm:h-[492px]">
@@ -246,16 +264,16 @@ const ProductSection = () => {
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
-                  onClick={toggleExpand2}
+                  onClick={() => toggleExpand(2)}
                 >
-                  <span className={isExpanded2 === true ? "hidden" : "flex"}>
+                  <span className={isExpanded[2] === true ? "hidden" : "flex"}>
                     Read More{" "}
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
               </p>
               <AnimatePresence>
-                {isExpanded2 && (
+                {isExpanded[2] && (
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -284,7 +302,10 @@ const ProductSection = () => {
                       menyenangkan sembari belajar tentang pentingnya menjaga
                       kelestarian alam kita!{" "}
                       <span
-                        onClick={toggleExpand2}
+                        onClick={() => {
+                          scrollToTopProduct(2);
+                          toggleExpand(2);
+                        }}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                       >
                         Read Less
@@ -312,17 +333,10 @@ const ProductSection = () => {
         exit="exit"
         transition={{ duration: 0.5 }}
         className="w-full bg-[#d2f4d3] py-14"
+        id="product-3"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
           <motion.div className="container flex flex-col items-center justify-center gap-4">
-            {/* <div className="relative w-[280px] sm:w-[350px] h-[396px] sm:h-[492px]">
-                  <Placeholder
-                    height={492}
-                    width={350}
-                    background="#333"
-                    color="#fff"
-                  />
-                </div> */}
             <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
               <Image
                 src={ComingSoon}
@@ -350,16 +364,16 @@ const ProductSection = () => {
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
-                  onClick={toggleExpand3}
+                  onClick={() => toggleExpand(3)}
                 >
-                  <span className={isExpanded3 === true ? "hidden" : "flex"}>
+                  <span className={isExpanded[3] === true ? "hidden" : "flex"}>
                     Read More{" "}
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
               </motion.p>
               <AnimatePresence>
-                {isExpanded3 && (
+                {isExpanded[3] && (
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -393,7 +407,10 @@ const ProductSection = () => {
                       Mari bergabung dalam petualangan seru di Minilemon
                       Explorer dan jelajahi kekayaan Nusantara!{" "}
                       <span
-                        onClick={toggleExpand3}
+                        onClick={() => {
+                          toggleExpand(3);
+                          scrollToTopProduct(3);
+                        }}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                       >
                         Read Less
@@ -421,6 +438,7 @@ const ProductSection = () => {
         exit="exit"
         transition={{ duration: 0.5 }}
         className="w-full bg-[#f4d3e8] py-14"
+        id="product-4"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
           <motion.div className="container flex flex-col items-center justify-center gap-4">
@@ -459,16 +477,16 @@ const ProductSection = () => {
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
-                  onClick={toggleExpand4}
+                  onClick={() => toggleExpand(4)}
                 >
-                  <span className={isExpanded4 ? "hidden" : "flex"}>
+                  <span className={isExpanded[4] ? "hidden" : "flex"}>
                     Read More{" "}
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
               </motion.p>
               <AnimatePresence>
-                {isExpanded4 && (
+                {isExpanded[4] && (
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -485,7 +503,10 @@ const ProductSection = () => {
                       hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
                       YouTube, TikTok, dan Instagram.{" "}
                       <span
-                        onClick={toggleExpand4}
+                        onClick={() => {
+                          toggleExpand(4);
+                          scrollToTopProduct(4);
+                        }}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                       >
                         Read Less
@@ -508,7 +529,7 @@ const ProductSection = () => {
         </motion.div>
       </motion.div>
 
-      {/* Produk 5 */}
+      {/* Product 5 */}
       <motion.div
         variants={fifthDivVariants}
         initial="hidden"
@@ -516,6 +537,7 @@ const ProductSection = () => {
         exit="exit"
         transition={{ duration: 0.5 }}
         className="flex flex-row bg-[#f4efd2] py-14"
+        id="product-5"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
           <motion.div className="container flex flex-col items-center justify-center gap-4">
@@ -554,16 +576,16 @@ const ProductSection = () => {
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
-                  onClick={toggleExpand5}
+                  onClick={() => toggleExpand(5)}
                 >
-                  <span className={isExpanded5 ? "hidden" : "flex"}>
+                  <span className={isExpanded[5] ? "hidden" : "flex"}>
                     Read More{" "}
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
               </motion.p>
               <AnimatePresence>
-                {isExpanded5 && (
+                {isExpanded[5] && (
                   <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -578,7 +600,10 @@ const ProductSection = () => {
                       pertumbuhan. di mana kesenangan dan pelajaran hidup
                       menyatu dalam sebuah pertunjukan.{" "}
                       <span
-                        onClick={toggleExpand5}
+                        onClick={() => {
+                          toggleExpand(5);
+                          scrollToTopProduct(5);
+                        }}
                         className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                       >
                         Read Less
