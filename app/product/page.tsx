@@ -7,7 +7,7 @@ import { useState } from "react";
 import { FaYoutube } from "react-icons/fa6";
 
 import BackgroundImage from "@/public/background/product.png";
-import ComingSoon from "@/public/product/coming-soon.jpg";
+import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
@@ -300,7 +300,7 @@ const ProductPage = () => {
           <div className="mb-0 flex">
             <div className="relative flex h-[492px] w-[350px] flex-col items-center justify-center bg-gray-500">
               <Image
-                src={ComingSoon}
+                src={MinilemonExplorerToJogja}
                 alt="Minilemon Explorer!"
                 fill
                 sizes="100vw"
