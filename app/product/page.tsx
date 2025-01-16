@@ -298,14 +298,8 @@ const ProductPage = () => {
       <div className="flex flex-row bg-[#d2f4d3] py-14">
         <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
           <div className="mb-0 flex">
-            <div className="relative flex h-[492px] w-[350px] flex-col items-center justify-center bg-gray-500">
-              <Image
-                src={MinilemonExplorerToJogja}
-                alt="Minilemon Explorer!"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
+            <div className="relative flex h-fit w-[350px] flex-col items-center justify-center bg-gray-500">
+              <Image src={MinilemonExplorerToJogja} alt="Minilemon Explorer!" />
             </div>
           </div>
           <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
