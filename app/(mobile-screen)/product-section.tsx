@@ -7,11 +7,11 @@ import {
   thirdDivVariants,
 } from "@/lib/animations/divVariants";
 import BackgroundImage from "@/public/background/product-mobile.png";
+import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
 import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
-import ComingSoon from "@/public/product/coming-soon.jpg";
 
 import MinilemonExplorerTitle1 from "@/public/title/minilemon-explorer-1.png";
 import MinilemonExplorerTitle2 from "@/public/title/minilemon-explorer-2.png";
@@ -339,7 +339,7 @@ const ProductSection = () => {
           <motion.div className="container flex flex-col items-center justify-center gap-4">
             <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
               <Image
-                src={ComingSoon}
+                src={MinilemonExplorerToJogja}
                 alt="coming soon"
                 layout="fill"
                 objectFit="fill"
