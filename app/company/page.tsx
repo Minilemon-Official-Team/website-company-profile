@@ -13,12 +13,14 @@ import VisiTitle from "@/public/title/visi.png";
 
 import Heri from "@/public/contributors/Heri.jpg";
 import Reno from "@/public/contributors/Reno.jpg";
+import Banner from "@/components/ui/banner/banner";
+import BannerWrapper from "@/components/ui/banner/bannerWrapper";
 
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
       {/* PT Minilemon Indonesia */}
-      <div className="relative flex flex-col items-center bg-[#1b1b1b] bg-cover bg-center">
+      {/* <div className="relative flex flex-col items-center bg-[#1b1b1b] bg-cover bg-center">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -33,7 +35,7 @@ const CompanyPage = () => {
               src={PTMinilemonNusantaraTitle}
               alt="PT Minilemon Nusantara"
             />
-          </div>
+        </div>
           <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-[0.07em] text-[#c5cce0]">
             <p>
               PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
@@ -57,7 +59,43 @@ const CompanyPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <BannerWrapper
+        backgroundImage={BackgroundImage}
+        backgroundAlt="Background"
+        bgColor="#1b1b1b"
+        // className="py-0"
+      >
+        <Banner
+          productTitle={PTMinilemonNusantaraTitle}
+          productTitleAlt="PT Minilemon Nusantara"
+          className="gap-6 py-14"
+        >
+          <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-[0.07em] text-[#c5cce0]">
+            <p>
+              PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
+              Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
+              Karakter Anak dan nilai - nilai kebaikan melalui berbagai Program
+              Pendidikan berbasis seni, hiburan dan teknologi.
+            </p>
+            <p>
+              Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
+              melakukan pendekatan terhadap Pendidikan, mulai dari film animasi,
+              game, panggung boneka, podcast parenting dan berbagai macam
+              program lainnya yang membawa karakter positif bagi anak-anak.
+            </p>
+            <p>
+              PT. Minilemon Nusantara adalah perusahaan persero terbatas yang
+              merupakan bagian dari dTopeng Kingdom Foundation, sebuah Yayasan
+              yang memiliki Visi dan Misi dalam penyelamatan nilai - nilai
+              Sejarah dan Budaya serta benda - benda artefak yang memiliki nilai
+              sejarah bagi bangsa Indonesia dengan melakukan pembangunan Museum
+              di berbagi tempat di Indonesia.
+            </p>
+          </div>
+        </Banner>
+      </BannerWrapper>
 
       {/* Visi dan Misi */}
       <div className="bg-[#1b1b1b] py-14">
