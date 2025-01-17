@@ -9,7 +9,7 @@ import {
 import BackgroundImage from "@/public/background/product-mobile.png";
 import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon-2.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.jpg";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth-2.png";
 
