@@ -352,15 +352,21 @@ const ProductSection = () => {
                 <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
                 <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
               </div>
-              <motion.p variants={paragraphVariants}>
-                Dengan menyadari betapa pentingnya menjaga dan melestarikan
-                alam, Minilemon yang di pimpin oleh Kak Bibie memulai
-                petualangan seru melalui serial animasi pramuka. Dalam
-                petualangan ini, mereka tidak hanya belajar lebih dalam tentang
-                ekosistem yang rumit, keanekaragaman hayati yang menakjubkan,
-                dan pentingnya konservasi alam, tetapi juga menanamkan
-                nilai-nilai positif dan tanggung jawab terhadap alam dalam
-                setiap langkah mereka.{" "}
+              <p>
+                Minilemon Explorer adalah game interaktif yang memadukan
+                storytelling dan edukasi, menghadirkan pengalaman belajar
+                sekaligus bermain yang seru dalam balutan tema petualangan.
+                Dalam game ini, kamu akan diajak menjelajahi berbagai tempat
+                menarik di Nusantara, salah satunya adalah kota budaya yang
+                memesona, Yogyakarta!
+              </p>
+              <p>
+                Tak hanya sampai di situ, Minilemon Explorer terus berkembang
+                dengan memperluas peta permainan ke berbagai lokasi ikonik di
+                seluruh Indonesia. Dari megahnya hutan Kalimantan, indahnya
+                pantai di Bali, hingga eksotisme alam Papua, setiap wilayah
+                menyuguhkan tema yang unik dan mekanisme permainan yang selalu
+                baru.{" "}
                 <Link
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
@@ -371,7 +377,7 @@ const ProductSection = () => {
                     <span className="ml-1 flex items-center text-xs">❯</span>
                   </span>
                 </Link>
-              </motion.p>
+              </p>
               <AnimatePresence>
                 {isExpanded[3] && (
                   <motion.div
@@ -383,29 +389,15 @@ const ProductSection = () => {
                     className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
                   >
                     <motion.p variants={paragraphVariants}>
-                      Minilemon Explorer adalah game petualangan eksplorasi
-                      bertema cozy dan seru yang cocok untuk semua kalangan!
-                      Ceritakan perjalanan enam anak Minilemon yang berlayar
-                      menjelajahi lautan Nusantara dan akhirnya tiba di Pulau
-                      Run, Maluku Tengah. Bersama Togar menyusuri keindahan
-                      pulau ini, sembari menjalankan misi utama: menemukan 10
-                      harta karun tersembunyi yang tersebar di seluruh penjuru
-                      pulau. Rasakan sensasi bertualang, bercocok tanam, dan
-                      menjelajahi alam sambil menikmati gameplay yang
-                      menyenangkan dan ramah anak.
+                      Ke depannya, kami akan menghadirkan gameplay bertema
+                      Pramuka di Jogja, di mana kamu bisa merasakan asyiknya
+                      memancing, berburu, hingga membangun tenda di alam
+                      terbuka.
                     </motion.p>
                     <motion.p variants={paragraphVariants}>
-                      Game ini akan terus berkembang dengan memperluas peta ke
-                      berbagai lokasi ikonik di Nusantara seperti Kalimantan,
-                      Sumatera, Sulawesi, Bali, Papua, NTB, dan NTT. Setiap
-                      wilayah menghadirkan tema unik dan mekanik permainan baru.
-                      Dalam rencana ke depan Minilemon Explorer akan bisa
-                      menikmati gameplay bertema Pramuka di Jogja, lengkap
-                      dengan aktivitas memancing, berburu, dan membangun tenda.
-                    </motion.p>
-                    <motion.p variants={paragraphVariants}>
-                      Mari bergabung dalam petualangan seru di Minilemon
-                      Explorer dan jelajahi kekayaan Nusantara!{" "}
+                      Yuk, gabung dalam petualangan seru di Minilemon Explorer!
+                      Bersama, kita jelajahi kekayaan budaya dan keindahan alam
+                      Nusantara yang luar biasa.{" "}
                       <span
                         onClick={() => {
                           toggleExpand(3);
