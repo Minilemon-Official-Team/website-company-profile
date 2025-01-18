@@ -1,6 +1,8 @@
 "use client";
+
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { Placeholder } from "placeholder";
@@ -186,7 +188,7 @@ function CompanySection() {
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-640 text-start">
+                <motion.div className="max-w-screen-640 text-start">
                   <motion.ul>
                     <motion.li>
                       <motion.p
@@ -216,7 +218,7 @@ function CompanySection() {
                       </motion.p>
                     </motion.li>
                   </motion.ul>
-                </motion.p>
+                </motion.div>
               </motion.div>
             </motion.div>
             <motion.div

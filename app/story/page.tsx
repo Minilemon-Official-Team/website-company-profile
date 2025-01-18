@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import BackgroundImage from "@/public/background/story.png";
 import StoryTitle from "@/public/title/story.png";
+import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import Banner from "@/components/ui/banner/banner";
 
 const StoryPage = () => {
   const containerVariants = {
@@ -34,7 +35,7 @@ const StoryPage = () => {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#d2def4]">
       <div className="flex w-full flex-grow flex-col">
         <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
-          <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14">
+          {/* <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14">
             <Image
               src={BackgroundImage}
               alt="Cave"
@@ -79,7 +80,44 @@ const StoryPage = () => {
                 ilmu dan kedamaian.
               </motion.p>
             </div>
-          </div>
+          </div> */}
+
+          <BannerWrapper
+            bgColor="#1b1b1b"
+            backgroundImage={BackgroundImage}
+            backgroundAlt="Background"
+            className="bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14"
+          >
+            <Banner
+              productTitle={StoryTitle}
+              productTitleAlt="Our Product"
+              className="mb-3 gap-4"
+            >
+              <motion.p
+                initial="hidden"
+                animate="visible"
+                variants={paragraphVariants}
+                className="mt-2"
+              >
+                Berawal dari kisah <b>Kakek Djoyo</b> yang merupakan seorang
+                pangeran sah penerus tahta ayahnya, seorang raja di tanah Jawa.
+                Sejak kecil, Pangeran Djoyo sudah kehilangan ibunya, seorang
+                permaisuri yang meninggal karena sakit. Keberadaannya sebagai
+                pewaris sah menjadi ancaman bagi saudara-saudaranya yang
+                berlomba merebut tahta dengan penuh intrik dan tipu muslihat
+                yang jahat.
+              </motion.p>
+              <motion.p
+                initial="hidden"
+                animate="visible"
+                variants={paragraphVariants}
+              >
+                Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
+                meninggalkan istana dan memulai perjalanan panjang untuk mencari
+                ilmu dan kedamaian.
+              </motion.p>
+            </Banner>
+          </BannerWrapper>
         </div>
         <div className="container flex flex-grow flex-col gap-8 py-14 leading-relaxed tracking-wider">
           <motion.div

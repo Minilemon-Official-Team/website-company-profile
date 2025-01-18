@@ -24,6 +24,8 @@ import MinilemonPanggungBonekaTitle1 from "@/public/title/panggung-boneka-minile
 import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minilemon-2.png";
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
+import Banner from "@/components/ui/banner/banner";
+import BannerWrapper from "@/components/ui/banner/bannerWrapper";
 
 const ProductPage = () => {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -84,7 +86,7 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      <div className="relative flex items-center bg-[#1b1b1b] bg-cover bg-center py-14">
+      {/* <div className="relative flex items-center bg-[#1b1b1b] bg-cover bg-center py-14">
         <Image
           src={BackgroundImage}
           alt="Background"
@@ -106,7 +108,29 @@ const ProductPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <BannerWrapper
+        bgColor="#1b1b1b"
+        backgroundImage={BackgroundImage}
+        backgroundAlt="Background"
+        className="py-14"
+      >
+        <Banner
+          productTitle={ProductTitle}
+          productTitleAlt="Our Product"
+          className="mt-2 justify-center gap-4"
+        >
+          <div className="z-20 mb-3 flex flex-col leading-loose tracking-wider">
+            <p className="text-[#d3dcf3]">
+              Di era modernisasi dan selera yang semakin beragam, Minilemon
+              memproduksi banyak varian produk digital maupun konvensional, agar
+              nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
+              banyak penggemar khususnya anak-anak usia 3 sampai 7 tahun.
+            </p>
+          </div>
+        </Banner>
+      </BannerWrapper>
 
       {/* Product 1 */}
       <div className="bg-[#1b1b1b] py-14">
