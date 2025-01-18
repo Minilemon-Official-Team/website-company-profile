@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 import BackgroundImage from "@/public/background/story.png";
 import StoryTitle from "@/public/title/story.png";
