@@ -3,7 +3,7 @@
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
 import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
-import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.png";
+import CoverPetualanganMinilemon from "@/public/product/petualangan-minilemon.jpg";
 import CoverPostParenting from "@/public/product/poster-parenting.png";
 import CoverSaveTheEarth from "@/public/product/save-the-earth.png";
 
