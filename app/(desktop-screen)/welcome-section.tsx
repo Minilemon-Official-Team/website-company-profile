@@ -12,7 +12,6 @@ import Link from "next/link";
 function WelcomeSection() {
   return (
     <div className="w-full bg-gradient-to-b from-[#0a040e] to-[#3a1c52] text-[#d0dff4]">
-      test
       <div className="container my-16 hidden flex-col gap-4 px-10 lg:flex lg:px-0">
         <p className="text-xl font-bold uppercase tracking-wide text-[#d5ddf4]">
           welcome to
