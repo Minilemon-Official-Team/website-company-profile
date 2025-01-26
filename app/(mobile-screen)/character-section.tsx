@@ -7,12 +7,14 @@ import BackgroundCharacter from "@/public/background/character-mobile.png";
 import CharacterTitle from "@/public/title/character.png";
 
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
+import { cn } from "@/lib/utils";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { luckiest_guy } from "../fonts";
 
 export default function CharacterSection() {
   return (
@@ -120,13 +122,16 @@ const CharacterSwiper = () => {
                   </div>
 
                   <div className="flex h-full w-1/2 flex-col justify-center gap-5 bg-[#2b2c2e] pr-5">
-                    <div>
-                      <p
-                        className="flex h-[30px] w-[80%] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5 text-lg font-bold italic tracking-wider text-gray-800"
-                        style={{
-                          clipPath: "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
-                        }}
-                      >
+                    <div
+                      className={cn(
+                        luckiest_guy.className,
+                        "flex h-[40px] w-[80%] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5",
+                      )}
+                      style={{
+                        clipPath: "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
+                      }}
+                    >
+                      <p className="skew-x-[-15deg] text-2xl tracking-wider text-gray-800">
                         {character.fullName}
                       </p>
                     </div>

@@ -1,9 +1,11 @@
+import { luckiest_guy } from "@/app/fonts";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
 
 function SwipeIndicator() {
   return (
-    <div className="flex w-fit items-center text-2xl text-gray-400">
+    <div className="flex w-fit items-center">
       <motion.span
         animate={{
           x: [0, 2, 0, 2, 0],
@@ -14,6 +16,10 @@ function SwipeIndicator() {
           repeatDelay: 1.5,
           ease: "easeInOut",
         }}
+        className={cn(
+          luckiest_guy.className,
+          "text-xl tracking-wider text-gray-400/80",
+        )}
       >
         SWIPE
       </motion.span>
@@ -30,8 +36,8 @@ function SwipeIndicator() {
         className="flex items-center"
       >
         <IoIosArrowForward className="text-3xl text-gray-400/60" />
-        <IoIosArrowForward className="-ml-4 text-3xl text-gray-400/80" />
-        <IoIosArrowForward className="-ml-4 text-3xl text-gray-400" />
+        <IoIosArrowForward className="-ml-5 text-3xl text-gray-400/80" />
+        <IoIosArrowForward className="-ml-5 text-3xl text-gray-400" />
       </motion.div>
     </div>
   );
