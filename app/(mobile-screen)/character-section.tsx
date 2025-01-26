@@ -95,61 +95,58 @@ const CharacterSwiper = () => {
             arrows: false,
           }}
         >
-          {charactersData
-            .sort((a, b) => b.description.length - a.description.length)
-            .map((character) => (
-              <SplideSlide key={character.id}>
-                <div className="flex w-full flex-col items-center justify-start gap-y-4">
-                  <div className="flex h-[230px] w-full flex-row items-start md:h-[400px]">
-                    <div
-                      style={{
-                        backgroundColor: character.bgcolor,
-                      }}
-                      className="flex h-full w-1/2 items-center justify-center overflow-hidden"
+          {charactersData.map((character) => (
+            <SplideSlide key={character.id}>
+              <div className="flex w-full flex-col items-center justify-start gap-y-4">
+                <div className="flex h-[230px] w-full flex-row items-start md:h-[400px]">
+                  <div
+                    style={{
+                      backgroundColor: character.bgcolor,
+                    }}
+                    className="flex h-full w-1/2 items-center justify-center overflow-hidden"
+                  >
+                    <motion.div
+                      animate={floatingAnimation}
+                      className="relative h-[300px] w-full md:h-[400px]"
                     >
-                      <motion.div
-                        animate={floatingAnimation}
-                        className="relative h-[300px] w-full md:h-[400px]"
-                      >
-                        <Image
-                          src={character.image}
-                          alt={character.fullName}
-                          layout="fill"
-                          sizes="100vw"
-                          objectFit="cover"
-                        />
-                      </motion.div>
-                    </div>
+                      <Image
+                        src={character.image}
+                        alt={character.fullName}
+                        layout="fill"
+                        sizes="100vw"
+                        objectFit="cover"
+                      />
+                    </motion.div>
+                  </div>
 
-                    <div className="flex h-full w-1/2 flex-col justify-center gap-5 bg-[#2b2c2e] pr-5">
-                      <div>
-                        <p
-                          className="flex h-[30px] w-[80%] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5 text-lg font-bold italic tracking-wider text-gray-800"
-                          style={{
-                            clipPath:
-                              "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
-                          }}
-                        >
-                          {character.fullName}
-                        </p>
-                      </div>
-                      <div className="flex flex-col gap-2 px-3">
-                        <SliderMobile name="Strong" value={character.strong} />
-                        <SliderMobile name="Logic" value={character.logic} />
-                        <SliderMobile
-                          name="Creative"
-                          value={character.creative}
-                        />
-                        <SliderMobile name="Luck" value={character.luck} />
-                      </div>
+                  <div className="flex h-full w-1/2 flex-col justify-center gap-5 bg-[#2b2c2e] pr-5">
+                    <div>
+                      <p
+                        className="flex h-[30px] w-[80%] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5 text-lg font-bold italic tracking-wider text-gray-800"
+                        style={{
+                          clipPath: "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
+                        }}
+                      >
+                        {character.fullName}
+                      </p>
+                    </div>
+                    <div className="flex flex-col gap-2 px-3">
+                      <SliderMobile name="Strong" value={character.strong} />
+                      <SliderMobile name="Logic" value={character.logic} />
+                      <SliderMobile
+                        name="Creative"
+                        value={character.creative}
+                      />
+                      <SliderMobile name="Luck" value={character.luck} />
                     </div>
                   </div>
-                  <p className="px-6 text-sm font-semibold leading-loose">
-                    {character.description}
-                  </p>
                 </div>
-              </SplideSlide>
-            ))}
+                <p className="px-6 text-sm font-semibold leading-loose">
+                  {character.description}
+                </p>
+              </div>
+            </SplideSlide>
+          ))}
         </Splide>
       </div>
       {/* Swipe Indicator */}
