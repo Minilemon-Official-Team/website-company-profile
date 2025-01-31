@@ -14,7 +14,7 @@ import VisiTitle from "@/public/title/visi.png";
 import Heri from "@/public/contributors/Heri.jpg";
 import Reno from "@/public/contributors/Reno.jpg";
 import Banner from "@/components/ui/banner/banner";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 
 const CompanyPage = () => {
   return (

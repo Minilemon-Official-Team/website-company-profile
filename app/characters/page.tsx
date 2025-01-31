@@ -7,7 +7,7 @@ import Character from "@/components/character";
 import { charactersData } from "@/data/characters";
 import BackgroundImage from "@/public/background/character.png";
 import CharacterTitle from "@/public/title/character.png";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 import Banner from "@/components/ui/banner/banner";
 
 const CharactersPage = () => {

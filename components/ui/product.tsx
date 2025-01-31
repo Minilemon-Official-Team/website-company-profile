@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import ImageProduct from "./imageProduct";
+import ImageProduct from "./image-product";
 import { FaYoutube } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 
