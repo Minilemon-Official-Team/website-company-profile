@@ -100,7 +100,7 @@ const CharacterSwiper = () => {
           {charactersData.map((character) => (
             <SplideSlide key={character.id}>
               <div className="flex w-full flex-col items-center justify-start gap-y-4">
-                <div className="flex h-[230px] w-full flex-row items-start md:h-[400px]">
+                <div className="flex h-[190px] w-full flex-row items-start md:h-[400px]">
                   <div
                     style={{
                       backgroundColor: character.bgcolor,
@@ -109,7 +109,7 @@ const CharacterSwiper = () => {
                   >
                     <motion.div
                       animate={floatingAnimation}
-                      className="relative h-[300px] w-full md:h-[400px]"
+                      className="relative h-[230px] w-full md:h-[400px]"
                     >
                       <Image
                         src={character.image}
@@ -121,11 +121,11 @@ const CharacterSwiper = () => {
                     </motion.div>
                   </div>
 
-                  <div className="flex h-full w-1/2 flex-col justify-center gap-5 bg-[#2b2c2e] pr-5">
+                  <div className="flex h-full w-1/2 flex-col justify-center gap-3 bg-[#2b2c2e] pr-5">
                     <div
                       className={cn(
                         luckiest_guy.className,
-                        "flex h-[40px] w-[80%] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5",
+                        "flex h-[30px] w-full items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5",
                       )}
                       style={{
                         clipPath: "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
@@ -135,7 +135,7 @@ const CharacterSwiper = () => {
                         {character.fullName}
                       </p>
                     </div>
-                    <div className="flex flex-col gap-2 px-3">
+                    <div className="flex flex-col gap-1 px-3">
                       <SliderMobile name="Strong" value={character.strong} />
                       <SliderMobile name="Logic" value={character.logic} />
                       <SliderMobile

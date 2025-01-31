@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface SliderProps {
@@ -10,16 +10,24 @@ const SliderMobile = ({ name, value: valueItem }: SliderProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [value, setValue] = useState(0);
+  const controls = useAnimation();
 
   useEffect(() => {
     if (!isInView) {
       setValue(0);
+      controls.set({ width: "0%" });
       return;
     }
 
-    const duration = 1500;
+    const baseDuration = 2; // maksimal durasi perubahan width
+    const duration = baseDuration * (valueItem / 100);
+    controls.start({
+      width: "100%",
+      transition: { duration, ease: "easeOut" },
+    });
+
     const step = 10;
-    const increment = valueItem / (duration / step);
+    const increment = valueItem / ((duration * 1000) / step);
     let start = 0;
 
     const interval = setInterval(() => {
@@ -34,15 +42,19 @@ const SliderMobile = ({ name, value: valueItem }: SliderProps) => {
   return (
     <div className="w-full" ref={ref}>
       <div className="flex w-full max-w-full flex-row items-center justify-start overflow-hidden">
-        <p
-          className="flex h-[20px] w-full items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] px-5 font-bold uppercase italic tracking-wider text-gray-800"
-          style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0% 100%)" }}
+        <motion.p
+          className="flex h-[20px] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] px-5 text-xs font-bold uppercase italic tracking-wider text-gray-800"
+          style={{
+            clipPath: "polygon(6px 0, 100% 0, 100% 20px, 0px 20px)",
+          }}
+          animate={controls}
         >
           {name}
-        </p>
+        </motion.p>
+
         <motion.p
-          className="text-md -ml-5 flex h-[30px] w-[50px] items-center justify-center bg-[#fdd05b] font-bold italic text-gray-800"
-          style={{ clipPath: "polygon(10% 0, 100% 0, 90% 100%, 0% 100%)" }}
+          className="-ml-5 flex h-[25px] w-[55px] items-center justify-center bg-[#fdd05b] text-xs font-bold italic text-gray-800"
+          style={{ clipPath: "polygon(20% 0, 100% 0, 80% 100%, 0% 100%)" }}
         >
           {value}%
         </motion.p>
