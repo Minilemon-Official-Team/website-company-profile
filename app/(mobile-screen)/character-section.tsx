@@ -109,13 +109,13 @@ const CharacterSwiper = () => {
                   >
                     <motion.div
                       animate={floatingAnimation}
-                      className="relative h-[230px] w-full md:h-[400px]"
+                      className="flex h-[250px] w-full items-center justify-center"
                     >
                       <Image
                         src={character.image}
                         alt={character.fullName}
-                        layout="fill"
                         sizes="100vw"
+                        height={200}
                         objectFit="cover"
                       />
                     </motion.div>
