@@ -1,6 +1,9 @@
 import BackgroundImage from "@/public/background/about-new.png";
 import IdeaTitle from "@/public/title/idea.png";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import MessageTitle from "@/public/title/message.png";
+import PsychographicTitle from "@/public/title/psychographic.png";
+import TreatmentTitle from "@/public/title/treatment.png";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 import Banner from "@/components/ui/banner/banner";
 import { infoData } from "@/data/info";
 import InfoSection from "@/components/info-section";

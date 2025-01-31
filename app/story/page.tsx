@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import BackgroundImage from "@/public/background/story.png";
 import StoryTitle from "@/public/title/story.png";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 import Banner from "@/components/ui/banner/banner";
 
 const StoryPage = () => {
