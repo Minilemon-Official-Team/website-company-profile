@@ -1,10 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaYoutube } from "react-icons/fa6";
 
 import BackgroundImage from "@/public/background/product.png";
 import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
@@ -25,33 +23,25 @@ import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minile
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
 import Banner from "@/components/ui/banner/banner";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
+import Product from "@/components/ui/product";
+// import exp from "constants";
 
 const ProductPage = () => {
-  const [isExpanded1, setIsExpanded1] = useState(false);
-  const [isExpanded2, setIsExpanded2] = useState(false);
-  const [isExpanded3, setIsExpanded3] = useState(false);
-  const [isExpanded4, setIsExpanded4] = useState(false);
-  const [isExpanded5, setIsExpanded5] = useState(false);
+  const [isExpanded, setIsExpanded] = useState<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
-  const toggleExpand1 = () => {
-    setIsExpanded1(!isExpanded1);
-  };
-
-  const toggleExpand2 = () => {
-    setIsExpanded2(!isExpanded2);
-  };
-
-  const toggleExpand3 = () => {
-    setIsExpanded3(!isExpanded3);
-  };
-
-  const toggleExpand4 = () => {
-    setIsExpanded4(!isExpanded4);
-  };
-
-  const toggleExpand5 = () => {
-    setIsExpanded5(!isExpanded5);
+  const toggleExpand = (expand: number) => {
+    setIsExpanded((prevState) => {
+      const newState = [...prevState];
+      newState[expand] = !newState[expand];
+      return newState;
+    });
   };
 
   const containerVariants = {
@@ -86,30 +76,6 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      {/* <div className="relative flex items-center bg-[#1b1b1b] bg-cover bg-center py-14">
-        <Image
-          src={BackgroundImage}
-          alt="Background"
-          quality={100}
-          fill
-          sizes="100vw"
-          className="absolute inset-0 z-10"
-        />
-        <div className="container z-20 mt-2 flex flex-col justify-center gap-4">
-          <div className="z-20">
-            <Image src={ProductTitle} alt="Our Product" />
-          </div>
-          <div className="z-20 mb-3 flex flex-col leading-loose tracking-wider">
-            <p className="text-[#d3dcf3]">
-              Di era modernisasi dan selera yang semakin beragam, Minilemon
-              memproduksi banyak varian produk digital maupun konvensional, agar
-              nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
-              banyak penggemar khususnya anak-anak usia 3 sampai 7 tahun.
-            </p>
-          </div>
-        </div>
-      </div> */}
-
       <BannerWrapper
         bgColor="#1b1b1b"
         backgroundImage={BackgroundImage}
@@ -133,434 +99,323 @@ const ProductPage = () => {
       </BannerWrapper>
 
       {/* Product 1 */}
-      <div className="bg-[#1b1b1b] py-14">
-        <div className="mb-2 flex flex-row">
-          <div className="container flex flex-row gap-x-8">
-            <div>
-              <div className="relative h-[492px] w-[350px]">
-                <Image
-                  src={CoverPetualanganMinilemon}
-                  alt="Petualangan Si Minilemon"
-                  fill
-                  sizes="100vw"
-                  objectFit="cover"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#c0cbdf]/90">
-              <div className="hidden flex-col lg:flex">
-                <Image
-                  src={PetualanganSiMinilemonTitle1}
-                  alt="Petualangan Si Minilemon"
-                />
-                <Image
-                  src={PetualanganSiMinilemonTitle2}
-                  alt="Petualangan Si Minilemon"
-                />
-              </div>
-              <p>
-                Petualangan Minilemon dimulai dari kecerobohan Ucup dan Togar
-                yang tanpa sengaja memicu kejar-kejaran menegangkan dengan
-                sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
-                menghilang setelah menemukan mesin portal misterius diruang
-                rahasia Kak Bibie.
-              </p>
-              <p className="">
-                Dengan kejadian itu, Anak-anak Minilemon mulai bersatu dan siap
-                bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
-                Tigor.{" "}
-                <Link
-                  className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                  href="javascript:void(0)"
-                  onClick={toggleExpand1}
+      <Product
+        bgColor="#1b1b1b"
+        textColor="text-[#c0cbdf]/90"
+        CoverProduct={CoverPetualanganMinilemon}
+        CoverAlt="Petualangan Si Minilemon"
+        TitleImage1={PetualanganSiMinilemonTitle1}
+        TitleImage2={PetualanganSiMinilemonTitle2}
+        TitleImageAlt="Petualangan Si Minilemon"
+        className="gap-y-6 tracking-wider"
+      >
+        <p>
+          Petualangan Minilemon dimulai dari kecerobohan Ucup dan Togar yang
+          tanpa sengaja memicu kejar-kejaran menegangkan dengan sekelompok angsa
+          marah. Dalam kekacauan itu, Ucup terpisah dan menghilang setelah
+          menemukan mesin portal misterius diruang rahasia Kak Bibie.
+        </p>
+        <p>
+          Dengan kejadian itu, Anak-anak Minilemon mulai bersatu dan siap
+          bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman Tigor.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(0)}
+          >
+            <span className={isExpanded[0] == true ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[0] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
+            >
+              <motion.p variants={paragraphVariants}>
+                Petualangan seru dengan rocket canggih dan mesin portal Kak
+                Biebie, membawa mereka ke berbagai tempat, mulai dari Candi
+                Borobudur, Jogjakarta hingga Pelabuhan Surabaya. Di tengah
+                pencarian, mereka menemukan bahwa Ucup ternyata diculik oleh
+                kelompok penjahat yang terlibat dalam perburuan hewan langka
+                secara ilegal. Akankah mereka berhasil menyelamatkan Ucup dan
+                menggagalkan rencana jahat para pemburu? Saksikan keseruan dan
+                ketegangan film &quot;Petualangan si Minilemon&quot;!{" "}
+                <span
+                  onClick={() => toggleExpand(0)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                 >
-                  <span className={isExpanded1 == true ? "hidden" : "flex"}>
-                    Read More{" "}
-                    <span className="ml-1 flex items-center text-xs">❯</span>
-                  </span>
-                </Link>
-              </p>
-              <AnimatePresence>
-                {isExpanded1 && (
-                  <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
-                  >
-                    <motion.p variants={paragraphVariants}>
-                      Petualangan seru dengan rocket canggih dan mesin portal
-                      Kak Biebie, membawa mereka ke berbagai tempat, mulai dari
-                      Candi Borobudur, Jogjakarta hingga Pelabuhan Surabaya. Di
-                      tengah pencarian, mereka menemukan bahwa Ucup ternyata
-                      diculik oleh kelompok penjahat yang terlibat dalam
-                      perburuan hewan langka secara ilegal. Akankah mereka
-                      berhasil menyelamatkan Ucup dan menggagalkan rencana jahat
-                      para pemburu? Saksikan keseruan dan ketegangan film
-                      &quot;Petualangan si Minilemon&quot;!{" "}
-                      <span
-                        onClick={toggleExpand1}
-                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                      >
-                        Read Less
-                      </span>
-                    </motion.p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <Link
-                href="javascript:void(0)"
-                className="flex flex-row items-center gap-x-2"
-              >
-                <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
-                  <FaYoutube className="" />
+                  Read Less
                 </span>
-                Trailer
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+              </motion.p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Product>
 
       {/* Product 2 */}
-      <div className="flex flex-row bg-[#d2e1f4] py-14">
-        <div className="container mb-2 flex flex-row gap-x-8">
-          <div>
-            <div className="relative h-[492px] w-[350px]">
-              <Image
-                src={CoverSaveTheEarth}
-                alt="Minilemon Save The Earth"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-wider text-[#1b1b1d]/70">
-            <div className="hidden flex-col lg:flex">
-              <Image
-                src={MinilemonSaveTheEarthTitle1}
-                alt="Minilemon Save The Earth"
-              />
-              <Image
-                src={MinilemonSaveTheEarthTitle2}
-                alt="Minilemon Save The Earth"
-              />
-            </div>
-            <p>
-              Dengan menyadari betapa pentingnya menjaga dan melestarikan alam,
-              Minilemon yang di pimpin Kak Biebie, memulai petualangan mereka
-              dalam serial animasi &quot;Minilemon Save The Earth&quot;. Di
-              sini, mereka tidak hanya belajar lebih dalam tentang ekosistem
-              yang rumit, keanekaragaman hayati yang menakjubkan, pentingnya
-              konservasi alam, tetapi mereka juga belajar menanamkan nilai-nilai
-              positif dan tanggung jawab terhadap alam dari setiap langkah
-              mereka.{" "}
-              <Link
-                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="javascript:void(0)"
-                onClick={toggleExpand2}
-              >
-                <span className={isExpanded2 === true ? "hidden" : "flex"}>
-                  Read More{" "}
-                  <span className="ml-1 flex items-center text-xs">❯</span>
-                </span>
-              </Link>
-            </p>
-            <AnimatePresence>
-              {isExpanded2 && (
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+      <Product
+        CoverProduct={CoverSaveTheEarth}
+        CoverAlt="Minilemon Save The Earth"
+        TitleImage1={MinilemonSaveTheEarthTitle1}
+        TitleImage2={MinilemonSaveTheEarthTitle2}
+        TitleImageAlt="Minilemon Save The Earth"
+        bgColor="#d2e1f4"
+        textColor="text-[#1b1b1d]/70"
+        className="gap-y-6 tracking-wider"
+      >
+        <p>
+          Dengan menyadari betapa pentingnya menjaga dan melestarikan alam,
+          Minilemon yang di pimpin Kak Biebie, memulai petualangan mereka dalam
+          serial animasi &quot;Minilemon Save The Earth&quot;. Di sini, mereka
+          tidak hanya belajar lebih dalam tentang ekosistem yang rumit,
+          keanekaragaman hayati yang menakjubkan, pentingnya konservasi alam,
+          tetapi mereka juga belajar menanamkan nilai-nilai positif dan tanggung
+          jawab terhadap alam dari setiap langkah mereka.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(1)}
+          >
+            <span className={isExpanded[1] === true ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[1] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+            >
+              <motion.p variants={paragraphVariants}>
+                “Berakit-rakit ke hulu, berenang-renang ke tepian.
+                Bersakit-sakit dahulu, bersenang-senang kemudian.”
+              </motion.p>
+              <motion.p variants={paragraphVariants}>
+                Perjalanan Minilemon tidaklah mudah. Mereka menghadapi berbagai
+                tantangan yang menguji ketangguhan dan kebijaksanaan mereka.
+                Dari menjaga disiplin, mengatasi konflik dengan teman, hingga
+                belajar bertahan hidup di alam liar. Setiap rintangan, seperti
+                membuat api, berinteraksi dengan hewan liar, dan mencari makanan
+                di hutan, menjadi pelajaran berharga yang memperkuat
+                persahabatan dan solidaritas mereka.
+              </motion.p>
+              <motion.p variants={paragraphVariants}>
+                Saksikan bagaimana Minilemon mengatasi berbagai tantangan di
+                alam liar, dengan berbagai cara yang lucu, seru dan menyenangkan
+                sembari belajar tentang pentingnya menjaga kelestarian alam
+                kita!{" "}
+                <span
+                  onClick={() => toggleExpand(1)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                 >
-                  <motion.p variants={paragraphVariants}>
-                    “Berakit-rakit ke hulu, berenang-renang ke tepian.
-                    Bersakit-sakit dahulu, bersenang-senang kemudian.”
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    Perjalanan Minilemon tidaklah mudah. Mereka menghadapi
-                    berbagai tantangan yang menguji ketangguhan dan
-                    kebijaksanaan mereka. Dari menjaga disiplin, mengatasi
-                    konflik dengan teman, hingga belajar bertahan hidup di alam
-                    liar. Setiap rintangan, seperti membuat api, berinteraksi
-                    dengan hewan liar, dan mencari makanan di hutan, menjadi
-                    pelajaran berharga yang memperkuat persahabatan dan
-                    solidaritas mereka.
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    Saksikan bagaimana Minilemon mengatasi berbagai tantangan di
-                    alam liar, dengan berbagai cara yang lucu, seru dan
-                    menyenangkan sembari belajar tentang pentingnya menjaga
-                    kelestarian alam kita!{" "}
-                    <span
-                      onClick={toggleExpand2}
-                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                    >
-                      Read Less
-                    </span>
-                  </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Link href={"#"} className="flex flex-row items-center gap-x-2">
-              <span className="rounded-full bg-[#333] p-[.4rem] shadow-xl">
-                <FaYoutube className="text-white" />
-              </span>
-              Trailer
-            </Link>
-          </div>
-        </div>
-      </div>
+                  Read Less
+                </span>
+              </motion.p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Product>
 
       {/* Product 3 */}
-      <div className="flex flex-row bg-[#d2f4d3] py-14">
-        <div className="container mb-2 flex flex-col gap-x-8 lg:flex-row">
-          <div className="mb-0 flex">
-            <div className="relative flex h-fit w-[350px] flex-col items-center justify-center bg-gray-500">
-              <Image src={MinilemonExplorerToJogja} alt="Minilemon Explorer!" />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/80">
-            <div className="hidden flex-col lg:flex">
-              <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
-              <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
-            </div>
-            <p>
-              Minilemon Explorer adalah game interaktif yang memadukan
-              storytelling dan edukasi, menghadirkan pengalaman belajar
-              sekaligus bermain yang seru dalam balutan tema petualangan. Dalam
-              game ini, kamu akan diajak menjelajahi berbagai tempat menarik di
-              Nusantara, salah satunya adalah kota budaya yang memesona,
-              Yogyakarta!
-            </p>
-            <p>
-              Tak hanya sampai di situ, Minilemon Explorer terus berkembang
-              dengan memperluas peta permainan ke berbagai lokasi ikonik di
-              seluruh Indonesia. Dari megahnya hutan Kalimantan, indahnya pantai
-              di Bali, hingga eksotisme alam Papua, setiap wilayah menyuguhkan
-              tema yang unik dan mekanisme permainan yang selalu baru.
-              <Link
-                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="javascript:void(0)"
-                onClick={toggleExpand3}
-              >
-                <span className={isExpanded3 === true ? "hidden" : "flex"}>
-                  Read More{" "}
-                  <span className="ml-1 flex items-center text-xs">❯</span>
-                </span>
-              </Link>
-            </p>
-            <AnimatePresence>
-              {isExpanded3 && (
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
-                >
-                  <motion.p variants={paragraphVariants}>
-                    Ke depannya, kami akan menghadirkan gameplay bertema Pramuka
-                    di Jogja, di mana kamu bisa merasakan asyiknya memancing,
-                    berburu, hingga membangun tenda di alam terbuka.
-                  </motion.p>
+      <Product
+        bgColor="#d2f4d3"
+        textColor="text-[#1b1b1d]/80"
+        CoverProduct={MinilemonExplorerToJogja}
+        CoverAlt="Minilemon Explorer!"
+        TitleImage1={MinilemonExplorerTitle1}
+        TitleImage2={MinilemonExplorerTitle2}
+        TitleImageAlt="Minilemon Explorer"
+        className="gap-y-8 tracking-[.07em]"
+      >
+        <p>
+          Minilemon Explorer adalah game interaktif yang memadukan storytelling
+          dan edukasi, menghadirkan pengalaman belajar sekaligus bermain yang
+          seru dalam balutan tema petualangan. Dalam game ini, kamu akan diajak
+          menjelajahi berbagai tempat menarik di Nusantara, salah satunya adalah
+          kota budaya yang memesona, Yogyakarta!
+        </p>
+        <p>
+          Tak hanya sampai di situ, Minilemon Explorer terus berkembang dengan
+          memperluas peta permainan ke berbagai lokasi ikonik di seluruh
+          Indonesia. Dari megahnya hutan Kalimantan, indahnya pantai di Bali,
+          hingga eksotisme alam Papua, setiap wilayah menyuguhkan tema yang unik
+          dan mekanisme permainan yang selalu baru.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(2)}
+          >
+            <span className={isExpanded[2] === true ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[2] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#1b1b1d]/80"
+            >
+              <motion.p variants={paragraphVariants}>
+                Ke depannya, kami akan menghadirkan gameplay bertema Pramuka di
+                Jogja, di mana kamu bisa merasakan asyiknya memancing, berburu,
+                hingga membangun tenda di alam terbuka.
+              </motion.p>
 
-                  <motion.p variants={paragraphVariants}>
-                    Yuk, gabung dalam petualangan seru di Minilemon Explorer!
-                    Bersama, kita jelajahi kekayaan budaya dan keindahan alam
-                    Nusantara yang luar biasa.{" "}
-                    <span
-                      onClick={toggleExpand3}
-                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                    >
-                      Read Less
-                    </span>
-                  </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Link href={"#"} className="flex flex-row items-center gap-x-2">
-              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                <FaYoutube className="text-white" />
-              </span>
-              Trailer
-            </Link>
-          </div>
-        </div>
-      </div>
+              <motion.p variants={paragraphVariants}>
+                Yuk, gabung dalam petualangan seru di Minilemon Explorer!
+                Bersama, kita jelajahi kekayaan budaya dan keindahan alam
+                Nusantara yang luar biasa.{" "}
+                <span
+                  onClick={() => toggleExpand(2)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                >
+                  Read Less
+                </span>
+              </motion.p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Product>
 
       {/* Product 4 */}
-      <div className="flex flex-row bg-[#f4d3e8] py-14">
-        <div className="container mb-2 flex flex-row gap-x-8">
-          <div>
-            <div className="relative h-[492px] w-[350px]">
-              <Image
-                src={CoverPostParenting}
-                alt="Minilemon Live Parenting"
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-8 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
-            <div className="hidden flex-col lg:flex">
-              <Image
-                src={MinilemonLiveParentingTitle1}
-                alt="Minilemon Live Parenting"
-              />
-              <Image
-                src={MinilemonLiveParentingTitle2}
-                alt="Minilemon Live Parenting"
-              />
-            </div>
-            <p>
-              Minilemon percaya bahwa pendidikan karakter anak tidak hanya
-              mengandalkan tontonan edukasi saja, akan tetapi dibutuhkan juga
-              peran aktif orang tua dalam membimbing anak-anak mereka.
-            </p>
-            <p>
-              &quot;Sahabat Minilemon Parenting&quot; adalah program yang
-              dirancang khusus untuk membantu para bunda dengan memberikan tips
-              dan saran praktis yang dapat langsung diterapkan di rumah.
-              Sehingga orang tua dapat ikut berperan mendidik anak-anak mereka.{" "}
-              <Link
-                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="javascript:void(0)"
-                onClick={toggleExpand4}
-              >
-                <span className={isExpanded4 ? "hidden" : "flex"}>
-                  Read More{" "}
-                  <span className="ml-1 flex items-center text-xs">❯</span>
-                </span>
-              </Link>
-            </p>
-            <AnimatePresence>
-              {isExpanded4 && (
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
-                >
-                  <motion.p variants={paragraphVariants}>
-                    menciptakan generasi yang kuat dan berkarakter.
-                  </motion.p>
-                  <motion.p variants={paragraphVariants}>
-                    &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap
-                    hari Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform
-                    YouTube, TikTok, dan Instagram.{" "}
-                    <span
-                      onClick={toggleExpand4}
-                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                    >
-                      Read Less
-                    </span>
-                  </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Link
-              href={"#"}
-              className="flex flex-row items-center gap-x-2 text-base"
+      <Product
+        bgColor="#f4d3e8"
+        textColor="text-[#1b1b1d]/70"
+        CoverProduct={CoverPostParenting}
+        CoverAlt="Minilemon Live Parenting"
+        TitleImage1={MinilemonLiveParentingTitle1}
+        TitleImage2={MinilemonLiveParentingTitle2}
+        TitleImageAlt="Minilemon Live Parenting"
+        className="gap-y-8 tracking-[.07em]"
+      >
+        <p>
+          Minilemon percaya bahwa pendidikan karakter anak tidak hanya
+          mengandalkan tontonan edukasi saja, akan tetapi dibutuhkan juga peran
+          aktif orang tua dalam membimbing anak-anak mereka.
+        </p>
+        <p>
+          &quot;Sahabat Minilemon Parenting&quot; adalah program yang dirancang
+          khusus untuk membantu para bunda dengan memberikan tips dan saran
+          praktis yang dapat langsung diterapkan di rumah. Sehingga orang tua
+          dapat ikut berperan mendidik anak-anak mereka.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(3)}
+          >
+            <span className={isExpanded[3] ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[3] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
             >
-              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                <FaYoutube className="text-white" />
-              </span>
-              Trailer
-            </Link>
-          </div>
-        </div>
-      </div>
+              <motion.p variants={paragraphVariants}>
+                menciptakan generasi yang kuat dan berkarakter.
+              </motion.p>
+              <motion.p variants={paragraphVariants}>
+                &quot;Sahabat Minilemon Parenting&quot; ditayangkan setiap hari
+                Senin, Rabu, dan Jumat, pukul 16.00 WIB di platform YouTube,
+                TikTok, dan Instagram.{" "}
+                <span
+                  onClick={() => toggleExpand(3)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+                >
+                  Read Less
+                </span>
+              </motion.p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Product>
 
       {/* Produk 5 */}
-      <div className="flex flex-row bg-[#f4efd2] py-14">
-        <div className="container flex flex-row gap-x-8">
-          <div className="">
-            <div className="relative h-[492px] w-[350px]">
-              <Image
-                src={CoverPanggungBonekaMinilemon}
-                alt="Panggung Boneka Minilemon"
-                className="h-[492px] w-[350px]"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-6 text-sm leading-loose tracking-[.07em] text-[#1b1b1d]/70">
-            <div className="hidden flex-col lg:flex">
-              <Image
-                src={MinilemonPanggungBonekaTitle1}
-                alt="Panggung Boneka Minilemon"
-              />
-              <Image
-                src={MinilemonPanggungBonekaTitle2}
-                alt="Panggung Boneka Minilemon"
-              />
-            </div>
-            <p>
-              &quot;Panggung Boneka Minilemon&quot; adlaah program pertunjukan
-              boneka yang menghadirkan kisah-kisah lucu dan seru dari keseharian
-              Minilemon.
-            </p>
-            <p>
-              Selain mengundang tawa dan penuh kejutan, certa &quot;Panggung
-              Boneka Minilemon&quot; selalu disertai dengan pesan-pesan moral
-              yang positif. Melalui karakter Minilemon, anak-anak diajak untuk
-              bermain dan belajar tentang nilai-nilai persahabatan, gotong
-              royong, kejujuran, dan tanggung jawab.{" "}
-              <Link
-                className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
-                href="javascript:void(0)"
-                onClick={toggleExpand5}
-              >
-                <span className={isExpanded5 ? "hidden" : "flex"}>
-                  Read More{" "}
-                  <span className="ml-1 flex items-center text-xs">❯</span>
-                </span>
-              </Link>
-            </p>
-            <AnimatePresence>
-              {isExpanded5 && (
-                <motion.div
-                  variants={containerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+      <Product
+        bgColor="#f4efd2"
+        textColor="text-[#1b1b1d]/70"
+        CoverProduct={CoverPanggungBonekaMinilemon}
+        CoverAlt="Panggung Boneka Minilemon"
+        TitleImage1={MinilemonPanggungBonekaTitle1}
+        TitleImage2={MinilemonPanggungBonekaTitle2}
+        TitleImageAlt="Panggung Boneka Minilemon"
+        className="gap-y-6 tracking-[.07em]"
+      >
+        <p>
+          &quot;Panggung Boneka Minilemon&quot; adlaah program pertunjukan
+          boneka yang menghadirkan kisah-kisah lucu dan seru dari keseharian
+          Minilemon.
+        </p>
+        <p>
+          Selain mengundang tawa dan penuh kejutan, certa &quot;Panggung Boneka
+          Minilemon&quot; selalu disertai dengan pesan-pesan moral yang positif.
+          Melalui karakter Minilemon, anak-anak diajak untuk bermain dan belajar
+          tentang nilai-nilai persahabatan, gotong royong, kejujuran, dan
+          tanggung jawab.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(4)}
+          >
+            <span className={isExpanded[4] ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[4] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+            >
+              <motion.p variants={paragraphVariants}>
+                &quot;Panggung Boneka Minilemon&quot; ini dirancang sempurna
+                untuk anak-anak yang sedang dalam masa pertumbuhan. di mana
+                kesenangan dan pelajaran hidup menyatu dalam sebuah pertunjukan.{" "}
+                <span
+                  onClick={() => toggleExpand(4)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                 >
-                  <motion.p variants={paragraphVariants}>
-                    &quot;Panggung Boneka Minilemon&quot; ini dirancang sempurna
-                    untuk anak-anak yang sedang dalam masa pertumbuhan. di mana
-                    kesenangan dan pelajaran hidup menyatu dalam sebuah
-                    pertunjukan.{" "}
-                    <span
-                      onClick={toggleExpand5}
-                      className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                    >
-                      Read Less
-                    </span>
-                  </motion.p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Link href={"#"} className="flex flex-row items-center gap-x-2">
-              <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
-                <FaYoutube className="text-white" />
-              </span>
-              Trailer
-            </Link>
-          </div>
-        </div>
-      </div>
+                  Read Less
+                </span>
+              </motion.p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Product>
     </div>
   );
 };
