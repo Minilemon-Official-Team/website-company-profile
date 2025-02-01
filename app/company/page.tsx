@@ -19,53 +19,10 @@ import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 const CompanyPage = () => {
   return (
     <div className="flex flex-col">
-      {/* PT Minilemon Indonesia */}
-      {/* <div className="relative flex flex-col items-center bg-[#1b1b1b] bg-cover bg-center">
-        <Image
-          src={BackgroundImage}
-          alt="Background"
-          quality={100}
-          fill
-          sizes="100vw"
-          className="absolute inset-0 z-10"
-        />
-        <div className="container z-20 flex flex-col gap-6 py-14">
-          <div className="z-20">
-            <Image
-              src={PTMinilemonNusantaraTitle}
-              alt="PT Minilemon Nusantara"
-            />
-        </div>
-          <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-[0.07em] text-[#c5cce0]">
-            <p>
-              PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
-              Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
-              Karakter Anak dan nilai - nilai kebaikan melalui berbagai Program
-              Pendidikan berbasis seni, hiburan dan teknologi.
-            </p>
-            <p>
-              Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
-              melakukan pendekatan terhadap Pendidikan, mulai dari film animasi,
-              game, panggung boneka, podcast parenting dan berbagai macam
-              program lainnya yang membawa karakter positif bagi anak-anak.
-            </p>
-            <p>
-              PT. Minilemon Nusantara adalah perusahaan persero terbatas yang
-              merupakan bagian dari dTopeng Kingdom Foundation, sebuah Yayasan
-              yang memiliki Visi dan Misi dalam penyelamatan nilai - nilai
-              Sejarah dan Budaya serta benda - benda artefak yang memiliki nilai
-              sejarah bagi bangsa Indonesia dengan melakukan pembangunan Museum
-              di berbagi tempat di Indonesia.
-            </p>
-          </div>
-        </div>
-      </div> */}
-
       <BannerWrapper
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
         bgColor="#1b1b1b"
-        // className="py-0"
       >
         <Banner
           productTitle={PTMinilemonNusantaraTitle}
