@@ -1,13 +1,12 @@
-import Image from "next/image";
-
 import BackgroundImage from "@/public/background/about-new.png";
-import ConceptTitle from "@/public/title/concept.png";
 import IdeaTitle from "@/public/title/idea.png";
 import MessageTitle from "@/public/title/message.png";
 import PsychographicTitle from "@/public/title/psychographic.png";
 import TreatmentTitle from "@/public/title/treatment.png";
 import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 import Banner from "@/components/ui/banner/banner";
+import { infoData } from "@/data/info";
+import InfoSection from "@/components/info-section";
 
 const AboutPage = () => {
   return (
@@ -82,7 +81,7 @@ const AboutPage = () => {
       </BannerWrapper>
 
       {/* Message */}
-      <div className="bg-[#d5ddf4] py-14">
+      {/* <div className="bg-[#d5ddf4] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
           <div className="flex justify-end">
             <Image src={MessageTitle} alt="Message" />
@@ -96,10 +95,10 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Treatment */}
-      <div className="bg-[#1b1b1b] py-14">
+      {/* <div className="bg-[#1b1b1b] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-center">
           <div className="flex justify-center">
             <Image src={TreatmentTitle} alt="Treatment" />
@@ -110,10 +109,10 @@ const AboutPage = () => {
             tontonan dan permainan, dengan target usia 3-7 tahun.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Concept */}
-      <div className="bg-[#d6f4df] py-14">
+      {/* <div className="bg-[#d6f4df] py-14">
         <div className="container flex flex-col justify-center gap-y-6 text-start">
           <div className="mt-2">
             <Image src={ConceptTitle} alt="Concept" />
@@ -126,10 +125,10 @@ const AboutPage = () => {
             setiap kisah yang mereka lalui.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Psychographic */}
-      <div className="bg-[#f4d8d4] py-14">
+      {/* <div className="bg-[#f4d8d4] py-14">
         <div className="container flex flex-col justify-center gap-y-6 p-6 text-end">
           <div className="flex justify-end">
             <Image src={PsychographicTitle} alt="Psychographic" />
@@ -141,7 +140,11 @@ const AboutPage = () => {
             coba-coba.
           </p>
         </div>
-      </div>
+      </div> */}
+
+      {infoData.map((info) => {
+        return <InfoSection key={info.id} {...info} />;
+      })}
     </div>
   );
 };
