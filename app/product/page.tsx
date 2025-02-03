@@ -23,7 +23,8 @@ import MinilemonPanggungBonekaTitle2 from "@/public/title/panggung-boneka-minile
 import PetualanganSiMinilemonTitle1 from "@/public/title/petualangan-si-minilemon-1.png";
 import PetualanganSiMinilemonTitle2 from "@/public/title/petualangan-si-minilemon-2.png";
 import Banner from "@/components/ui/banner/banner";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
+
 import Product from "@/components/ui/product";
 // import exp from "constants";
 
@@ -76,30 +77,6 @@ const ProductPage = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
-      {/* <div className="relative flex items-center bg-[#1b1b1b] bg-cover bg-center py-14">
-        <Image
-          src={BackgroundImage}
-          alt="Background"
-          quality={100}
-          fill
-          sizes="100vw"
-          className="absolute inset-0 z-10"
-        />
-        <div className="container z-20 mt-2 flex flex-col justify-center gap-4">
-          <div className="z-20">
-            <Image src={ProductTitle} alt="Our Product" />
-          </div>
-          <div className="z-20 mb-3 flex flex-col leading-loose tracking-wider">
-            <p className="text-[#d3dcf3]">
-              Di era modernisasi dan selera yang semakin beragam, Minilemon
-              memproduksi banyak varian produk digital maupun konvensional, agar
-              nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
-              banyak penggemar khususnya anak-anak usia 3 sampai 7 tahun.
-            </p>
-          </div>
-        </div>
-      </div> */}
-
       <BannerWrapper
         bgColor="#1b1b1b"
         backgroundImage={BackgroundImage}
@@ -123,6 +100,7 @@ const ProductPage = () => {
       </BannerWrapper>
 
       {/* Product 1 */}
+
       {/* <div className="bg-[#1b1b1b] py-14">
         <div className="mb-2 flex flex-row">
           <div className="container flex flex-row gap-x-8">
@@ -163,50 +141,64 @@ const ProductPage = () => {
                   className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
                   href="javascript:void(0)"
                   onClick={toggleExpand1}
+=======
+      <Product
+        bgColor="#1b1b1b"
+        textColor="text-[#c0cbdf]/90"
+        CoverProduct={CoverPetualanganMinilemon}
+        CoverAlt="Petualangan Si Minilemon"
+        TitleImage1={PetualanganSiMinilemonTitle1}
+        TitleImage2={PetualanganSiMinilemonTitle2}
+        TitleImageAlt="Petualangan Si Minilemon"
+        className="gap-y-6 tracking-wider"
+      >
+        <p>
+          Petualangan Minilemon dimulai dari kecerobohan Ucup dan Togar yang
+          tanpa sengaja memicu kejar-kejaran menegangkan dengan sekelompok angsa
+          marah. Dalam kekacauan itu, Ucup terpisah dan menghilang setelah
+          menemukan mesin portal misterius diruang rahasia Kak Bibie.
+        </p>
+        <p>
+          Dengan kejadian itu, Anak-anak Minilemon mulai bersatu dan siap
+          bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman Tigor.{" "}
+          <Link
+            className="inline-flex items-center font-bold uppercase text-blue-600 hover:underline"
+            href="javascript:void(0)"
+            onClick={() => toggleExpand(0)}
+          >
+            <span className={isExpanded[0] == true ? "hidden" : "flex"}>
+              Read More{" "}
+              <span className="ml-1 flex items-center text-xs">❯</span>
+            </span>
+          </Link>
+        </p>
+        <AnimatePresence>
+          {isExpanded[0] && (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
+            >
+              <motion.p variants={paragraphVariants}>
+                Petualangan seru dengan rocket canggih dan mesin portal Kak
+                Biebie, membawa mereka ke berbagai tempat, mulai dari Candi
+                Borobudur, Jogjakarta hingga Pelabuhan Surabaya. Di tengah
+                pencarian, mereka menemukan bahwa Ucup ternyata diculik oleh
+                kelompok penjahat yang terlibat dalam perburuan hewan langka
+                secara ilegal. Akankah mereka berhasil menyelamatkan Ucup dan
+                menggagalkan rencana jahat para pemburu? Saksikan keseruan dan
+                ketegangan film &quot;Petualangan si Minilemon&quot;!{" "}
+                <span
+                  onClick={() => toggleExpand(0)}
+                  className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
+
                 >
-                  <span className={isExpanded1 == true ? "hidden" : "flex"}>
-                    Read More{" "}
-                    <span className="ml-1 flex items-center text-xs">❯</span>
-                  </span>
-                </Link>
-              </p>
-              <AnimatePresence>
-                {isExpanded1 && (
-                  <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
-                  >
-                    <motion.p variants={paragraphVariants}>
-                      Petualangan seru dengan rocket canggih dan mesin portal
-                      Kak Biebie, membawa mereka ke berbagai tempat, mulai dari
-                      Candi Borobudur, Jogjakarta hingga Pelabuhan Surabaya. Di
-                      tengah pencarian, mereka menemukan bahwa Ucup ternyata
-                      diculik oleh kelompok penjahat yang terlibat dalam
-                      perburuan hewan langka secara ilegal. Akankah mereka
-                      berhasil menyelamatkan Ucup dan menggagalkan rencana jahat
-                      para pemburu? Saksikan keseruan dan ketegangan film
-                      &quot;Petualangan si Minilemon&quot;!{" "}
-                      <span
-                        onClick={toggleExpand1}
-                        className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
-                      >
-                        Read Less
-                      </span>
-                    </motion.p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <Link
-                href="javascript:void(0)"
-                className="flex flex-row items-center gap-x-2"
-              >
-                <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
-                  <FaYoutube className="" />
+                  Read Less
                 </span>
+
                 Trailer
               </Link>
             </div>
@@ -268,6 +260,7 @@ const ProductPage = () => {
                 >
                   Read Less
                 </span>
+
               </motion.p>
             </motion.div>
           )}
@@ -275,6 +268,7 @@ const ProductPage = () => {
       </Product>
 
       {/* Product 2 */}
+
       {/* <div className="bg-[#d2e1f4] py-14">
         <div className="container mb-2 flex flex-row gap-x-8">
           <div>
@@ -367,7 +361,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div> */}
-
       <Product
         CoverProduct={CoverSaveTheEarth}
         CoverAlt="Minilemon Save The Earth"
@@ -429,6 +422,7 @@ const ProductPage = () => {
                   onClick={() => toggleExpand(1)}
                   className="inline-flex cursor-pointer items-center font-bold uppercase text-blue-600 hover:underline"
                 >
+
                   Read Less
                 </span>
               </motion.p>
@@ -514,7 +508,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div> */}
-
       <Product
         bgColor="#d2f4d3"
         textColor="text-[#1b1b1d]/80"
@@ -564,7 +557,6 @@ const ProductPage = () => {
                 Jogja, di mana kamu bisa merasakan asyiknya memancing, berburu,
                 hingga membangun tenda di alam terbuka.
               </motion.p>
-
               <motion.p variants={paragraphVariants}>
                 Yuk, gabung dalam petualangan seru di Minilemon Explorer!
                 Bersama, kita jelajahi kekayaan budaya dan keindahan alam
@@ -666,7 +658,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div> */}
-
       <Product
         bgColor="#f4d3e8"
         textColor="text-[#1b1b1d]/70"
@@ -806,7 +797,6 @@ const ProductPage = () => {
           </div>
         </div>
       </div> */}
-
       <Product
         bgColor="#f4efd2"
         textColor="text-[#1b1b1d]/70"

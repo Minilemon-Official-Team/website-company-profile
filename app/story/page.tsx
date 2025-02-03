@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import BackgroundImage from "@/public/background/story.png";
 import StoryTitle from "@/public/title/story.png";
-import BannerWrapper from "@/components/ui/banner/bannerWrapper";
+import BannerWrapper from "@/components/ui/banner/banner-wrapper";
 import Banner from "@/components/ui/banner/banner";
 
 const StoryPage = () => {
@@ -35,53 +35,7 @@ const StoryPage = () => {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#d2def4]">
       <div className="flex w-full flex-grow flex-col">
         <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
-          {/* <div className="relative flex w-full items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14">
-            <Image
-              src={BackgroundImage}
-              alt="Cave"
-              className="absolute z-0"
-              quality={100}
-              fill
-              sizes="100vw"
-              style={{
-                height: "100%",
-                width: "100%",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-                color: "transparent",
-              }}
-            />
-            <div className="container relative mb-3 flex flex-col gap-4">
-              <div className="mb-2">
-                <Image src={StoryTitle} alt="Story" />
-              </div>
-              <motion.p
-                initial="hidden"
-                animate="visible"
-                variants={paragraphVariants}
-              >
-                Berawal dari kisah <b>Kakek Djoyo</b> yang merupakan seorang
-                pangeran sah penerus tahta ayahnya, seorang raja di tanah Jawa.
-                Sejak kecil, Pangeran Djoyo sudah kehilangan ibunya, seorang
-                permaisuri yang meninggal karena sakit. Keberadaannya sebagai
-                pewaris sah menjadi ancaman bagi saudara-saudaranya yang
-                berlomba merebut tahta dengan penuh intrik dan tipu muslihat
-                yang jahat.
-              </motion.p>
-              <motion.p
-                initial="hidden"
-                animate="visible"
-                variants={paragraphVariants}
-              >
-                Dengan hati yang berat, Pangeran Djoyo memutuskan untuk
-                meninggalkan istana dan memulai perjalanan panjang untuk mencari
-                ilmu dan kedamaian.
-              </motion.p>
-            </div>
-          </div> */}
-
+          {/* Hero Section */}
           <BannerWrapper
             bgColor="#1b1b1b"
             backgroundImage={BackgroundImage}
