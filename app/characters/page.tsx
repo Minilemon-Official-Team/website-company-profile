@@ -23,7 +23,7 @@ const CharactersPage = () => {
   return (
     <>
       <BannerWrapper
-        bgColor="#dedede"
+        bgColor="bg-[#dedede]"
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
         className="py-14"

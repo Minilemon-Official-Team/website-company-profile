@@ -14,6 +14,7 @@ interface infoData {
   bgColor?: string;
   padding?: string;
   className?: string;
+  textColor?: string;
 }
 
 export const infoData: infoData[] = [
@@ -26,8 +27,9 @@ export const infoData: infoData[] = [
     textAlign: "text-end",
     imageAlign: "justify-end",
     bgColor: "#d5ddf4",
+    textColor: "text-[#2c2d2f]/90",
     padding: "p-6",
-    className: "tracking-widest gap-y-6 text-[#2c2d2f]/90",
+    className: "tracking-widest gap-y-6 ",
   },
   {
     id: 2,
@@ -38,8 +40,9 @@ export const infoData: infoData[] = [
     textAlign: "text-center",
     imageAlign: "justify-center",
     bgColor: "#1b1b1b",
+    textColor: "text-[#c2cbde]",
     padding: "p-6",
-    className: "tracking-wider gap-y-6 text-[#c2cbde]",
+    className: "tracking-wider gap-y-6 ",
   },
   {
     id: 3,
@@ -50,8 +53,9 @@ export const infoData: infoData[] = [
     textAlign: "text-start",
     imageAlign: "mt-2",
     bgColor: "#d6f4df",
+    textColor: "text-[#000]",
     padding: "0",
-    className: "tracking-wider pb-6 #000",
+    className: "tracking-wider pb-6",
   },
   {
     id: 4,
@@ -62,7 +66,8 @@ export const infoData: infoData[] = [
     textAlign: "text-end",
     imageAlign: "justify-end",
     bgColor: "#f4d8d4",
+    textColor: "text-[#000]",
     padding: "p-6",
-    className: "tracking-wider gap-y-6 #000",
+    className: "tracking-wider gap-y-6 ",
   },
 ];

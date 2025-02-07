@@ -8,9 +8,8 @@ import InfoSection from "@/components/info-section";
 const AboutPage = () => {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
       <BannerWrapper
-        bgColor="#d6ddf4"
+        bgColor="bg-[#d6ddf4]"
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
         className="py-14"
@@ -41,6 +40,7 @@ const AboutPage = () => {
           </div>
         </Banner>
       </BannerWrapper>
+
       {infoData.map((info) => {
         return <InfoSection key={info.id} {...info} />;
       })}

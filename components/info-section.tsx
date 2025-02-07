@@ -1,6 +1,11 @@
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 
+const color = {
+  "text-[#2c2d2f]/90": "text-[#2c2d2f]/90",
+  "text-[#c2cbde]": "text-[#c2cbde]",
+  "text-[#000]": "text-[#000]",
+};
 interface InfoSectionProps {
   id: number;
   imageTitle: string | StaticImageData;
@@ -12,6 +17,7 @@ interface InfoSectionProps {
   tracking?: string;
   padding?: string;
   className?: string;
+  textColor?: keyof typeof color | string;
 }
 
 export default function InfoSection({
@@ -23,6 +29,7 @@ export default function InfoSection({
   bgColor,
   padding,
   className,
+  textColor = "text-[#000]",
 }: InfoSectionProps) {
   return (
     <div className={`bg-[${bgColor}] py-14`}>
@@ -35,7 +42,7 @@ export default function InfoSection({
         <div>
           <p
             className={cn(
-              `flex flex-col font-medium leading-loose`,
+              `flex flex-col font-medium leading-loose ${color[textColor as keyof typeof color] || textColor}`,
               className,
             )}
           >

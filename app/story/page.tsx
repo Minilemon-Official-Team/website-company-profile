@@ -37,7 +37,7 @@ const StoryPage = () => {
         <div className="relative leading-loose tracking-wider text-[#c3cde1]/90">
           {/* Hero Section */}
           <BannerWrapper
-            bgColor="#1b1b1b"
+            bgColor="bg-[#1b1b1b]"
             backgroundImage={BackgroundImage}
             backgroundAlt="Background"
             className="bg-gradient-to-b from-black via-[#0e102a] to-[#d6e0f4] py-14"

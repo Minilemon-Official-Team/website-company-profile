@@ -22,7 +22,7 @@ const CompanyPage = () => {
       <BannerWrapper
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
-        bgColor="#1b1b1b"
+        bgColor="bg-[#1b1b1b]"
       >
         <Banner
           productTitle={PTMinilemonNusantaraTitle}

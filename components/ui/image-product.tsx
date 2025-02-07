@@ -7,14 +7,13 @@ interface ImageProductProps {
 
 export default function ImageProduct({
   CoverProduct,
-CoverAlt,
+  CoverAlt,
 }: ImageProductProps) {
   return (
     <div className="relative h-[492px] w-[350px]">
       <Image
         src={CoverProduct}
         alt={CoverAlt}
-        fill
         sizes="100vw"
         className="object-cover"
       />

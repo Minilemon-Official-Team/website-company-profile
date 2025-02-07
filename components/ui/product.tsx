@@ -46,7 +46,7 @@ export default function Product({
           {children}
           <Link
             href="javascript:void(0)"
-            className="flex flex-row items-center gap-x-2"
+            className="flex flex-row items-center gap-x-2 self-start"
           >
             <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
               <FaYoutube className="text-white" />

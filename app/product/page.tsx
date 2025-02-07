@@ -77,7 +77,7 @@ const ProductPage = () => {
     <div className="flex flex-col">
       {/* Hero Section Desktop View */}
       <BannerWrapper
-        bgColor="#1b1b1b"
+        bgColor="bg-[#1b1b1b]"
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
         className="py-14"
