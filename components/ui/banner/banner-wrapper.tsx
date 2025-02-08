@@ -20,7 +20,7 @@ export default function BannerWrapper({
     <div
       className={cn(
         "relative flex items-center bg-cover bg-center",
-        { [`bg-[${bgColor}]`]: bgColor },
+        { [`${bgColor}`]: bgColor },
         className,
       )}
     >
