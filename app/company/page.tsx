@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Placeholder } from "placeholder";
 
 import { Family, Hero } from "@/data/contribution";
 import BackgroundImage from "@/public/background/company.png";
@@ -15,6 +14,8 @@ import Heri from "@/public/contributors/Heri.jpg";
 import Reno from "@/public/contributors/Reno.jpg";
 import Banner from "@/components/ui/banner/banner";
 import BannerWrapper from "@/components/ui/banner/banner-wrapper";
+import PersonCard from "@/components/ui/personCard";
+import Founder from "@/components/ui/founder";
 
 const CompanyPage = () => {
   return (
@@ -91,94 +92,65 @@ const CompanyPage = () => {
       </div>
 
       {/* Founder */}
-      <div className="flex flex-row bg-[#a4bddc] py-14">
-        <div className="container flex flex-col gap-4 px-8 lg:px-0">
-          <div className="flex w-full justify-center lg:justify-start">
-            <Image src={FounderTitle} alt="The Founder" />
-          </div>
-          <div className="flex flex-col gap-6 lg:flex-row">
-            <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Image src={Reno} alt="Reno Halsamer" width={350} height={495} />
-              {/* <Placeholder
-                height={495}
-                width={350}
-                background="#333"
-                color="#fff"
-              /> */}
-            </div>
-            <div className="flex basis-7/12 flex-col gap-y-8 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
-              <p>
-                <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di
-                Surabaya Indonesia. Sebagai seorang bisnisman dan penggiat
-                Museum seni khususnya Topeng Indonesia, Sejak tahun 2015 di
-                Surabaya, ditengah situasi yang dirasa mundurnya kecintaan
-                masyarakat terhadap seni dan budaya, Reno Halsamer mencetuskan
-                ide untuk menciptakan karakter animasi dengan mengkombinasikan
-                topeng dan buah lemon. Selain topeng merupakan karya seni yang
-                dibuat orisinil dari leluhur bangsa Indonesia, topeng juga
-                diharapkan mampu mewakili wajah karakter masyarakan Indonesia
-              </p>
-              <p>
-                Karakter animasi minilemon diharapkan menjadi figur baik dan
-                menjadi teladan terutama untuk anak-anak Indonesia, sehingga
-                buah lemon yang dikenal banyak manfaatnya, sangat cocok
-                dipadukan dengan topeng, untuk menjadi &quot;THE GOOD
-                CHARACTER&quot; dengan &quot;WAJAH INDOENSIA&quot;. Dengan
-                idenya yang brilian, &quot;BAPAK MINILEMON&quot; merupakan
-                julukan yang pantas dilekatkan dengan Reno Halsamer.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Founder
+        titleImage={FounderTitle}
+        photo={Reno}
+        titleAlt="The Founder"
+        photoAlt="Reno Halsamer"
+        bgColor="bg-[#a4bddc]"
+      >
+        <p>
+          <b>Reno Halsamer</b> Adalah Pria yang lahir dan tinggal di Surabaya
+          Indonesia. Sebagai seorang bisnisman dan penggiat Museum seni
+          khususnya Topeng Indonesia, Sejak tahun 2015 di Surabaya, ditengah
+          situasi yang dirasa mundurnya kecintaan masyarakat terhadap seni dan
+          budaya, Reno Halsamer mencetuskan ide untuk menciptakan karakter
+          animasi dengan mengkombinasikan topeng dan buah lemon. Selain topeng
+          merupakan karya seni yang dibuat orisinil dari leluhur bangsa
+          Indonesia, topeng juga diharapkan mampu mewakili wajah karakter
+          masyarakan Indonesia
+        </p>
+        <p>
+          Karakter animasi minilemon diharapkan menjadi figur baik dan menjadi
+          teladan terutama untuk anak-anak Indonesia, sehingga buah lemon yang
+          dikenal banyak manfaatnya, sangat cocok dipadukan dengan topeng, untuk
+          menjadi &quot;THE GOOD CHARACTER&quot; dengan &quot;WAJAH
+          INDOENSIA&quot;. Dengan idenya yang brilian, &quot;BAPAK
+          MINILEMON&quot; merupakan julukan yang pantas dilekatkan dengan Reno
+          Halsamer.
+        </p>
+      </Founder>
 
       {/* Co Founder */}
-      <div className="flex flex-row bg-[#d5ddf4] py-14">
-        <div className="container flex flex-col gap-6 px-8 lg:px-0">
-          <div className="flex w-full justify-center lg:justify-start">
-            <Image src={CoFounderTitle} alt="Co Founder" />
-          </div>
-          <div className="flex flex-col gap-6 lg:flex-row">
-            <div className="flex basis-5/12 items-center justify-center lg:justify-start">
-              <Image
-                src={Heri}
-                alt="Heriyadi Natawijaya"
-                width={350}
-                height={495}
-              />
-              {/* <Placeholder
-                height={495}
-                width={350}
-                background="#333"
-                color="#fff"
-              /> */}
-            </div>
-            <div className="flex basis-7/12 flex-col gap-y-6 text-[0.93rem] leading-loose tracking-wide text-[#1b1b1d]/70">
-              <p>
-                <b className="text-[#1b1b1d]/90">Heriyadi Natawijaya</b> lahir
-                di Palembang dan tinggal di Depok Indonesia, adalah Seorang
-                Sutradara iklan, Video Klip dan Animasi Sejak 2009. Heriyadi
-                Natawijaya juga sebagai Pendiri Perakaria & IDsains sebagai
-                Pusat Komunitas Kreatif dan produksi seni di Depok, Indonesia.
-              </p>
-              <p>
-                Karirnya di dunia Seni dan Perfilman membuatnya bertemu Reno
-                Halsamer sebagai sosok pencetus Minilemon. Mempunyai Visi Misi
-                yang sama untuk kemudian menjadikan minilemon sebagai produk
-                Kreatif, edukatif dengan nilai-nilai budaya.
-              </p>
-              <p>
-                Pengalaman panjang sebagai kepala Seni, dan kecintaannya dengan
-                teknologi, membuat Heriyadi Natawijaya banyak menciptakan
-                gagasan dan putusan yang berpihak kepada estetika dan budaya
-                kerja yang tech savvy, menyenangkan, transparan dan terukur.
-                dengan pemikiran dan Kepiawayannya &quot;Paman Minilemon&quot;
-                adalah julukan yang cocok untuk Heriyadi Natawijaya.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Founder
+        titleImage={CoFounderTitle}
+        photo={Heri}
+        titleAlt="Co Founder"
+        photoAlt="Heriyadi Natawijaya"
+        bgColor="bg-[#d5ddf4]"
+      >
+        <p>
+          <b className="text-[#1b1b1d]/90">Heriyadi Natawijaya</b> lahir di
+          Palembang dan tinggal di Depok Indonesia, adalah Seorang Sutradara
+          iklan, Video Klip dan Animasi Sejak 2009. Heriyadi Natawijaya juga
+          sebagai Pendiri Perakaria & IDsains sebagai Pusat Komunitas Kreatif
+          dan produksi seni di Depok, Indonesia.
+        </p>
+        <p>
+          Karirnya di dunia Seni dan Perfilman membuatnya bertemu Reno Halsamer
+          sebagai sosok pencetus Minilemon. Mempunyai Visi Misi yang sama untuk
+          kemudian menjadikan minilemon sebagai produk Kreatif, edukatif dengan
+          nilai-nilai budaya.
+        </p>
+        <p>
+          Pengalaman panjang sebagai kepala Seni, dan kecintaannya dengan
+          teknologi, membuat Heriyadi Natawijaya banyak menciptakan gagasan dan
+          putusan yang berpihak kepada estetika dan budaya kerja yang tech
+          savvy, menyenangkan, transparan dan terukur. dengan pemikiran dan
+          Kepiawayannya &quot;Paman Minilemon&quot; adalah julukan yang cocok
+          untuk Heriyadi Natawijaya.
+        </p>
+      </Founder>
 
       {/* Our Hero Desktop View */}
       <div className="flex flex-col gap-y-12 bg-[#1b1b1b] py-14">
@@ -188,34 +160,15 @@ const CompanyPage = () => {
         <div className="container">
           <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
             {Hero.map((data) => (
-              <div
-                className="flex flex-col items-center justify-center text-white"
+              <PersonCard
                 key={data.id}
-              >
-                <div className="pb-3">
-                  {data.photo ? (
-                    <Image
-                      src={data.photo}
-                      alt={data.name}
-                      width={150}
-                      height={200}
-                    />
-                  ) : (
-                    <Placeholder
-                      height={200}
-                      width={150}
-                      background="#fff"
-                      color="#333"
-                    />
-                  )}
-                </div>
-                <p className="text-base font-semibold capitalize text-white/60">
-                  {data.name}
-                </p>
-                <p className="text-sm font-bold uppercase text-white/80">
-                  {data.position}
-                </p>
-              </div>
+                photo={data.photo}
+                name={data.name}
+                position={data.position}
+                colorPrimary="text-white"
+                colorName="text-white/60"
+                colorPosition="text-white/80"
+              />
             ))}
           </div>
         </div>
@@ -229,34 +182,15 @@ const CompanyPage = () => {
           </div>
           <div className="grid grid-cols-3 gap-x-8 gap-y-12 pb-12">
             {Family.map((data) => (
-              <div
-                className="flex flex-col items-center justify-center text-black"
+              <PersonCard
                 key={data.id}
-              >
-                <div className="pb-3">
-                  {data.photo ? (
-                    <Image
-                      src={data.photo}
-                      alt={data.name}
-                      width={150}
-                      height={200}
-                    />
-                  ) : (
-                    <Placeholder
-                      height={200}
-                      width={150}
-                      background="#fff"
-                      color="#333"
-                    />
-                  )}
-                </div>
-                <p className="text-base font-semibold capitalize text-black/60">
-                  {data.name}
-                </p>
-                <p className="text-sm font-bold uppercase text-black/80">
-                  {data.position}
-                </p>
-              </div>
+                photo={data.photo}
+                name={data.name}
+                position={data.position}
+                colorPrimary="text-black"
+                colorName="text-black/60"
+                colorPosition="text-black/80"
+              />
             ))}
           </div>
         </div>
