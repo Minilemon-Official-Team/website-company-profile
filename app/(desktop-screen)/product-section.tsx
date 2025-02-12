@@ -1,6 +1,7 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import { productData } from "@/data/product";
 import MinilemonExplorerToJogja from "@/public/product/minilemon-explorer-to-jogja.jpg";
 import CoverSaveTheEarth from "@/public/product/minilemon-save-the-earth.jpg";
 import CoverPanggungBonekaMinilemon from "@/public/product/panggung-boneka-minilemon.png";
@@ -48,41 +49,17 @@ function ProductSection() {
             }}
             extensions={{ AutoScroll }}
           >
-            <SplideSlide>
-              <Image
-                src={CoverPetualanganMinilemon}
-                alt="Petualangan Minilemon"
-                className="h-[492px] w-[350px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                src={CoverSaveTheEarth}
-                alt="Minilemon Save The Earth"
-                className="h-[492px] w-[350px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                src={MinilemonExplorerToJogja}
-                alt="Minilemon Explorer!"
-                className="h-[492px] w-[350px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                src={CoverPostParenting}
-                alt="Minilemon Live Parenting"
-                className="h-[492px] w-[350px]"
-              />
-            </SplideSlide>
-            <SplideSlide>
-              <Image
-                src={CoverPanggungBonekaMinilemon}
-                alt="Panggung Boneka Minilemon"
-                className="h-[492px] w-[350px]"
-              />
-            </SplideSlide>
+            {productData.map((product) => {
+              return (
+                <SplideSlide key={product.id}>
+                  <Image
+                    src={product.cover}
+                    alt={product.titleCover}
+                    className="h-[492px] w-[350px]"
+                  />
+                </SplideSlide>
+              );
+            })}
           </Splide>
         </div>
         <Link href="/product">
