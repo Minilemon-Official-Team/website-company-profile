@@ -1,22 +1,13 @@
 "use client";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
+import { infoDataMobile } from "@/data/info";
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 import { containerVariants } from "@/lib/animations/containerVariants";
-import {
-  fifthDivVariants,
-  fourthDivVariants,
-  secondDivVariants,
-  thirdDivVariants,
-} from "@/lib/animations/divVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
 import { cn } from "@/lib/utils";
 import BackgroundAboutUs from "@/public/background/about-mobile.png";
-import ConceptTitle from "@/public/title/concept.png";
 import IdeaTitle from "@/public/title/idea.png";
-import MessageTitle from "@/public/title/message.png";
-import PsychographicTitle from "@/public/title/psychographic.png";
-import TreatmentTitle from "@/public/title/treatment.png";
 import "@splidejs/react-splide/css";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -133,31 +124,51 @@ export default function AboutUsSection() {
                 </motion.p>
               </motion.div>
             </motion.div>
-            <motion.div
-              variants={secondDivVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-end bg-[#d5def4]"
-            >
-              <motion.div className="flex max-w-screen-640 flex-col items-end justify-end gap-4 px-6 py-4">
-                <motion.div className="">
-                  <Image
-                    src={MessageTitle}
-                    alt="Message"
-                    className="w-[160px] sm:w-[190px]"
-                  />
+            {infoDataMobile.map((data) => {
+              return (
+                <motion.div
+                  key={data.id}
+                  variants={data.variantDiv}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.5 }}
+                  className={`flex flex-col items-center ${data.imageAlign} ${data.bgColor}`}
+                >
+                  <motion.div
+                    className={`flex max-w-screen-640 flex-col gap-4 px-6 py-4 ${data.imageAlign}`}
+                  >
+                    <motion.div className="">
+                      <Image
+                        src={data.imageTitle}
+                        alt={data.imageAlt}
+                        className={data.imgSize}
+                      />
+                    </motion.div>
+                    <motion.p
+                      className={`leading-relaxed tracking-widest ${data.textColor} ${data.textAlign}`}
+                    >
+                      {data.description}
+                    </motion.p>
+                  </motion.div>
+                  {data.id === 4 && (
+                    <ButtonLegacy.Primary
+                      className={cn(
+                        isExpanded === true ? "flex" : "hidden",
+                        "mb-7 mt-3 scale-90",
+                      )}
+                      onClick={() => {
+                        toggleExpand();
+                        scrollToHeader();
+                      }}
+                    >
+                      Read Less
+                    </ButtonLegacy.Primary>
+                  )}
                 </motion.div>
-                <motion.p className="text-end leading-relaxed tracking-widest">
-                  minimnya hiburan yang mengedepankan kualitas dan edukasi
-                  kepada anak-anak Indonesia, Minilemon berharap mampu menjadi
-                  idola baru, menanamkan nilai-nilai positif di banyak platform
-                  dan gadget yang merupakan kebutuhan gen z saat ini.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-            <motion.div
+              );
+            })}
+            {/* <motion.div
               variants={thirdDivVariants}
               initial="hidden"
               animate="visible"
@@ -205,8 +216,8 @@ export default function AboutUsSection() {
                   satu dan lainnya dalam setiap kisah yang mekea lalui.
                 </motion.p>
               </motion.div>
-            </motion.div>
-            <motion.div
+            </motion.div> */}
+            {/* <motion.div
               variants={fifthDivVariants}
               initial="hidden"
               animate="visible"
@@ -241,7 +252,7 @@ export default function AboutUsSection() {
               >
                 Read Less
               </ButtonLegacy.Primary>
-            </motion.div>
+            </motion.div> */}
           </>
         )}
       </AnimatePresence>
