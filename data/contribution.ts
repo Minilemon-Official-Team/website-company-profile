@@ -18,6 +18,10 @@ import Joy from "@/public/contributors/Joy.jpg";
 import Evan from "@/public/contributors/Evan.jpg";
 import Andepp from "@/public/contributors/Andepp.jpg";
 import Siska from "@/public/contributors/Siska.jpg";
+import Naufal from "@/public/contributors/Naufal.png";
+
+import DummyMale from "@/public/contributors/dummy-male.png";
+import DummyFemale from "@/public/contributors/dummy-female.png";
 
 
 interface ContributionProps {
@@ -26,6 +30,108 @@ interface ContributionProps {
   name: string;
   position: string;
 }
+
+export const Agency: ContributionProps[] = [
+  {
+    id: 1,
+    name: "Stefanus Dimas",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 2,
+    name: "Rian Ekky Pradipta",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 3,
+    name: "Yourdan Anand",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 4,
+    name: "Elly Halsamer",
+    position: "MEDIA COMMUNICATION",
+    photo: Elly,
+  },
+  {
+    id: 5,
+    name: "Fiola Virginia Gunawi",
+    position: "Title",
+    photo: DummyFemale,
+  },
+  {
+    id: 6,
+    name: "Sri Kurnia Dewi",
+    position: "Title",
+    photo: DummyFemale,
+  },
+  {
+    id: 7,
+    name: "Novansyah",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 8,
+    name: "Suthan Reinaldy",
+    position: "Title",
+    photo: DummyMale,
+  },
+];
+
+export const Studio: ContributionProps[] = [
+  {
+    id: 1,
+    name: "Arif Rakhman H",
+    position: "TECHNICAL DIRECTOR",
+    photo: Arif,
+  },
+  {
+    id: 2,
+    name: "Andi Hardjani",
+    position: "Head of Visual Development",
+    photo: Andepp,
+  },
+  {
+    id: 3,
+    name: "Ignatius Mubiarnoto N",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 4,
+    name: "Fikri Abdan",
+    position: "Head of Manager",
+    photo: Abdan,
+  },
+  {
+    id: 5,
+    name: "Dimas Ramadhan",
+    position: "Head of Post-Production",
+    photo: Dimas,
+  },
+  {
+    id: 6,
+    name: "Febrian Dhuhal",
+    position: "Title",
+    photo: DummyMale,
+  },
+  {
+    id: 7,
+    name: "Naufal Selnis M",
+    position: "Title",
+    photo: Naufal,
+  },
+  {
+    id: 8,
+    name: "Auriga F Vereno",
+    position: "Head of Animation",
+    photo: Auriga,
+  },
+];
 
 export const Hero: ContributionProps[] = [
   {
