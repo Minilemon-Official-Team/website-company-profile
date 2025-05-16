@@ -247,14 +247,17 @@ function CompanySection() {
                 <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
                   <div className="flex flex-col items-center gap-6 text-sm leading-7 tracking-widest text-black">
                     <div className="flex justify-center gap-6">
-                      {[{ src: Reno, alt: 'Reno Halsamer', name: 'Reno Halsamer' },
-                      { src: Heri, alt: 'Heriyadi Natawijaya', name: 'Heriyadi Natawijaya' }]
-                        .map(({ src, alt, name }, i) => (
+                      {[{ src: Reno, alt: 'Reno Halsamer', name: 'Reno Halsamer', position: 'Founder' },
+                      { src: Heri, alt: 'Heriyadi Natawijaya', name: 'Heriyadi Natawijaya', position: 'Co Founder, CEO' },]
+                        .map(({ src, alt, name, position }, i) => (
                           <div key={i} className="flex flex-col items-center gap-2">
                             <div className="relative min-w-[175px] min-h-[230px]">
                               <Image src={src} alt={alt} fill className="object-cover" />
                             </div>
-                            <span className="text-[0.7rem] tracking-widest text-center">{name}</span>
+                            <div className="flex flex-col items-center">
+                              <span className="text-[0.7rem] tracking-widest text-center">{name}</span>
+                              <span className="text-[0.7rem] tracking-widest leading-3 text-center font-bold">{position}</span>
+                            </div>
                           </div>
                         ))}
                     </div>
@@ -265,7 +268,10 @@ function CompanySection() {
                         <div className="relative min-w-[175px] min-h-[230px]">
                           <Image src={Wathin} alt="Wathin Ciptawan" fill className="object-cover" />
                         </div>
-                        <span className="text-[0.7rem] tracking-widest text-center">Wathin Ciptawan</span>
+                        <div className="flex flex-col items-center">
+                          <span className="text-[0.7rem] tracking-widest text-center">Wathin Ciptawan</span>
+                          <span className="text-[0.7rem] tracking-widest leading-3 text-center font-bold">Special Partner</span>
+                        </div>
                       </div>
                     </div>
                   </div>

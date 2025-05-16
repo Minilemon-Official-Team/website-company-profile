@@ -99,21 +99,21 @@ const CompanyPage = () => {
               <Image src={Reno} alt="Reno Halsamer" width={295} height={400} />
               <div className="flex flex-col items-center">
                 <span className="text-center text-base font-semibold text-black/60">Reno Halsamer</span>
-                {/* <span className="font-bold">Founder</span> */}
+                <span className="font-bold">Founder</span>
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 items-center">
               <Image src={Heri} alt="Heriyadi Natawijaya" width={295} height={400} />
               <div className="flex flex-col items-center">
                 <span className="text-center text-base font-semibold text-black/60">Heriyadi Natawijaya</span>
-                {/* <span className="font-bold">Co Founder, CEO</span> */}
+                <span className="font-bold">Co Founder, CEO</span>
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 items-center">
               <Image src={Wathin} alt="Wathin Ciptawan" width={295} height={400} />
               <div className="flex flex-col items-center">
                 <span className="text-center text-base font-semibold text-black/60">Wathin Ciptawan</span>
-                {/* <span className="font-bold">Special Partner</span> */}
+                <span className="font-bold">Special Partner</span>
               </div>
             </div>
           </div>
