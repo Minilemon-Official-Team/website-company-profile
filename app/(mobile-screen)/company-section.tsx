@@ -9,7 +9,7 @@ import { Placeholder } from "placeholder";
 import { useEffect, useRef, useState } from "react";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
-import { Studio, Agency } from "@/data/contribution";
+import { Studio, Agency, Academy, Technology } from "@/data/contribution";
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
 // import { containerVariants } from "@/lib/animations/containerVariants";
 import {
@@ -33,13 +33,7 @@ import PlanetTechnology from "@/public/title/planet-technology.png";
 import VisiTitle from "@/public/title/visi.png";
 import MinilemonUniverse from "@/public/title/minilemon-universe.png";
 import FounderTitle from '@/public/title/the-founder.png';
-import Biwara from "@/public/contributors/Biwara.jpg";
-import Siska from "@/public/contributors/Siska.jpg";
-import Anis from "@/public/contributors/Anis.jpg";
-import Ghaza from "@/public/contributors/Ghaza.jpg";
-import Fahmi from "@/public/contributors/Fahmi.jpg";
 import Wathin from "@/public/contributors/Watin.jpg";
-import David from "@/public/contributors/David.jpg";
 // import CoFounderTitle from "@/public/title/co-founder.png";
 // import OurFamilyTile from "@/public/title/our-family.png";
 // import OurHeroTile from "@/public/title/our-hero.png";
@@ -242,37 +236,36 @@ function CompanySection() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center justify-center bg-[#a4bcdc]"
             >
-              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-2 py-4">
                 <motion.div>
                   <Image
                     src={FounderTitle}
                     alt="FounderTitle"
-                    className="scale-[0.7]"
+                    className="h-[40px] w-auto"
                   />
                 </motion.div>
                 <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
-                  <div className="flex justify-start gap-4 items-start">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Reno} alt="Reno Halsamer" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Reno Halsamer</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Founder</span> */}
-                      </div>
+                  <div className="flex flex-col items-center gap-6 text-sm leading-7 tracking-widest text-black">
+                    <div className="flex justify-center gap-6">
+                      {[{ src: Reno, alt: 'Reno Halsamer', name: 'Reno Halsamer' },
+                      { src: Heri, alt: 'Heriyadi Natawijaya', name: 'Heriyadi Natawijaya' }]
+                        .map(({ src, alt, name }, i) => (
+                          <div key={i} className="flex flex-col items-center gap-2">
+                            <div className="relative min-w-[175px] min-h-[230px]">
+                              <Image src={src} alt={alt} fill className="object-cover" />
+                            </div>
+                            <span className="text-[0.7rem] tracking-widest text-center">{name}</span>
+                          </div>
+                        ))}
                     </div>
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Heri} alt="Heriyadi Natawijaya" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Heriyadi Natawijaya</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Co Founder, CEO</span> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-full">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Wathin} alt="Wathin Ciptawan" width={295} height={400} className="max-w-[164.2px]" />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Wathin Ciptawan</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Special Partner</span> */}
+
+                    {/* Bottom center image */}
+                    <div className="flex justify-center">
+                      <div className="flex flex-col items-center gap-2">
+                        <div className="relative min-w-[175px] min-h-[230px]">
+                          <Image src={Wathin} alt="Wathin Ciptawan" fill className="object-cover" />
+                        </div>
+                        <span className="text-[0.7rem] tracking-widest text-center">Wathin Ciptawan</span>
                       </div>
                     </div>
                   </div>
@@ -292,7 +285,7 @@ function CompanySection() {
                   <Image
                     src={PlanetAgencyTitle}
                     alt="PlanetAgencyTitle"
-                    className="scale-[0.7]"
+                    className="h-[40px] w-auto"
                   />
                 </motion.div>
                 <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
@@ -347,7 +340,7 @@ function CompanySection() {
                   <Image
                     src={PlanetStudioTitle}
                     alt="PlanetStudioTitle"
-                    className="scale-[0.7]"
+                    className="h-[40px] w-auto"
                   />
                 </motion.div>
                 <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
@@ -402,35 +395,45 @@ function CompanySection() {
                   <Image
                     src={PlanetAcademyTitle}
                     alt="PlanetAcademyTitle"
-                    className="scale-[0.7]"
+                    className="h-[40px] w-auto"
                   />
                 </motion.div>
-                <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
-                  <div className="flex justify-start gap-4 items-start">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Biwara} alt="Biwara S Pracihara" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Biwara S Pracihara</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">CREATIVE PROGRAM ANALYST</span> */}
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
+                  {Academy.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
+                    >
+                      {/* <motion.img
+                              src="https://picsum.photos/id/200/200/250?grayscale"
+                              alt="Founder Image"
+                              className="w-full"
+                            /> */}
+
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
-                    </div>
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Siska} alt="Fransisca Diwati" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Fransisca Diwati</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">PUBLIC RELATION</span> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-full">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Anis} alt="Anis Ilahi Wahdati" width={295} height={400} className="max-w-[164.2px]" />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-[0.7rem] tracking-widest">Anis Ilahi Wahdati</span>
-                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">BUSINESS DEVELOPMENT</span> */}
-                      </div>
-                    </div>
-                  </div>
+                      <motion.p className="text-nowrap text-center text-black text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                        {item.name}
+                      </motion.p>
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                        {/* {item.position} */}
+                      </motion.p>
+                    </motion.div>
+                  ))}
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -447,35 +450,45 @@ function CompanySection() {
                   <Image
                     src={PlanetTechnology}
                     alt="PlanetTechnology"
-                    className="scale-[0.7]"
+                    className="h-[40px] w-auto"
                   />
                 </motion.div>
-                <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
-                  <div className="flex justify-start gap-4 items-start">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Ghaza} alt="Muhammad Ghazariz" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-white/60 text-[0.7rem] -tracking-tighter">Muhammad Ghazariz</span>
-                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">Game Development</span> */}
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
+                  {Technology.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex w-[140px] flex-col items-center justify-start gap-2"
+                    >
+                      {/* <motion.img
+                              src="https://picsum.photos/id/200/200/250?grayscale"
+                              alt="Founder Image"
+                              className="w-full"
+                            /> */}
+
+                      <div className="flex w-full">
+                        {/* sm:h-[200px] sm:w-[160px] */}
+                        {item.photo ? (
+                          <Image
+                            height={180}
+                            src={item.photo}
+                            alt={item.name}
+                          />
+                        ) : (
+                          <Placeholder
+                            height={200}
+                            width={160}
+                            text="160 x 200"
+                          />
+                        )}
                       </div>
-                    </div>
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={Fahmi} alt="Fahmi" width={295} height={400} />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-white/60 text-[0.7rem] tracking-widest">Fahmi</span>
-                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">IT Development</span> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center w-full">
-                    <div className="flex flex-col justify-center gap-4 items-center">
-                      <Image src={David} alt="David G Halsamer" width={295} height={400} className="max-w-[164.2px]" />
-                      <div className="flex flex-col items-center">
-                        <span className="text-center text-white/60 text-[0.7rem] tracking-widest">David G Halsamer</span>
-                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">DIGITAL ANALYST</span> */}
-                      </div>
-                    </div>
-                  </div>
+                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                        {item.name}
+                      </motion.p>
+                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                        {/* {item.position} */}
+                      </motion.p>
+                    </motion.div>
+                  ))}
                 </motion.div>
               </motion.div>
               <ButtonLegacy.Primary

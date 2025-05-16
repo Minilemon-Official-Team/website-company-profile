@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Placeholder } from "placeholder";
 
-import { Studio, Agency } from "@/data/contribution";
+import { Studio, Agency, Academy, Technology } from "@/data/contribution";
 import BackgroundImage from "@/public/background/company.png";
 // import CoFounderTitle from "@/public/title/co-founder.png";
 // import HeroTitle from "@/public/title/our-hero.png";
@@ -16,12 +16,6 @@ import MisiTitle from "@/public/title/misi.png";
 import FounderTitle from "@/public/title/the-founder.png";
 import VisiTitle from "@/public/title/visi.png";
 
-import Ghaza from "@/public/contributors/Ghaza.jpg";
-import Fahmi from "@/public/contributors/Fahmi.jpg"
-import David from "@/public/contributors/David.jpg";
-import Biwara from "@/public/contributors/Biwara.jpg";
-import Siska from "@/public/contributors/Siska.jpg";
-import Anis from "@/public/contributors/Anis.jpg";
 import Heri from "@/public/contributors/Heri.jpg";
 import Reno from "@/public/contributors/Reno.jpg";
 import Wathin from "@/public/contributors/Watin.jpg";
@@ -104,21 +98,21 @@ const CompanyPage = () => {
             <div className="flex flex-col justify-center gap-4 items-center">
               <Image src={Reno} alt="Reno Halsamer" width={295} height={400} />
               <div className="flex flex-col items-center">
-                <span className="text-center ">Reno Halsamer</span>
+                <span className="text-center text-base font-semibold text-black/60">Reno Halsamer</span>
                 {/* <span className="font-bold">Founder</span> */}
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 items-center">
               <Image src={Heri} alt="Heriyadi Natawijaya" width={295} height={400} />
               <div className="flex flex-col items-center">
-                <span className="text-center ">Heriyadi Natawijaya</span>
+                <span className="text-center text-base font-semibold text-black/60">Heriyadi Natawijaya</span>
                 {/* <span className="font-bold">Co Founder, CEO</span> */}
               </div>
             </div>
             <div className="flex flex-col justify-center gap-4 items-center">
               <Image src={Wathin} alt="Wathin Ciptawan" width={295} height={400} />
               <div className="flex flex-col items-center">
-                <span className="text-center ">Wathin Ciptawan</span>
+                <span className="text-center text-base font-semibold text-black/60">Wathin Ciptawan</span>
                 {/* <span className="font-bold">Special Partner</span> */}
               </div>
             </div>
@@ -209,65 +203,83 @@ const CompanyPage = () => {
       </div>
 
       {/* Planet Academy Desktop View */}
-      <div className="flex flex-row bg-[#fff4ec] py-14">
-        <div className="container flex flex-col gap-4 px-8 lg:px-0">
-          <div className="flex w-full justify-center mb-14">
-            <Image src={PlanetAcademyTitle} alt="Planet Academy" />
-          </div>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 justify-center">
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={Biwara} alt="Biwara S Pracihara" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center">Biwara S Pracihara</span>
-                {/* <span className="font-bold">CREATIVE PROGRAM ANALYST</span> */}
+      <div className="flex flex-col gap-y-12 bg-[#fff4ec] py-14">
+        <div className="container flex items-center justify-center">
+          <Image src={PlanetAcademyTitle} alt="Planet Academy" />
+        </div>
+        <div className="container">
+          <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
+            {Academy.map((data) => (
+              <div
+                className="flex flex-col items-center justify-center text-white"
+                key={data.id}
+              >
+                <div className="pb-3">
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
+                </div>
+                <p className="text-base font-semibold capitalize text-black/60">
+                  {data.name}
+                </p>
+                <p className="text-sm font-bold uppercase text-black/80">
+                  {/* {data.position} */}
+                </p>
               </div>
-            </div>
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={Siska} alt="Fransisca Diwati" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center">Fransisca Diwati</span>
-                {/* <span className="font-bold">PUBLIC RELATION</span> */}
-              </div>
-            </div>
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={Anis} alt="Anis Ilahi Wahdati" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center">Anis Ilahi Wahdati</span>
-                {/* <span className="font-bold">BUSINESS DEVELOPMENT</span> */}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Planet Technology Desktop View */}
-      <div className="flex flex-row bg-[#1b1b1b] py-14">
-        <div className="container flex flex-col gap-4 px-8 lg:px-0">
-          <div className="flex w-full justify-center mb-14">
-            <Image src={PlanetTechnology} alt="Planet Technology" />
-          </div>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 justify-center">
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={Ghaza} alt="Muhammad Ghazariz" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center text-white/60">Muhammad Ghazariz</span>
-                {/* <span className="font-bold text-white/80">Game Development</span> */}
+      <div className="flex flex-col gap-y-12 bg-[#1b1b1b] py-14">
+        <div className="container flex items-center justify-center">
+          <Image src={PlanetTechnology} alt="Planet Technology" />
+        </div>
+        <div className="container">
+          <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
+            {Technology.map((data) => (
+              <div
+                className="flex flex-col items-center justify-center text-white"
+                key={data.id}
+              >
+                <div className="pb-3">
+                  {data.photo ? (
+                    <Image
+                      src={data.photo}
+                      alt={data.name}
+                      width={150}
+                      height={200}
+                    />
+                  ) : (
+                    <Placeholder
+                      height={200}
+                      width={150}
+                      background="#fff"
+                      color="#333"
+                    />
+                  )}
+                </div>
+                <p className="text-base font-semibold capitalize text-white/60">
+                  {data.name}
+                </p>
+                <p className="text-sm font-bold uppercase text-white/80">
+                  {/* {data.position} */}
+                </p>
               </div>
-            </div>
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={Fahmi} alt="Fahmi" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center text-white/60">Fahmi</span>
-                {/* <span className="font-bold text-white/80">IT Development</span> */}
-              </div>
-            </div>
-            <div className="flex flex-col justify-center gap-4 items-center">
-              <Image src={David} alt="David G Halsamer" width={295} height={400} />
-              <div className="flex flex-col items-center">
-                <span className="text-center text-white/60">David G Halsamer</span>
-                {/* <span className="font-bold text-white/80">DIGITAL ANALYST</span> */}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

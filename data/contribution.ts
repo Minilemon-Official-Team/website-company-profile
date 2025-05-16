@@ -19,6 +19,7 @@ import Evan from "@/public/contributors/Evan.jpg";
 import Andepp from "@/public/contributors/Andepp.jpg";
 import Siska from "@/public/contributors/Siska.jpg";
 import Naufal from "@/public/contributors/Naufal.png";
+import Novansyah from "@/public/contributors/Novansyah.png";
 
 import DummyMale from "@/public/contributors/dummy-male.png";
 import DummyFemale from "@/public/contributors/dummy-female.png";
@@ -72,7 +73,7 @@ export const Agency: ContributionProps[] = [
     id: 7,
     name: "Novansyah",
     position: "Title",
-    photo: DummyMale,
+    photo: Novansyah,
   },
   {
     id: 8,
@@ -130,6 +131,60 @@ export const Studio: ContributionProps[] = [
     name: "Auriga F Vereno",
     position: "Head of Animation",
     photo: Auriga,
+  },
+];
+
+export const Academy: ContributionProps[] = [
+  {
+    id: 1,
+    name: "Biwara S Pracihara",
+    position: "Creative Program Analyst",
+    photo: Biwara,
+  },
+  {
+    id: 2,
+    name: "Fransisca Diwati",
+    position: "Public Relation",
+    photo: Siska,
+  },
+  {
+    id: 3,
+    name: "Anis Ilahi Wahdati",
+    position: "Business Development",
+    photo: Anis,
+  },
+  {
+    id: 4,
+    name: "Arif Rakhman H",
+    position: "TECHNICAL DIRECTOR",
+    photo: Arif,
+  },
+];
+
+export const Technology: ContributionProps[] = [
+  {
+    id: 1,
+    name: "Muhammad Ghazariz",
+    position: "Game Development",
+    photo: Ghaza,
+  },
+  {
+    id: 2,
+    name: "Fahmi Arif",
+    position: "IT Development",
+    photo: Fahmi,
+  },
+  {
+    id: 3,
+    name: "David G Halsamer",
+    position: "Digital Analyst",
+    photo: David,
+  },
+  {
+    id: 4,
+    name: "Fiola Virginia Gunawi",
+    position: "Title",
+    photo: DummyFemale,
   },
 ];
 
