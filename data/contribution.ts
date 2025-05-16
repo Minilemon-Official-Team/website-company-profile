@@ -53,9 +53,9 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 4,
-    name: "Elly Halsamer",
-    position: "MEDIA COMMUNICATION",
-    photo: Elly,
+    name: "Ahmad Hakim Jayli",
+    position: "Title",
+    photo: DummyMale,
   },
   {
     id: 5,
@@ -71,15 +71,27 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 7,
-    name: "Novansyah",
-    position: "Title",
-    photo: Novansyah,
+    name: "Elly Halsamer",
+    position: "MEDIA COMMUNICATION",
+    photo: Elly,
   },
   {
     id: 8,
     name: "Suthan Reinaldy",
     position: "Title",
-    photo: DummyMale,
+    photo: DummyFemale,
+  },
+  {
+    id: 9,
+    name: "Novansyah",
+    position: "Title",
+    photo: Novansyah,
+  },
+  {
+    id: 10,
+    name: "Muahmmad Ghazariz",
+    position: "Title",
+    photo: Ghaza,
   },
 ];
 

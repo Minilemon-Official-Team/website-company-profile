@@ -127,10 +127,11 @@ const CompanyPage = () => {
         </div>
         <div className="container">
           <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
-            {Agency.map((data) => (
+            {/* First 8 items */}
+            {Agency.slice(0, 8).map((data) => (
               <div
-                className="flex flex-col items-center justify-center text-black"
                 key={data.id}
+                className="flex flex-col items-center justify-center text-black"
               >
                 <div className="pb-3">
                   {data.photo ? (
@@ -157,6 +158,65 @@ const CompanyPage = () => {
                 </p>
               </div>
             ))}
+
+            {/* Centered last row with Grid */}
+            <div className="col-span-4 grid grid-cols-4 gap-x-8">
+              <div className="col-start-2">
+                <div className="flex flex-col items-center justify-center text-black">
+                  <div className="pb-3">
+                    {Agency[8].photo ? (
+                      <Image
+                        src={Agency[8].photo}
+                        alt={Agency[8].name}
+                        width={150}
+                        height={200}
+                      />
+                    ) : (
+                      <Placeholder
+                        height={200}
+                        width={150}
+                        background="#fff"
+                        color="#333"
+                      />
+                    )}
+                  </div>
+                  <p className="text-base font-semibold capitalize text-black/60">
+                    {Agency[8].name}
+                  </p>
+                  <p className="text-sm font-bold uppercase text-black/80">
+                    {/* {Agency[8].position} */}
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex flex-col items-center justify-center text-black">
+                  <div className="pb-3">
+                    {Agency[9].photo ? (
+                      <Image
+                        src={Agency[9].photo}
+                        alt={Agency[9].name}
+                        width={150}
+                        height={200}
+                      />
+                    ) : (
+                      <Placeholder
+                        height={200}
+                        width={150}
+                        background="#fff"
+                        color="#333"
+                      />
+                    )}
+                  </div>
+                  <p className="text-base font-semibold capitalize text-black/60">
+                    {Agency[9].name}
+                  </p>
+                  <p className="text-sm font-bold uppercase text-black/80">
+                    {/* {Agency[9].position} */}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
