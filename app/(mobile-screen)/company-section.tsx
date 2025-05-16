@@ -9,13 +9,14 @@ import { Placeholder } from "placeholder";
 import { useEffect, useRef, useState } from "react";
 
 import { Button as ButtonLegacy } from "@/components/ui/button-sec";
-import { Family, Hero } from "@/data/contribution";
+import { Studio, Agency } from "@/data/contribution";
 import useUpdateCurrentLink from "@/hooks/useUpdateCurrentLink";
-import { containerVariants } from "@/lib/animations/containerVariants";
+// import { containerVariants } from "@/lib/animations/containerVariants";
 import {
   fifthDivVariants,
   fourthDivVariants,
   secondDivVariants,
+  sixthDivVariants,
   thirdDivVariants,
 } from "@/lib/animations/divVariants";
 import { paragraphVariants } from "@/lib/animations/paragraphVariants";
@@ -24,13 +25,26 @@ import { cn } from "@/lib/utils";
 import BackgroundCompany from "@/public/background/company-mobile.png";
 import Heri from "@/public/contributors/Heri.jpg";
 import Reno from "@/public/contributors/Reno.jpg";
-import CoFounderTitle from "@/public/title/co-founder.png";
 import MisiTitle from "@/public/title/misi.png";
-import OurFamilyTile from "@/public/title/our-family.png";
-import OurHeroTile from "@/public/title/our-hero.png";
-import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
-import TheFounderTitle from "@/public/title/the-founder.png";
+import PlanetAgencyTitle from "@/public/title/planet-agency.png";
+import PlanetStudioTitle from "@/public/title/planet-studio.png";
+import PlanetAcademyTitle from "@/public/title/planet-academy.png";
+import PlanetTechnology from "@/public/title/planet-technology.png";
 import VisiTitle from "@/public/title/visi.png";
+import MinilemonUniverse from "@/public/title/minilemon-universe.png";
+import FounderTitle from '@/public/title/the-founder.png';
+import Biwara from "@/public/contributors/Biwara.jpg";
+import Siska from "@/public/contributors/Siska.jpg";
+import Anis from "@/public/contributors/Anis.jpg";
+import Ghaza from "@/public/contributors/Ghaza.jpg";
+import Fahmi from "@/public/contributors/Fahmi.jpg";
+import Wathin from "@/public/contributors/Watin.jpg";
+import David from "@/public/contributors/David.jpg";
+// import CoFounderTitle from "@/public/title/co-founder.png";
+// import OurFamilyTile from "@/public/title/our-family.png";
+// import OurHeroTile from "@/public/title/our-hero.png";
+// import PtMinilemonNusantaraMobileTitle from "@/public/title/pt-minilemon-nusantara-mobile-1.png";
+// import TheFounderTitle from "@/public/title/the-founder.png";
 
 function CompanySection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -91,28 +105,28 @@ function CompanySection() {
           <div ref={scrollRef} id="company" className="z-10">
             <Image
               ref={refInView}
-              src={PtMinilemonNusantaraMobileTitle}
-              alt="PtMinilemonNusantaraMobileTitle"
+              src={MinilemonUniverse}
+              alt="MinilemonUniverse"
               className="w-[240px] 400:w-[290px]"
             />
           </div>
           <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">
             <p>
-              PT. Minilemon Nusantara adalah perusahaan yang berdomisili di
-              Surabaya dan Jakarta, Indonesia. Yang berorientasi pada Pendidikan
-              Karakter Anak dan nilai-nilai kebaikan melalui berbagai Program
-              Pendidikan berbasis seni, hiburan, dan teknologi.
+              Minilemon Universe merupakan cakrawala sejati yang berorientasi pada
+              Pendidikan Karakter Anak dan nilai - nilai kebaikan melalui berbagai
+              Program Pendidikan berbasis seni, hiburan dan teknologi.
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] pt-4">
+      <div className="flex flex-col items-center justify-center bg-[#e7e7e7] py-4">
         <div className="flex max-w-screen-640 flex-col items-center px-6 py-3 leading-7 tracking-widest">
           <p>
-            Beragam program dikerjakan PT. Minilemon Nusantara untuk terus
-            melakukan pendekatan terhadap pendidikan, mulai dari film animasi,
-            game, panggung boneka, podcast parenting dan berbagai macam progam
-            lainnya yang membawa karakter positif bagi anak-anak.
+            Di dalam Minilemon Universe terdapat Planet Agency, Planet Sudio,
+            Planet Academy dan Planet Software,  yang terus melakukan pendekatan
+            terhadap Pendidikan, mulai dari film animasi, game, panggung boneka,
+            podcast parenting dan berbagai macam program lainnya yang membawa
+            karakter positif bagi anak-anak.
           </p>
           <ButtonLegacy.Primary
             className={cn(
@@ -128,7 +142,7 @@ function CompanySection() {
       <AnimatePresence>
         {isExpanded && (
           <>
-            <motion.div
+            {/* <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -149,7 +163,7 @@ function CompanySection() {
                   pembangunan Museum di berbagai tempat di Indonesia.
                 </motion.p>
               </motion.div>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               variants={secondDivVariants}
               initial="hidden"
@@ -170,14 +184,13 @@ function CompanySection() {
                   className="max-w-screen-640 text-start text-sm leading-7 tracking-widest text-[#c5cce2]"
                   variants={paragraphVariants}
                 >
-                  Sebagai anak bangsa yang baik dan cinta tanah air, PT
-                  Minilemon Nusantara mengambil tanggung jawab untuk
-                  berkontribusi memberikan edukasi dan harapan untuk kemajuan
-                  bangsa. Dengan menciptakan &quot;Good character&quot; PT
-                  Minilemon Nusantara diharapkan dapat berperan kreatif untuk
-                  mempersiapkan generasi muda dan anak-anak Indonesia yang
-                  tangguh, cinta tanah air, dengan membawa nilai-nilai kebaikan
-                  dan budaya yang merupakan warisan yang selalu kita banggakan.
+                  Sebagai anak bangsa yang baik dan cinta tanah air, Minilemon mengambil
+                  tanggung jawab untuk berkontribusi memberikan edukasi dan harapan
+                  untuk kemajuan bangsa.Dengan menciptakan &quot;Good character&quot;
+                  Minilemon diharapkan dapat berperan kreatif untuk mempersiapkan
+                  generasi muda dan anak-anak Indonesia yang tangguh, cinta tanah air,
+                  dengan membawa nilai - nilai kebaikan dan budaya yang merupakan warisan
+                  yang selalu kita banggakan.
                 </motion.p>
               </motion.div>
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
@@ -227,158 +240,63 @@ function CompanySection() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#a4bcdc] py-5"
-            >
-              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
-                <motion.div className="mb-3">
-                  <Image
-                    src={TheFounderTitle}
-                    alt="TheFounderTitle"
-                    className="w-[250px]"
-                  />
-                </motion.div>
-                <motion.div>
-                  {/* <motion.img
-                          src="https://via.placeholder.com/200x250"
-                          alt="Founder Image"
-                          className="float-left shadow-lg mr-4 rounded-md w-1/2"
-                        /> */}
-
-                  <div className="float-left mb-1 mr-4">
-                    <Image
-                      src={Reno}
-                      alt="Reno Halsamer"
-                      width={144}
-                      height={200}
-                    />
-                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
-                  </div>
-                  <motion.div>
-                    <motion.p
-                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
-                      variants={paragraphVariants}
-                    >
-                      <motion.span className="mr-2 font-bold">
-                        Reno Halsamer
-                      </motion.span>
-                      <br />
-                      Adalah Pria yang lahir dan tinggal di Surabaya Indonesia.
-                      Sebagai seorang bisnisman dan penggiat Museum seni
-                      khususnya Topeng Indonesia, Sejak tahun 2015 di Surabaya,
-                      dengan situasi yang dirasa mundurnya kecintaan masyarakat
-                      terhadap seni dan budaya, Reno Halsamer mencetuskan ide
-                      untuk menciptakan karakter animasi dengan mengkombinasikan
-                      topeng dan buah lemon. Sehingga, topeng merupakan karya
-                      seni yang dibuat orisinal dari leluhur bangsa Indonesia,
-                      topeng juga diharapkan mampu mewakili wajah karakter
-                      masyarakat Indonesia.
-                    </motion.p>
-                    <motion.p
-                      className="mt-5 text-start text-[.80rem] leading-7 tracking-wider"
-                      variants={paragraphVariants}
-                    >
-                      Karakter animasi minilemon diharapkan menjadi figur baik
-                      dan menjadi teladan teruntuk anak-anak Indonesia, sehinga
-                      buah lemon yang dikenal banyak manfaatnya, sangat cocok
-                      dipadukan dengan topeng, untuk menjadi &quot;THE GOOD
-                      CHARACTER&quot; dengan &quot;WAJAH INDONESIA&quot;. Dengan
-                      ide yang brilian, &quot;BAPAK MINILEMON&quot; merupakan
-                      julukan yang pantas dilekatkan dengan Reno Halsamer.
-                    </motion.p>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              variants={fourthDivVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#d3def4] py-5"
+              className="flex flex-col items-center justify-center bg-[#a4bcdc]"
             >
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
-                    src={CoFounderTitle}
-                    alt="CoFounderTitle"
-                    className="mb-3 w-[250px]"
-                  />
-                </motion.div>
-                <motion.div>
-                  {/* <motion.img
-                          src="https://via.placeholder.com/200x250"
-                          alt="Founder Image"
-                          className="float-left shadow-lg mr-4 rounded-md w-1/2"
-                        /> */}
-                  <div className="float-left mb-1 mr-4">
-                    <Image
-                      src={Heri}
-                      alt="Heriyadi Natawijaya"
-                      width={144}
-                      height={200}
-                    />
-                    {/* <Placeholder height={200} width={144} text="144 x 200" /> */}
-                  </div>
-                  <motion.div>
-                    <motion.p
-                      className="-mt-2 text-start text-[.80rem] leading-7 tracking-wider"
-                      variants={paragraphVariants}
-                    >
-                      <motion.span className="font-bold">
-                        Heriyadi Natawijaya
-                      </motion.span>
-                      <br />
-                      Lahir di Palembang dan tinggal di Depok Indonesia, adalah
-                      Seorang Sutradara Iklan, Video Klip dan Animasi Sejak
-                      2009. Heriyadi Natawijaya juga sebagai Pendiri Perakaria
-                      dan IDSains sebagai Pusat Komunitas Kreatif dan produksi
-                      seni di Depok, Indonesia.
-                    </motion.p>
-                    <motion.p
-                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
-                      variants={paragraphVariants}
-                    >
-                      Karirnya di dunia Seni dan Perfilman membuatnya bertemu
-                      Reno Halsamer sebagai sosok pencetus Minilemon. Mempunyai
-                      Visi Misi yang sama untuk kemudian menghidupkan minilemon
-                      sebagai produk Kreatif, edukatif dengan nilai-nilai
-                      budaya.
-                    </motion.p>
-                    <motion.p
-                      className="mt-5 text-[.80rem] leading-7 tracking-wider"
-                      variants={paragraphVariants}
-                    >
-                      Pengalaman panjang sebagai kepala Seni, dan kecintaannya
-                      dengan teknologi, membuat Heriyadi Natawijaya banyak
-                      menciptakan gagasan dan putusan yang berpihak kepada
-                      estetika dan budaya kerja yang tech savvy, menyenangkan,
-                      transparan dan terukur, dengan pergelaran dan
-                      Kepiawaiannya “Paman Minilemon” adalah julukan yang cocok
-                      untuk Heriyadi Natawijaya.
-                    </motion.p>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              variants={fifthDivVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
-            >
-              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
-                <motion.div>
-                  <Image
-                    src={OurHeroTile}
-                    alt="OurHeroTile"
+                    src={FounderTitle}
+                    alt="FounderTitle"
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
-                  {Hero.map((item, index) => (
+                <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
+                  <div className="flex justify-start gap-4 items-start">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Reno} alt="Reno Halsamer" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Reno Halsamer</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Founder</span> */}
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Heri} alt="Heriyadi Natawijaya" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Heriyadi Natawijaya</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Co Founder, CEO</span> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center w-full">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Wathin} alt="Wathin Ciptawan" width={295} height={400} className="max-w-[164.2px]" />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Wathin Ciptawan</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">Special Partner</span> */}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              variants={thirdDivVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center justify-center bg-[#d3def4]"
+            >
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
+                <motion.div>
+                  <Image
+                    src={PlanetAgencyTitle}
+                    alt="PlanetAgencyTitle"
+                    className="scale-[0.7]"
+                  />
+                </motion.div>
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
+                  {Agency.map((item, index) => (
                     <motion.div
                       key={index}
                       className="flex w-[140px] flex-col items-center justify-start gap-2"
@@ -409,7 +327,7 @@ function CompanySection() {
                         {item.name}
                       </motion.p>
                       <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
-                        {item.position}
+                        {/* {item.position} */}
                       </motion.p>
                     </motion.div>
                   ))}
@@ -417,32 +335,33 @@ function CompanySection() {
               </motion.div>
             </motion.div>
             <motion.div
-              variants={fifthDivVariants}
+              variants={fourthDivVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="flex flex-col items-center justify-center bg-[#fff4ec]"
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
             >
               <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
                 <motion.div>
                   <Image
-                    src={OurFamilyTile}
-                    alt="OurFamilyTile"
+                    src={PlanetStudioTitle}
+                    alt="PlanetStudioTitle"
                     className="scale-[0.7]"
                   />
                 </motion.div>
-                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest sm:gap-20">
-                  {Family.map((item, index) => (
+                <motion.div className="grid max-w-screen-640 grid-cols-2 gap-x-5 gap-y-[1.5rem] text-start text-sm leading-7 tracking-widest text-[#c5cce2] sm:gap-20">
+                  {Studio.map((item, index) => (
                     <motion.div
                       key={index}
                       className="flex w-[140px] flex-col items-center justify-start gap-2"
                     >
                       {/* <motion.img
-                              src="https://picsum.photos/seed/picsum/200/250"
+                              src="https://picsum.photos/id/200/200/250?grayscale"
                               alt="Founder Image"
                               className="w-full"
                             /> */}
+
                       <div className="flex w-full">
                         {/* sm:h-[200px] sm:w-[160px] */}
                         {item.photo ? (
@@ -463,10 +382,100 @@ function CompanySection() {
                         {item.name}
                       </motion.p>
                       <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
-                        {item.position}
+                        {/* {item.position} */}
                       </motion.p>
                     </motion.div>
                   ))}
+                </motion.div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              variants={fifthDivVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center justify-center bg-[#fff4ec]"
+            >
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
+                <motion.div>
+                  <Image
+                    src={PlanetAcademyTitle}
+                    alt="PlanetAcademyTitle"
+                    className="scale-[0.7]"
+                  />
+                </motion.div>
+                <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
+                  <div className="flex justify-start gap-4 items-start">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Biwara} alt="Biwara S Pracihara" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Biwara S Pracihara</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">CREATIVE PROGRAM ANALYST</span> */}
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Siska} alt="Fransisca Diwati" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Fransisca Diwati</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">PUBLIC RELATION</span> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center w-full">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Anis} alt="Anis Ilahi Wahdati" width={295} height={400} className="max-w-[164.2px]" />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-[0.7rem] tracking-widest">Anis Ilahi Wahdati</span>
+                        {/* <span className="font-bold text-center text-[0.7rem] leading-[1rem] tracking-widest">BUSINESS DEVELOPMENT</span> */}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              variants={sixthDivVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center justify-center bg-[#1b1b1b]"
+            >
+              <motion.div className="flex max-w-screen-640 flex-col items-center justify-center gap-4 px-6 py-4">
+                <motion.div>
+                  <Image
+                    src={PlanetTechnology}
+                    alt="PlanetTechnology"
+                    className="scale-[0.7]"
+                  />
+                </motion.div>
+                <motion.div className="max-w-screen-640 flex flex-col gap-x-5 gap-y-[1.5rem] justify-start items-start text-start text-sm leading-7 tracking-widest text-[#000] sm:gap-20">
+                  <div className="flex justify-start gap-4 items-start">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Ghaza} alt="Muhammad Ghazariz" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-white/60 text-[0.7rem] -tracking-tighter">Muhammad Ghazariz</span>
+                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">Game Development</span> */}
+                      </div>
+                    </div>
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={Fahmi} alt="Fahmi" width={295} height={400} />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-white/60 text-[0.7rem] tracking-widest">Fahmi</span>
+                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">IT Development</span> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center items-center w-full">
+                    <div className="flex flex-col justify-center gap-4 items-center">
+                      <Image src={David} alt="David G Halsamer" width={295} height={400} className="max-w-[164.2px]" />
+                      <div className="flex flex-col items-center">
+                        <span className="text-center text-white/60 text-[0.7rem] tracking-widest">David G Halsamer</span>
+                        {/* <span className="font-bold text-center text-white/80 text-[0.7rem] leading-[1rem] tracking-widest">DIGITAL ANALYST</span> */}
+                      </div>
+                    </div>
+                  </div>
                 </motion.div>
               </motion.div>
               <ButtonLegacy.Primary
