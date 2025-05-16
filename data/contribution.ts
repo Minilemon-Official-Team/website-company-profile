@@ -18,11 +18,11 @@ import Joy from "@/public/contributors/Joy.jpg";
 import Evan from "@/public/contributors/Evan.jpg";
 import Andepp from "@/public/contributors/Andepp.jpg";
 import Siska from "@/public/contributors/Siska.jpg";
-import Naufal from "@/public/contributors/Naufal.png";
-import Novansyah from "@/public/contributors/Novansyah.png";
+import Naufal from "@/public/contributors/Naufal.jpg";
+import Novansyah from "@/public/contributors/Novansyah.jpg";
 
-import DummyMale from "@/public/contributors/dummy-male.png";
-import DummyFemale from "@/public/contributors/dummy-female.png";
+import DummyMale from "@/public/contributors/dummy-male.jpg";
+import DummyFemale from "@/public/contributors/dummy-female.jpg";
 
 
 interface ContributionProps {
