@@ -49,7 +49,7 @@ const CompanyPage = () => {
             </p>
             <p>
               Di dalam Minilemon Universe terdapat Planet Agency, Planet Sudio,
-              Planet Academy dan Planet Software,  yang terus melakukan pendekatan
+              Planet Academy dan Planet Technology,  yang terus melakukan pendekatan
               terhadap Pendidikan, mulai dari film animasi, game, panggung boneka,
               podcast parenting dan berbagai macam program lainnya yang membawa
               karakter positif bagi anak-anak.
