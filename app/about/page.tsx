@@ -9,7 +9,6 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col">
       <BannerWrapper
-        bgColor="bg-[#d6ddf4]"
         backgroundImage={BackgroundImage}
         backgroundAlt="Background"
         className="py-14"
