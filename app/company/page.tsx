@@ -59,11 +59,10 @@ const CompanyPage = () => {
             <Image src={VisiTitle} alt="Visi dan Misi" />
           </div>
           <p className="leading-[1.8] tracking-[0.04em] text-[#d1d9e6]">
-            Sebagai anak bangsa yang baik dan cinta tanah air, PT Minilemon
-            Nusantara mengambil tanggung jawab untuk berkontribusi memberikan
+            Sebagai anak bangsa yang baik dan cinta tanah air, Minilemon mengambil tanggung jawab untuk berkontribusi memberikan
             edukasi dan harapan untuk kemajuan bangsa.
             <br />
-            Dengan menciptakan &quot;Good character&quot; PT Minilemon Nusantara
+            Dengan menciptakan &quot;Good character&quot; Minilemon
             diharapkan dapat berperan kreatif untuk mempersiapkan generasi muda
             dan anak-anak Indonesia yang tangguh, cinta tanah air, dengan
             membawa nilai - nilai kebaikan dan budaya yang merupakan warisan
