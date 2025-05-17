@@ -59,27 +59,27 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 5,
-    name: "Fiola Virginia Gunawi",
-    position: "Title",
-    photo: DummyFemale,
-  },
-  {
-    id: 6,
-    name: "Sri Kurnia Dewi",
-    position: "Title",
-    photo: DummyFemale,
-  },
-  {
-    id: 7,
     name: "Elly Halsamer",
     position: "MEDIA COMMUNICATION",
     photo: Elly,
   },
   {
+    id: 6,
+    name: "Fiola Virginia Gunawi",
+    position: "Title",
+    photo: DummyFemale,
+  },
+  {
+    id: 7,
+    name: "Sri Kurnia Dewi",
+    position: "Title",
+    photo: DummyFemale,
+  },
+  {
     id: 8,
     name: "Suthan Reinaldy",
     position: "Title",
-    photo: DummyFemale,
+    photo: DummyMale,
   },
   {
     id: 9,
@@ -89,7 +89,7 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 10,
-    name: "Muahmmad Ghazariz",
+    name: "Muhammad Ghazariz",
     position: "Title",
     photo: Ghaza,
   },
@@ -104,21 +104,21 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 2,
+    name: "Fikri Abdan",
+    position: "Head of Manager",
+    photo: Abdan,
+  },
+  {
+    id: 3,
     name: "Andi Hardjani",
     position: "Head of Visual Development",
     photo: Andepp,
   },
   {
-    id: 3,
+    id: 4,
     name: "Ignatius Mubiarnoto N",
     position: "Title",
     photo: DummyMale,
-  },
-  {
-    id: 4,
-    name: "Fikri Abdan",
-    position: "Head of Manager",
-    photo: Abdan,
   },
   {
     id: 5,
@@ -128,21 +128,21 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 6,
+    name: "Auriga F Vereno",
+    position: "Head of Animation",
+    photo: Auriga,
+  },
+  {
+    id: 7,
     name: "Febrian Dhuhal",
     position: "Title",
     photo: DummyMale,
   },
   {
-    id: 7,
+    id: 8,
     name: "Naufal Selnis M",
     position: "Title",
     photo: Naufal,
-  },
-  {
-    id: 8,
-    name: "Auriga F Vereno",
-    position: "Head of Animation",
-    photo: Auriga,
   },
 ];
 
@@ -182,15 +182,15 @@ export const Technology: ContributionProps[] = [
   },
   {
     id: 2,
-    name: "Fahmi Arif",
-    position: "IT Development",
-    photo: Fahmi,
-  },
-  {
-    id: 3,
     name: "David G Halsamer",
     position: "Digital Analyst",
     photo: David,
+  },
+  {
+    id: 3,
+    name: "Fahmi Arif",
+    position: "IT Development",
+    photo: Fahmi,
   },
   {
     id: 4,
