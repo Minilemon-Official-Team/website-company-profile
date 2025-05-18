@@ -55,7 +55,7 @@ const CompanyPage = () => {
       {/* Visi dan Misi */}
       <div className="bg-[#1b1b1b] py-14">
         <div className="container flex flex-col gap-y-10">
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-start">
             <Image src={VisiTitle} alt="Visi dan Misi" />
           </div>
           <p className="leading-[1.8] tracking-[0.04em] text-[#d1d9e6]">
@@ -68,7 +68,7 @@ const CompanyPage = () => {
             membawa nilai - nilai kebaikan dan budaya yang merupakan warisan
             yang selalu kita banggakan.
           </p>
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-start">
             <Image src={MisiTitle} alt="Misi" />
           </div>
           <ol className="ml-6 list-decimal leading-[1.8] tracking-[0.02em] text-[#c5cce0]/90">
