@@ -136,18 +136,17 @@ const ProductSection = () => {
       {/* Product 1 */}
       <div className="w-full bg-[#1b1b1b] py-14" id="product-1">
         <div className="mx-auto max-w-screen-640 px-6">
-          <div className="container flex flex-col items-center justify-center gap-4">
-            <div className="relative h-[396px] w-full sm:h-[492px]">
+          <div className="w-full mx-auto max-w-[350px] flex flex-col items-center justify-center gap-4">
+            <div className="relative  w-full h-[492px]">
               <Image
                 src={CoverPetualanganMinilemon}
                 alt="Petualangan Si Minilemon"
                 layout="fill"
-                objectFit="fill"
-                className="w-full"
+                className="w-full object-contain"
               />
             </div>
 
-            <div className="flex flex-col gap-y-6 text-start text-sm leading-[1.6rem] tracking-wider text-[#c0cbdf]/90 sm:leading-7">
+            <div className="flex flex-col gap-y-6 text-start justify-center text-sm leading-[1.6rem] tracking-wider text-[#c0cbdf]/90 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={PetualanganSiMinilemonTitle1}
@@ -158,14 +157,14 @@ const ProductSection = () => {
                   alt="Petualangan Si Minilemon"
                 />
               </div>
-              <p className="sm:text-sm md:text-lg">
+              <p className="md:text-lg">
                 Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar
                 yang tanpa sengaja memicu kejar-kerjaran menegangkan dengan
                 sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
                 menghilang setelah menemukan mesin portal misterius diruang
                 rahasia Kak Bibie.
               </p>
-              <p className="sm:text-sm md:text-lg">
+              <p className="md:text-lg">
                 Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan siap
                 bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
                 Tigor.{" "}
@@ -188,7 +187,7 @@ const ProductSection = () => {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90 sm:text-sm md:text-lg"
+                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90  md:text-lg"
                   >
                     <motion.p variants={paragraphVariants}>
                       Petualangan seru dengan rocket canggih dan mesin portal
@@ -215,7 +214,7 @@ const ProductSection = () => {
               </AnimatePresence>
               <Link
                 href="javascript:void(0)"
-                className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg"
+                className="flex flex-row items-center gap-x-2  md:text-lg"
               >
                 <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
                   <FaYoutube className="" />
@@ -230,8 +229,8 @@ const ProductSection = () => {
       {/* Product 2 */}
       <div className="w-full bg-[#d2e1f4] py-14" id="product-2">
         <div className="mx-auto max-w-screen-640 px-6">
-          <div className="container flex flex-col items-center justify-center gap-4">
-            <div className="relative h-[396px] w-full sm:h-[492px]">
+          <div className="w-full mx-auto max-w-[350px] flex flex-col items-center justify-center gap-4">
+            <div className="relative w-full h-[492px]">
               <Image
                 src={CoverSaveTheEarth}
                 alt="Minilemon Save The Earth"
@@ -252,7 +251,7 @@ const ProductSection = () => {
                   alt="Minilemon Save The Earth"
                 />
               </div>
-              <p className="sm:text-sm md:text-lg">
+              <p className=" md:text-lg">
                 Dengan menyadari betapa pentingnya meenjaga dan melestarikan
                 alam, Minilemon yang di pimpin Kak Biebie, memulai petualangan
                 mereka dalam serial animasi &quot;Minilemon Save The
@@ -280,7 +279,7 @@ const ProductSection = () => {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70 sm:text-sm md:text-lg"
+                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70  md:text-lg"
                   >
                     <motion.p variants={paragraphVariants}>
                       “Berakit-rakit ke hulu, berenang-renang ke tepian.
@@ -314,7 +313,7 @@ const ProductSection = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <Link href={"#"} className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg">
+              <Link href={"#"} className="flex flex-row items-center gap-x-2  md:text-lg">
                 <span className="rounded-full bg-[#333] p-[.4rem] shadow-xl">
                   <FaYoutube className="text-white" />
                 </span>
@@ -336,8 +335,8 @@ const ProductSection = () => {
         id="product-3"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
-          <motion.div className="container flex flex-col items-center justify-center gap-4">
-            <div className="relative flex h-[396px] w-full flex-col items-center justify-center bg-gray-500 sm:h-[492px]">
+          <motion.div className="w-full mx-auto max-w-[350px] flex flex-col items-center justify-center gap-4">
+            <div className="relative flex w-full flex-col items-center justify-center bg-gray-500 h-[492px]">
               <Image
                 src={MinilemonExplorerToJogja}
                 alt="coming soon"
@@ -347,7 +346,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-8 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-8 text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
                 <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
@@ -433,8 +432,8 @@ const ProductSection = () => {
         id="product-4"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
-          <motion.div className="container flex flex-col items-center justify-center gap-4">
-            <div className="relative h-[396px] w-full sm:h-[492px]">
+          <motion.div className="w-full mx-auto max-w-[350px] flex flex-col items-center justify-center gap-4">
+            <div className="relative w-full h-[492px]">
               <Image
                 src={CoverPostParenting}
                 alt="Minilemon Live Parenting"
@@ -444,7 +443,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-8 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-8 text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={MinilemonLiveParentingTitle1}
@@ -509,7 +508,7 @@ const ProductSection = () => {
               </AnimatePresence>
               <Link
                 href={"#"}
-                className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg"
+                className="flex flex-row items-center gap-x-2  md:text-lg"
               >
                 <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                   <FaYoutube className="text-white" />
@@ -532,8 +531,8 @@ const ProductSection = () => {
         id="product-5"
       >
         <motion.div className="mx-auto max-w-screen-640 px-6">
-          <motion.div className="container flex flex-col items-center justify-center gap-4">
-            <div className="relative h-[396px] w-full sm:h-[492px]">
+          <motion.div className="w-full mx-auto max-w-[350px] flex flex-col items-center justify-center gap-4">
+            <div className="relative w-full h-[492px]">
               <Image
                 src={CoverPanggungBonekaMinilemon}
                 alt="Panggung Boneka Minilemon"
@@ -543,7 +542,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-6 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-6 text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={MinilemonPanggungBonekaTitle1}
