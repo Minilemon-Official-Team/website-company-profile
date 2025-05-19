@@ -43,17 +43,14 @@ const SliderMobile = ({ name, value: valueItem }: SliderProps) => {
     <div className="w-full" ref={ref}>
       <div className="flex w-full max-w-full flex-row items-center justify-start overflow-hidden">
         <motion.p
-          className="flex h-[20px] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] px-5 text-xs font-bold uppercase italic tracking-wider text-gray-800"
-          style={{
-            clipPath: "polygon(6px 0, 100% 0, 100% 20px, 0px 20px)",
-          }}
+          className="slider-label flex h-[20px] md:h-[30px] items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] px-5 text-xs md:text-lg font-bold uppercase italic tracking-wider text-gray-800"
           animate={controls}
         >
           {name}
         </motion.p>
 
         <motion.p
-          className="-ml-5 flex h-[25px] w-[55px] items-center justify-center bg-[#fdd05b] text-xs font-bold italic text-gray-800"
+          className="-ml-5 flex h-[25px] md:h-[40px] w-[55px] md:w-[70px] items-center justify-center bg-[#fdd05b] text-xs md:text-lg font-bold italic text-gray-800"
           style={{ clipPath: "polygon(20% 0, 100% 0, 80% 100%, 0% 100%)" }}
         >
           {value}%
