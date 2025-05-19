@@ -83,7 +83,7 @@ export default function AboutUsSection() {
             />
           </div>
           <div className="z-10 leading-relaxed tracking-widest text-[#c5cce2]">
-            <p>
+            <p className="md:text-lg sm:text-sm">
               Berawal dari cinta dan bangga akan warisan budaya khusunya topeng
               yang merupakan penutup wajah dari setiap Suku di Indonesia.
             </p>
@@ -92,7 +92,7 @@ export default function AboutUsSection() {
       </div>
       <div className="flex flex-col items-center justify-center bg-[#f2e3fe]">
         <div className="flex max-w-screen-640 flex-col items-center px-6 py-5 leading-relaxed tracking-widest">
-          <p>
+        <p className="md:text-lg sm:text-sm">
             Reno Halsamer (Founder dTopeng Kingdom Foundation) melalui
             perjalanan panjanga telah menciptakan tokoh animasi (fiksi) dengan
             memadukan topeng sebagai wajah indonesia dan tubuh lemon yang
@@ -122,7 +122,7 @@ export default function AboutUsSection() {
             >
               <motion.div className="flex max-w-screen-640 flex-col items-end justify-end gap-4 px-6 py-4">
                 <motion.p
-                  className="leading-relaxed tracking-widest"
+                  className="leading-relaxed tracking-widest sm:text-sm md:text-lg"
                   variants={paragraphVariants}
                 >
                   Bernama Minilemon dengan harapan dapat memberi manfaat positif
@@ -149,7 +149,7 @@ export default function AboutUsSection() {
                     className="w-[160px] sm:w-[190px]"
                   />
                 </motion.div>
-                <motion.p className="text-end leading-relaxed tracking-widest">
+                <motion.p className="text-end sm:text-sm md:text-lg leading-relaxed tracking-widest">
                   minimnya hiburan yang mengedepankan kualitas dan edukasi
                   kepada anak-anak Indonesia, Minilemon berharap mampu menjadi
                   idola baru, menanamkan nilai-nilai positif di banyak platform
@@ -173,7 +173,7 @@ export default function AboutUsSection() {
                     className="w-[210px] sm:w-[320px]"
                   />
                 </motion.div>
-                <motion.p className="max-w-screen-640 text-center text-xs leading-relaxed tracking-widest text-[#c5cce2] sm:text-sm">
+                <motion.p className="max-w-screen-640 sm:text-sm md:text-lg text-center leading-relaxed tracking-widest text-[#c5cce2]">
                   Sadar akan persoalan-persoalan besar dan mendasar, PT
                   Minilemon Nusantara berinisitatif membuat produk-produk anak
                   yang berupa tontonan dan permainan, dengan target usia 3-7
@@ -197,7 +197,7 @@ export default function AboutUsSection() {
                     className="w-[160px] sm:w-[180px]"
                   />
                 </motion.div>
-                <motion.p className="text-start leading-relaxed tracking-widest">
+                <motion.p className="text-start sm:text-sm md:text-lg leading-relaxed tracking-widest">
                   Minilemon adalah kisah 6 sahabat sepermainan yang berasal dari
                   suku berbeda-beda yaitu Jawa, Sunda, Papua, Tionghoa, Batak
                   dan Bali. meskipun berbeda Minilemon selalu mengedepankan
@@ -222,7 +222,7 @@ export default function AboutUsSection() {
                     className="w-[250px] sm:w-[270px]"
                   />
                 </motion.div>
-                <motion.p className="text-end leading-relaxed tracking-widest">
+                <motion.p className="text-end sm:text-sm md:text-lg leading-relaxed tracking-widest">
                   Membangun pola pikir positif di dalam pertumbuhan anak yang
                   suka bermain, imajinatif, hidup dalam dunia angan-angan, tidak
                   suka larangan, mempunyai sifat ingin tahu dan bersemangat

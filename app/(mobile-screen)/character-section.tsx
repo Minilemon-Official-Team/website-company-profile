@@ -57,7 +57,7 @@ const CharacterIntro = () => {
           />
         </div>
         <div className="z-10 flex flex-col gap-y-6 leading-relaxed tracking-widest text-[#c5cce2]">
-          <p ref={refInView}>
+          <p ref={refInView} className="sm:text-sm md:text-lg">
             Minilemon adalah animasi perpaduan topeng dan buah lemon yang hidup
             di dalam mimpi kakek Djoyo, terdiri dari 6 karakter utama yang
             mewakili 6 suku besar di Indonesia, yaitu Wayan (Bali), Togar
