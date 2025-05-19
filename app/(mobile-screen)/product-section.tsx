@@ -123,7 +123,7 @@ const ProductSection = () => {
             />
           </div>
           <div className="z-20 mb-3 flex flex-col leading-[1.6rem] tracking-wider sm:leading-7">
-            <p className="text-sm leading-[1.6rem] tracking-wider text-[#d3dcf3] sm:leading-7">
+            <p className="text-sm md:text-lg leading-[1.6rem] tracking-wider text-[#d3dcf3] sm:leading-7">
               Di era modernisasi dan selera yang semakin beragam, Minilemon
               memproduksi banyak varian produk digital maupun konvensional, agar
               nilai-nilai edukasi dan karakter positif, dapat menjangkau ke
@@ -158,14 +158,14 @@ const ProductSection = () => {
                   alt="Petualangan Si Minilemon"
                 />
               </div>
-              <p>
+              <p className="sm:text-sm md:text-lg">
                 Petualangan Minilemon dimulai dari keceroohan Ucup dan Togar
                 yang tanpa sengaja memicu kejar-kerjaran menegangkan dengan
                 sekelompok angsa marah. Dalam kekacauan itu, Ucup terpisah dan
                 menghilang setelah menemukan mesin portal misterius diruang
                 rahasia Kak Bibie.
               </p>
-              <p className="">
+              <p className="sm:text-sm md:text-lg">
                 Dengan kejadian itu, Anaak-anak Minilemon mulai bersatu dan siap
                 bertualang mencari Ucup dengan bantuan Kak Bibie dan Paman
                 Tigor.{" "}
@@ -188,7 +188,7 @@ const ProductSection = () => {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90"
+                    className="flex flex-col gap-y-6 text-[#c0cbdf]/90 sm:text-sm md:text-lg"
                   >
                     <motion.p variants={paragraphVariants}>
                       Petualangan seru dengan rocket canggih dan mesin portal
@@ -215,7 +215,7 @@ const ProductSection = () => {
               </AnimatePresence>
               <Link
                 href="javascript:void(0)"
-                className="flex flex-row items-center gap-x-2"
+                className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg"
               >
                 <span className="rounded-full bg-[#333333] p-[.4rem] shadow-xl">
                   <FaYoutube className="" />
@@ -252,7 +252,7 @@ const ProductSection = () => {
                   alt="Minilemon Save The Earth"
                 />
               </div>
-              <p>
+              <p className="sm:text-sm md:text-lg">
                 Dengan menyadari betapa pentingnya meenjaga dan melestarikan
                 alam, Minilemon yang di pimpin Kak Biebie, memulai petualangan
                 mereka dalam serial animasi &quot;Minilemon Save The
@@ -280,7 +280,7 @@ const ProductSection = () => {
                     animate="visible"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70"
+                    className="flex flex-col gap-y-6 text-[#1b1b1d]/70 sm:text-sm md:text-lg"
                   >
                     <motion.p variants={paragraphVariants}>
                       “Berakit-rakit ke hulu, berenang-renang ke tepian.
@@ -314,7 +314,7 @@ const ProductSection = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <Link href={"#"} className="flex flex-row items-center gap-x-2">
+              <Link href={"#"} className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg">
                 <span className="rounded-full bg-[#333] p-[.4rem] shadow-xl">
                   <FaYoutube className="text-white" />
                 </span>
@@ -347,7 +347,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-8 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/80 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image src={MinilemonExplorerTitle1} alt="Minilemon Explorer" />
                 <Image src={MinilemonExplorerTitle2} alt="Minilemon Explorer" />
@@ -444,7 +444,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-8 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-8 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={MinilemonLiveParentingTitle1}
@@ -509,7 +509,7 @@ const ProductSection = () => {
               </AnimatePresence>
               <Link
                 href={"#"}
-                className="flex flex-row items-center gap-x-2 text-base"
+                className="flex flex-row items-center gap-x-2 sm:text-sm md:text-lg"
               >
                 <span className="rounded-full bg-[#333] p-[.4rem] shadow-lg">
                   <FaYoutube className="text-white" />
@@ -543,7 +543,7 @@ const ProductSection = () => {
               />
             </div>
 
-            <motion.div className="flex flex-col gap-y-6 text-sm leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
+            <motion.div className="flex flex-col gap-y-6 sm:text-sm md:text-lg leading-[1.6rem] tracking-[.07em] text-[#1b1b1d]/70 sm:leading-7">
               <div className="hidden flex-col lg:flex">
                 <Image
                   src={MinilemonPanggungBonekaTitle1}

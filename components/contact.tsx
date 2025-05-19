@@ -115,7 +115,7 @@ const Contact = ({
               {...register("name")}
               id="name"
               placeholder="Name"
-              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 sm:text-sm md:text-lg text-[#d2def4]"
             />
             {errors.name && (
               <p className="text-xs text-red-500">{errors.name.message}</p>
@@ -130,7 +130,7 @@ const Contact = ({
               id="email"
               type="email"
               placeholder="Email"
-              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 sm:text-sm md:text-lg text-[#d2def4]"
             />
             {errors.email && (
               <p className="text-xs text-red-500">{errors.email.message}</p>
@@ -145,7 +145,7 @@ const Contact = ({
               id="subject"
               type="text"
               placeholder="Subject"
-              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 text-sm text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 sm:text-sm md:text-lg text-[#d2def4]"
             />
             {errors.subject && (
               <p className="text-xs text-red-500">{errors.subject.message}</p>
@@ -160,7 +160,7 @@ const Contact = ({
               id="message"
               rows={4}
               placeholder="Message"
-              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 pb-16 text-sm text-[#d2def4]"
+              className="w-full rounded-md border border-white/30 bg-transparent px-4 py-2 pb-16 sm:text-sm md:text-lg text-[#d2def4]"
             />
             {errors.message && (
               <p className="text-xs text-red-500">{errors.message.message}</p>
