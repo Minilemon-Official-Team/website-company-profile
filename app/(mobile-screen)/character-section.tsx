@@ -97,7 +97,7 @@ const CharacterSwiper = () => {
           {charactersData.map((character) => (
             <SplideSlide key={character.id}>
               <div className="flex w-full flex-col items-center justify-start gap-y-4">
-                <div className="flex h-[200px] w-full flex-row items-start md:h-[400px]">
+                <div className="flex h-[210px] sm:h-[300px] md:h-[400px] w-full flex-row items-start">
                   <div
                     style={{
                       backgroundColor: character.bgcolor,
