@@ -105,7 +105,7 @@ function CompanySection() {
             />
           </div>
           <div className="z-10 leading-7 tracking-widest text-[#c5cce2]">
-            <p>
+            <p className="sm:text-sm md:text-lg">
               Minilemon Universe merupakan cakrawala sejati yang berorientasi pada
               Pendidikan Karakter Anak dan nilai - nilai kebaikan melalui berbagai
               Program Pendidikan berbasis seni, hiburan dan teknologi.
@@ -115,7 +115,7 @@ function CompanySection() {
       </div>
       <div className="flex flex-col items-center justify-center bg-[#e7e7e7] py-4">
         <div className="flex max-w-screen-640 flex-col items-center px-6 py-3 leading-7 tracking-widest">
-          <p>
+          <p className="sm:text-sm md:text-lg">
             Di dalam Minilemon Universe terdapat Planet Agency, Planet Sudio,
             Planet Academy dan Planet Software,  yang terus melakukan pendekatan
             terhadap Pendidikan, mulai dari film animasi, game, panggung boneka,
@@ -322,10 +322,10 @@ function CompanySection() {
                           />
                         )}
                       </div>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {/* {item.position} */}
                       </motion.p>
                     </motion.div>
@@ -377,10 +377,10 @@ function CompanySection() {
                           />
                         )}
                       </div>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {/* {item.position} */}
                       </motion.p>
                     </motion.div>
@@ -432,10 +432,10 @@ function CompanySection() {
                           />
                         )}
                       </div>
-                      <motion.p className="text-nowrap text-center text-black text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-black text-[0.7rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {/* {item.position} */}
                       </motion.p>
                     </motion.div>
@@ -487,10 +487,10 @@ function CompanySection() {
                           />
                         )}
                       </div>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] leading-[1rem] tracking-widest sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] leading-[1rem] tracking-widest sm:text-sm">
                         {item.name}
                       </motion.p>
-                      <motion.p className="text-nowrap text-center text-[0.6rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
+                      <motion.p className="text-nowrap text-center text-[0.7rem] font-bold uppercase leading-[1rem] tracking-normal 400:tracking-normal sm:text-sm">
                         {/* {item.position} */}
                       </motion.p>
                     </motion.div>

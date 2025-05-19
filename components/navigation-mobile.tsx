@@ -116,7 +116,7 @@ const NavigationMobile = () => {
                 currentLinkIndex === 0 && "cursor-not-allowed opacity-50",
               )}
             />
-            <div className="font-bold capitalize tracking-wider text-[#ffd201]">
+            <div className="font-bold sm:text-sm md:text-xl capitalize tracking-wider text-[#ffd201]">
               {NAV_LINKS[currentLinkIndex].slice(1)}
             </div>
             <FaPlay

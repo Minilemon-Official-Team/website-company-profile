@@ -73,7 +73,7 @@ function StorySection() {
             />
           </div>
           <div className="z-10 flex flex-col gap-y-6 leading-5 tracking-widest text-[#c5cce2]">
-            <p>
+            <p className="sm:text-sm md:text-lg">
               Berawal dari kisah Kakek Djoyo yang merupakan seorang pangeran sah
               penerus tahta ayahnya, seorang raja di tanah Jawa. Sejak kecil,
               Pangeran Djoyo sudah kehilangan ibunya, seorang permaisuri yang
@@ -86,7 +86,7 @@ function StorySection() {
       </div>
       <div className="flex flex-col items-center justify-center bg-[#d4e1f4]">
         <div className="flex max-w-screen-640 flex-col items-center px-6 py-4 leading-5 tracking-widest">
-          <p>
+          <p className="sm:text-sm md:text-lg">
             Dengan hati yang berat, Pangeran Djoyo memutuskan untuk meninggalkan
             istana dan memulai perjalanan panjang untuk mencari ilmu dan
             kedamaian.
@@ -108,7 +108,7 @@ function StorySection() {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="flex max-w-screen-640 flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-5 tracking-widest"
+            className="flex max-w-screen-640 flex-col gap-y-4 bg-[#d4e1f4] px-6 py-4 leading-5 tracking-widest sm:text-sm md:text-lg"
           >
             <motion.p variants={paragraphVariants}>
               Suatu malam, dalam perjalanannya melewati hutan yang lebat,

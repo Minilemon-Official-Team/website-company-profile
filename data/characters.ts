@@ -27,6 +27,7 @@ interface CharacterData {
   namePicture: StaticImageData;
   fullName: string;
   description: string;
+  mobileDescription?: string;
   image: StaticImageData;
   strong: number;
   logic: number;
@@ -120,6 +121,8 @@ export const charactersData: CharacterData[] = [
     fullName: "Amink",
     description:
       "Aming adalah sepupu memey yang datang dari ibu kota, sebagai anak muda yg gemar dengan hal-hal kekinian, Aming sering kali merasa diri nya lebih up to date, modern dan terkesan pamer dimata teman-temannya. walaupun cuek, ia merupakan sosok pekerja keras dan senang berbagi hal baru, agar teman-temannya bisa ikut merasakan kesuksesan dan indahnya hidup dalam kemewahan",
+    mobileDescription:
+      "Aming adalah sepupu memey yang datang dari ibu kota, sebagai anak muda yg gemar dengan hal-hal kekinian, Aming merasa diri nya lebih up to date dan terkesan pamer dimata teman-temannya. walaupun cuek, ia merupakan sosok pekerja keras dan senang berbagi hal baru.",
     image: Amink,
     bgcolor: "#ffcab2",
     strong: 10,
@@ -159,6 +162,8 @@ export const charactersData: CharacterData[] = [
     fullName: "RU-DI",
     description:
       "RU-DI adalah robot canggih buatan Biebie yang lebih dari sekadar asisten lab. Dengan Al luar biasa, RU-DI mampu mencari dan mengolah informasi secara presisi, menjadikannya partner tak tergantikan. Dilengkapi peralatan mutakhir, ia membantu tim Minilemon dalam petualangan, menjadi pelindung dan penunjuk jalan. Meski logis dan tampak kaku, RU-DI menunjukkan loyalitas dan emosi yang menjadikannya teman yang dapat diandalkan di saat-saat genting.",
+    mobileDescription:
+      "RU-D1 adalah robot canggih buatan Biebie yang lebih dari sekadar asisten lab. Dengan teknologi AI yang luar biasa, RU-D1 mampu mencari dan mengolah informasi secara presisi dan menjadi partner tak tergantikan dalam misi-misi penting di petualangan Minilemon.",
     image: Rudi,
     bgcolor: "#c1e5c1",
     strong: 40,
