@@ -97,7 +97,7 @@ const CharacterSwiper = () => {
           {charactersData.map((character) => (
             <SplideSlide key={character.id}>
               <div className="flex w-full flex-col items-center justify-start gap-y-4">
-                <div className="flex h-[210px] sm:h-[300px] md:h-[400px] w-full flex-row items-start">
+                <div className="char-card flex h-[210px] sm:h-[300px] md:h-[400px] w-full flex-row items-start">
                   <div
                     style={{
                       backgroundColor: character.bgcolor,
@@ -106,7 +106,7 @@ const CharacterSwiper = () => {
                   >
                     <motion.div
                       animate={floatingAnimation}
-                      className="flex h-[250px] w-full items-center justify-center"
+                      className="flex h-[250px] sm:h-[350px] md:h-[500px] w-full items-center justify-center"
                     >
                       <Image
                         src={character.image}
@@ -121,28 +121,25 @@ const CharacterSwiper = () => {
                     <div
                       className={cn(
                         luckiest_guy.className,
-                        "flex h-[30px] w-full items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5",
+                        "flex h-[30px] md:h-[50px] w-full items-center justify-start bg-gradient-to-b from-[#fff000] to-[#ffa800] pl-5",
                       )}
                       style={{
                         clipPath: "polygon(0% 0, 100% 0, 93% 100%, 0% 100%)",
                       }}
                     >
-                      <p className="skew-x-[-15deg] text-2xl tracking-wider text-gray-800">
+                      <p className="skew-x-[-15deg] text-2xl md:text-4xl tracking-wider text-gray-800">
                         {character.fullName}
                       </p>
                     </div>
                     <div className="flex flex-col gap-1 px-3">
                       <SliderMobile name="Strong" value={character.strong} />
                       <SliderMobile name="Logic" value={character.logic} />
-                      <SliderMobile
-                        name="Creative"
-                        value={character.creative}
-                      />
+                      <SliderMobile name="Creative" value={character.creative} />
                       <SliderMobile name="Luck" value={character.luck} />
                     </div>
                   </div>
                 </div>
-                <p className="px-6 text-sm font-semibold leading-loose text-[#374151]">
+                <p className="px-6 text-sm md:text-xl font-semibold leading-loose text-[#374151]">
                   {character.description}
                 </p>
               </div>
