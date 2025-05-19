@@ -20,6 +20,10 @@ import Andepp from "@/public/contributors/Andepp.jpg";
 import Siska from "@/public/contributors/Siska.jpg";
 import Naufal from "@/public/contributors/Naufal.jpg";
 import Novansyah from "@/public/contributors/Novansyah.jpg";
+import SDimas from "@/public/contributors/S_Dimas.jpg";
+import Anand from "@/public/contributors/Anand.jpg";
+import Hakim from "@/public/contributors/Gus_Hakim.jpg";
+import Noto from "@/public/contributors/Noto.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -37,7 +41,7 @@ export const Agency: ContributionProps[] = [
     id: 1,
     name: "Stefanus Dimas",
     position: "Title",
-    photo: DummyMale,
+    photo: SDimas,
   },
   {
     id: 2,
@@ -49,13 +53,13 @@ export const Agency: ContributionProps[] = [
     id: 3,
     name: "Yourdan Anand",
     position: "Title",
-    photo: DummyMale,
+    photo: Anand,
   },
   {
     id: 4,
     name: "Ahmad Hakim Jayli",
     position: "Title",
-    photo: DummyMale,
+    photo: Hakim,
   },
   {
     id: 5,
@@ -118,7 +122,7 @@ export const Studio: ContributionProps[] = [
     id: 4,
     name: "Ignatius Mubiarnoto N",
     position: "Title",
-    photo: DummyMale,
+    photo: Noto,
   },
   {
     id: 5,
