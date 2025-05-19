@@ -27,6 +27,8 @@ import Noto from "@/public/contributors/Noto.jpg";
 import Rian from "@/public/contributors/Rian.jpg";
 import Kurnia from "@/public/contributors/Kurnia.jpg";
 import Reinaldy from "@/public/contributors/Reinaldy.jpg";
+import Gilbert from "@/public/contributors/Gilbert.jpg";
+import Gersom from "@/public/contributors/Gersom.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -151,6 +153,18 @@ export const Studio: ContributionProps[] = [
     position: "Title",
     photo: Naufal,
   },
+  {
+    id: 9,
+    name: "Abraham Gilbert Halsamer",
+    position: "Title",
+    photo: Gilbert,
+  },
+  {
+    id: 10,
+    name: "Gersom Halsamer",
+    position: "Title",
+    photo: Gersom,
+  }
 ];
 
 export const Academy: ContributionProps[] = [
