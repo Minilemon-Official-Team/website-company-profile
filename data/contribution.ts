@@ -24,6 +24,9 @@ import SDimas from "@/public/contributors/S_Dimas.jpg";
 import Anand from "@/public/contributors/Anand.jpg";
 import Hakim from "@/public/contributors/Gus_Hakim.jpg";
 import Noto from "@/public/contributors/Noto.jpg";
+import Rian from "@/public/contributors/Rian.jpg";
+import Kurnia from "@/public/contributors/Kurnia.jpg";
+import Reinaldy from "@/public/contributors/Reinaldy.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -47,7 +50,7 @@ export const Agency: ContributionProps[] = [
     id: 2,
     name: "Rian Ekky Pradipta",
     position: "Title",
-    photo: DummyMale,
+    photo: Rian,
   },
   {
     id: 3,
@@ -77,13 +80,13 @@ export const Agency: ContributionProps[] = [
     id: 7,
     name: "Sri Kurnia Dewi",
     position: "Title",
-    photo: DummyFemale,
+    photo: Kurnia,
   },
   {
     id: 8,
     name: "Suthan Reinaldy",
     position: "Title",
-    photo: DummyMale,
+    photo: Reinaldy,
   },
   {
     id: 9,

@@ -140,7 +140,9 @@ const CharacterSwiper = () => {
                   </div>
                 </div>
                 <p className="px-6 text-sm md:text-xl font-semibold leading-loose text-[#374151]">
-                  {character.description}
+                  {(character.fullName === "RU-DI" || character.fullName === "Amink")
+                    ? character.mobileDescription
+                    : character.description}
                 </p>
               </div>
             </SplideSlide>
