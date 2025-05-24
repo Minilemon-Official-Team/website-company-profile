@@ -29,6 +29,8 @@ import Kurnia from "@/public/contributors/Kurnia.jpg";
 import Reinaldy from "@/public/contributors/Reinaldy.jpg";
 import Gilbert from "@/public/contributors/Gilbert.jpg";
 import Gersom from "@/public/contributors/Gersom.jpg";
+import Febri from "@/public/contributors/Febri.jpg";
+import Fiola from "@/public/contributors/Fiola.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -76,7 +78,7 @@ export const Agency: ContributionProps[] = [
     id: 6,
     name: "Fiola Virginia Gunawi",
     position: "Title",
-    photo: DummyFemale,
+    photo: Fiola,
   },
   {
     id: 7,
@@ -145,7 +147,7 @@ export const Studio: ContributionProps[] = [
     id: 7,
     name: "Febrian Dhuhal",
     position: "Title",
-    photo: DummyMale,
+    photo: Febri,
   },
   {
     id: 8,
@@ -217,7 +219,7 @@ export const Technology: ContributionProps[] = [
     id: 4,
     name: "Fiola Virginia Gunawi",
     position: "Title",
-    photo: DummyFemale,
+    photo: Fiola,
   },
 ];
 
