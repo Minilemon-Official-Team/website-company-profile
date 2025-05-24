@@ -149,9 +149,9 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 8,
-    name: "Naufal Selnis M",
+    name: "Gersom Halsamer",
     position: "Title",
-    photo: Naufal,
+    photo: Gersom,
   },
   {
     id: 9,
@@ -161,9 +161,9 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 10,
-    name: "Gersom Halsamer",
+    name: "Naufal Selnis M",
     position: "Title",
-    photo: Gersom,
+    photo: Naufal,
   }
 ];
 
