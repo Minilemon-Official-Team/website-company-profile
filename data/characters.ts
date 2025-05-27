@@ -42,7 +42,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleTogar,
     fullName: "Togar",
     description:
-      "TOGAR besar di suku Batak. Berwatak keras dan tidak mau kalah, membuat Togar sering berdebat dengan teman-temannya. Tapi Togar memiliki sifat yang berani, pantang menyerah, dan memiliki cita-cita yang tinggi.",
+      "TOGAR digambarkan sebagai karakter Batak yang berwatak keras, tidak mau kalah, dan sering berdebat dengan teman-temannya. Namun, Togar memiliki sifat berani, pantang menyerah, serta bercita-cita tinggi.",
     image: Togar,
     bgcolor: "#f3c7be",
     strong: 80,
@@ -55,7 +55,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleSlamet,
     fullName: "Slamet",
     description:
-      "SLAMET dibesarkan di lingkungan pesantren Jawa Tengah. Berperilaku santun, lurus dan penurut. setiap pendapatnya memiliki dalil yang ia dapatkan dari Gus nya di pesantren.",
+      "SLAMET digambarkan sebagai karakter Muslim Jawa yang berperilaku santun, polos, dan penurut. Setiap pendapatnya selalu didasarkan pada dalil dari kitab suci dan buku-buku yang rutin ia pelajari.",
     image: Slamet,
     bgcolor: "#fbd0ae",
     strong: 40,
@@ -68,7 +68,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleWayan,
     fullName: "Wayan",
     description:
-      "WAYAN besar di tanah Bali, ia mempunyai jiwa seni yang sering kali mengkedepankan imajinasi dari pada akalnya. Walau selebor, banyak aktifitas Minilemon yang berasal dari gagasan Wayan.",
+      "WAYAN digambarkan sebagai karakter Bali. Wayan memiliki jiwa seni yang sering kali mengedepankan imajinasi daripada logika. Meskipun terkesan selebor, banyak aktivitas Minilemon yang berasal dari gagasan Wayan.",
     image: Wayan,
     bgcolor: "#c3cad4",
     strong: 55,
@@ -81,7 +81,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleMemey,
     fullName: "Memey",
     description:
-      "MEMEY besar di lingkungan Tionghoa. Rajin, Disiplin, dan demokratis. Pribadinya yang cerewet manjadikan Memey menjadi tokoh penting untuk memastikan setiap misi Minilemon terselesaikan.",
+      "MEMEY digambarkan sebagai karakter Tionghoa yang rajin, disiplin, dan demokratis. Pribadinya yang cerewet menjadikan Memey tokoh penting dalam memastikan setiap misi Minilemon terselesaikan.",
     image: Memey,
     bgcolor: "#edcce7",
     strong: 60,
@@ -94,7 +94,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleUcup,
     fullName: "Ucup",
     description:
-      "UCUP besar di suku Sunda. selain ramah dan suka bercanda, Ucup sangat menyukai sains dan teknologi. Setiap melihat sesuatu Ucup selalu mencari informasi lebih dalam di internet.",
+      "UCUP digambarkan sebagai karakter Sunda yang ramah dan suka bercanda. Ucup sangat menyukai gadget dan internet, sehingga ide serta pendapatnya sering kali bersumber dari suara terbanyak netizen",
     image: Ucup,
     bgcolor: "#ccd4df",
     strong: 40,
@@ -107,7 +107,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleMinggus,
     fullName: "Minggus",
     description:
-      "MINGGUS besar di tanah Papua. Berhati lembut, suka bernyanyi dan menari, Minggus mempunyai postur yang besar, menjadikan Minggus sebagai pelindung teman-temannya terutama Memey.",
+      "MINGGUS digambarkan sebagai karakter Papua yang bertubuh besar dan kuat. Minggus selalu dijadikan sosok pelindung bagi teman-temannya. Walau terlihat gagah, Minggus berhati lembut dan gemar bernyanyi.",
     image: Minggus,
     bgcolor: "#dfc2e0",
     strong: 95,
@@ -120,9 +120,9 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleAmink,
     fullName: "Amink",
     description:
-      "Aming adalah sepupu memey yang datang dari ibu kota, sebagai anak muda yg gemar dengan hal-hal kekinian, Aming sering kali merasa diri nya lebih up to date, modern dan terkesan pamer dimata teman-temannya. walaupun cuek, ia merupakan sosok pekerja keras dan senang berbagi hal baru, agar teman-temannya bisa ikut merasakan kesuksesan dan indahnya hidup dalam kemewahan",
+      "AMING adalah sepupu Memey yang selalu merasa paling up-to-date dan terkesan pamer di mata teman-temannya. Meskipun terkesan cuek, ia merupakan sosok pekerja keras dan senang berbagi hal-hal baru.",
     mobileDescription:
-      "Aming adalah sepupu memey yang datang dari ibu kota, sebagai anak muda yg gemar dengan hal-hal kekinian, Aming merasa diri nya lebih up to date dan terkesan pamer dimata teman-temannya. walaupun cuek, ia merupakan sosok pekerja keras dan senang berbagi hal baru.",
+      "AMING adalah sepupu Memey yang selalu merasa paling up-to-date dan terkesan pamer di mata teman-temannya. Meskipun terkesan cuek, ia merupakan sosok pekerja keras dan senang berbagi hal-hal baru.",
     image: Amink,
     bgcolor: "#ffcab2",
     strong: 10,
@@ -135,7 +135,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleBibie,
     fullName: "Bibie",
     description:
-      "BIBIE Pemuda genius dari tanah Betawi. Seorang ahli teknologi dan otak dari penciptaan Portal Bibie, Bibie sangat mahir dalam dunia Sains dan teknologi, karna itu membuat Biebie sangat tergantung dengan teknologi dan gadget-gadgetnya.",
+      "BIBIE digambarkan sebagai karakter Betawi yang jenius, high-tech, dan merupakan otak di balik penciptaan portal waktu. Kecintaannya pada sains dan teknologi membuat Bibie mengidap insomnia dan sering tertidur sewaktu-waktu.",
     image: Bibie,
     bgcolor: "#cfe9ce",
     strong: 50,
@@ -148,7 +148,7 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleTigor,
     fullName: "Tigor",
     description:
-      "TIGOR adalah paman Togar yang maniak coklat. Dalam perjalanan Minilemon ia ditugaskan untuk menjaga anak-anak Minilemon, tetapi sikapnya yang pemalas, kolot, suka pamer dan mau enak sendiri, Sering kali justru merepotkan anak-anak Minilemon.",
+      "TIGOR adalah paman Togar yang maniak cokelat. Sebagai penjaga anak-anak Minilemon, Tigor sering kali gagal menjalankan tugasnya dan justru merepotkan karena sikapnya yang kolot, suka pamer, dan maunya enak sendiri.",
     image: Tigor,
     bgcolor: "#f3c7be",
     strong: 95,
@@ -161,9 +161,9 @@ export const charactersData: CharacterData[] = [
     namePicture: TitleRudi,
     fullName: "RU-DI",
     description:
-      "RU-DI adalah robot canggih buatan Biebie yang lebih dari sekadar asisten lab. Dengan Al luar biasa, RU-DI mampu mencari dan mengolah informasi secara presisi, menjadikannya partner tak tergantikan. Dilengkapi peralatan mutakhir, ia membantu tim Minilemon dalam petualangan, menjadi pelindung dan penunjuk jalan. Meski logis dan tampak kaku, RU-DI menunjukkan loyalitas dan emosi yang menjadikannya teman yang dapat diandalkan di saat-saat genting.",
+      "RU-D1 adalah robot ciptaan Bibie yang mempunyai banyak ke canggihan luar biasa. RU-D1 mampu mencari dan mengolah informasi secara presisi yang siap menjadi assisten dalam misi-misi penting di petualangan Minilemon.",
     mobileDescription:
-      "RU-D1 adalah robot canggih buatan Biebie yang lebih dari sekadar asisten lab. Dengan teknologi AI yang luar biasa, RU-D1 mampu mencari dan mengolah informasi secara presisi dan menjadi partner tak tergantikan dalam misi-misi penting di petualangan Minilemon.",
+      "RU-D1 adalah robot ciptaan Bibie yang mempunyai banyak ke canggihan luar biasa. RU-D1 mampu mencari dan mengolah informasi secara presisi yang siap menjadi assisten dalam misi-misi penting di petualangan Minilemon.",
     image: Rudi,
     bgcolor: "#c1e5c1",
     strong: 40,
