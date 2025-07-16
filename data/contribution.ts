@@ -7,11 +7,11 @@ import Erik from "@/public/contributors/Erik.jpg";
 import Dimas from "@/public/contributors/Dimas.jpg";
 import Ostin from "@/public/contributors/Ostin.jpg";
 import David from "@/public/contributors/David.jpg";
-import Auriga from "@/public/contributors/Auriga.jpg"
+import Auriga from "@/public/contributors/Auriga.jpg";
 
-import Anis from "@/public/contributors/Anis.jpg"
-import Biwara from "@/public/contributors/Biwara.jpg"
-import Fahmi from "@/public/contributors/Fahmi.jpg"
+import Anis from "@/public/contributors/Anis.jpg";
+import Biwara from "@/public/contributors/Biwara.jpg";
+import Fahmi from "@/public/contributors/Fahmi_New.jpg";
 import Watin from "@/public/contributors/Watin.jpg";
 import Ghaza from "@/public/contributors/Ghaza.jpg";
 import Joy from "@/public/contributors/Joy.jpg";
@@ -31,6 +31,8 @@ import Gilbert from "@/public/contributors/Gilbert.jpg";
 import Gersom from "@/public/contributors/Gersom.jpg";
 import Febri from "@/public/contributors/Febri.jpg";
 import Fiola from "@/public/contributors/Fiola.jpg";
+import Lucky from "@/public/contributors/Lucky.jpg";
+import Sidik from "@/public/contributors/Sidik_Setiawan.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -76,9 +78,9 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 6,
-    name: "Fiola Virginia Gunawi",
+    name: "Sidik Setiawan",
     position: "Title",
-    photo: Fiola,
+    photo: Sidik,
   },
   {
     id: 7,
@@ -100,9 +102,21 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 10,
-    name: "Muhammad Ghazariz",
+    name: "David G Halsamer",
+    position: "Digital Analyst",
+    photo: David,
+  },
+  {
+    id: 11,
+    name: "Gersom Halsamer",
     position: "Title",
-    photo: Ghaza,
+    photo: Gersom,
+  },
+  {
+    id: 12,
+    name: "Fiola Virginia Gunawi",
+    position: "Title",
+    photo: Fiola,
   },
 ];
 
@@ -139,21 +153,21 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 6,
+    name: "Lucky",
+    position: "Title",
+    photo: Lucky,
+  },
+  {
+    id: 7,
     name: "Auriga F Vereno",
     position: "Head of Animation",
     photo: Auriga,
   },
   {
-    id: 7,
+    id: 8,
     name: "Febrian Dhuhal",
     position: "Title",
     photo: Febri,
-  },
-  {
-    id: 8,
-    name: "Gersom Halsamer",
-    position: "Title",
-    photo: Gersom,
   },
   {
     id: 9,
@@ -166,7 +180,13 @@ export const Studio: ContributionProps[] = [
     name: "Naufal Selnis M",
     position: "Title",
     photo: Naufal,
-  }
+  },
+  // {
+  //   id: 11,
+  //   name: "Messa",
+  //   position: "Title",
+  //   photo: DummyMale,
+  // },
 ];
 
 export const Academy: ContributionProps[] = [
