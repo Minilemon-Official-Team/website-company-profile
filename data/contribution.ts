@@ -153,7 +153,7 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 6,
-    name: "Lucky",
+    name: "Lucky Tri Putro",
     position: "Title",
     photo: Lucky,
   },
