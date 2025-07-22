@@ -77,10 +77,10 @@ const CompanyPage = () => {
             </li>
             <li className="text-[#c5cce0]/90">
               Membangun ekosistem yang mandiri, kreatif dan punya daya saing
-              kuat di kancah internsional
+              kuat di kancah internasional
             </li>
             <li className="text-[#c5cce0]/90">
-              Membangun sistem integrasi dengan teknlogi yang friendly,
+              Membangun sistem integrasi dengan teknologi yang friendly,
               transparan, terukur dengan jangkauan yang luas
             </li>
           </ol>

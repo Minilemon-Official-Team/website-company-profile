@@ -13,7 +13,7 @@ const ScreenProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     // Redirect to the home page if the screen width is less than 1024x
-    if (screenWidth < 1024 && pathname !== "/") {
+    if (screenWidth < 1024 && pathname !== "/" && pathname !== "/privacy") {
       router.push("/");
     }
   }, [pathname, router, screenWidth]);
