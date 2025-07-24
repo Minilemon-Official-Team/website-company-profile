@@ -20,7 +20,7 @@ const AboutPage = () => {
         >
           <div className="z-20 flex flex-col gap-y-6 leading-loose tracking-widest text-[#c5cce2]">
             <p>
-              Berawal dari cinta dan bangga akan warisan budaya khusunya topeng,
+              Berawal dari cinta dan bangga akan warisan budaya khususnya topeng,
               yang merupakan penutup wajah dari setiap Suku di Indonesia.
             </p>
             <p>
@@ -31,7 +31,7 @@ const AboutPage = () => {
             </p>
             <p>
               Bernama <b>Minilemon</b> dengan harapan dapat memberi manfaat
-              positif bagi anak-anak indonesia dalam belaja Sejarah, Budaya,
+              positif bagi anak-anak indonesia dalam belajar Sejarah, Budaya,
               hormat kepada orangtua, gotong royong, menghargai perbedaan, cinta
               Bangsa dan Negara, serta ikut serta dalam penyelamatan Lingkungan
               hidup di dunia.
