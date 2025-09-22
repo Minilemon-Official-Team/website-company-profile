@@ -6,7 +6,7 @@ import Arif from "@/public/contributors/Arif.jpg";
 import Erik from "@/public/contributors/Erik.jpg";
 import Dimas from "@/public/contributors/Dimas.jpg";
 import Ostin from "@/public/contributors/Ostin.jpg";
-import David from "@/public/contributors/David.jpg";
+import Wenpri from "@/public/contributors/Wenpri.jpg";
 import Auriga from "@/public/contributors/Auriga.jpg";
 
 import Anis from "@/public/contributors/Anis.jpg";
@@ -54,57 +54,57 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 2,
+    name: "Wenpri Andy Lasmana",
+    position: "Digital Analyst",
+    photo: Wenpri,
+  },
+  {
+    id: 3,
     name: "Rian Ekky Pradipta",
     position: "Title",
     photo: Rian,
   },
   {
-    id: 3,
+    id: 4,
     name: "Yourdan Anand",
     position: "Title",
     photo: Anand,
   },
   {
-    id: 4,
+    id: 5,
     name: "Ahmad Hakim Jayli",
     position: "Title",
     photo: Hakim,
   },
   {
-    id: 5,
+    id: 6,
     name: "Elly Halsamer",
     position: "MEDIA COMMUNICATION",
     photo: Elly,
   },
   {
-    id: 6,
+    id: 7,
     name: "Sidik Setiawan",
     position: "Title",
     photo: Sidik,
   },
   {
-    id: 7,
+    id: 8,
     name: "Sri Kurnia Dewi",
     position: "Title",
     photo: Kurnia,
   },
   {
-    id: 8,
+    id: 9,
     name: "Suthan Reinaldy",
     position: "Title",
     photo: Reinaldy,
   },
   {
-    id: 9,
+    id: 10,
     name: "Novansyah",
     position: "Title",
     photo: Novansyah,
-  },
-  {
-    id: 10,
-    name: "David G Halsamer",
-    position: "Digital Analyst",
-    photo: David,
   },
   {
     id: 11,
@@ -153,9 +153,9 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 6,
-    name: "Lucky Tri Putro",
+    name: "Naufal Murfit",
     position: "Title",
-    photo: Lucky,
+    photo: Naufal,
   },
   {
     id: 7,
@@ -165,21 +165,9 @@ export const Studio: ContributionProps[] = [
   },
   {
     id: 8,
-    name: "Febrian Dhuhal",
-    position: "Title",
-    photo: Febri,
-  },
-  {
-    id: 9,
     name: "Abraham Gilbert Halsamer",
     position: "Title",
     photo: Gilbert,
-  },
-  {
-    id: 10,
-    name: "Naufal Selnis M",
-    position: "Title",
-    photo: Naufal,
   },
   // {
   //   id: 11,
@@ -225,9 +213,9 @@ export const Technology: ContributionProps[] = [
   },
   {
     id: 2,
-    name: "David G Halsamer",
+    name: "Wenpri Andy Lasmana",
     position: "Digital Analyst",
-    photo: David,
+    photo: Wenpri,
   },
   {
     id: 3,
@@ -288,9 +276,9 @@ export const Hero: ContributionProps[] = [
   },
   {
     id: 8,
-    name: "David G Halsamer",
+    name: "Wenpri Andy Lasmana",
     position: "Digital Analyst",
-    photo: David,
+    photo: Wenpri,
   },
 ];
 

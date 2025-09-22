@@ -171,8 +171,7 @@ const CompanyPage = () => {
         </div>
         <div className="container">
           <div className="grid grid-cols-4 gap-x-8 gap-y-16 pb-12">
-            {/* First 8 items */}
-            {Studio.slice(0, 8).map((data) => (
+            {Studio.map((data) => (
               <div
                 key={data.id}
                 className="flex flex-col items-center justify-center text-white"
@@ -203,64 +202,6 @@ const CompanyPage = () => {
               </div>
             ))}
 
-            {/* Centered last row with Grid */}
-            <div className="col-span-4 grid grid-cols-4 gap-x-8">
-              <div className="col-start-2">
-                <div className="flex flex-col items-center justify-center text-white">
-                  <div className="pb-3">
-                    {Studio[8].photo ? (
-                      <Image
-                        src={Studio[8].photo}
-                        alt={Studio[8].name}
-                        width={150}
-                        height={200}
-                      />
-                    ) : (
-                      <Placeholder
-                        height={200}
-                        width={150}
-                        background="#fff"
-                        color="#333"
-                      />
-                    )}
-                  </div>
-                  <p className="text-base font-semibold capitalize text-white/60">
-                    {Studio[8].name}
-                  </p>
-                  <p className="text-sm font-bold uppercase text-white/80">
-                    {/* {Studio[8].position} */}
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <div className="flex flex-col items-center justify-center text-white">
-                  <div className="pb-3">
-                    {Studio[9].photo ? (
-                      <Image
-                        src={Studio[9].photo}
-                        alt={Studio[9].name}
-                        width={150}
-                        height={200}
-                      />
-                    ) : (
-                      <Placeholder
-                        height={200}
-                        width={150}
-                        background="#fff"
-                        color="#333"
-                      />
-                    )}
-                  </div>
-                  <p className="text-base font-semibold capitalize text-white/60">
-                    {Studio[9].name}
-                  </p>
-                  <p className="text-sm font-bold uppercase text-white/80">
-                    {/* {Studio[9].position} */}
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
