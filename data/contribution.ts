@@ -33,6 +33,7 @@ import Febri from "@/public/contributors/Febri.jpg";
 import Fiola from "@/public/contributors/Fiola.jpg";
 import Lucky from "@/public/contributors/Lucky.jpg";
 import Sidik from "@/public/contributors/Sidik_Setiawan.jpg";
+import David from "@/public/contributors/David.jpg";
 
 import DummyMale from "@/public/contributors/dummy-male.jpg";
 import DummyFemale from "@/public/contributors/dummy-female.jpg";
@@ -213,9 +214,9 @@ export const Technology: ContributionProps[] = [
   },
   {
     id: 2,
-    name: "Wenpri Andy Lasmana",
-    position: "Digital Analyst",
-    photo: Wenpri,
+    name: "David G Halsamer",
+    position: "Technology Specialist",
+    photo: David,
   },
   {
     id: 3,
