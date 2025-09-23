@@ -54,7 +54,7 @@ export const Agency: ContributionProps[] = [
   },
   {
     id: 2,
-    name: "Wenpri Andy Lasmana",
+    name: "Wenpri Andy Lesmana",
     position: "Digital Analyst",
     photo: Wenpri,
   },
